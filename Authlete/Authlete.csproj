@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <PackageId>Authlete.Authlete</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Authlete</Authors>
+    <PackageLicenseUrl>https://github.com/authlete/authlete-csharp/LICENSE</PackageLicenseUrl>
+    <Owners>authlete</Owners>
+    <PackageProjectUrl>https://github.com/authlete/authlete-csharp</PackageProjectUrl>
+    <Summary>C# library for Authlete Web APIs</Summary>
+    <PackageTags>Authlete OAuth OpenID OpenIDConnect OIDC API Security SSO</PackageTags>
+    <Title>Authlete Library for C#</Title>
+    <Description>C# library for Authlete Web APIs with which you can build an authorization server and OpenID provider that complies with OAuth 2.0 and OpenID Connect.</Description>
+    <PackageIconUrl>https://github.com/authlete/authlete-csharp/authlete-logo.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile>bin\Debug\netstandard1.4\Authlete.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Api\" />
+    <Folder Include="Conf\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Types\" />
+    <Folder Include="Util\" />
+    <Folder Include="Web\" />
+    <Folder Include="Handler\" />
+    <Folder Include="Handler\Spi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+  </ItemGroup>
+</Project>
