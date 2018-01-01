@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['refreshclientsecret',['RefreshClientSecret',['../class_authlete_1_1_api_1_1_authlete_api.html#a71e568cce4a37599ee0d91fccca84036',1,'Authlete.Api.AuthleteApi.RefreshClientSecret(long clientId)'],['../class_authlete_1_1_api_1_1_authlete_api.html#ac164b1aaf5633cf49de48e7ea936ce92',1,'Authlete.Api.AuthleteApi.RefreshClientSecret(string clientIdentifier)'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#a333d566bc29eeb3d29ec68154984903a',1,'Authlete.Api.IAuthleteApi.RefreshClientSecret(long clientId)'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#a1a1c866e1a3312a12dd50c12546624a6',1,'Authlete.Api.IAuthleteApi.RefreshClientSecret(string clientIdentifier)']]],
+  ['revocation',['Revocation',['../class_authlete_1_1_api_1_1_authlete_api.html#aca3ee9c4567b576fec0fe9c3d0c6ec74',1,'Authlete.Api.AuthleteApi.Revocation()'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#a93786f67fc6b00ff5bc260210fcfa3e4',1,'Authlete.Api.IAuthleteApi.Revocation()']]],
+  ['revocationrequesthandler',['RevocationRequestHandler',['../class_authlete_1_1_handler_1_1_revocation_request_handler.html#a43cf0a8353fef0301fba8d8761daef8b',1,'Authlete::Handler::RevocationRequestHandler']]]
+];
