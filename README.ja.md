@@ -59,6 +59,12 @@ API リファレンス (Authlete)
   <c>https://docs.authlete.com/</code>
 
 
+NuGet
+-----
+
+  [Authlete.Authlete][8]
+
+
 説明
 ----
 
@@ -320,3 +326,4 @@ TODO
 [5]: https://medium.com/@darutk/new-architecture-of-oauth-2-0-and-openid-connect-implementation-18f408f9338d
 [6]: https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
 [7]: https://qiita.com/TakahikoKawasaki/items/b2a4fc39e0c1a1949aab
+[8]: https://www.nuget.org/packages/Authlete.Authlete

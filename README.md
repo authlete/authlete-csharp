@@ -55,6 +55,12 @@ API Reference (Authlete)
   <c>https://docs.authlete.com/</code>
 
 
+NuGet
+-----
+
+  [Authlete.Authlete][8]
+
+
 Description
 -----------
 
@@ -323,3 +329,4 @@ Contact
 [4]: http://openid.net/connect/
 [5]: https://medium.com/@darutk/new-architecture-of-oauth-2-0-and-openid-connect-implementation-18f408f9338d
 [6]: https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
+[8]: https://www.nuget.org/packages/Authlete.Authlete
