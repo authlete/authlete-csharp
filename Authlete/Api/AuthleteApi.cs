@@ -270,7 +270,8 @@ namespace Authlete.Api
 
             // Set 'Authorization' header to access the Authlete API.
             headers.Authorization =
-                new AuthenticationHeaderValue("Basic", credentials.Formatted);
+                new AuthenticationHeaderValue(
+                           "Basic", credentials.FormattedParameter);
 
             // If a request body is given.
             if (requestBody != null)
