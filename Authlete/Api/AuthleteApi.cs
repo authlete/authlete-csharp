@@ -246,8 +246,23 @@ namespace Authlete.Api
                 throw CreateExceptionOfApiFailure(request, response, content);
             }
 
+            // If the response does not have a response body.
+            if (content == null)
+            {
+                // Basically, null is returned.
+                return default(TResponse);
+            }
+
+            // Some API calls use 'string' or 'object' as TResponse.
+            if (typeof(TResponse) == typeof(string) ||
+                typeof(TResponse) == typeof(object))
+            {
+                // The content should not be processed by the JSON
+                // processor, so return it without conversion.
+                return (TResponse)(object)content;
+            }
+
             // Convert the content of the response to an object.
-            // If 'content' is null, null is returned.
             return TextUtility.FromJson<TResponse>(content);
         }
 
