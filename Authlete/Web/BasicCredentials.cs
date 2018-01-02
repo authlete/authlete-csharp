@@ -39,7 +39,7 @@ namespace Authlete.Web
         {
             // Create a regular expression for "Basic {value}".
             CHALLENGE_PATTERN = new Regex(
-                "^Basic *([^ ]+) *$",
+                "^Basic *(?<parameter>[^ ]+) *$",
                 RegexOptions.IgnoreCase | RegexOptions.Compiled
             );
         }
@@ -50,9 +50,10 @@ namespace Authlete.Web
         /// </summary>
         public BasicCredentials(string userId, string password)
         {
-            UserId    = userId;
-            Password  = password;
-            Formatted = Format(userId, password);
+            UserId             = userId;
+            Password           = password;
+            FormattedParameter = FormatParameter(userId, password);
+            Formatted          = $"Basic {FormattedParameter}";
         }
 
 
@@ -77,21 +78,31 @@ namespace Authlete.Web
 
 
         /// <summary>
-        /// Format the credentials into
-        /// "Basic {base64-encoded-string}" which is suitable as a
-        /// value of <c>Authorization</c> header for Basic
-        /// Authentication.
+        /// A string in <c>"{base64-encoded-string}"</c> format
+        /// which is suitable as a value of the parameter part of
+        /// <c>Authorization</c> header for Basic Authentication.
         /// </summary>
-        static string Format(string userId, string password)
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.1
+        /// </para>
+        /// </remarks>
+        public string FormattedParameter { get; }
+
+
+        /// <summary>
+        /// Format the credentials into "{base64-encoded-string}"
+        /// which is suitable as a value of the parameter part of
+        /// <c>Authorization</c> header for Basic Authentication.
+        /// </summary>
+        static string FormatParameter(string userId, string password)
         {
             // Build a plain text, "{userId}:{password}".
             string plainText = $"{userId ?? ""}:{password ?? ""}";
 
             // Encode the plain text by Base64.
-            string base64string = Base64Encode(plainText);
-
-            // Build a string suitable for Basic Authentication.
-            return $"Basic {base64string}";
+            return Base64Encode(plainText);
         }
 
 
@@ -157,17 +168,17 @@ namespace Authlete.Web
             }
 
             // Expecting the input matches "Basic {base64string}".
-            var matches = CHALLENGE_PATTERN.Matches(value);
+            var match = CHALLENGE_PATTERN.Match(value);
 
             // If not matched.
-            if (matches.Count != 1)
+            if (match.Success == false)
             {
                 // UserId = null, Password = null
                 return new BasicCredentials(null, null);
             }
 
             // Base64-encoded "UserId:Password".
-            string base64String = matches[0].Value;
+            string base64String = match.Groups["parameter"].Value;
 
             // Build a BasicCredentials instance from the
             // base64 expression of "{UserId}:{Password}".
