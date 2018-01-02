@@ -5,7 +5,7 @@
     <ReleaseVersion>1.0.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <PackageId>Authlete.Authlete</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Authlete</Authors>
     <PackageLicenseUrl>https://github.com/authlete/authlete-csharp/LICENSE</PackageLicenseUrl>
     <Owners>authlete</Owners>
