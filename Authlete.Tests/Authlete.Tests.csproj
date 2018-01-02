@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Util\" />
+    <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Authlete\Authlete.csproj" />
