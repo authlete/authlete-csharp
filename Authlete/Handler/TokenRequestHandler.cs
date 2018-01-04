@@ -94,9 +94,101 @@ namespace Authlete.Handler
         public async Task<HttpResponseMessage> Handle(
             string parameters, AuthenticationHeaderValue authorization)
         {
+            // Convert the value of the Authorization header
+            // (credentials of the client application), if any,
+            // into BasicCredentials.
+            BasicCredentials credentials =
+                BasicCredentials.Parse(authorization);
+
+            return await Handle(parameters, credentials);
+        }
+
+
+        /// <summary>
+        /// Handle a token request to a token endpoint. This method
+        /// calls Authlete's <c>/api/auth/token</c> API and
+        /// conditionally <c>/api/auth/token/issue</c> API or
+        /// <c>/api/token/issue/fail</c> API.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.3
+        /// </para>
+        /// </remarks>
+        ///
+        /// <returns>
+        /// An HTTP response that should be returned from the token
+        /// endpoint implementation to the client application.
+        /// </returns>
+        ///
+        /// <param name="parameters">
+        /// Form parameters of the token request in
+        /// <c>application/x-www-form-urlencoded</c> format.
+        /// The value can be obtained by calling
+        /// <c>HttpRequestMessage.Content.ReadAsStringAsync</c>.
+        /// </param>
+        ///
+        /// <param name="authorizationHeaderValue">
+        /// The value of the <c>Authorization</c> header of the
+        /// token request. The value can be obtained by calling
+        /// <c>HttpRequestMessage.Headers.Authorization</c>.
+        /// Note that token requests don't always have an
+        /// <c>Authorization</c> header.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"/>
+        public async Task<HttpResponseMessage> Handle(
+            string parameters, string authorizationHeaderValue)
+        {
+            // Convert the value of the Authorization header
+            // (credentials of the client application), if any,
+            // into BasicCredentials.
+            BasicCredentials credentials =
+                BasicCredentials.Parse(authorizationHeaderValue);
+
+            return await Handle(parameters, credentials);
+        }
+
+
+        /// <summary>
+        /// Handle a token request to a token endpoint. This method
+        /// calls Authlete's <c>/api/auth/token</c> API and
+        /// conditionally <c>/api/auth/token/issue</c> API or
+        /// <c>/api/token/issue/fail</c> API.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.3
+        /// </para>
+        /// </remarks>
+        ///
+        /// <returns>
+        /// An HTTP response that should be returned from the token
+        /// endpoint implementation to the client application.
+        /// </returns>
+        ///
+        /// <param name="parameters">
+        /// Form parameters of the token request in
+        /// <c>application/x-www-form-urlencoded</c> format.
+        /// The value can be obtained by calling
+        /// <c>HttpRequestMessage.Content.ReadAsStringAsync</c>.
+        /// </param>
+        ///
+        /// <param name="credentials">
+        /// The pair of client ID and client secret that might be
+        /// embedded in the <c>Authorization</c> header of the
+        /// token request.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"/>
+        public async Task<HttpResponseMessage> Handle(
+            string parameters, BasicCredentials credentials)
+        {
             // Call Authlete's /api/auth/token API.
             TokenResponse response =
-                await CallTokenApi(parameters, authorization);
+                await CallTokenApi(parameters, credentials);
 
             // 'action' in the response denotes the next action which
             // the implementation of the token endpoint should take.
@@ -138,7 +230,7 @@ namespace Authlete.Handler
 
 
         async Task<TokenResponse> CallTokenApi(
-            string parameters, AuthenticationHeaderValue authorization)
+            string parameters, BasicCredentials credentials)
         {
             if (parameters == null)
             {
@@ -148,12 +240,6 @@ namespace Authlete.Handler
                 // a client application's error.
                 parameters = "";
             }
-
-            // Convert the value of the Authorization header
-            // (credentials of the client application), if any,
-            // into BasicCredentials.
-            BasicCredentials credentials =
-                BasicCredentials.Parse(authorization);
 
             // Prepare a request for Authlete's /api/auth/token API.
             TokenRequest request = new TokenRequest
