@@ -77,9 +77,96 @@ namespace Authlete.Handler
         public async Task<HttpResponseMessage> Handle(
             string parameters, AuthenticationHeaderValue authorization)
         {
+            // Convert the value of the Authorization header
+            // (credentials of the client application), if any,
+            // into BasicCredentials.
+            BasicCredentials credentials =
+                BasicCredentials.Parse(authorization);
+
+            return await Handle(parameters, credentials);
+        }
+
+
+        /// <summary>
+        /// Handle a revocation request
+        /// (<a href="https://tools.ietf.org/html/rfc7009">RFC
+        /// 7009</a>). This method calls Authlete's
+        /// <c>/api/auth/revocation</c> API.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.3
+        /// </para>
+        /// </remarks>
+        ///
+        /// <returns>
+        /// An HTTP response that should be returned from the
+        /// revocation endpoint implementation to the client
+        /// application.
+        /// </returns>
+        ///
+        /// <param name="parameters">
+        /// Request parameters of a revocation request.
+        /// </param>
+        ///
+        /// <param name="authorizationHeaderValue">
+        /// The value of the <c>Authorization</c> header in the
+        /// revocation request. A client application may embed its
+        /// pair of client ID and client secret in a revocation
+        /// request using Basic Authentication.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"/>
+        public async Task<HttpResponseMessage> Handle(
+            string parameters, string authorizationHeaderValue)
+        {
+            // Convert the value of the Authorization header
+            // (credentials of the client application), if any,
+            // into BasicCredentials.
+            BasicCredentials credentials =
+                BasicCredentials.Parse(authorizationHeaderValue);
+
+            return await Handle(parameters, credentials);
+        }
+
+
+        /// <summary>
+        /// Handle a revocation request
+        /// (<a href="https://tools.ietf.org/html/rfc7009">RFC
+        /// 7009</a>). This method calls Authlete's
+        /// <c>/api/auth/revocation</c> API.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.3
+        /// </para>
+        /// </remarks>
+        ///
+        /// <returns>
+        /// An HTTP response that should be returned from the
+        /// revocation endpoint implementation to the client
+        /// application.
+        /// </returns>
+        ///
+        /// <param name="parameters">
+        /// Request parameters of a revocation request.
+        /// </param>
+        ///
+        /// <param name="credentials">
+        /// The pair of client ID and client secret that might be
+        /// embedded in the <c>Authorization</c> header of the
+        /// revocation request.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"/>
+        public async Task<HttpResponseMessage> Handle(
+            string parameters, BasicCredentials credentials)
+        {
             // Call Authlete's /api/auth/revocation API.
             RevocationResponse response =
-                await CallRevocationApi(parameters, authorization);
+                await CallRevocationApi(parameters, credentials);
 
             // 'action' in the response denotes the next action which
             // the implementation of revocation endpoint should take.
@@ -116,7 +203,7 @@ namespace Authlete.Handler
 
 
         async Task<RevocationResponse> CallRevocationApi(
-            string parameters, AuthenticationHeaderValue authorization)
+            string parameters, BasicCredentials credentials)
         {
             if (parameters == null)
             {
@@ -126,12 +213,6 @@ namespace Authlete.Handler
                 // a client application's error.
                 parameters = "";
             }
-
-            // Convert the value of the Authorization header
-            // (credentials of the client application), if any,
-            // into BasicCredentials.
-            BasicCredentials credentials =
-                BasicCredentials.Parse(authorization);
 
             // Prepare a request for Authlete's /api/auth/revocation API.
             var request = new RevocationRequest
