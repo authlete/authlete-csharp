@@ -1,6 +1,15 @@
 変更点
 ======
 
+1.0.3 (2018 年 01 月 04 日)
+---------------------------
+
+- `TokenRequestHandler.Handle(string, string)` メソッドを追加。
+- `TokenRequestHandler.Handle(string, BasicCredentials)` メソッドを追加。
+- `RevocationRequestHandler.Handle(string, string)` メソッドを追加。
+- `RevocationRequestHandler.Handle(string, BasicCredentials)` メソッドを追加。
+
+
 1.0.2 (2018 年 01 月 02 日)
 ---------------------------
 
