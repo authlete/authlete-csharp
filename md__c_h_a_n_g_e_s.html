@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Authlete: Class Members - Properties</title>
+<title>Authlete: CHANGES</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('functions_prop_f.html','');});
+$(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -78,19 +78,33 @@ $(document).ready(function(){initNavTree('functions_prop_f.html','');});
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">CHANGES </div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;
-
-<h3><a id="index_f"></a>- f -</h3><ul>
-<li>Formatted
-: <a class="el" href="class_authlete_1_1_dto_1_1_address.html#a75b92ff852a0e036c5939d5155990d78">Address</a>
-, <a class="el" href="class_authlete_1_1_web_1_1_basic_credentials.html#a75b92ff852a0e036c5939d5155990d78">BasicCredentials</a>
-</li>
-<li>FormattedParameter
-: <a class="el" href="class_authlete_1_1_web_1_1_basic_credentials.html#a2b8d818920619010b27afe5e82c55000">BasicCredentials</a>
-</li>
+<div class="textblock"><h2>1.0.3 (2018-01-04) </h2>
+<ul>
+<li>Added <code>TokenRequestHandler.Handle(string, string)</code> method.</li>
+<li>Added <code>TokenRequestHandler.Handle(string, BasicCredentials)</code> method.</li>
+<li>Added <code>RevocationRequestHandler.Handle(string, string)</code> method.</li>
+<li>Added <code>RevocationRequestHandler.Handle(string, BasicCredentials)</code> method.</li>
 </ul>
-</div><!-- contents -->
+<h2>1.0.2 (2018-01-02) </h2>
+<ul>
+<li>Fixed a bug in <code>AuthleteApi</code> where objects which should not be processed by the JSON processor were passed to the JSON processor.</li>
+</ul>
+<h2>1.0.1 (2018-01-02) </h2>
+<ul>
+<li>Fixed a bug in <code>BasicCredentials.Parse(string)</code>.</li>
+<li>Fixed a bug in <code>AuthleteApi</code> where Authorization header was badly formatted.</li>
+<li>Added <code>BasicCredentials.FormattedParameter</code> property.</li>
+</ul>
+<h2>1.0.0 (2018-01-01) </h2>
+<ul>
+<li>First release. </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -46,5 +46,6 @@ var searchData=
   ['createservice',['CreateService',['../class_authlete_1_1_api_1_1_authlete_api.html#aa108e8cda8d6c8de68f8052157d94a1e',1,'Authlete.Api.AuthleteApi.CreateService()'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#aca390636648fb4196727b251cd886403',1,'Authlete.Api.IAuthleteApi.CreateService()']]],
   ['currenttimemillis',['CurrentTimeMillis',['../class_authlete_1_1_util_1_1_time_utility.html#a5e06ee2bd040716697750b295a8ecbfe',1,'Authlete::Util::TimeUtility']]],
   ['currenttimeseconds',['CurrentTimeSeconds',['../class_authlete_1_1_util_1_1_time_utility.html#a805628d6bfd1bbd1acb318fcbc0823cf',1,'Authlete::Util::TimeUtility']]],
+  ['changes',['CHANGES',['../md__c_h_a_n_g_e_s.html',1,'']]],
   ['c_23_20用_20authlete_20ライブラリ',['C# 用 Authlete ライブラリ',['../md__r_e_a_d_m_e_8ja.html',1,'']]]
 ];
