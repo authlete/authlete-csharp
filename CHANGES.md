@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.0.4 (2018-01-06)
+------------------
+
+- Fixed the attribute of `AuthorizationResponse.Prompts`.
+
+
 1.0.3 (2018-01-04)
 ------------------
 
