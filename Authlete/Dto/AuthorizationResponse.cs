@@ -1122,8 +1122,7 @@ namespace Authlete.Dto
         /// parameter.
         /// </para>
         /// </remarks>
-        [JsonProperty("prompts")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty("prompts", ItemConverterType = typeof(StringEnumConverter))]
         public Prompt[] Prompts { get; set; }
 
 
