@@ -246,7 +246,7 @@ namespace Authlete.Handler
             string ticket, AuthorizationFailReason reason)
         {
             // Create a request for Authlete's
-            // /api/auth/authorizatin/fail API.
+            // /api/auth/authorization/fail API.
             var request = new AuthorizationFailRequest
             {
                 Ticket = ticket,
