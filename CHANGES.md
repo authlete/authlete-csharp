@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.0.5 (2018-01-07)
+------------------
+
+- Removed `PrepareUserClaims` method from `IUserInfoRequestHandlerSpi`.
+
+
 1.0.4 (2018-01-06)
 ------------------
 
