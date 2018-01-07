@@ -37,27 +37,6 @@ namespace Authlete.Handler.Spi
         : IUserClaimProvider
     {
         /// <summary>
-        /// Prepare claim values of the user who is identified by
-        /// the subject. This method is called before calls of the
-        /// <c>GetUserClaim</c> method.
-        /// </summary>
-        ///
-        /// <param name="subject">
-        /// The subject (= unique identifier) of the user.
-        /// </param>
-        ///
-        /// <param name="claimNames">
-        /// Names of the requested claims. Each claim name may
-        /// contain a language tag. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
-        /// Claims Languages and Scripts</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
-        /// Connect Core 1.0</a> for details.
-        /// </param>
-        void PrepareUserClaims(string subject, string[] claimNames);
-
-
-        /// <summary>
         /// The value of the <c>"sub"</c> claim that will be
         /// embedded in the response from the userinfo endpoint.
         /// If this property is <c>null</c>, the subject associated

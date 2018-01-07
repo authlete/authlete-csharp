@@ -32,12 +32,6 @@ namespace Authlete.Handler.Spi
     public class UserInfoRequestHandlerSpiAdapter
         : UserClaimProviderAdapter, IUserInfoRequestHandlerSpi
     {
-        public virtual void
-        PrepareUserClaims(string subject, string[] claimNames)
-        {
-        }
-
-
         public virtual string
         GetSub()
         {
