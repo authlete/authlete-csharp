@@ -104,9 +104,6 @@ Inheritance diagram for UserInfoRequestHandlerSpiAdapter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acce8d209f195b2a9b9471b7fce2e05fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html#acce8d209f195b2a9b9471b7fce2e05fa">PrepareUserClaims</a> (string subject, string[] claimNames)</td></tr>
-<tr class="memdesc:acce8d209f195b2a9b9471b7fce2e05fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare claim values of the user who is identified by the subject. This method is called before calls of the <code>GetUserClaim</code> method.  <a href="#acce8d209f195b2a9b9471b7fce2e05fa">More...</a><br /></td></tr>
-<tr class="separator:acce8d209f195b2a9b9471b7fce2e05fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9658f82dee542f8d2b47937765abba3"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html#ac9658f82dee542f8d2b47937765abba3">GetSub</a> ()</td></tr>
 <tr class="memdesc:ac9658f82dee542f8d2b47937765abba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the <code>"sub"</code> claim that will be embedded in the response from the userinfo endpoint. If this property is <code>null</code>, the subject associated with the access token (which was presented by the client application at the userinfo endpoint) will be used as the value of the <code>"sub"</code> claim.  <a href="#ac9658f82dee542f8d2b47937765abba3">More...</a><br /></td></tr>
 <tr class="separator:ac9658f82dee542f8d2b47937765abba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,58 +142,6 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The value of the <code>"sub"</code> claim. </dd></dl>
 
 <p>Implements <a class="el" href="interface_authlete_1_1_handler_1_1_spi_1_1_i_user_info_request_handler_spi.html#a4fff0dae09d89fa48d17afd0721bb076">IUserInfoRequestHandlerSpi</a>.</p>
-
-</div>
-</div>
-<a id="acce8d209f195b2a9b9471b7fce2e05fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce8d209f195b2a9b9471b7fce2e05fa">&#9670;&nbsp;</a></span>PrepareUserClaims()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void PrepareUserClaims </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>subject</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string []&#160;</td>
-          <td class="paramname"><em>claimNames</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Prepare claim values of the user who is identified by the subject. This method is called before calls of the <code>GetUserClaim</code> method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">subject</td><td>The subject (= unique identifier) of the user. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">claimNames</td><td>Names of the requested claims. Each claim name may contain a language tag. See <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2. Claims Languages and Scripts</a> of <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for details. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="interface_authlete_1_1_handler_1_1_spi_1_1_i_user_info_request_handler_spi.html#adb8278b1ded4d44790aad5d147141529">IUserInfoRequestHandlerSpi</a>.</p>
 
 </div>
 </div>
