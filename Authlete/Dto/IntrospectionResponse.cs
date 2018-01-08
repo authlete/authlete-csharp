@@ -277,5 +277,32 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("expiresAt")]
         public long ExpiresAt { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether the access token is
+        /// active (= exists and has not expired). This property is
+        /// just an alias of the `IsUsable` property. The reason
+        /// this property was added is to mitigate confusion that
+        /// those who are familiar with
+        /// <a href="https://tools.ietf.org/html/rfc7662">RFC 7662</a>
+        /// (OAuth 2.0 Token Introspection) may have.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.6.
+        /// </para>
+        /// </remarks>
+        public bool IsActive
+        {
+            get {
+                return IsUsable;
+            }
+
+            set {
+                IsUsable = value;
+            }
+        }
     }
 }
