@@ -232,7 +232,7 @@ namespace Authlete.Dto
         /// exists or not.
         /// </summary>
         [JsonProperty("existent")]
-        public bool Existent { get; set; }
+        public bool IsExistent { get; set; }
 
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace Authlete.Dto
         /// usable (= exists and has not expired).
         /// </summary>
         [JsonProperty("usable")]
-        public bool Usable { get; set; }
+        public bool IsUsable { get; set; }
 
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Authlete.Dto
         /// covers the required scopes.
         /// </summary>
         [JsonProperty("sufficient")]
-        public bool Sufficient { get; set; }
+        public bool IsSufficient { get; set; }
 
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Authlete.Dto
         /// refresh token has already expired.
         /// </summary>
         [JsonProperty("refreshable")]
-        public bool Refreshable { get; set; }
+        public bool IsRefreshable { get; set; }
 
 
         /// <summary>
