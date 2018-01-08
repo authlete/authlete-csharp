@@ -1,6 +1,16 @@
 変更点
 ======
 
+1.0.6 (2018 年 01 月 08 日)
+---------------------------
+
+- `IntrospectionResponse` の `Existent` プロパティーを `IsExistent` へとリネーム。
+- `IntrospectionResponse` の `Usable` プロパティーを `IsUsable` へとリネーム。
+- `IntrospectionResponse` の `Sufficient` プロパティーを `IsSufficient` へとリネーム。
+- `IntrospectionResponse` の `Refreshable` プロパティーを `IsRefreshable` へとリネーム。
+- `IntrospectinoResponse` に `IsUsable` の別名として `IsActive` プロパティーを追加。
+
+
 1.0.5 (2018 年 01 月 07 日)
 ---------------------------
 

@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+1.0.6 (2018-01-08)
+------------------
+
+- Renamed `Existent` property in `IntrospectionResponse` to `IsExistent`.
+- Renamed `Usable` property in `IntrospectionResponse` to `IsUsable`.
+- Renamed `Sufficient` property in `IntrospectionResponse` to `IsSufficient`.
+- Renamed `Refreshable` property in `IntrospectionResponse` to `IsRefreshable`.
+- Added `IsActive` property to `IntrospectionResponse` as an alias of `IsUsable`.
+
+
 1.0.5 (2018-01-07)
 ------------------
 
