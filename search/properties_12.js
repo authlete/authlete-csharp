@@ -1,7 +1,6 @@
 var searchData=
 [
   ['uilocales',['UiLocales',['../class_authlete_1_1_dto_1_1_authorization_response.html#a1d1299301e893485fc9ab78cb96ae18c',1,'Authlete::Dto::AuthorizationResponse']]],
-  ['usable',['Usable',['../class_authlete_1_1_dto_1_1_introspection_response.html#aa73627cc6c75f8962fcff53c06829801',1,'Authlete::Dto::IntrospectionResponse']]],
   ['userid',['UserId',['../class_authlete_1_1_web_1_1_basic_credentials.html#abc7e824d07fb4b7efdef6498d7c99e63',1,'Authlete::Web::BasicCredentials']]],
   ['userinfoencryptionalg',['UserInfoEncryptionAlg',['../class_authlete_1_1_dto_1_1_client.html#aa6dfdd915e11d237bc5017f8b4e42f58',1,'Authlete::Dto::Client']]],
   ['userinfoencryptionenc',['UserInfoEncryptionEnc',['../class_authlete_1_1_dto_1_1_client.html#ad7d593831b930833fee337a578091e3f',1,'Authlete::Dto::Client']]],

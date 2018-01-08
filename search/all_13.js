@@ -11,7 +11,6 @@ var searchData=
   ['updateservice',['UpdateService',['../class_authlete_1_1_api_1_1_authlete_api.html#a9e5b853be8bfc637cf9abdcb8c10222f',1,'Authlete.Api.AuthleteApi.UpdateService()'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#a1adf2ee215df4a6b05570cd112a8b3c3',1,'Authlete.Api.IAuthleteApi.UpdateService()']]],
   ['urldecode',['UrlDecode',['../class_authlete_1_1_util_1_1_text_utility.html#a21c20da1e3fa64eefcb14c4b1fe44b34',1,'Authlete::Util::TextUtility']]],
   ['urlencode',['UrlEncode',['../class_authlete_1_1_util_1_1_text_utility.html#a79a5d3bbf7959b54bf213c5158f7e866',1,'Authlete::Util::TextUtility']]],
-  ['usable',['Usable',['../class_authlete_1_1_dto_1_1_introspection_response.html#aa73627cc6c75f8962fcff53c06829801',1,'Authlete::Dto::IntrospectionResponse']]],
   ['userclaimprovideradapter',['UserClaimProviderAdapter',['../class_authlete_1_1_handler_1_1_spi_1_1_user_claim_provider_adapter.html',1,'Authlete::Handler::Spi']]],
   ['userid',['UserId',['../class_authlete_1_1_web_1_1_basic_credentials.html#abc7e824d07fb4b7efdef6498d7c99e63',1,'Authlete::Web::BasicCredentials']]],
   ['userinfo',['UserInfo',['../class_authlete_1_1_api_1_1_authlete_api.html#ac522a9117f3025814c7720386d2e9425',1,'Authlete.Api.AuthleteApi.UserInfo()'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#aa10e6b49262810c44a6d9ecf02bb0e77',1,'Authlete.Api.IAuthleteApi.UserInfo()']]],

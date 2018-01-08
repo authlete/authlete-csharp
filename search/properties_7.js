@@ -7,6 +7,7 @@ var searchData=
   ['idtokenencryptionenc',['IdTokenEncryptionEnc',['../class_authlete_1_1_dto_1_1_client.html#ae8811e357008df44e8a8522eda390d1f',1,'Authlete::Dto::Client']]],
   ['idtokensignalg',['IdTokenSignAlg',['../class_authlete_1_1_dto_1_1_client.html#ad7551b8fe6516591176cc4d53bceddf8',1,'Authlete::Dto::Client']]],
   ['isacressential',['IsAcrEssential',['../class_authlete_1_1_dto_1_1_authorization_response.html#a354a2efd3a1034496ae5c46823f8c5b1',1,'Authlete::Dto::AuthorizationResponse']]],
+  ['isactive',['IsActive',['../class_authlete_1_1_dto_1_1_introspection_response.html#a92c6b1cf703f9e064f5efc0907f80379',1,'Authlete::Dto::IntrospectionResponse']]],
   ['isauthtimerequired',['IsAuthTimeRequired',['../class_authlete_1_1_dto_1_1_client.html#a9750dad1b33c042d78fa876f9f663a80',1,'Authlete::Dto::Client']]],
   ['isclientidaliasenabled',['IsClientIdAliasEnabled',['../class_authlete_1_1_dto_1_1_client.html#a4710df1daa3a166e3319ffdc2fa3b454',1,'Authlete::Dto::Client']]],
   ['isclientidaliasused',['IsClientIdAliasUsed',['../class_authlete_1_1_dto_1_1_authorization_response.html#a05bac6f2b5a683a49cd10f8046634456',1,'Authlete.Dto.AuthorizationResponse.IsClientIdAliasUsed()'],['../class_authlete_1_1_dto_1_1_token_create_request.html#a05bac6f2b5a683a49cd10f8046634456',1,'Authlete.Dto.TokenCreateRequest.IsClientIdAliasUsed()'],['../class_authlete_1_1_dto_1_1_token_issue_response.html#a05bac6f2b5a683a49cd10f8046634456',1,'Authlete.Dto.TokenIssueResponse.IsClientIdAliasUsed()'],['../class_authlete_1_1_dto_1_1_token_response.html#a05bac6f2b5a683a49cd10f8046634456',1,'Authlete.Dto.TokenResponse.IsClientIdAliasUsed()']]],
@@ -17,9 +18,13 @@ var searchData=
   ['isdirectrevocationendpointenabled',['IsDirectRevocationEndpointEnabled',['../class_authlete_1_1_dto_1_1_service.html#a555465da162aa6cb2e6e366ccbcf5de4',1,'Authlete::Dto::Service']]],
   ['isdirecttokenendpointenabled',['IsDirectTokenEndpointEnabled',['../class_authlete_1_1_dto_1_1_service.html#a1455465cefe01240d7ade737709d8c5e',1,'Authlete::Dto::Service']]],
   ['isdirectuserinfoendpointenabled',['IsDirectUserInfoEndpointEnabled',['../class_authlete_1_1_dto_1_1_service.html#a7fff62fa1cd8729890666e4604d30122',1,'Authlete::Dto::Service']]],
+  ['isexistent',['IsExistent',['../class_authlete_1_1_dto_1_1_introspection_response.html#a26474a1e64c5ade83992596c49b98056',1,'Authlete::Dto::IntrospectionResponse']]],
   ['ishidden',['IsHidden',['../class_authlete_1_1_dto_1_1_property.html#a9dde57eae1f04b6e656f40a262118380',1,'Authlete::Dto::Property']]],
   ['ispkcerequired',['IsPkceRequired',['../class_authlete_1_1_dto_1_1_service.html#aa72f9e5a5338a69f13d9cba2f2ad1896',1,'Authlete::Dto::Service']]],
+  ['isrefreshable',['IsRefreshable',['../class_authlete_1_1_dto_1_1_introspection_response.html#a449a4c00dbb8daa7534d92b782f08b0b',1,'Authlete::Dto::IntrospectionResponse']]],
   ['isrequestablescopesenabled',['IsRequestableScopesEnabled',['../class_authlete_1_1_dto_1_1_client_extension.html#a3c9928f1eb1b962e1b5f0d7c583ed82d',1,'Authlete::Dto::ClientExtension']]],
   ['issingleaccesstokenpersubject',['IsSingleAccessTokenPerSubject',['../class_authlete_1_1_dto_1_1_service.html#aee17734606ced132dc4c8798a949536c',1,'Authlete::Dto::Service']]],
-  ['issuer',['Issuer',['../class_authlete_1_1_dto_1_1_service.html#a9a63e04dfd03f09ee9a29cd30fe9e7ff',1,'Authlete::Dto::Service']]]
+  ['issuer',['Issuer',['../class_authlete_1_1_dto_1_1_service.html#a9a63e04dfd03f09ee9a29cd30fe9e7ff',1,'Authlete::Dto::Service']]],
+  ['issufficient',['IsSufficient',['../class_authlete_1_1_dto_1_1_introspection_response.html#a51895f66d5e670b15aae4a20f3312785',1,'Authlete::Dto::IntrospectionResponse']]],
+  ['isusable',['IsUsable',['../class_authlete_1_1_dto_1_1_introspection_response.html#a4c229593df19c46b3d7bc0583b62aac2',1,'Authlete::Dto::IntrospectionResponse']]]
 ];
