@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "AccessTokenValidator", "class_authlete_1_1_web_1_1_access_token_validator.html", null ],
     [ "Address", "class_authlete_1_1_dto_1_1_address.html", null ],
     [ "ApiResponse", "class_authlete_1_1_dto_1_1_api_response.html", [
       [ "AuthorizationFailResponse", "class_authlete_1_1_dto_1_1_authorization_fail_response.html", null ],
