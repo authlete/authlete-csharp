@@ -262,7 +262,7 @@ categories.
 
   12. Methods for Authorization Management on a User-Client Combination Basis
 
-    - `DeleteClientAuthorization(long clientId)`
+    - `DeleteClientAuthorization(long clientId, string subject)`
     - `GetClientAuthorizationList(ClientAuthorizationGetListRequest request)`
     - `UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)`
 
