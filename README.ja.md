@@ -260,7 +260,7 @@ settings.Timeout = TimeSpan.FromSeconds(5);
 
   12. ユーザー・クライアント単位の認可管理に関するメソッド群
 
-    - `DeleteClientAuthorization(long clientId)`
+    - `DeleteClientAuthorization(long clientId, string subject)`
     - `GetClientAuthorizationList(ClientAuthorizationGetListRequest request)`
     - `UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)`
 
