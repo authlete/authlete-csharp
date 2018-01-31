@@ -192,51 +192,51 @@ settings.Timeout = TimeSpan.FromSeconds(5);
 
   1. 認可エンドポイント実装のためのメソッド群
 
-    - `Authorization(AuthorizationRequest)`
-    - `AuthorizationFail(AuthorizationFailRequest)`
-    - `AuthorizationIssue(AuthorizationIssueRequest)`
+    - `Authorization(AuthorizationRequest request)`
+    - `AuthorizationFail(AuthorizationFailRequest request)`
+    - `AuthorizationIssue(AuthorizationIssueRequest request)`
 
   2. トークンエンドポイント実装のためのメソッド群
 
-    - `Token(TokenRequest)`
-    - `TokenFail(TokenFailRequest)`
-    - `TokenIssue(TokenIssueRequest)`
+    - `Token(TokenRequest request)`
+    - `TokenFail(TokenFailRequest request)`
+    - `TokenIssue(TokenIssueRequest request)`
 
   3. サービス管理のためのメソッド群
 
-    - `CreateService(Service)`
+    - `CreateService(Service service)`
     - `DeleteService(long serviceApiKey)`
     - `GetService(long serviceApiKey)`
     - `GetServiceList()`
     - `GetServiceList(int start, int end)`
-    - `UpdateService(Service)`
+    - `UpdateService(Service service)`
 
   4. クライアントアプリケーション管理のためのメソッド群
 
-    - `CreateClient(Client)`
+    - `CreateClient(Client client)`
     - `DeleteClient(long clientId)`
     - `GetClient(long clientId)`
     - `GetClientList()`
     - `GetClientList(int start, int end)`
-    - `UpdateClient(Client)`
-    - `RefreshClientSecret(long)`
-    - `RefreshClientSecret(String)`
-    - `UpdateClientSecret(long, string)`
-    - `UpdateClientSecret(String, string)`
+    - `UpdateClient(Client client)`
+    - `RefreshClientSecret(long clientId)`
+    - `RefreshClientSecret(string clientIdentifier)`
+    - `UpdateClientSecret(long clientId, string clientSecret)`
+    - `UpdateClientSecret(string clientIdentifier, string clientSecret)`
 
   5. アクセストークンの情報取得のためのメソッド群
 
-    - `Introspection(IntrospectionRequest)`
-    - `StandardIntrospection(StandardIntrospectionRequest)`
+    - `Introspection(IntrospectionRequest request)`
+    - `StandardIntrospection(StandardIntrospectionRequest request)`
 
   6. アクセストークン取り消しエンドポイント実装のためのメソッド群
 
-    - `Revocation(RevocationRequest)`
+    - `Revocation(RevocationRequest request)`
 
   7. ユーザー情報エンドポイント実装のためのメソッド群
 
-    - `Userinfo(UserInfoRequest)`
-    - `UserinfoIssue(UserInfoIssueRequest)`
+    - `Userinfo(UserInfoRequest request)`
+    - `UserinfoIssue(UserInfoIssueRequest request)`
 
   8. JWK セットエンドポイント実装のためのメソッド群
 
@@ -250,8 +250,8 @@ settings.Timeout = TimeSpan.FromSeconds(5);
 
   10. トークン操作のためのメソッド群
 
-    - `TokenCreate(TokenCreateRequest)`
-    - `TokenUpdate(TokenUpdateRequest)`
+    - `TokenCreate(TokenCreateRequest request)`
+    - `TokenUpdate(TokenUpdateRequest request)`
 
   11. 付与されたスコープの記録に関するメソッド群
 
