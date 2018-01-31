@@ -194,51 +194,51 @@ categories.
 
   1. Methods for Authorization Endpoint Implementation
 
-    - `Authorization(AuthorizationRequest)`
-    - `AuthorizationFail(AuthorizationFailRequest)`
-    - `AuthorizationIssue(AuthorizationIssueRequest)`
+    - `Authorization(AuthorizationRequest request)`
+    - `AuthorizationFail(AuthorizationFailRequest request)`
+    - `AuthorizationIssue(AuthorizationIssueRequest request)`
 
   2. Methods for Token Endpoint Implementation
 
-    - `Token(TokenRequest)`
-    - `TokenFail(TokenFailRequest)`
-    - `TokenIssue(TokenIssueRequest)`
+    - `Token(TokenRequest request)`
+    - `TokenFail(TokenFailRequest request)`
+    - `TokenIssue(TokenIssueRequest request)`
 
   3. Methods for Service Management
 
-    - `CreateService(Service)`
+    - `CreateService(Service service)`
     - `DeleteService(long serviceApiKey)`
     - `GetService(long serviceApiKey)`
     - `GetServiceList()`
     - `GetServiceList(int start, int end)`
-    - `UpdateService(Service)`
+    - `UpdateService(Service service)`
 
   4. Methods for Client Application Management
 
-    - `CreateClient(Client)`
+    - `CreateClient(Client client)`
     - `DeleteClient(long clientId)`
     - `GetClient(long clientId)`
     - `GetClientList()`
     - `GetClientList(int start, int end)`
-    - `UpdateClient(Client)`
-    - `RefreshClientSecret(long)`
-    - `RefreshClientSecret(String)`
-    - `UpdateClientSecret(long, string)`
-    - `UpdateClientSecret(String, string)`
+    - `UpdateClient(Client client)`
+    - `RefreshClientSecret(long clientId)`
+    - `RefreshClientSecret(string clientIdentifier)`
+    - `UpdateClientSecret(long clientId, string clientSecret)`
+    - `UpdateClientSecret(string clientIdentifier, string clientSecret)`
 
   5. Methods for Access Token Introspection
 
-    - `Introspection(IntrospectionRequest)`
-    - `StandardIntrospection(StandardIntrospectionRequest)`
+    - `Introspection(IntrospectionRequest request)`
+    - `StandardIntrospection(StandardIntrospectionRequest request)`
 
   6. Methods for Revocation Endpoint Implementation
 
-    - `Revocation(RevocationRequest)`
+    - `Revocation(RevocationRequest request)`
 
   7. Methods for User Info Endpoint Implementation
 
-    - `Userinfo(UserInfoRequest)`
-    - `UserinfoIssue(UserInfoIssueRequest)`
+    - `Userinfo(UserInfoRequest request)`
+    - `UserinfoIssue(UserInfoIssueRequest request)`
 
   8. Methods for JWK Set Endpoint Implementation
 
@@ -252,8 +252,8 @@ categories.
 
   10. Methods for Token Operations
 
-    - `TokenCreate(TokenCreateRequest)`
-    - `TokenUpdate(TokenUpdateRequest)`
+    - `TokenCreate(TokenCreateRequest request)`
+    - `TokenUpdate(TokenUpdateRequest request)`
 
   11. Methods for Records of Granted Scopes
 
