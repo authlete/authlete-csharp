@@ -447,7 +447,7 @@ namespace Authlete.Api
         /// <summary>
         /// Get the configuration of the service in JSON format
         /// that complies with
-        /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
         /// Connect Discovery 1.0</a>.
         /// </summary>
         ///
@@ -470,7 +470,7 @@ namespace Authlete.Api
         /// <summary>
         /// Get the configuration of the service in JSON format
         /// that complies with
-        /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
         /// Connect Discovery 1.0</a> (= call Authlete's
         /// <c>/api/service/configuration</c> API).
         /// </summary>
@@ -480,10 +480,10 @@ namespace Authlete.Api
         /// The value returned from this method can be used as the
         /// response body from <c>/.well-known/openid-configuration</c>.
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig">4.
+        /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig">4.
         /// Obtaining OpenID Provider Configuration Information</a>
         /// of
-        /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
         /// Connect Discovery 1.0</a> for details.
         /// </para>
         /// </remarks>
@@ -521,7 +521,7 @@ namespace Authlete.Api
 
         /// <summary>
         /// Delete a client
-        /// (call Authlete's <c>/api/client/delete/{clientId}</c> API).
+        /// (= call Authlete's <c>/api/client/delete/{clientId}</c> API).
         /// </summary>
         ///
         /// <param name="clientId">

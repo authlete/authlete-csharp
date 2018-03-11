@@ -49,7 +49,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns
     /// a string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so if the protected
     /// resource of the resource server wants to return an error
     /// response to the client application in the way that complies
@@ -78,7 +78,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so if the protected
     /// resource of the resource server wants to return an error
     /// response to the client application in the way that complies
@@ -106,7 +106,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so if the protected
     /// resource of the resource server wants to return an error
     /// response to the client application in the way that complies
@@ -134,7 +134,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so if the protected
     /// resource of the resource server wants to return an error
     /// response to the client application in the way that complies
@@ -183,7 +183,7 @@ namespace Authlete.Dto
     /// <para>
     /// Basically, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so if the resource server
     /// has selected <c>"Bearer"</c> as the token type, the string
     /// returned from the <c>ResponseContent</c> property can be

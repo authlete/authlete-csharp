@@ -37,7 +37,7 @@ namespace Authlete.Types
         /// flow</a>, which is not a valid value for the
         /// <c>"grant_type"</c> request parameter of token requests
         /// but is listed in this enum because
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> uses
         /// <c>"implicit"</c> as a value of <c>"grant_types"</c> of
         /// client metadata.

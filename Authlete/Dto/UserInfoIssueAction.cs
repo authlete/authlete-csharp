@@ -27,7 +27,7 @@ namespace Authlete.Dto
         /// <summary>
         /// The request from your system was wrong or an error
         /// occurred in Authlete. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return <c>"500
         /// Internal Server Error"</c> to the client application.
         /// </summary>
@@ -36,7 +36,7 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The request does not contain an access token. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return <c>"400 Bad
         /// Request"</c> to the client application.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The access token does not exist or has expired. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return <c>"401
         /// Unauthorized"</c> to the client application.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Authlete.Dto
         /// The access token does not cover the required scopes.
         /// To be concrete, the access token does not have the
         /// <c>"openid"</c> scope. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return <c>"403
         /// Forbidden"</c> to the client application.
         /// </summary>
@@ -66,7 +66,7 @@ namespace Authlete.Dto
         /// <summary>
         /// The access token was valid and a userinfo response was
         /// generated successfully in JSON format. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return
         /// <c>"200 OK"</c> to the client application with the
         /// content type <c>"application/json;charset=UTF-8"</c>.
@@ -77,7 +77,7 @@ namespace Authlete.Dto
         /// <summary>
         /// The access token was valid and a userinfo response was
         /// generated successfully in JWT format. The
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation should return
         /// <c>"200 OK"</c> to the client application with the
         /// content type <c>"application/jwt"</c>.

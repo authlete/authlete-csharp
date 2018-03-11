@@ -20,7 +20,7 @@ namespace Authlete.Types
 {
     /// <summary>
     /// Values for the <c>"prompt"</c> request parameter defined in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </summary>
     public enum Prompt
@@ -35,7 +35,7 @@ namespace Authlete.Types
         /// the request. The error code will typically be
         /// <c>login_required</c>, <c>interaction_required</c>,
         /// or another code defined in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthError">Section
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthError">Section
         /// 3.1.2.6</a>. This can be used as a method to check
         /// for existing authentication and/or consent.
         /// </summary>

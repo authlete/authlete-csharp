@@ -98,7 +98,7 @@ namespace Authlete.Handler.Spi
         /// because they are reserved in
         /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>
         /// and
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>.
         /// </para>
         ///

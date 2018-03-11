@@ -31,9 +31,9 @@ namespace Authlete.Dto
     /// of client ID and client secret (<c>client_id</c> and
     /// <c>client_secret</c>) along with other request parameters
     /// as described in
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1.
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1.
     /// Client Password</a> of
-    /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+    /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
     /// If the client credentials are contained in both the
     /// <c>Authorization</c> header and the entity body, they must
     /// be identical. Otherwise, Authlete's <c>/api/auth/revocation</c>
@@ -83,7 +83,7 @@ namespace Authlete.Dto
         /// <para>
         /// If the revocation endpoint of the authorization server
         /// supports Basic Authentication as a means of
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client
         /// authentication</a>, and if the request from the client
         /// application contained its client ID in the
         /// <c>Authorization</c> header, the value should be
@@ -104,7 +104,7 @@ namespace Authlete.Dto
         /// <para>
         /// If the revocation endpoint of the authorization server
         /// supports Basic Authentication as a means of
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client
         /// authentication</a>, and if the request from the client
         /// application contained its client secret in the
         /// <c>Authorization</c> header, the value should be

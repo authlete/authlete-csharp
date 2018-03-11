@@ -32,9 +32,9 @@ namespace Authlete.Handler
 {
     /// <summary>
     /// Handler for userinfo requests to a
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
     /// endpoint</a> defined in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </summary>
     public class UserInfoRequestHandler : BaseRequestHandler

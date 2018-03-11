@@ -31,9 +31,9 @@ namespace Authlete.Dto
     /// <remarks>
     /// <para>
     /// Some properties correspond to the ones listed in
-    /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+    /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
     /// Client Metadata</a> of
-    /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
     /// Connect Dynamic Client Registration 1.0</a>.
     /// </para>
     /// </remarks>
@@ -104,9 +104,9 @@ namespace Authlete.Dto
         /// The client type, either <c>ClientType.PUBLIC</c> or
         /// <c>ClientType.CONFIDENTIAL</c>. The definition of
         /// <i>"Client Type"</i> is described in
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-2.1">2.1.
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-2.1">2.1.
         /// Client Types</a> of
-        /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
         /// </summary>
         [JsonProperty("clientType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -115,9 +115,9 @@ namespace Authlete.Dto
 
         /// <summary>
         /// Redirect URIs. See
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-3.1.2">3.1.2.
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">3.1.2.
         /// Redirection Endpoint</a> of
-        /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
         /// </summary>
         [JsonProperty("redirectUris")]
         public string[] RedirectUris { get; set; }
@@ -128,9 +128,9 @@ namespace Authlete.Dto
         /// application is declaring that it will restrict itself
         /// to using. This property corresponds to the
         /// <c>"response_types"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("responseTypes", ItemConverterType = typeof(StringEnumConverter))]
@@ -142,9 +142,9 @@ namespace Authlete.Dto
         /// application is declaring that it will restrict itself
         /// to using. This property corresponds to the
         /// <c>"grant_types"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("grantTypes", ItemConverterType = typeof(StringEnumConverter))]
@@ -156,9 +156,9 @@ namespace Authlete.Dto
         /// <c>WEB</c>, <c>NATIVE</c> or <c>null</c>. This property
         /// corresponds to the <c>"application_type"</c> metadata
         /// defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("applicationType")]
@@ -167,12 +167,12 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The email address of contacts for this client
+        /// The email addresses of contacts for this client
         /// application. This property corresponds to the
         /// <c>"contacts"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("contacts")]
@@ -183,9 +183,9 @@ namespace Authlete.Dto
         /// The name of this client application. This property
         /// corresponds to the <c>"client_name"</c> metadata
         /// defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("clientName")]
@@ -203,9 +203,9 @@ namespace Authlete.Dto
         /// The URI of the logo image of this client application.
         /// This property corresponds to the <c>"logo_uri"</c>
         /// metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("logoUri")]
@@ -223,9 +223,9 @@ namespace Authlete.Dto
         /// The URI of the home page of this client application.
         /// This property corresponds to the <c>"client_uri"</c>
         /// metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("clientUri")]
@@ -244,9 +244,9 @@ namespace Authlete.Dto
         /// client application uses the profile data of the
         /// end-user. This property corresponds to the
         /// <c>"policy_uri"</c> defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("policyUri")]
@@ -264,10 +264,10 @@ namespace Authlete.Dto
         /// <summary>
         /// The URI of the "Terms Of Service" page of this
         /// client application. This property corresponds to the
-        /// <c>"policy_uri"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <c>"tos_uri"</c> metadata defined in
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("tosUri")]
@@ -286,9 +286,9 @@ namespace Authlete.Dto
         /// The URI of the JSON Web Key Set of this client
         /// application. This property corresponds to the
         /// <c>"jwks_uri"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("jwksUri")]
@@ -299,9 +299,9 @@ namespace Authlete.Dto
         /// The JSON Web Key Set of this client application. This
         /// property corresponds to the
         /// <c>"jwks"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("jwks")]
@@ -311,13 +311,13 @@ namespace Authlete.Dto
         /// <summary>
         /// The sector identifier URI. This property corresponds to
         /// the <c>"sector_identifier_uri"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>. See
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#SectorIdentifierValidation">5.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#SectorIdentifierValidation">5.
         /// "sector_identifier_uri" Validation</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for details.
         /// </summary>
         [JsonProperty("sectorIdentifier")]
@@ -327,13 +327,13 @@ namespace Authlete.Dto
         /// <summary>
         /// The subject type. This property corresponds to the
         /// <c>"subject_type"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
         /// Subject Identifier Types</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details.
         /// </summary>
         [JsonProperty("subjectType")]
@@ -346,9 +346,9 @@ namespace Authlete.Dto
         /// issued to this client application. This property
         /// corresponds to the <c>"id_token_signed_response_alg"</c>
         /// metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("idTokenSignAlg")]
@@ -361,9 +361,9 @@ namespace Authlete.Dto
         /// issued to this client application. This property
         /// corresponds to the <c>"id_token_encrypted_response_alg"</c>
         /// metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("idTokenEncryptionAlg")]
@@ -376,9 +376,9 @@ namespace Authlete.Dto
         /// issued to this client application. This property
         /// corresponds to the <c>"id_token_encrypted_response_enc"</c>
         /// metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("idTokenEncryptionEnc")]
@@ -391,9 +391,9 @@ namespace Authlete.Dto
         /// responses. This property corresponds to the
         /// <c>"userinfo_signed_response_alg"</c> metadata defined
         /// in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("userInfoSignAlg")]
@@ -406,9 +406,9 @@ namespace Authlete.Dto
         /// responses. This property corresponds to the
         /// <c>"userinfo_encrypted_response_alg"</c> metadata
         /// defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("userInfoEncryptionAlg")]
@@ -421,9 +421,9 @@ namespace Authlete.Dto
         /// responses. This property corresponds to the
         /// <c>"userinfo_encrypted_response_enc"</c> metadata
         /// defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("userInfoEncryptionEnc")]
@@ -435,9 +435,9 @@ namespace Authlete.Dto
         /// The JWS <c>"alg"</c> algorithm for signing request
         /// objects. This property corresponds to the
         /// <c>"request_object_signing_alg"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("requestSignAlg")]
@@ -450,9 +450,9 @@ namespace Authlete.Dto
         /// objects. This property corresponds to the
         /// <c>"request_object_encryption_alg"</c> metadata defined
         /// in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("requestEncryptionAlg")]
@@ -465,9 +465,9 @@ namespace Authlete.Dto
         /// objects. This property corresponds to the
         /// <c>"request_object_encryption_enc"</c> metadata defined
         /// in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("requestEncryptionEnc")]
@@ -479,9 +479,9 @@ namespace Authlete.Dto
         /// The client authentication method for the token endpoint.
         /// This property corresponds to the
         /// <c>"token_endpoint_auth_method"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("tokenAuthMethod")]
@@ -495,9 +495,9 @@ namespace Authlete.Dto
         /// property corresponds to the
         /// <c>"token_endpoint_auth_signing_alg"</c> metadata
         /// defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("tokenAuthSignAlg")]
@@ -509,9 +509,9 @@ namespace Authlete.Dto
         /// The default value of the maximum authentication age in
         /// seconds. This property corresponds to the
         /// <c>"default_max_age"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("defaultMaxAge")]
@@ -519,13 +519,13 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether this client requires
+        /// The flag which indicates whether this client requires
         /// <c>"auth_time"</c> claim to be embedded in ID tokens.
         /// This property corresponds to the
         /// <c>"require_auth_time"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("authTimeRequired")]
@@ -536,9 +536,9 @@ namespace Authlete.Dto
         /// The default list of Authentication Context Class
         /// References. This property corresponds to the
         /// <c>"default_acr_values"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("defaultAcrs")]
@@ -549,9 +549,9 @@ namespace Authlete.Dto
         /// The URL that can initiate a login for this client
         /// application. This property corresponds to the
         /// <c>"initiate_login_uri"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("loginUri")]
@@ -562,9 +562,9 @@ namespace Authlete.Dto
         /// The request URIs that this client declares it may use.
         /// This property corresponds to the
         /// <c>"request_uris"</c> metadata defined in
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>.
         /// </summary>
         [JsonProperty("requestUris")]

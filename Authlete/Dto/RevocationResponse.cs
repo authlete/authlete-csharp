@@ -55,7 +55,7 @@ namespace Authlete.Dto
     /// "Authorization" request header field, the authorization
     /// server MUST respond with an HTTP 401 (Unauthorized) status
     /// code and include the
-    /// <a href="http://tools.ietf.org/html/rfc2616#section-14.47">"WWW-Authenticate"</a>
+    /// <a href="https://tools.ietf.org/html/rfc2616#section-14.47">"WWW-Authenticate"</a>
     /// response header field matching the authentication scheme
     /// used by the client.</i>
     /// </para>
@@ -78,7 +78,7 @@ namespace Authlete.Dto
     /// Cache-Control: no-store
     /// Pragma: no-cache
     ///
-    /// (The value returned from <c>ResponseContent</c>)
+    /// (The value returned from ResponseContent)
     /// </code>
     ///
     /// <para>
@@ -111,7 +111,7 @@ namespace Authlete.Dto
     /// Cache-Control: no-store
     /// Pragma: no-cache
     ///
-    /// (The value returned from <c>ResponseContent</c>)
+    /// (The value returned from ResponseContent)
     /// </code>
     ///
     /// <para>
@@ -129,9 +129,9 @@ namespace Authlete.Dto
     /// <a href="https://tools.ietf.org/html/rfc7009">RFC 7009</a>
     /// states <i>"The error presentation conforms to the
     /// definition in
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-5.2">Section
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-5.2">Section
     /// 5.2</a> of
-    /// [<a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>]."</i>
+    /// [<a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>]."</i>
     /// </para>
     ///
     /// <para>
@@ -148,7 +148,7 @@ namespace Authlete.Dto
     /// Cache-Control: no-store
     /// Pragma: no-cache
     ///
-    /// (The value returned from <c>ResponseContent</c>)
+    /// (The value returned from ResponseContent)
     /// </code>
     ///
     /// <para>
@@ -191,7 +191,7 @@ namespace Authlete.Dto
     /// Cache-Control: no-store
     /// Pragma: no-cache
     ///
-    /// (The value returned from <c>ResponseContent</c>)
+    /// (The value returned from ResponseContent)
     /// </code>
     /// </remarks>
     public class RevocationResponse : ApiResponse

@@ -47,11 +47,11 @@ namespace Authlete.Dto
     /// status of the response to the client application should be
     /// either <c>"400 Bad Request"</c> or <c>"401 Unauthorized"</c>.
     /// This requirement comes from
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-5.2">5.2.
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-5.2">5.2.
     /// Error Response</a> of
-    /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+    /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
     /// The description about <c>"invalid_client"</c> shown below
-    /// is an excerpt from RFC 6749
+    /// is an excerpt from RFC 6749.
     /// </para>
     ///
     /// <para>
@@ -63,7 +63,7 @@ namespace Authlete.Dto
     /// attempted to authenticate via the "Authorization" request
     /// header field, the authorization server MUST respond with an
     /// HTTP 401 (Unauthorized) status code and include the
-    /// <a href="http://tools.ietf.org/html/rfc2616#section-14.47">"WWW-Authenticate"</a>
+    /// <a href="https://tools.ietf.org/html/rfc2616#section-14.47">"WWW-Authenticate"</a>
     /// response header field matching the authentication scheme
     /// used by the client.</i>
     /// </para>
@@ -162,7 +162,7 @@ namespace Authlete.Dto
     /// the client application is valid and the value of the
     /// <c>"grant_type"</c> request parameter was <c>"password"</c>.
     /// This indicates that the flow is
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-4.3">Resource
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-4.3">Resource
     /// Owner Password Credentials Flow</a>.
     /// </para>
     ///
@@ -342,7 +342,7 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The newly issued ID token. An
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#IDToken">ID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">ID
         /// token</a> is issued from a token endpoint when the
         /// <a href="https://tools.ietf.org/html/rfc6749#section-4.1">authorization
         /// code flow</a> is used and <c>"openid"</c> is included
@@ -393,7 +393,7 @@ namespace Authlete.Dto
         /// Even if an access token was issued by the call of
         /// <c>/api/auth/token</c> API, this property returns
         /// <c>null</c> if the flow of the token request was
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-4.4">Client
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-4.4">Client
         /// Credentials Flow</a> (<c>grant_type=client_credentials</c>)
         /// because access tokens are not associated with any
         /// specific end-user in the flow.

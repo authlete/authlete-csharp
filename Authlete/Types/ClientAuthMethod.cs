@@ -41,9 +41,9 @@ namespace Authlete.Types
         /// <summary>
         /// Client authentication using Basic Authentication as
         /// defined in
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-3.2.1">3.2.1.
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-3.2.1">3.2.1.
         /// Client Authentication</a> of
-        /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
         /// </summary>
         CLIENT_SECRET_BASIC,
 
@@ -51,9 +51,9 @@ namespace Authlete.Types
         /// <summary>
         /// Client authentication using the <c>"client_secret"</c>
         /// request parameter in the request body as defined in
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-3.2.1">3.2.1.
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-3.2.1">3.2.1.
         /// Client Authentication</a> of
-        /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
         /// </summary>
         CLIENT_SECRET_POST,
 
@@ -61,9 +61,7 @@ namespace Authlete.Types
         /// <summary>
         /// Client authentication using JWT signed by the shared
         /// client secret as defined in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#OAuth.JWT">JSON
-        /// Web Token (JWT) Profile for OAuth 2.0 Client
-        /// Authentication and Authorization Grants</a>.
+        /// <a href="https://tools.ietf.org/html/rfc7523">RFC 7523</a>.
         /// </summary>
         CLIENT_SECRET_JWT,
 
@@ -71,9 +69,7 @@ namespace Authlete.Types
         /// <summary>
         /// Client authentication using JWT signed by the client's
         /// private key as defined in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#OAuth.JWT">JSON
-        /// Web Token (JWT) Profile for OAuth 2.0 Client
-        /// Authentication and Authorization Grants</a>.
+        /// <a href="https://tools.ietf.org/html/rfc7523">RFC 7523</a>.
         /// </summary>
         PRIVATE_KEY_JWT,
 

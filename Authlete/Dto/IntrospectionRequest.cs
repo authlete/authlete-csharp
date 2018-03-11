@@ -58,7 +58,9 @@ namespace Authlete.Dto
         /// Authlete's <c>/api/auth/introspection</c> API returns
         /// <c>IntrospectionAction.FORBIDDEN</c> as the
         /// <c>"action"</c> and sets <c>"invalid_request"</c> as
-        /// the error code.
+        /// the error code. If this property holds <c>null</c>,
+        /// Authlete's <c>/api/auth/introspection</c> API does not
+        /// check the subject of the access token.
         /// </summary>
         [JsonProperty("subject")]
         public string Subject { get; set; }

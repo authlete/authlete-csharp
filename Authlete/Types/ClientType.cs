@@ -20,9 +20,9 @@ namespace Authlete.Types
 {
     /// <summary>
     /// Client types defined in
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-2.1">2.1.
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-2.1">2.1.
     /// Client Types</a> of
-    /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+    /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
     /// </summary>
     public enum ClientType
     {

@@ -55,7 +55,7 @@ namespace Authlete.Dto
         /// server implementation should notify the client application
         /// of the error by <c>"200 OK"</c> with an HTML which
         /// triggers redirection by JavaScript. See
-        /// <a href="http://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html">OAuth
+        /// <a href="https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html">OAuth
         /// 2.0 Form Post Response Mode</a> for details.
         /// </summary>
         FORM,

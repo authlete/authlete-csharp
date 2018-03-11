@@ -88,9 +88,9 @@ namespace Authlete.Dto
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
         /// Standard Claims</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">OpenID
         /// Connect Core 1.0</a> for further details about the
         /// format.
         /// </para>

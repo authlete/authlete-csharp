@@ -32,9 +32,9 @@ namespace Authlete.Dto
     /// <remarks>
     /// <para>
     /// Some properties correspond to the ones listed in
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
     /// OpenID Provider Metadata</a> of
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Connect Discovery 1.0</a>
     /// </para>
     /// </remarks>
@@ -122,9 +122,9 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The URI of the UserInfo endpoint
-        /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
+        /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
         /// UserInfo Endpoint</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>). This property corresponds to the
         /// <c>"userinfo_endpoint"</c> metadata defined in
         /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
@@ -157,9 +157,9 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The URI of the registration endpoint
-        /// (<a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientRegistration">3.
+        /// (<a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientRegistration">3.
         /// Client Registration Endpoint</a>) of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a>). This
         /// property corresponds to the
         /// <c>"registration_endpoint"</c> metadata defined in
@@ -193,7 +193,7 @@ namespace Authlete.Dto
         /// (<a href="https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth
         /// 2.0 Multiple Response Type Encoding Practices</a>).
         /// This property corresponds to the
-        /// <c>"response_type_supported"</c> metadata defined in
+        /// <c>"response_types_supported"</c> metadata defined in
         /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
         /// OpenID Provider Metadata</a> of
         /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
@@ -259,9 +259,9 @@ namespace Authlete.Dto
 
         /// <summary>
         /// Claim types supported by this service
-        /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimTypes">5.6.
+        /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimTypes">5.6.
         /// Claim Types</a> in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>). This property corresponds to the
         /// <c>"claim_types_supported"</c> metadata defined in
         /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
@@ -508,7 +508,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct authorization
+        /// The flag which indicates whether the direct authorization
         /// endpoint is enabled or not. The path of the endpoint is
         /// <c>/api/auth/authorization/direct/{serviceApiKey}</c>.
         /// The default value is <c>true</c>, but it is recommended
@@ -536,8 +536,8 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct token endpoint
-        /// is enabled or not. The path of the endpoint is
+        /// The flag which indicates whether the direct token
+        /// endpoint is enabled or not. The path of the endpoint is
         /// <c>/api/auth/token/direct/{serviceApiKey}</c>. The
         /// default value is <c>true</c>, but it is recommended to
         /// disable the endpoint for production use.
@@ -563,7 +563,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct revocation
+        /// The flag which indicates whether the direct revocation
         /// endpoint is enabled or not. The path of the endpoint is
         /// <c>/api/auth/revocation/direct/{serviceApiKey}</c>.
         /// </summary>
@@ -583,7 +583,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct userinfo
+        /// The flag which indicates whether the direct userinfo
         /// endpoint is enabled or not. However, this feature has
         /// not been implemented yet.
         /// </summary>
@@ -592,7 +592,7 @@ namespace Authlete.Dto
         /// <para>
         /// Authlete provides APIs for developers to implement a
         /// userinfo endpoint
-        /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
+        /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
         /// UserInfo Endpoint</a>) such as <c>/api/auth/userinfo</c>
         /// and <c>/api/auth/userinfo/issue</c>.
         /// </para>
@@ -602,8 +602,8 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct JWK Set endpoint
-        /// is enabled or not. The path of the endpoint is
+        /// The flag which indicates whether the direct JWK Set
+        /// endpoint is enabled or not. The path of the endpoint is
         /// <c>/api/service/jwks/get/direct/{serviceApiKey}</c>.
         /// </summary>
         ///
@@ -623,7 +623,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the direct introspection
+        /// The flag which indicates whether the direct introspection
         /// endpoint is enabled or not. The path of the endpoint is
         /// <c>/api/auth/introspection/standard/direct</c>. The API
         /// is protected by pairs of API key and API secret of
@@ -654,7 +654,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the number of access
+        /// The flag which indicates whether the number of access
         /// tokens per subject (and per client) is at most one or
         /// can be more. If this flag is <c>true</c>, an attempt to
         /// issue a new access token invalidates existing access
@@ -679,8 +679,8 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// The flag to indicate whether the use of Proof Key for
-        /// Code Exchange (PKCE) is always required for
+        /// The flag which indicates whether the use of Proof Key
+        /// for Code Exchange (PKCE) is always required for
         /// authorization requests using
         /// <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization
         /// Code Flow</a>. See

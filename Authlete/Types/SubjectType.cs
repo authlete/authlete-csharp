@@ -20,9 +20,9 @@ namespace Authlete.Types
 {
     /// <summary>
     /// Subject types. See
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
     /// Subject Identifier Types</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details.
     /// </summary>
     public enum SubjectType

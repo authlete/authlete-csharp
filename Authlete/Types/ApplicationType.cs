@@ -20,7 +20,7 @@ namespace Authlete.Types
 {
     /// <summary>
     /// Values for the <c>"application_type"</c> metadata defined in
-    /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
     /// Connect Dynamic Client Registration 1.0</a>.
     /// </summary>
     public enum ApplicationType

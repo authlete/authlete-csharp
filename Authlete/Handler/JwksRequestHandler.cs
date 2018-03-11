@@ -40,9 +40,9 @@ namespace Authlete.Handler
     /// requests to the OP. The URI of a JWK Set endpoint can be
     /// found as the value of the <c>"jwks_uri"</c> metadata which
     /// is defined in
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">OpenID
     /// Provider Metadata</a>, if the OP supports
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Connect Discovery 1.0</a>.
     /// </para>
     /// </remarks>

@@ -54,7 +54,7 @@ namespace Authlete.Dto
         /// The authorization server implementation should return
         /// <c>"200 OK"</c> to the client application with an HTML
         /// which triggers redirection. See
-        /// <a href="http://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html">OAuth
+        /// <a href="https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html">OAuth
         /// 2.0 Form Post Response Mode</a> for details.
         /// </summary>
         FORM,

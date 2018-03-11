@@ -31,20 +31,20 @@ namespace Authlete.Handler
     /// <remarks>
     /// <para>
     /// An OpenID Provider that supports
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Connect Discovery 1.0</a> provides an endpoint that returns
     /// its configuration information in JSON format. Details about
     /// the format are described in
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
     /// OpenID Provider Metadata</a> of
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Connect Discovery 1.0</a>.
     /// </para>
     ///
     /// <para>
     /// Note that the URI of an OpenID Provider configuration
     /// endpoint is defined in
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest">4.1.
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest">4.1.
     /// OpenID Provider Configuration Request</a>. In short, the
     /// URI must be:
     /// </para>
@@ -58,13 +58,13 @@ namespace Authlete.Handler
     /// Provider. For example, <c>https://example.com</c>. For
     /// details about Issuer Identifier, see the description about
     /// the <c>"issuer"</c> metadata defined in
-    /// <a href="http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
+    /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3.
     /// OpenID Provider Metadata</a>
-    /// (<a href="http://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
+    /// (<a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Conect Discovery 1.0</a>) and the <c>"iss"</c> claim in
-    /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#IDToken">2.
+    /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">2.
     /// ID Token</a>
-    /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>).
     /// </para>
     ///

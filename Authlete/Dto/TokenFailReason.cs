@@ -35,7 +35,7 @@ namespace Authlete.Dto
         /// The resource owner's credentials (<c>username</c> and
         /// <c>password</c> contained in the token request whose
         /// flow is
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-4.3">Resource
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-4.3">Resource
         /// Owner Password Credentials</a>) are invalid. Using this
         /// reason will result in <c>error=invalid_request</c>.
         /// </summary>

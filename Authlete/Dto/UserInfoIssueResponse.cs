@@ -31,7 +31,7 @@ namespace Authlete.Dto
     /// <para>
     /// Authlete's <c>/api/auth/userinfo/issue</c> API returns JSON
     /// which can be mapped to this class. The
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
     /// endpoint</a> implementation should retrieve the value of
     /// the <c>"action"</c> response parameter (which can be
     /// obtained via the <c>Action</c> property of this class) from
@@ -54,7 +54,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so the userinfo endpoint
     /// implementation of your system can use the string returned
     /// from the property as the value of the <c>WWW-Authenticate</c>
@@ -62,8 +62,8 @@ namespace Authlete.Dto
     /// with RFC 6750. Note that OpenID Connect Core 1.0 requires
     /// that an error response from the userinfo endpoint comply
     /// with RFC 6750. See
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfoError">5.3.3.
-    /// UserInfoResponse</a> for details.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfoError">5.3.3.
+    /// UserInfo Error Response</a> for details.
     /// </para>
     ///
     /// <code>
@@ -84,7 +84,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so the userinfo endpoint
     /// implementation can use the string returned from the
     /// property as the value of the <c>WWW-Authenticate</c> header.
@@ -109,7 +109,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so the userinfo endpoint
     /// implementation can use the string returned from the
     /// property as the value of the <c>WWW-Authenticate</c> header.
@@ -133,7 +133,7 @@ namespace Authlete.Dto
     /// <para>
     /// In this case, the <c>ResponseContent</c> property returns a
     /// string which describes the error in the format of
-    /// <a href="http://tools.ietf.org/html/rfc6750">RFC 6750</a>
+    /// <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
     /// (OAuth 2.0 Bearer Token Usage), so the userinfo endpoint
     /// implementation can use the string returned from the
     /// property as the value of the <c>WWW-Authenticate</c> header.

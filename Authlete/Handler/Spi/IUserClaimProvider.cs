@@ -44,9 +44,9 @@ namespace Authlete.Handler.Spi
         /// A claim name such as <c>"name"</c> and
         /// <c>"family_name"</c>. Standard claim names are listed
         /// in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
         /// Standard Claims</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>. Constant values that represent
         /// the standard claims are listed in
         /// <c>Authlete.Types.StandardClaims</c> class. Note that
@@ -58,9 +58,9 @@ namespace Authlete.Handler.Spi
         /// A language tag such as <c>"en"</c> and <c>"ja"</c>.
         /// Implementations of this method should take this into
         /// consideration if possible. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
         /// Claims Languages and Scripts</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details.
         /// </param>
         object GetUserClaimValue(

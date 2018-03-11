@@ -23,7 +23,7 @@ namespace Authlete.Dto
 {
     /// <summary>
     /// A string value with a
-    /// <a href="http://en.wikipedia.org/wiki/IETF_language_tag">language
+    /// <a href="https://en.wikipedia.org/wiki/IETF_language_tag">language
     /// tag</a>.
     /// </summary>
     public class TaggedValue
@@ -42,7 +42,7 @@ namespace Authlete.Dto
         /// </summary>
         ///
         /// <param name="tag">
-        /// A <a href="http://en.wikipedia.org/wiki/IETF_language_tag">language
+        /// A <a href="https://en.wikipedia.org/wiki/IETF_language_tag">language
         /// tag</a>
         /// </param>
         ///
@@ -57,7 +57,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// <a href="http://en.wikipedia.org/wiki/IETF_language_tag">Language
+        /// <a href="https://en.wikipedia.org/wiki/IETF_language_tag">Language
         /// tag</a>.
         /// </summary>
         [JsonProperty("tag")]

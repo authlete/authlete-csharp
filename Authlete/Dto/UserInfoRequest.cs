@@ -28,7 +28,7 @@ namespace Authlete.Dto
     {
         /// <summary>
         /// The access token that the
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a> implementation received from the client
         /// application.
         /// </summary>

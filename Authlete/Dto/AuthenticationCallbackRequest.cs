@@ -227,9 +227,9 @@ namespace Authlete.Dto
         /// A <i>claim</i> is a piece of information about an
         /// end-user. Some standard claim names such as
         /// <c>given_name</c> and <c>email</c> are defined in
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
         /// Standard Claims</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>. The implementation of the
         /// authentication callback endpoint should extract data
         /// corresponding to the claims from its database and
@@ -257,9 +257,9 @@ namespace Authlete.Dto
         /// <c>"claims_locales"</c> request parameter contained in
         /// an authorization request. The values are the end-user's
         /// preferred languages and scripts for claims. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
         /// Claims Languages and Scripts</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details.
         /// </para>
         ///

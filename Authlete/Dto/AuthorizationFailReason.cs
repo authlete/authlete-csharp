@@ -41,9 +41,9 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"prompt"</c> request
         /// parameter.
         /// </para>
@@ -67,18 +67,18 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"max_age"</c> request
         /// parameter.
         /// </para>
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for the
         /// <c>"default_max_age"</c> configuration parameter.
         /// </para>
@@ -99,18 +99,18 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"prompt"</c> and
         /// <c>"max_age"</c> request parameters.
         /// </para>
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for the
         /// <c>"default_max_age"</c> configuration parameter.
         /// </para>

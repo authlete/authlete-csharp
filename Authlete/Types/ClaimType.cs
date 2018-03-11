@@ -20,9 +20,9 @@ namespace Authlete.Types
 {
     /// <summary>
     /// Claim types defined in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimTypes">5.6.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimTypes">5.6.
     /// Claim Types</a> in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </summary>
     public enum ClaimType

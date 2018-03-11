@@ -402,9 +402,9 @@ namespace Authlete.Dto
     /// the <c>"sub"</c> claim is different from the value
     /// specified here, but <c>PAIRWISE</c> is not supported by
     /// Authlete yet. See
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">8.
     /// Subject Identifier Types</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details about subject types.
     /// </para>
     /// <para>
@@ -465,9 +465,9 @@ namespace Authlete.Dto
     /// consideration when the authorization server implementation
     /// gathers claim values. Especially, note the excerpt below
     /// from
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
     /// Claims Languages and Scripts</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </para>
     /// <para>
@@ -487,18 +487,18 @@ namespace Authlete.Dto
     /// </para>
     /// <para>
     /// See
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
     /// Standard Claims</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for claim names and their value
     /// formats. Note (1) that the authorization server
     /// implementation may support its special claims
-    /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#AdditionalClaims">5.1.2.
+    /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#AdditionalClaims">5.1.2.
     /// Additional Claims</a>) and (2) that claim names may be
     /// followed by a language tag
-    /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
+    /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsLanguagesAndScripts">5.2.
     /// Claims Languages and Scripts</a>). Read the specification of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details.
     /// </para>
     /// <para>
@@ -541,9 +541,9 @@ namespace Authlete.Dto
     /// not included in the original request, keep in mind that the
     /// specification requires explicit consent from the end-user
     /// for the scope
-    /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
+    /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
     /// Offline Access</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>). When <c>"offline_access"</c> is
     /// included in the original authorization request, the current
     /// implementation of Authlete's <c>/api/auth/authorization</c>
@@ -606,9 +606,9 @@ namespace Authlete.Dto
     /// property and it is one of <c>PAGE</c> (default), <c>POPUP</c>
     /// <c>TOUCH</c> and <c>WAP</c>. The meanings of the values are
     /// described in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
     /// Authentication Request</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>. Basically, the authorization server
     /// implementation should display the UI which is suitable for
     /// the display mode, but it is okay for the authorization
@@ -725,9 +725,9 @@ namespace Authlete.Dto
     /// corresponds to the value of the <c>"prompt"</c> request
     /// parameter. Details of the request parameter are described
     /// in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
     /// Authentication Request</a> of
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </para>
     /// <para>
@@ -738,6 +738,20 @@ namespace Authlete.Dto
     /// value, it is the end-user ID that the client application
     /// expects, so the value should be used to determine the value
     /// of the login ID. Note that a subject and a login ID are not
+    /// necessarily equal. If the <c>Subject</c> property returns
+    /// <c>null</c>, the value returned from the <c>LoginHint</c>
+    /// should be referred to as a hint to determine the value of
+    /// the login ID. The <c>LoginHint</c> property simply returns
+    /// the value of the <c>"login_hint"</c> request parameter.
+    /// </para>
+    /// <para>
+    /// If the value returned from the <c>Prompts</c> property
+    /// contains <c>Prompt.LOGIN</c>, display a form to urge the
+    /// end-user to login even if the end-user has already logged
+    /// in. If the <c>Subject</c> property returns a non-null value,
+    /// it is the end-user ID that the client application expects,
+    /// so the value should be used to determine the value of the
+    /// login ID. Note that a subject and a login ID are not
     /// necessarily equal. If the <c>Subject</c> property returns
     /// <c>null</c>, the value returned from the <c>LoginHint</c>
     /// should be referred to as a hint to determine the value of
@@ -901,18 +915,18 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"max_age"</c> request
         /// parameter.
         /// </para>
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for the
         /// <c>"default_max_age"</c> configuration parameter.
         /// </para>
@@ -956,9 +970,9 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"ui_locales"</c>
         /// request parameter.
         /// </para>
@@ -977,9 +991,9 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"claims_locales"</c>
         /// request parameter.
         /// </para>
@@ -1010,9 +1024,9 @@ namespace Authlete.Dto
         /// contains the <c>"claims"</c> request parameter and it
         /// contains an entry for the <c>"acr"</c> claim with
         /// <c>"essential":true</c>. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests">5.5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests">5.5.1.
         /// Individual Claims Requests</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details.
         /// </para>
         /// </remarks>
@@ -1033,28 +1047,28 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
         /// Requesting Claims using the "claims" Request Parameter</a>
         /// of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"claims"</c> request
         /// parameter.
         /// </para>
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"acr_values"</c>
         /// request parameter.
         /// </para>
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
         /// Client Metadata</a> of
-        /// <a href="http://openid.net/specs/openid-connect-registration-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for the
         /// <c>"default_acr_values"</c> configuration parameter of
         /// the client application.
@@ -1075,10 +1089,10 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
         /// Requesting Claims using the "claims" Request Parameter</a>
         /// of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"claims"</c> request
         /// parameter.
         /// </para>
@@ -1095,9 +1109,9 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"login_hint"</c> request
         /// parameter.
         /// </para>
@@ -1115,9 +1129,9 @@ namespace Authlete.Dto
         /// <remarks>
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1.
         /// Authentication Request</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for the <c>"prompt"</c> request
         /// parameter.
         /// </para>

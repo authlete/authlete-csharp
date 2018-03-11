@@ -85,9 +85,9 @@ namespace Authlete.Handler.Spi
         /// The value returned from this method has an important
         /// meaning only when the <c>"acr"</c> claim is requested
         /// as an essential claim. See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#acrSemantics">5.5.1.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#acrSemantics">5.5.1.1.
         /// Requesting the "acr" Claim</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details.
         /// </para>
         /// </remarks>
@@ -122,7 +122,7 @@ namespace Authlete.Handler.Spi
         /// because they are reserved in
         /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>
         /// and
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>.
         /// </para>
         ///
@@ -188,9 +188,9 @@ namespace Authlete.Handler.Spi
         /// it is not included in the original request, keep in
         /// mind that the specification requires explicit consent
         /// from the end-user for the scope
-        /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
+        /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
         /// Offline Access</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>). When <c>"offline_access"</c> is
         /// included in the original authorization request, the
         /// current implementation of Authlete's

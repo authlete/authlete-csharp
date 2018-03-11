@@ -31,7 +31,7 @@ namespace Authlete.Types
         /// code_verifier</c>. See
         /// <a href="https://tools.ietf.org/html/rfc7636#section-4.2">4.2.
         /// Client Creates the Code Challenge</a> of
-        /// <a href="http://tools.ietf.org/html/rfc7636">RFC 7636</a>
+        /// <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a>
         /// for details.
         /// </summary>
         PLAIN = 1,
@@ -42,7 +42,7 @@ namespace Authlete.Types
         /// BASE64URL-ENCODE(SHA256(ASCII(code_verifier)))</c>. See
         /// <a href="https://tools.ietf.org/html/rfc7636#section-4.2">4.2.
         /// Client Creates the Code Challenge</a> of
-        /// <a href="http://tools.ietf.org/html/rfc7636">RFC 7636</a>
+        /// <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a>
         /// for details.
         /// </summary>
         S256,

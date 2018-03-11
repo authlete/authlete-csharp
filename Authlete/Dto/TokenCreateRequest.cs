@@ -125,7 +125,7 @@ namespace Authlete.Dto
         /// <para>
         /// This has an effect only on the value of the <c>"aud"</c>
         /// claim in a response from a
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo
         /// endpoint</a>. When you access the userinfo endpoint
         /// (which is expected to be implemented using Authlete's
         /// <c>/api/auth/userinfo</c> API and

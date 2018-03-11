@@ -28,7 +28,7 @@ namespace Authlete.Dto
     {
         /// <summary>
         /// The access token contained in the
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfoRequest">userinfo
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfoRequest">userinfo
         /// request</a> from the client application to the userinfo
         /// endpoint.
         /// </summary>
@@ -67,9 +67,9 @@ namespace Authlete.Dto
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
         /// Standard Claims</a>" of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for further details about the
         /// format.
         /// </para>

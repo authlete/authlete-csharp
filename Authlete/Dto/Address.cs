@@ -24,9 +24,9 @@ namespace Authlete.Dto
     /// <summary>
     /// Address claim that represents a physical mailing address.
     /// See
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#AddressClaim">5.1.1.
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#AddressClaim">5.1.1.
     /// Address Claim</a> in
-    /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+    /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details.
     /// </summary>
     public class Address

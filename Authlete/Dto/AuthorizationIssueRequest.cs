@@ -48,9 +48,9 @@ namespace Authlete.Dto
         /// <c>response_type=none</c> (which means the cient
         /// application did not request any token to be returned).
         /// See
-        /// <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#none">4.
+        /// <a href="https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#none">4.
         /// None Response Type</a> of
-        /// <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth
+        /// <a href="https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth
         /// 2.0 Multiple Response Type Encoding Practices</a> for
         /// details about <c>response_type=none</c>.
         /// </summary>
@@ -147,9 +147,9 @@ namespace Authlete.Dto
         ///
         /// <para>
         /// See
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
         /// Standard Claims</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a> for details about the format.
         /// </para>
         /// </remarks>
@@ -210,7 +210,7 @@ namespace Authlete.Dto
         /// because they are reserved in
         /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>
         /// and
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>.
         /// </para>
         ///
@@ -279,9 +279,9 @@ namespace Authlete.Dto
         /// it is not included in the original request, keep in
         /// mind that the specification requires explicit consent
         /// from the end-user for the scope
-        /// (<a href="http://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
+        /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11.
         /// Offline Access</a> of
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// Connect Core 1.0</a>). When <c>"offline_access"</c> is
         /// included in the original authorization request, the
         /// current implementation of Authlete's

@@ -30,9 +30,9 @@ namespace Authlete.Dto
     /// An entity body of a token request may contain the client ID
     /// (<c>client_id</c>) and the client secret (<c>client_secret</c>)
     /// along with other request parameters as described in
-    /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1.
+    /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1.
     /// Client Password</a> of
-    /// <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>.
+    /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>.
     /// If client credentials are contained both in the
     /// <c>Authorization</c> header and in the entity body, they
     /// must be identical. If they do not match, Authlete's
@@ -65,7 +65,7 @@ namespace Authlete.Dto
         /// <para>
         /// If the token endpoint of the authorization server
         /// supports Basic Authentication as a means of
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client
         /// authentication</a>, and if the request from the client
         /// application contained its client ID in the
         /// <c>Authorization</c> header, the value should be
@@ -86,7 +86,7 @@ namespace Authlete.Dto
         /// <para>
         /// If the token endpoint of the authorization server
         /// supports Basic Authentication as a means of
-        /// <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client
+        /// <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client
         /// authentication</a>, and if the request from the client
         /// application contained its client secret in the
         /// <c>Authorization</c> header, the value should be
@@ -183,7 +183,7 @@ namespace Authlete.Dto
         /// because they are reserved in
         /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>
         /// and
-        /// <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
         /// OpenID Connect Core 1.0</a>.
         /// </para>
         ///
