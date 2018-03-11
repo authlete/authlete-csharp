@@ -690,5 +690,18 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("pkceRequired")]
         public bool IsPkceRequired { get; set; }
+
+
+        /// <summary>
+        /// Service profiles supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.8.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedServiceProfiles", ItemConverterType = typeof(StringEnumConverter))]
+        public ServiceProfile[] SupportedServiceProfiles { get; set; }
     }
 }
