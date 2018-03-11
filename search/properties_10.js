@@ -28,6 +28,7 @@ var searchData=
   ['supportedgranttypes',['SupportedGrantTypes',['../class_authlete_1_1_dto_1_1_service.html#aae6c9a2f3f06186b716c3af4db2a31ab',1,'Authlete::Dto::Service']]],
   ['supportedresponsetypes',['SupportedResponseTypes',['../class_authlete_1_1_dto_1_1_service.html#afbaaa789bcf7f2fc2c32b7731e0f2d7b',1,'Authlete::Dto::Service']]],
   ['supportedscopes',['SupportedScopes',['../class_authlete_1_1_dto_1_1_service.html#a0b2c368203ca3154f6799cea420f2ca6',1,'Authlete::Dto::Service']]],
+  ['supportedserviceprofiles',['SupportedServiceProfiles',['../class_authlete_1_1_dto_1_1_service.html#add86c73b72eb4ecfb37068eddc86dca9',1,'Authlete::Dto::Service']]],
   ['supportedsnses',['SupportedSnses',['../class_authlete_1_1_dto_1_1_service.html#a250ef993c9b898d6e2355722bcc6a771',1,'Authlete::Dto::Service']]],
   ['supportedtokenauthmethods',['SupportedTokenAuthMethods',['../class_authlete_1_1_dto_1_1_service.html#a3f5f76335f72ff32885aa67a4f0ffc93',1,'Authlete::Dto::Service']]],
   ['supporteduilocales',['SupportedUiLocales',['../class_authlete_1_1_dto_1_1_service.html#aa17f20691bd8729c3ec189f6def8d15f',1,'Authlete::Dto::Service']]]

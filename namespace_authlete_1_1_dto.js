@@ -25,6 +25,7 @@ var namespace_authlete_1_1_dto =
     [ "GrantedScopesGetResponse", "class_authlete_1_1_dto_1_1_granted_scopes_get_response.html", "class_authlete_1_1_dto_1_1_granted_scopes_get_response" ],
     [ "IntrospectionRequest", "class_authlete_1_1_dto_1_1_introspection_request.html", "class_authlete_1_1_dto_1_1_introspection_request" ],
     [ "IntrospectionResponse", "class_authlete_1_1_dto_1_1_introspection_response.html", "class_authlete_1_1_dto_1_1_introspection_response" ],
+    [ "Pair", "class_authlete_1_1_dto_1_1_pair.html", "class_authlete_1_1_dto_1_1_pair" ],
     [ "Property", "class_authlete_1_1_dto_1_1_property.html", "class_authlete_1_1_dto_1_1_property" ],
     [ "RevocationRequest", "class_authlete_1_1_dto_1_1_revocation_request.html", "class_authlete_1_1_dto_1_1_revocation_request" ],
     [ "RevocationResponse", "class_authlete_1_1_dto_1_1_revocation_response.html", "class_authlete_1_1_dto_1_1_revocation_response" ],

@@ -86,6 +86,7 @@ var hierarchy =
         [ "UserInfoRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html", null ]
       ] ]
     ] ],
+    [ "Pair", "class_authlete_1_1_dto_1_1_pair.html", null ],
     [ "PropertiesLoader", "class_authlete_1_1_util_1_1_properties_loader.html", null ],
     [ "Property", "class_authlete_1_1_dto_1_1_property.html", null ],
     [ "ResponseUtility", "class_authlete_1_1_web_1_1_response_utility.html", null ],

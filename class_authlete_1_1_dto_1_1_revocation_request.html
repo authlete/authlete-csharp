@@ -104,7 +104,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Request to Authlete's <code>/api/auth/revocation</code> API. </p>
-<p>The entity body of a revocation request may contain a pair of client ID and client secret (<code>client_id</code> and <code>client_secret</code>) along with other request parameters as described in <a href="http://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1. Client Password</a> of <a href="http://tools.ietf.org/html/rfc6749">RFC 6749</a>. If the client credentials are contained in both the <code>Authorization</code> header and the entity body, they must be identical. Otherwise, Authlete's <code>/api/auth/revocation</code> API generates an error (it's not a service error but a client error). </p>
+<p>The entity body of a revocation request may contain a pair of client ID and client secret (<code>client_id</code> and <code>client_secret</code>) along with other request parameters as described in <a href="https://tools.ietf.org/html/rfc6749#section-2.3.1">2.3.1. Client Password</a> of <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>. If the client credentials are contained in both the <code>Authorization</code> header and the entity body, they must be identical. Otherwise, Authlete's <code>/api/auth/revocation</code> API generates an error (it's not a service error but a client error). </p>
 <p>When the presented token is an access token, Authlete revokes the access token and its associated refresh token, too. Likewise, if the presented token is a refresh token, Authlete revokes the refresh token and its associated access token. Note that, however, other access tokens and refresh tokens are not revoked even though their associated client application, subject and grant type are equal to those of the token to be revoked. </p>
 </div><h2 class="groupheader">Property Documentation</h2>
 <a id="aafe8b143d232fc8175b4f51af732863f"></a>
@@ -128,7 +128,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The client ID extracted from the <code>Authorization</code> header of the revocation request from the client application. </p>
-<p>If the revocation endpoint of the authorization server supports Basic Authentication as a means of <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client authentication</a>, and if the request from the client application contained its client ID in the <code>Authorization</code> header, the value should be extracted from there and set to this property. </p>
+<p>If the revocation endpoint of the authorization server supports Basic Authentication as a means of <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client authentication</a>, and if the request from the client application contained its client ID in the <code>Authorization</code> header, the value should be extracted from there and set to this property. </p>
 
 </div>
 </div>
@@ -153,7 +153,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The client secret extracted from the <code>Authorization</code> header of the revocation request from the client application. </p>
-<p>If the revocation endpoint of the authorization server supports Basic Authentication as a means of <a href="http://tools.ietf.org/html/rfc6749#section-2.3">client authentication</a>, and if the request from the client application contained its client secret in the <code>Authorization</code> header, the value should be extracted from there and set to this property. </p>
+<p>If the revocation endpoint of the authorization server supports Basic Authentication as a means of <a href="https://tools.ietf.org/html/rfc6749#section-2.3">client authentication</a>, and if the request from the client application contained its client secret in the <code>Authorization</code> header, the value should be extracted from there and set to this property. </p>
 
 </div>
 </div>

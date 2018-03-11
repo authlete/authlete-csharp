@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Authlete: C# 用 Authlete ライブラリ</title>
+<title>Authlete: README (日本語)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,12 +80,12 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">C# 用 Authlete ライブラリ </div>  </div>
+<div class="title">README (日本語) </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>概要 </h2>
 <p><a href="https://docs.authlete.com/">Authlete Web APIs</a> のための C# ライブラリです。</p>
-<p><a href="https://www.authlete.com/">Authlete</a> は <a href="http://tools.ietf.org/html/rfc6749">OAuth 2.0</a> と <a href="http://openid.net/connect/">OpenID Connect</a> の実装を提供するクラウドサービスです。 Authlete が提供する Web API を使い、DB-less (データベース無し) の認可サーバーを構築することができます。「DB-less」とは、認可データ (アクセストークン等)、 認可サーバーの設定、クライアントアプリケーションの設定を保存するデータベースを管理する必要が無い、という意味です。 これらのデータはクラウド上にある Authlete サーバーに保存されます。</p>
+<p><a href="https://www.authlete.com/">Authlete</a> は <a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0</a> と <a href="https://openid.net/connect/">OpenID Connect</a> の実装を提供するクラウドサービスです。 Authlete が提供する Web API を使い、DB-less (データベース無し) の認可サーバーを構築することができます。「DB-less」とは、認可データ (アクセストークン等)、 認可サーバーの設定、クライアントアプリケーションの設定を保存するデータベースを管理する必要が無い、という意味です。 これらのデータはクラウド上にある Authlete サーバーに保存されます。</p>
 <p>Authlete のアーキテクチャーの詳細については、 <em><a href="https://medium.com/@darutk/new-architecture-of-oauth-2-0-and-openid-connect-implementation-18f408f9338d">New Architecture of OAuth 2.0 and OpenID Connect Implementation</a></em> をお読みください。真のエンジニアであれば、このアーキテクチャーを気に入ってくれるはずです ;-) なお、日本語版は「<a href="https://qiita.com/TakahikoKawasaki/items/b2a4fc39e0c1a1949aab">OAuth 2.0 / OIDC 実装の新アーキテクチャー</a>」です。</p>
 <blockquote class="doxtable">
 <p>The primary advantage of this architecture is in that the backend service can focus on implementing OAuth 2.0 and OpenID Connect without caring about other components such as identity management, user authentication, login session management, API management and fraud detection. And, consequently, it leads to another major advantage which enables the backend service (implementation of OAuth 2.0 and OpenID Connect) to be combined with any solution of other components and thus gives flexibility to frontend server implementations.</p>
@@ -101,6 +101,12 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 <p><code><a href="https://docs.authlete.com/">https://docs.authlete.com/</a></code></p>
 <h2>NuGet </h2>
 <p><a href="https://www.nuget.org/packages/Authlete.Authlete">Authlete.Authlete</a></p>
+<h2>サンプル </h2>
+<ul>
+<li><a href="https://github.com/authlete/csharp-oauth-server">csharp-oauth-server</a> - 認可サーバー</li>
+<li><a href="https://github.com/authlete/csharp-resource-server">csharp-resource-server</a> - リソースサーバー</li>
+<li><a href="https://qiita.com/TakahikoKawasaki/items/657ef040802f8524403a">C# による OAuth 2.0 と OpenID Connect の実装 (Authlete)</a> - 上記二つのサーバーに関する記事</li>
+</ul>
 <h2>説明 </h2>
 <h4>IAuthleteApi の取得方法</h4>
 <p><a href="https://docs.authlete.com/">Authlete Web API</a> とやりとりするメソッドは全て <code>IAuthleteApi</code> インターフェースに集められています。 現在のところ、このインターフェースを実装するクラスは <code>AuthleteApi</code> クラスのみです。</p>
@@ -157,51 +163,51 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 <p><code>IAuthleteApi</code> インターフェースのメソッド群は幾つかのカテゴリーに分けることができます。</p>
 <ol type="1">
 <li>認可エンドポイント実装のためのメソッド群<ul>
-<li><code>Authorization(AuthorizationRequest)</code></li>
-<li><code>AuthorizationFail(AuthorizationFailRequest)</code></li>
-<li><code>AuthorizationIssue(AuthorizationIssueRequest)</code></li>
+<li><code>Authorization(AuthorizationRequest request)</code></li>
+<li><code>AuthorizationFail(AuthorizationFailRequest request)</code></li>
+<li><code>AuthorizationIssue(AuthorizationIssueRequest request)</code></li>
 </ul>
 </li>
 <li>トークンエンドポイント実装のためのメソッド群<ul>
-<li><code>Token(TokenRequest)</code></li>
-<li><code>TokenFail(TokenFailRequest)</code></li>
-<li><code>TokenIssue(TokenIssueRequest)</code></li>
+<li><code>Token(TokenRequest request)</code></li>
+<li><code>TokenFail(TokenFailRequest request)</code></li>
+<li><code>TokenIssue(TokenIssueRequest request)</code></li>
 </ul>
 </li>
 <li>サービス管理のためのメソッド群<ul>
-<li><code>CreateService(Service)</code></li>
+<li><code>CreateService(Service service)</code></li>
 <li><code>DeleteService(long serviceApiKey)</code></li>
 <li><code>GetService(long serviceApiKey)</code></li>
 <li><code>GetServiceList()</code></li>
 <li><code>GetServiceList(int start, int end)</code></li>
-<li><code>UpdateService(Service)</code></li>
+<li><code>UpdateService(Service service)</code></li>
 </ul>
 </li>
 <li>クライアントアプリケーション管理のためのメソッド群<ul>
-<li><code>CreateClient(Client)</code></li>
+<li><code>CreateClient(Client client)</code></li>
 <li><code>DeleteClient(long clientId)</code></li>
 <li><code>GetClient(long clientId)</code></li>
 <li><code>GetClientList()</code></li>
 <li><code>GetClientList(int start, int end)</code></li>
-<li><code>UpdateClient(Client)</code></li>
-<li><code>RefreshClientSecret(long)</code></li>
-<li><code>RefreshClientSecret(String)</code></li>
-<li><code>UpdateClientSecret(long, string)</code></li>
-<li><code>UpdateClientSecret(String, string)</code></li>
+<li><code>UpdateClient(Client client)</code></li>
+<li><code>RefreshClientSecret(long clientId)</code></li>
+<li><code>RefreshClientSecret(string clientIdentifier)</code></li>
+<li><code>UpdateClientSecret(long clientId, string clientSecret)</code></li>
+<li><code>UpdateClientSecret(string clientIdentifier, string clientSecret)</code></li>
 </ul>
 </li>
 <li>アクセストークンの情報取得のためのメソッド群<ul>
-<li><code>Introspection(IntrospectionRequest)</code></li>
-<li><code>StandardIntrospection(StandardIntrospectionRequest)</code></li>
+<li><code>Introspection(IntrospectionRequest request)</code></li>
+<li><code>StandardIntrospection(StandardIntrospectionRequest request)</code></li>
 </ul>
 </li>
 <li>アクセストークン取り消しエンドポイント実装のためのメソッド群<ul>
-<li><code>Revocation(RevocationRequest)</code></li>
+<li><code>Revocation(RevocationRequest request)</code></li>
 </ul>
 </li>
 <li>ユーザー情報エンドポイント実装のためのメソッド群<ul>
-<li><code>Userinfo(UserInfoRequest)</code></li>
-<li><code>UserinfoIssue(UserInfoIssueRequest)</code></li>
+<li><code>Userinfo(UserInfoRequest request)</code></li>
+<li><code>UserinfoIssue(UserInfoIssueRequest request)</code></li>
 </ul>
 </li>
 <li>JWK セットエンドポイント実装のためのメソッド群<ul>
@@ -215,8 +221,8 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 </ul>
 </li>
 <li>トークン操作のためのメソッド群<ul>
-<li><code>TokenCreate(TokenCreateRequest)</code></li>
-<li><code>TokenUpdate(TokenUpdateRequest)</code></li>
+<li><code>TokenCreate(TokenCreateRequest request)</code></li>
+<li><code>TokenUpdate(TokenUpdateRequest request)</code></li>
 </ul>
 </li>
 <li>付与されたスコープの記録に関するメソッド群<ul>
@@ -225,7 +231,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 </ul>
 </li>
 <li>ユーザー・クライアント単位の認可管理に関するメソッド群<ul>
-<li><code>DeleteClientAuthorization(long clientId)</code></li>
+<li><code>DeleteClientAuthorization(long clientId, string subject)</code></li>
 <li><code>GetClientAuthorizationList(ClientAuthorizationGetListRequest request)</code></li>
 <li><code>UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)</code></li>
 </ul>
@@ -235,12 +241,44 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e_8ja.html','');});
 <p>次のコードは既存のサービスのリストを取得する例です。 各サービスは一つの認可サーバーに対応します。</p>
 <div class="fragment"><div class="line">// Authlete API にアクセスするための設定を用意する。ここでは</div><div class="line">// IAuthleteConfiguration インターフェースの実装の一つとして</div><div class="line">// AuthleteSimpleConfiguration を用いている。前述のとおり、</div><div class="line">// AuthletePropertiesConfiguration など、他の実装もある。</div><div class="line">IAuthleteConfiguration conf = new AuthleteSimpleConfiguration</div><div class="line">{</div><div class="line">    BaseUrl               = &quot;https://api.authlete.com&quot;,</div><div class="line">    ServiceOwnerApiKey    = &quot;1532787510&quot;,</div><div class="line">    ServiceOwnerApiSecret = &quot;9Y0ZARGatedJRhsYLNfiK_aKQIBCug2O3JQU6srZrpk&quot;,</div><div class="line">    ServiceApiKey         = &quot;9463955934&quot;,</div><div class="line">    ServiceApiSecret      = &quot;AAw0rner_wjRCpk-y1A6J9s20Bvez3GxEBoL9jOJVR0&quot;</div><div class="line">};</div><div class="line"></div><div class="line">// IAuthleteApi インターフェースの実装を取得する。</div><div class="line">// 現在のところ IAuthleteApi インターフェースを</div><div class="line">// 実装しているのは AuthleteApi クラスのみ。</div><div class="line">IAuthleteApi api = new AuthleteApi(conf);</div><div class="line"></div><div class="line">// サービスのリストを取得する。</div><div class="line">ServiceListResponse response = await api.GetServiceList();</div></div><!-- fragment --><h4>ハンドラー</h4>
 <p><code>IAuthleteApi</code> インターフェースのメソッド群だけを用いて認可サーバーや OpenID プロバイダーを開発することも可能ですが、<code>Authlete.Handler</code> 名前空間にあるユーティリティークラス群を用いることで、作業はもっと簡単になります。</p>
-<p>TODO: ハンドラーに関する説明をここに記述する。</p>
-<h2>TODO </h2>
-<ul>
-<li>ハンドラーに関する説明を記述する。</li>
-</ul>
-<h2>コンタクト </h2>
+<p>ハンドラーの使用例の使用例は <a href="https://github.com/authlete/csharp-oauth-server">csharp-oauth-server</a> と <a href="https://github.com/authlete/csharp-resource-server">cshar-resource-server</a> にあります。 これらは認可サーバーとリソースサーバーのサンプル実装です。 『<a href="https://qiita.com/TakahikoKawasaki/items/657ef040802f8524403a">C# による OAuth 2.0 と OpenID Connect の実装 (Authlete)</a>』 はこれらの二つのサンプルサーバーに関する記事です。</p>
+<h2>テスト手順 </h2>
+<pre class="fragment">$ cd Authlete.Tests
+$ dotnet test
+</pre><h2>リリース手順 </h2>
+<h4>1. ドキュメント更新</h4>
+<p><code>CHANGES.md</code> と <code>CHANGES.ja.md</code> を更新する。 必要があれば <code>README.md</code> と <code>README.ja.md</code> も更新する。</p>
+<h4>2. バージョン更新</h4>
+<p>Visual Studio で <code>Authlete</code> プロジェクトの「オプション」メニューを開く。 「プロジェクト オプション - Authlete」というタイトルのウィンドウで、 「NuGet パッケージ」→「メタデータ」→「全般」タブ、と進む。 「バージョン:」欄の値を更新する。</p>
+<p>もしくは、<code>Authlete/Authlete.csproj</code> ファイル内の <code>&lt;PackageVersion&gt;</code> の値を直接更新する。</p>
+<h4>3. バージョン確定</h4>
+<pre class="fragment">$ git add Authlete/Authlete.csproj
+$ git commit -m 'Updated PackageVersion to X.Y.Z.'
+$ git push
+</pre><h4>4. パッケージ生成</h4>
+<pre class="fragment">$ dotnet pack
+</pre><p><code>bin/Debug</code> ディレクトリに <code>.nupkg</code> ファイルが生成される。</p>
+<h4>5. パッケージ公開</h4>
+<pre class="fragment">$ nuget push bin/Debug/Authlete.Authlete.X.Y.Z.nupkg $KEY \
+    -Source https://api.nuget.org/v3/index.json
+</pre><p>コマンドライン上の <code>$KEY</code> の値は nuget.org から発行された API キー。 詳細は『<a href="https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package">Publishing packages</a>』を参照のこと。</p>
+<p>　公開されたパッケージは <a href="https://www.nuget.org/packages/Authlete.Authlete">https://www.nuget.org/packages/Authlete.Authlete</a> にリストされるが、何分か時間がかかる。</p>
+<h4>6. API リファレンス更新</h4>
+<pre class="fragment">$ cd ..
+$ rm -rf html
+$ doxygen
+</pre><h4>7. API リファレンス公開</h4>
+<pre class="fragment">$ mkdir -p ../docs
+$ cd ../docs
+$ git clone https://github.com/authlete/authlete-csharp
+$ cd authlete-csharp
+$ git checkout gh-pages
+$ rm -rf *
+$ cp -r ../../authlete-csharp/html/* .
+$ git add .
+$ git commit -m 'Updated for version X.Y.Z'
+$ git push origin gh-pages
+</pre><h2>コンタクト </h2>
 <table class="doxtable">
 <tr>
 <th align="left">目的 </th><th align="left">メールアドレス  </th></tr>

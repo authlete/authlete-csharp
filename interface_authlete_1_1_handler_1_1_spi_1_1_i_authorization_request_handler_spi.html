@@ -147,7 +147,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the authentication context class reference (ACR) that was satisfied when the end-user was authenticated. </p>
-<p>The value returned from this method has an important meaning only when the <code>"acr"</code> claim is requested as an essential claim. See <a href="http://openid.net/specs/openid-connect-core-1_0.html#acrSemantics">5.5.1.1. Requesting the "acr" Claim</a> of <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for details. </p>
+<p>The value returned from this method has an important meaning only when the <code>"acr"</code> claim is requested as an essential claim. See <a href="https://openid.net/specs/openid-connect-core-1_0.html#acrSemantics">5.5.1.1. Requesting the "acr" Claim</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for details. </p>
 <dl class="section return"><dt>Returns</dt><dd>The ACR that was satisfied when the end-user was authenticated. If your system does not recognize ACR, <code>null</code> should be returned. </dd></dl>
 
 </div>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get arbitrary key-value pairs to be associated with an access token and/or an authorization code. </p>
 <p>Properties returned from this method will appear as top-level entries (unless they are marked as hidden) in a JSON response from the authorization server as shown in <a href="https://tools.ietf.org/html/rfc6749#section-5.1">5.1. Successful Response</a> of <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>. </p>
-<p>Keys listed below should not be used and they would be ignored on Authlete side even if they were used. It is because they are reserved in <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a> and <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. </p>
+<p>Keys listed below should not be used and they would be ignored on Authlete side even if they were used. It is because they are reserved in <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a> and <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. </p>
 <ul>
 <li>
 <code>access_token</code> </li>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <p>Get scopes to be associated with an access token and/or an authorization code. </p>
 <p>If <code>null</code> is returned, the scopes specified in the original authorization request from the client application are used. In other cases, the specified scopes by this method will replace the original scopes. </p>
 <p>Even scopes that are not included in the original authorization request can be specified. However, as an exception, the <code>"openid"</code> scope is ignored on Authlete server side if it is not included in the original request. It is because the existence of the <code>"openid"</code> scope considerably changes the validation steps and because adding <code>"openid"</code> triggers generation of an ID token (although the client application has not requested it) and the behavior is a major violation against the specification. </p>
-<p>If you add the <code>"offline_access"</code> scope although it is not included in the original request, keep in mind that the specification requires explicit consent from the end-user for the scope (<a href="http://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11. Offline Access</a> of <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). When <code>"offline_access"</code> is included in the original authorization request, the current implementation of Authlete's <code>/api/auth/authorization</code> API checks whether the authorization request has come along with the <code>"prompt"</code> request parameter and its value includes <code>"consent"</code>. However, note that the implementation of Authlete's <code>/api/auth/authorization/issue</code> API does not perform the same validation even if the <code>"offline_access"</code> scope is newly added via this <code>"scopes"</code> parameter. </p>
+<p>If you add the <code>"offline_access"</code> scope although it is not included in the original request, keep in mind that the specification requires explicit consent from the end-user for the scope (<a href="https://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11. Offline Access</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). When <code>"offline_access"</code> is included in the original authorization request, the current implementation of Authlete's <code>/api/auth/authorization</code> API checks whether the authorization request has come along with the <code>"prompt"</code> request parameter and its value includes <code>"consent"</code>. However, note that the implementation of Authlete's <code>/api/auth/authorization/issue</code> API does not perform the same validation even if the <code>"offline_access"</code> scope is newly added via this <code>"scopes"</code> parameter. </p>
 <dl class="section return"><dt>Returns</dt><dd>Scopes which replace the scopes of the original authorization request. If <code>null</code> is returned, the scopes will not be replaced. </dd></dl>
 
 </div>

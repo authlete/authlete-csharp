@@ -245,7 +245,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The flag which indicates whether to emulate that the client ID alias is used instead of the original numeric client ID when a new access token is created. </p>
-<p>This has an effect only on the value of the <code>"aud"</code> claim in a response from a <a href="http://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo endpoint</a>. When you access the userinfo endpoint (which is expected to be implemented using Authlete's <code>/api/auth/userinfo</code> API and <code>/api/auth/userinfo/issue</code> API) with an access token which has been created using Authlete's <code>/api/auth/token/create</code> API with this property (<code>IsClientIdAliasUsed</code>) <code>true</code>, the client ID alias is used as the value of the <code>"aud"</code> claim in a response from the userinfo endpoint. </p>
+<p>This has an effect only on the value of the <code>"aud"</code> claim in a response from a <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo endpoint</a>. When you access the userinfo endpoint (which is expected to be implemented using Authlete's <code>/api/auth/userinfo</code> API and <code>/api/auth/userinfo/issue</code> API) with an access token which has been created using Authlete's <code>/api/auth/token/create</code> API with this property (<code>IsClientIdAliasUsed</code>) <code>true</code>, the client ID alias is used as the value of the <code>"aud"</code> claim in a response from the userinfo endpoint. </p>
 <p>Note that if a client ID alias is not assigned to the client when Authlete's <code>/api/auth/token/create</code> API is called, this property has no effect (it is always regarded as <code>false</code>). </p>
 
 </div>

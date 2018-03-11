@@ -1,10 +1,10 @@
 var NAVTREE =
 [
   [ "Authlete", "index.html", [
-    [ "Authlete Library for C#", "index.html", null ],
-    [ "変更点", "md__c_h_a_n_g_e_s_8ja.html", null ],
+    [ "README", "index.html", null ],
+    [ "CHANGES (日本語)", "md__c_h_a_n_g_e_s_8ja.html", null ],
     [ "CHANGES", "md__c_h_a_n_g_e_s.html", null ],
-    [ "C# 用 Authlete ライブラリ", "md__r_e_a_d_m_e_8ja.html", null ],
+    [ "README (日本語)", "md__r_e_a_d_m_e_8ja.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -30,7 +30,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "class_authlete_1_1_dto_1_1_introspection_response.html#a00533685efc8eefd6feeae97dd0cc491",
-"class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#a5e71fe5b82e80b0f6793d517c78c6bbe"
+"class_authlete_1_1_handler_1_1_revocation_request_handler.html#a43cf0a8353fef0301fba8d8761daef8b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
