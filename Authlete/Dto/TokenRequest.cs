@@ -99,6 +99,20 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The client certificate from the MTLS of the token
+        /// request from the client application.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.8.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("clientCertificate")]
+        public string ClientCertificate { get; set; }
+
+
+        /// <summary>
         /// Extra properties to be associated with an access token
         /// which may be issued as a result of the token request.
         /// </summary>
