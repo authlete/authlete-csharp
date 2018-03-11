@@ -1,5 +1,5 @@
-C# 用 Authlete ライブラリ
-=======================
+README (日本語)
+===============
 
 概要
 --------
@@ -56,13 +56,21 @@ API リファレンス (authlete-csharp)
 API リファレンス (Authlete)
 -------------------------
 
-  <c>https://docs.authlete.com/</code>
+  <code>https://docs.authlete.com/</code>
 
 
 NuGet
 -----
 
   [Authlete.Authlete][8]
+
+
+サンプル
+--------
+
+  * [csharp-oauth-server][9] - 認可サーバー
+  * [csharp-resource-server][10] - リソースサーバー
+  * [C# による OAuth 2.0 と OpenID Connect の実装 (Authlete)][11] - 上記二つのサーバーに関する記事
 
 
 説明
@@ -299,13 +307,79 @@ ServiceListResponse response = await api.GetServiceList();
 OpenID プロバイダーを開発することも可能ですが、`Authlete.Handler`
 名前空間にあるユーティリティークラス群を用いることで、作業はもっと簡単になります。
 
-TODO: ハンドラーに関する説明をここに記述する。
+ハンドラーの使用例の使用例は [csharp-oauth-server][9] と
+[cshar-resource-server][10] にあります。
+これらは認可サーバーとリソースサーバーのサンプル実装です。
+『[C# による OAuth 2.0 と OpenID Connect の実装 (Authlete)][11]』
+はこれらの二つのサンプルサーバーに関する記事です。
 
 
-TODO
-----
+テスト手順
+----------
 
-- ハンドラーに関する説明を記述する。
+    $ cd Authlete.Tests
+    $ dotnet test
+
+
+リリース手順
+------------
+
+#### 1. ドキュメント更新
+
+`CHANGES.md` と `CHANGES.ja.md` を更新する。 必要があれば `README.md` と
+`README.ja.md` も更新する。
+
+#### 2. バージョン更新
+
+Visual Studio で `Authlete` プロジェクトの「オプション」メニューを開く。
+「プロジェクト オプション - Authlete」というタイトルのウィンドウで、
+「NuGet パッケージ」→「メタデータ」→「全般」タブ、と進む。
+「バージョン:」欄の値を更新する。
+
+もしくは、`Authlete/Authlete.csproj` ファイル内の `<PackageVersion>`
+の値を直接更新する。
+
+#### 3. バージョン確定
+
+    $ git add Authlete/Authlete.csproj
+    $ git commit -m 'Updated PackageVersion to X.Y.Z.'
+    $ git push
+
+#### 4. パッケージ生成
+
+    $ dotnet pack
+
+  `bin/Debug` ディレクトリに `.nupkg` ファイルが生成される。
+
+#### 5. パッケージ公開
+
+    $ nuget push bin/Debug/Authlete.Authlete.X.Y.Z.nupkg $KEY \
+        -Source https://api.nuget.org/v3/index.json
+
+  コマンドライン上の `$KEY` の値は nuget.org から発行された API キー。
+  詳細は『[Publishing packages][12]』を参照のこと。
+
+　公開されたパッケージは https://www.nuget.org/packages/Authlete.Authlete
+  にリストされるが、何分か時間がかかる。
+
+#### 6. API リファレンス更新
+
+    $ cd ..
+    $ rm -rf html
+    $ doxygen
+
+#### 7. API リファレンス公開
+
+    $ mkdir -p ../docs
+    $ cd ../docs
+    $ git clone https://github.com/authlete/authlete-csharp
+    $ cd authlete-csharp
+    $ git checkout gh-pages
+    $ rm -rf *
+    $ cp -r ../../authlete-csharp/html/* .
+    $ git add .
+    $ git commit -m 'Updated for version X.Y.Z'
+    $ git push origin gh-pages
 
 
 コンタクト
@@ -321,9 +395,13 @@ TODO
 
 [1]: https://www.authlete.com/
 [2]: https://docs.authlete.com/
-[3]: http://tools.ietf.org/html/rfc6749
-[4]: http://openid.net/connect/
+[3]: https://tools.ietf.org/html/rfc6749
+[4]: https://openid.net/connect/
 [5]: https://medium.com/@darutk/new-architecture-of-oauth-2-0-and-openid-connect-implementation-18f408f9338d
 [6]: https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
 [7]: https://qiita.com/TakahikoKawasaki/items/b2a4fc39e0c1a1949aab
 [8]: https://www.nuget.org/packages/Authlete.Authlete
+[9]: https://github.com/authlete/csharp-oauth-server
+[10]: https://github.com/authlete/csharp-resource-server
+[11]: https://qiita.com/TakahikoKawasaki/items/657ef040802f8524403a
+[12]: https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package

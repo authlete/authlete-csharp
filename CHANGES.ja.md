@@ -1,5 +1,22 @@
-変更点
-======
+CHANGES (日本語)
+================
+
+1.0.8 (2018 年 03 月 11 日)
+---------------------------
+
+- `Scope` クラス
+    * `Attributes` プロパティーを追加。
+
+- `Service` クラス
+    * `SupportedServiceProfiles` プロパティーを追加。
+
+- `TokenRequest` クラス
+    * `ClientCertificate` プロパティーを追加。
+
+- 新しい型
+    * `Pair` クラス
+    * `ServiceProfie` 列挙型
+
 
 1.0.7 (2018 年 01 月 08 日)
 ---------------------------

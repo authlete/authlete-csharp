@@ -1,6 +1,23 @@
 CHANGES
 =======
 
+1.0.8 (2018-03-11)
+------------------
+
+- `Scope` class
+    * Added `Attributes` property.
+
+- `Service` class
+    * Added `SupportedServiceProfiles` property.
+
+- `TokenRequest` class
+    * Added `ClientCertificate` property.
+
+- New types
+    * `Pair` class
+    * `ServiceProfie` enum
+
+
 1.0.7 (2018-01-08)
 ------------------
 
