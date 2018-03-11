@@ -59,5 +59,18 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("descriptions")]
         public TaggedValue[] Descriptions { get; set; }
+
+
+        /// <summary>
+        /// Attributes of this scope.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.8.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("attributes")]
+        public Pair[] Attributes { get; set; }
     }
 }
