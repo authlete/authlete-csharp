@@ -188,8 +188,8 @@ ISettings settings = api.Setting;
 
 // Set a network timeout.
 //
-// In the current implementation, the value set to the `Timeout`
-// property is passed to `HttpClient.Timeout`.
+// In the current implementation, the value set to the Timeout
+// property is passed to HttpClient.Timeout.
 //
 settings.Timeout = TimeSpan.FromSeconds(5);
 ```
@@ -335,10 +335,10 @@ Update `CHANGES.md` and `CHANGES.ja.md`. Update `README.md` and
 
 #### 2. Update Version
 
-In Visual Studio, open _"Options"_ menu of the `Authlete` project.
-In the window titled _"Project Options - Authlete"_, go to
-_"NuGet Package"_ -> _"Metadata"_ -> _"General"_ tab. Update the
-value in the _"Version:"_ field.
+In Visual Studio, open "Options" menu of the `Authlete` project.
+In the window titled "Project Options - Authlete", go to
+"NuGet Package" -> "Metadata" -> "General" tab. Update the value
+in the "Version:" field.
 
 Or, edit the value of `<PackageVersion>` in `Authlete/Authlete.csproj`
 file directly.
@@ -361,7 +361,7 @@ file directly.
         -Source https://api.nuget.org/v3/index.json
 
   The value of `$KEY` on the command line is an API key issued by
-  nuget.org. See _"[Publishing packages][12]"_ for details.
+  nuget.org. See [Publishing packages][12] for details.
 
   The published package will appear at https://www.nuget.org/packages/Authlete.Authlete,
   but it will take some minutes.
