@@ -101,10 +101,39 @@ Properties</h2></td></tr>
 <tr class="memitem:a00533685efc8eefd6feeae97dd0cc491"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_request.html#a00533685efc8eefd6feeae97dd0cc491">Subject</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a00533685efc8eefd6feeae97dd0cc491"><td class="mdescLeft">&#160;</td><td class="mdescRight">The subject (= unique identifier) of an end-user which is required to access the protected resource endpoint of the resource server. If the specified subject is different from the one associated with the access token, Authlete's <code>/api/auth/introspection</code> API returns <code>IntrospectionAction.FORBIDDEN</code> as the <code>"action"</code> and sets <code>"invalid_request"</code> as the error code. If this property holds <code>null</code>, Authlete's <code>/api/auth/introspection</code> API does not check the subject of the access token.  <a href="#a00533685efc8eefd6feeae97dd0cc491">More...</a><br /></td></tr>
 <tr class="separator:a00533685efc8eefd6feeae97dd0cc491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15755995ab2ca9587d4c24b5735aa51e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_request.html#a15755995ab2ca9587d4c24b5735aa51e">ClientCertificate</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a15755995ab2ca9587d4c24b5735aa51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The client certificate which the client application presented at the API of the resource server.  <a href="#a15755995ab2ca9587d4c24b5735aa51e">More...</a><br /></td></tr>
+<tr class="separator:a15755995ab2ca9587d4c24b5735aa51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Request to Authlete's <code>/api/auth/introspection</code> API. The API returns information about an access token. </p>
 </div><h2 class="groupheader">Property Documentation</h2>
+<a id="a15755995ab2ca9587d4c24b5735aa51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15755995ab2ca9587d4c24b5735aa51e">&#9670;&nbsp;</a></span>ClientCertificate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ClientCertificate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The client certificate which the client application presented at the API of the resource server. </p>
+<p>If the access token which the client application presented is bound to a client certificate, the client application has to present the client certificate in addition to the access token when it accesses APIs. </p>
+<p>Since version 1.0.9. </p>
+
+</div>
+</div>
 <a id="a6cddb907d289189a0110bd13c4dcd6fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cddb907d289189a0110bd13c4dcd6fb">&#9670;&nbsp;</a></span>Scopes</h2>
 

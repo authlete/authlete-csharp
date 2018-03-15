@@ -113,6 +113,12 @@ Properties</h2></td></tr>
 <tr class="memitem:a83304bd5063bdbccbda3203142cef402"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a83304bd5063bdbccbda3203142cef402">RevocationEndpoint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a83304bd5063bdbccbda3203142cef402"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the revocation endpoint (<a href="https://tools.ietf.org/html/rfc7009">RFC 7009</a>). This property corresponds to the <code>"revocation_endpoint"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>.  <a href="#a83304bd5063bdbccbda3203142cef402">More...</a><br /></td></tr>
 <tr class="separator:a83304bd5063bdbccbda3203142cef402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a5fd7bc99cbd0ead1d2a9df66a23e3b87">SupportedRevocationAuthMethods</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client authentication methods at the revocation endpoint supported by this service.  <a href="#a5fd7bc99cbd0ead1d2a9df66a23e3b87">More...</a><br /></td></tr>
+<tr class="separator:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc3d23c710762d77c57c85d64a36118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aadc3d23c710762d77c57c85d64a36118">SupportedRevocationAuthSigningAlgorithms</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aadc3d23c710762d77c57c85d64a36118"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWS signing algorithms (<code>"alg"</code> values) supported by the revocation endpoint for the signature on the JWT used to authenticate the client at the revocation endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods.  <a href="#aadc3d23c710762d77c57c85d64a36118">More...</a><br /></td></tr>
+<tr class="separator:aadc3d23c710762d77c57c85d64a36118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d099e1e9b7006fd71d8e2f9a320588"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a26d099e1e9b7006fd71d8e2f9a320588">UserInfoEndpoint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a26d099e1e9b7006fd71d8e2f9a320588"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the UserInfo endpoint (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3. UserInfo Endpoint</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). This property corresponds to the <code>"userinfo_endpoint"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>.  <a href="#a26d099e1e9b7006fd71d8e2f9a320588">More...</a><br /></td></tr>
 <tr class="separator:a26d099e1e9b7006fd71d8e2f9a320588"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +251,18 @@ Properties</h2></td></tr>
 <tr class="memitem:add86c73b72eb4ecfb37068eddc86dca9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#af9d435a056682a35aedd5eb29ac1c553">ServiceProfile</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#add86c73b72eb4ecfb37068eddc86dca9">SupportedServiceProfiles</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:add86c73b72eb4ecfb37068eddc86dca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service profiles supported by this service.  <a href="#add86c73b72eb4ecfb37068eddc86dca9">More...</a><br /></td></tr>
 <tr class="separator:add86c73b72eb4ecfb37068eddc86dca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ae664fc79fbefa3d6c1d03274d5a091ab">IsMutualTlsSenderConstrainedAccessTokens</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service supports "Mutual TLS sender constrained access tokens".  <a href="#ae664fc79fbefa3d6c1d03274d5a091ab">More...</a><br /></td></tr>
+<tr class="separator:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aa8c76e614bafb1b3a6b7e4d882071ae8">IntrospectionEndpoint</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the introspection endpoint (<a href="https://tools.ietf.org/html/rfc7662">RFC 7662: OAuth 2.0 Token Introspection</a>).  <a href="#aa8c76e614bafb1b3a6b7e4d882071ae8">More...</a><br /></td></tr>
+<tr class="separator:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a4614dcb27cf2620cbcb00ed364e8e2c2">SupportedIntrospectionAuthMethods</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client authentication methods at the introspection endpoint supported by this service.  <a href="#a4614dcb27cf2620cbcb00ed364e8e2c2">More...</a><br /></td></tr>
+<tr class="separator:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ad6fa3eef1a42aec2a059dd939852eee3">SupportedIntrospectionAuthSigningAlgorithms</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad6fa3eef1a42aec2a059dd939852eee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWS signing algorithms (<code>"alg"</code> values) supported by the introspection endpoint for the signature on the JWT used to authenticate the client at the introspection endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods.  <a href="#ad6fa3eef1a42aec2a059dd939852eee3">More...</a><br /></td></tr>
+<tr class="separator:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a service which represents an authorization server / OpenID provider. </p>
@@ -634,6 +652,31 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="aa8c76e614bafb1b3a6b7e4d882071ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c76e614bafb1b3a6b7e4d882071ae8">&#9670;&nbsp;</a></span>IntrospectionEndpoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uri IntrospectionEndpoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The URI of the introspection endpoint (<a href="https://tools.ietf.org/html/rfc7662">RFC 7662: OAuth 2.0 Token Introspection</a>). </p>
+<p>Since version 1.0.9. </p>
+
+</div>
+</div>
 <a id="a9a339d21ec8a4aed1ee2180bc7362d42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a339d21ec8a4aed1ee2180bc7362d42">&#9670;&nbsp;</a></span>IsDirectAuthorizationEndpointEnabled</h2>
 
@@ -782,6 +825,32 @@ Properties</h2></td></tr>
 
 <p>The flag which indicates whether the direct userinfo endpoint is enabled or not. However, this feature has not been implemented yet. </p>
 <p>Authlete provides APIs for developers to implement a userinfo endpoint (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3. UserInfo Endpoint</a>) such as <code>/api/auth/userinfo</code> and <code>/api/auth/userinfo/issue</code>. </p>
+
+</div>
+</div>
+<a id="ae664fc79fbefa3d6c1d03274d5a091ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae664fc79fbefa3d6c1d03274d5a091ab">&#9670;&nbsp;</a></span>IsMutualTlsSenderConstrainedAccessTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsMutualTlsSenderConstrainedAccessTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether this service supports "Mutual TLS sender constrained access tokens". </p>
+<p>If this property is <code>true</code>, client applications whose <code>IsMutualTlsSenderConstrainedAccessTokens</code> property is <code>true</code> are required to present a client certificate on token requests to the authorization server and on API calls to the resource server. </p>
+<p>Since version 1.0.9. </p>
 
 </div>
 </div>
@@ -1266,6 +1335,60 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a4614dcb27cf2620cbcb00ed364e8e2c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4614dcb27cf2620cbcb00ed364e8e2c2">&#9670;&nbsp;</a></span>SupportedIntrospectionAuthMethods</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> [] SupportedIntrospectionAuthMethods</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client authentication methods at the introspection endpoint supported by this service. </p>
+<p>This property corresponds to the <code>"introspection_endpoint_auth_methods_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
+Metadata". </p>
+<p>Since version 1.0.9. </p>
+
+</div>
+</div>
+<a id="ad6fa3eef1a42aec2a059dd939852eee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fa3eef1a42aec2a059dd939852eee3">&#9670;&nbsp;</a></span>SupportedIntrospectionAuthSigningAlgorithms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> [] SupportedIntrospectionAuthSigningAlgorithms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JWS signing algorithms (<code>"alg"</code> values) supported by the introspection endpoint for the signature on the JWT used to authenticate the client at the introspection endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods. </p>
+<p>This property corresponds to the <code>"introspection_endpoint_auth_signing_alg_values_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
+Metadata". </p>
+<p>Since version 1.0.9. </p>
+
+</div>
+</div>
 <a id="afbaaa789bcf7f2fc2c32b7731e0f2d7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbaaa789bcf7f2fc2c32b7731e0f2d7b">&#9670;&nbsp;</a></span>SupportedResponseTypes</h2>
 
@@ -1287,6 +1410,60 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Response types supported by this service (<a href="https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth 2.0 Multiple Response Type Encoding Practices</a>). This property corresponds to the <code>"response_types_supported"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>. </p>
+
+</div>
+</div>
+<a id="a5fd7bc99cbd0ead1d2a9df66a23e3b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd7bc99cbd0ead1d2a9df66a23e3b87">&#9670;&nbsp;</a></span>SupportedRevocationAuthMethods</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> [] SupportedRevocationAuthMethods</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client authentication methods at the revocation endpoint supported by this service. </p>
+<p>This property corresponds to the <code>"revocation_endpoint_auth_methods_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
+Metadata". </p>
+<p>Since version 1.0.9. </p>
+
+</div>
+</div>
+<a id="aadc3d23c710762d77c57c85d64a36118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc3d23c710762d77c57c85d64a36118">&#9670;&nbsp;</a></span>SupportedRevocationAuthSigningAlgorithms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> [] SupportedRevocationAuthSigningAlgorithms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JWS signing algorithms (<code>"alg"</code> values) supported by the revocation endpoint for the signature on the JWT used to authenticate the client at the revocation endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods. </p>
+<p>This property corresponds to the <code>"revocation_endpoint_auth_signing_alg_values_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
+Metadata". </p>
+<p>Since version 1.0.9. </p>
 
 </div>
 </div>

@@ -134,6 +134,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a92c6b1cf703f9e064f5efc0907f80379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a92c6b1cf703f9e064f5efc0907f80379">IsActive</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a92c6b1cf703f9e064f5efc0907f80379"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the access token is active (= exists and has not expired). This property is just an alias of the <code>IsUsable</code> property. The reason this property was added is to mitigate confusion that those who are familiar with <a href="https://tools.ietf.org/html/rfc7662">RFC 7662</a> (OAuth 2.0 Token Introspection) may have.  <a href="#a92c6b1cf703f9e064f5efc0907f80379">More...</a><br /></td></tr>
 <tr class="separator:a92c6b1cf703f9e064f5efc0907f80379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723ac64082f1518833d27a08e0ca9ba3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a723ac64082f1518833d27a08e0ca9ba3">CertificateThumbprint</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a723ac64082f1518833d27a08e0ca9ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thumbprint of the client certificate which is associated with the access token.  <a href="#a723ac64082f1518833d27a08e0ca9ba3">More...</a><br /></td></tr>
+<tr class="separator:a723ac64082f1518833d27a08e0ca9ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_authlete_1_1_dto_1_1_api_response"><td colspan="2" onclick="javascript:toggleInherit('properties_class_authlete_1_1_dto_1_1_api_response')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_authlete_1_1_dto_1_1_api_response.html">ApiResponse</a></td></tr>
 <tr class="memitem:a90ab9c1807ec222e7723930c865b8266 inherit properties_class_authlete_1_1_dto_1_1_api_response"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_api_response.html#a90ab9c1807ec222e7723930c865b8266">ResultCode</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a90ab9c1807ec222e7723930c865b8266 inherit properties_class_authlete_1_1_dto_1_1_api_response"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code of the result of an Authlete API call. For example, <code>"A004001"</code>.  <a href="class_authlete_1_1_dto_1_1_api_response.html#a90ab9c1807ec222e7723930c865b8266">More...</a><br /></td></tr>
@@ -180,6 +183,32 @@ Request"</code>. The resource server may use this string to tell the client appl
 </div><div class="memdoc">
 
 <p>The next action that the resource server should take. </p>
+
+</div>
+</div>
+<a id="a723ac64082f1518833d27a08e0ca9ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723ac64082f1518833d27a08e0ca9ba3">&#9670;&nbsp;</a></span>CertificateThumbprint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CertificateThumbprint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The thumbprint of the client certificate which is associated with the access token. </p>
+<p>If the access token is bound to a client certificate, this property holds the thumbprint of the client certificate. </p>
+<p>Since version 1.0.9. </p>
 
 </div>
 </div>

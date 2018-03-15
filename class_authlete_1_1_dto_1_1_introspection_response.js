@@ -1,6 +1,7 @@
 var class_authlete_1_1_dto_1_1_introspection_response =
 [
     [ "Action", "class_authlete_1_1_dto_1_1_introspection_response.html#a055bf97d399878b232e9fb7b198ffed1", null ],
+    [ "CertificateThumbprint", "class_authlete_1_1_dto_1_1_introspection_response.html#a723ac64082f1518833d27a08e0ca9ba3", null ],
     [ "ClientId", "class_authlete_1_1_dto_1_1_introspection_response.html#ab251593be26db265e53ed7eec15102de", null ],
     [ "ExpiresAt", "class_authlete_1_1_dto_1_1_introspection_response.html#afc6e28b351635ee06030661d1e3b89f6", null ],
     [ "IsActive", "class_authlete_1_1_dto_1_1_introspection_response.html#a92c6b1cf703f9e064f5efc0907f80379", null ],

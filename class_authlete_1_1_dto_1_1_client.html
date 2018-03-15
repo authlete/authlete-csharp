@@ -233,6 +233,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a2cf5a7ce85ac120338b51eb3bad67ac9">TlsClientAuthSubjectDn</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string representation of the expected subject distinguished name of the certificate this client will use in mutual TLS authentication. See <code>"tls_client_auth_subject_dn"</code> in 2.3. Dynamic Client Registration in Mutual TLS Profile for OAuth Clients for details.  <a href="#a2cf5a7ce85ac120338b51eb3bad67ac9">More...</a><br /></td></tr>
 <tr class="separator:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#ae664fc79fbefa3d6c1d03274d5a091ab">IsMutualTlsSenderConstrainedAccessTokens</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this client uses "Mutual TLS sender constrained access tokens".  <a href="#ae664fc79fbefa3d6c1d03274d5a091ab">More...</a><br /></td></tr>
+<tr class="separator:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a client application. </p>
@@ -789,6 +792,32 @@ Properties</h2></td></tr>
 
 <p>The flag which indicates whether the client ID alias is enabled or not. </p>
 <p>Note that <code>Service</code> class also has <code>IsClientIdAliasEnabled</code> property. If the service's <code>IsClientIdAliasEnabled</code> property is <code>false</code>, the client ID alias of this client is not recognized even if this client's <code>IsClientIdAliasEnabled</code> property is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="ae664fc79fbefa3d6c1d03274d5a091ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae664fc79fbefa3d6c1d03274d5a091ab">&#9670;&nbsp;</a></span>IsMutualTlsSenderConstrainedAccessTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsMutualTlsSenderConstrainedAccessTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether this client uses "Mutual TLS sender constrained access tokens". </p>
+<p>If this property is <code>true</code> (and if the service supports "Mutual TLS sender constrained access tokens"), this client must present its client certificate (1) when it makes token requests to the authorization server and (2) when it makes API calls to the resource server. </p>
+<p>Since version 1.0.9. </p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['NAME',['../class_authlete_1_1_types_1_1_standard_claims.html#ada83baeeb6d803cb1ddfd8d603b68b3d',1,'Authlete.Types.StandardClaims.NAME()'],['../class_authlete_1_1_dto_1_1_scope.html#a7ee9065718e6628dc7791b756fa6c0f9',1,'Authlete.Dto.Scope.Name()']]],
+  ['name',['Name',['../class_authlete_1_1_dto_1_1_scope.html#a7ee9065718e6628dc7791b756fa6c0f9',1,'Authlete.Dto.Scope.Name()'],['../class_authlete_1_1_types_1_1_standard_claims.html#ada83baeeb6d803cb1ddfd8d603b68b3d',1,'Authlete.Types.StandardClaims.NAME()']]],
   ['native',['NATIVE',['../namespace_authlete_1_1_types.html#aeecf5888f18e859ec6023d64ec50934daf78504d96ba7177dc0c6784905ac8743',1,'Authlete::Types']]],
   ['newclientsecret',['NewClientSecret',['../class_authlete_1_1_dto_1_1_client_secret_refresh_response.html#a296f3989c7a9a79d9e427942b8532b41',1,'Authlete.Dto.ClientSecretRefreshResponse.NewClientSecret()'],['../class_authlete_1_1_dto_1_1_client_secret_update_response.html#a296f3989c7a9a79d9e427942b8532b41',1,'Authlete.Dto.ClientSecretUpdateResponse.NewClientSecret()']]],
   ['nickname',['NICKNAME',['../class_authlete_1_1_types_1_1_standard_claims.html#afd5551e69d98fa11cacfbafc6a88d5a1',1,'Authlete::Types::StandardClaims']]],

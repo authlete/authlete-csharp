@@ -23,6 +23,7 @@ var class_authlete_1_1_dto_1_1_client =
     [ "IdTokenSignAlg", "class_authlete_1_1_dto_1_1_client.html#ad7551b8fe6516591176cc4d53bceddf8", null ],
     [ "IsAuthTimeRequired", "class_authlete_1_1_dto_1_1_client.html#a9750dad1b33c042d78fa876f9f663a80", null ],
     [ "IsClientIdAliasEnabled", "class_authlete_1_1_dto_1_1_client.html#a4710df1daa3a166e3319ffdc2fa3b454", null ],
+    [ "IsMutualTlsSenderConstrainedAccessTokens", "class_authlete_1_1_dto_1_1_client.html#ae664fc79fbefa3d6c1d03274d5a091ab", null ],
     [ "Jwks", "class_authlete_1_1_dto_1_1_client.html#a265fb5702391fa9d7f9ef8e4aec9c689", null ],
     [ "JwksUri", "class_authlete_1_1_dto_1_1_client.html#a82e5ef73b4ad47c49d3fae2eda2fe925", null ],
     [ "LoginUri", "class_authlete_1_1_dto_1_1_client.html#a1f0b703a03f9cdec4eb16ab4e7bb284f", null ],
