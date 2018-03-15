@@ -304,5 +304,25 @@ namespace Authlete.Dto
                 IsUsable = value;
             }
         }
+
+
+        /// <summary>
+        /// The thumbprint of the client certificate which is
+        /// associated with the access token.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If the access token is bound to a client certificate,
+        /// this property holds the thumbprint of the client
+        /// certificate.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("certificateThumbprint")]
+        public string CertificateThumbprint { get; set; }
     }
 }
