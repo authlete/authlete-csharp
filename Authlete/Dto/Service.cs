@@ -121,6 +121,51 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// Client authentication methods at the revocation
+        /// endpoint supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>"revocation_endpoint_auth_methods_supported"</c>
+        /// metadata defined in "OAuth 2.0 Authorization Server
+        /// Metadata".
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedRevocationAuthMethods", ItemConverterType = typeof(StringEnumConverter))]
+        public ClientAuthMethod[] SupportedRevocationAuthMethods { get; set; }
+
+
+        /// <summary>
+        /// JWS signing algorithms (<c>"alg"</c> values) supported
+        /// by the revocation endpoint for the signature on the
+        /// JWT used to authenticate the client at the revocation
+        /// endpoint for the <c>"private_key_jwt"</c> and
+        /// <c>"client_secret_jwt"</c> authentication methods.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>"revocation_endpoint_auth_signing_alg_values_supported"</c>
+        /// metadata defined in "OAuth 2.0 Authorization Server
+        /// Metadata".
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedRevocationAuthSigningAlgorithms", ItemConverterType = typeof(StringEnumConverter))]
+        public JWSAlg[] SupportedRevocationAuthSigningAlgorithms { get; set; }
+
+
+        /// <summary>
         /// The URI of the UserInfo endpoint
         /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
         /// UserInfo Endpoint</a> of
@@ -703,5 +748,88 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("supportedServiceProfiles", ItemConverterType = typeof(StringEnumConverter))]
         public ServiceProfile[] SupportedServiceProfiles { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether this service supports
+        /// "Mutual TLS sender constrained access tokens".
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If this property is <c>true</c>, client applications
+        /// whose <c>IsMutualTlsSenderConstrainedAccessTokens</c>
+        /// property is <c>true</c> are required to present a
+        /// client certificate on token requests to the
+        /// authorization server and on API calls to the resource
+        /// server.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("mutualTlsSenderConstrainedAccessTokens")]
+        public bool IsMutualTlsSenderConstrainedAccessTokens { get; set; }
+
+
+        /// <summary>
+        /// The URI of the introspection endpoint
+        /// (<a href="https://tools.ietf.org/html/rfc7662">RFC 7662:
+        /// OAuth 2.0 Token Introspection</a>).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("introspectionEndpoint")]
+        public Uri IntrospectionEndpoint { get; set; }
+
+
+        /// <summary>
+        /// Client authentication methods at the introspection
+        /// endpoint supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>"introspection_endpoint_auth_methods_supported"</c>
+        /// metadata defined in "OAuth 2.0 Authorization Server
+        /// Metadata".
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedIntrospectionAuthMethods", ItemConverterType = typeof(StringEnumConverter))]
+        public ClientAuthMethod[] SupportedIntrospectionAuthMethods { get; set; }
+
+
+        /// <summary>
+        /// JWS signing algorithms (<c>"alg"</c> values) supported
+        /// by the introspection endpoint for the signature on the
+        /// JWT used to authenticate the client at the introspection
+        /// endpoint for the <c>"private_key_jwt"</c> and
+        /// <c>"client_secret_jwt"</c> authentication methods.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>"introspection_endpoint_auth_signing_alg_values_supported"</c>
+        /// metadata defined in "OAuth 2.0 Authorization Server
+        /// Metadata".
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedIntrospectionAuthSigningAlgorithms", ItemConverterType = typeof(StringEnumConverter))]
+        public JWSAlg[] SupportedIntrospectionAuthSigningAlgorithms { get; set; }
     }
 }
