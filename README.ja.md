@@ -225,7 +225,9 @@ settings.Timeout = TimeSpan.FromSeconds(5);
     - `DeleteClient(long clientId)`
     - `GetClient(long clientId)`
     - `GetClientList()`
+    - `GetClientList(string developer)`
     - `GetClientList(int start, int end)`
+    - `GetClientList(string developer, int start, int end)`
     - `UpdateClient(Client client)`
     - `RefreshClientSecret(long clientId)`
     - `RefreshClientSecret(string clientIdentifier)`
