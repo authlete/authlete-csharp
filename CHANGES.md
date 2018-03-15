@@ -1,6 +1,27 @@
 CHANGES
 =======
 
+1.0.9 (2018-03-15)
+------------------
+
+- `Client` class
+    * Added `IsMutualTlsSenderConstrainedAccessTokens` property.
+
+- `IntrospectionRequest` class
+    * Added `ClientCertificate` property.
+
+- `IntrospectionResponse` class
+    * Added `CertificateThumbprint` property.
+
+- `Service` class
+    * Added `IsMutualTlsSenderConstrainedAccessTokens` property.
+    * Added `SupportedRevocationAuthMethods` property.
+    * Added `SupportedRevocationAuthSigningAlgorithms` property.
+    * Added `IntrospectionEndpoint` property.
+    * Added `SupportedIntrospectionAuthMethods` property.
+    * Added `SupportedIntrospectionAuthSigningAlgorithms` property.
+
+
 1.0.8 (2018-03-11)
 ------------------
 

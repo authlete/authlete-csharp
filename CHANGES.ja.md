@@ -1,6 +1,27 @@
 CHANGES (日本語)
 ================
 
+1.0.9 (2018 年 03 月 15 日)
+---------------------------
+
+- `Client` クラス
+    * `IsMutualTlsSenderConstrainedAccessTokens` プロパティーを追加。
+
+- `IntrospectionRequest` クラス
+    * `ClientCertificate` プロパティーを追加。
+
+- `IntrospectionResponse` クラス
+    * `CertificateThumbprint` プロパティーを追加。
+
+- `Service` クラス
+    * `IsMutualTlsSenderConstrainedAccessTokens` プロパティーを追加。
+    * `SupportedRevocationAuthMethods` プロパティーを追加。
+    * `SupportedRevocationAuthSigningAlgorithms` プロパティーを追加。
+    * `IntrospectionEndpoint` プロパティーを追加。
+    * `SupportedIntrospectionAuthMethods` プロパティーを追加。
+    * `SupportedIntrospectionAuthSigningAlgorithms` プロパティーを追加。
+
+
 1.0.8 (2018 年 03 月 11 日)
 ---------------------------
 
