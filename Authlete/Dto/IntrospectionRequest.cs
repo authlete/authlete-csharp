@@ -64,5 +64,26 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("subject")]
         public string Subject { get; set; }
+
+
+        /// <summary>
+        /// The client certificate which the client application
+        /// presented at the API of the resource server.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If the access token which the client application
+        /// presented is bound to a client certificate, the client
+        /// application has to present the client certificate in
+        /// addition to the access token when it accesses APIs.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.0.9.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("clientCertificate")]
+        public string ClientCertificate { get; set; }
     }
 }
