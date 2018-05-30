@@ -225,5 +225,23 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("properties")]
         public Property[] Properties { get; set; }
+
+
+        /// <summary>
+        /// The certificate path presented by the client during
+        /// client authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// These certificates are string in PEM format.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.1.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("clientCertificatePath")]
+        public string[] ClientCertificatePath { get; set; }
     }
 }
