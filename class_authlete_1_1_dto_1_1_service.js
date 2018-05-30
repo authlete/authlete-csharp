@@ -23,10 +23,11 @@ var class_authlete_1_1_dto_1_1_service =
     [ "IsDirectRevocationEndpointEnabled", "class_authlete_1_1_dto_1_1_service.html#a555465da162aa6cb2e6e366ccbcf5de4", null ],
     [ "IsDirectTokenEndpointEnabled", "class_authlete_1_1_dto_1_1_service.html#a1455465cefe01240d7ade737709d8c5e", null ],
     [ "IsDirectUserInfoEndpointEnabled", "class_authlete_1_1_dto_1_1_service.html#a7fff62fa1cd8729890666e4604d30122", null ],
-    [ "IsMutualTlsSenderConstrainedAccessTokens", "class_authlete_1_1_dto_1_1_service.html#ae664fc79fbefa3d6c1d03274d5a091ab", null ],
+    [ "IsMutualTlsValidatePkiCertChain", "class_authlete_1_1_dto_1_1_service.html#ac729d09a68a289c8057103b39e450c2f", null ],
     [ "IsPkceRequired", "class_authlete_1_1_dto_1_1_service.html#aa72f9e5a5338a69f13d9cba2f2ad1896", null ],
     [ "IsSingleAccessTokenPerSubject", "class_authlete_1_1_dto_1_1_service.html#aee17734606ced132dc4c8798a949536c", null ],
     [ "Issuer", "class_authlete_1_1_dto_1_1_service.html#a9a63e04dfd03f09ee9a29cd30fe9e7ff", null ],
+    [ "IsTlsClientCertificateBoundAccessTokens", "class_authlete_1_1_dto_1_1_service.html#ad6a5ebe9ffa223cb123fcc055fdf015b", null ],
     [ "Jwks", "class_authlete_1_1_dto_1_1_service.html#aeb48619c22093e56dcdf58552992c4cc", null ],
     [ "JwksUri", "class_authlete_1_1_dto_1_1_service.html#a82e5ef73b4ad47c49d3fae2eda2fe925", null ],
     [ "ModifiedAt", "class_authlete_1_1_dto_1_1_service.html#a3e23a2aaf8ea59d59615b557dfc40a5e", null ],
@@ -56,5 +57,6 @@ var class_authlete_1_1_dto_1_1_service =
     [ "SupportedUiLocales", "class_authlete_1_1_dto_1_1_service.html#aa17f20691bd8729c3ec189f6def8d15f", null ],
     [ "TokenEndpoint", "class_authlete_1_1_dto_1_1_service.html#a847e2e2331dd67571da949244e18bb8d", null ],
     [ "TosUri", "class_authlete_1_1_dto_1_1_service.html#a3dbe64402dd637caf00f27d2581b8bf6", null ],
+    [ "TrustedRootCertificates", "class_authlete_1_1_dto_1_1_service.html#af5874b6df8d48ee06d27486fbe0df1e6", null ],
     [ "UserInfoEndpoint", "class_authlete_1_1_dto_1_1_service.html#a26d099e1e9b7006fd71d8e2f9a320588", null ]
 ];

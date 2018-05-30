@@ -216,7 +216,7 @@ Public Member Functions</h2></td></tr>
 <ul>
 <li>
 <p class="startli">grant_type=authorization_code  </p>
-<p class="endli">If the authorization code presented by the client application already has extra properties (this happens if <code>IAuthorizationDecisionHandlerSpi.GetProperties</code> returned extra properties when the authorization code was issued), extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this metho have the same keys. </p>
+<p class="endli">If the authorization code presented by the client application already has extra properties (this happens if <code>IAuthorizationDecisionHandlerSpi.GetProperties</code> returned extra properties when the authorization code was issued), extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this method have the same keys. </p>
 </li>
 </ul>
 <p>For example, if an authorization code has two extra properties, <code>a=1</code> and <code>b=2</code>, and if this method returns two extra properties, <code>a=A</code> and <code>c=3</code>, the resultant access token will have three extra properties, <code>a=A</code>, <code>b=2</code> and <code>c=3</code>. </p>

@@ -107,6 +107,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_authlete_1_1_dto_1_1_property.html">Property</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_request.html#a9b6ab7c5d23e9d75a59c0595620fdb51">Properties</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra properties to be associated with an access token which may be issued as a result of the token request.  <a href="#a9b6ab7c5d23e9d75a59c0595620fdb51">More...</a><br /></td></tr>
 <tr class="separator:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb595b255a439a0da6f85ea14c221f1"><td class="memItemLeft" align="right" valign="top">string []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_request.html#a8fb595b255a439a0da6f85ea14c221f1">ClientCertificatePath</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8fb595b255a439a0da6f85ea14c221f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The certificate path presented by the client during client authentication.  <a href="#a8fb595b255a439a0da6f85ea14c221f1">More...</a><br /></td></tr>
+<tr class="separator:a8fb595b255a439a0da6f85ea14c221f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Request to Authlete's <code>/api/auth/token</code> API. </p>
@@ -134,6 +137,32 @@ Properties</h2></td></tr>
 
 <p>The client certificate from the MTLS of the token request from the client application. </p>
 <p>Since version 1.0.8. </p>
+
+</div>
+</div>
+<a id="a8fb595b255a439a0da6f85ea14c221f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb595b255a439a0da6f85ea14c221f1">&#9670;&nbsp;</a></span>ClientCertificatePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] ClientCertificatePath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The certificate path presented by the client during client authentication. </p>
+<p>These certificates are string in PEM format. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>

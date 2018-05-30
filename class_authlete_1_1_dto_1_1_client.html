@@ -233,9 +233,12 @@ Properties</h2></td></tr>
 <tr class="memitem:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a2cf5a7ce85ac120338b51eb3bad67ac9">TlsClientAuthSubjectDn</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string representation of the expected subject distinguished name of the certificate this client will use in mutual TLS authentication. See <code>"tls_client_auth_subject_dn"</code> in 2.3. Dynamic Client Registration in Mutual TLS Profile for OAuth Clients for details.  <a href="#a2cf5a7ce85ac120338b51eb3bad67ac9">More...</a><br /></td></tr>
 <tr class="separator:a2cf5a7ce85ac120338b51eb3bad67ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#ae664fc79fbefa3d6c1d03274d5a091ab">IsMutualTlsSenderConstrainedAccessTokens</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this client uses "Mutual TLS sender constrained access tokens".  <a href="#ae664fc79fbefa3d6c1d03274d5a091ab">More...</a><br /></td></tr>
-<tr class="separator:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#ad6a5ebe9ffa223cb123fcc055fdf015b">IsTlsClientCertificateBoundAccessTokens</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this client uses "client certificate bound access tokens".  <a href="#ad6a5ebe9ffa223cb123fcc055fdf015b">More...</a><br /></td></tr>
+<tr class="separator:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b770e81c608185b2561bf01ef589dd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a17b770e81c608185b2561bf01ef589dd">SelfSignedCertificateKeyId</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a17b770e81c608185b2561bf01ef589dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key ID of a JWK containing a self-signed certificate of this client application.  <a href="#a17b770e81c608185b2561bf01ef589dd">More...</a><br /></td></tr>
+<tr class="separator:a17b770e81c608185b2561bf01ef589dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a client application. </p>
@@ -795,8 +798,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="ae664fc79fbefa3d6c1d03274d5a091ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae664fc79fbefa3d6c1d03274d5a091ab">&#9670;&nbsp;</a></span>IsMutualTlsSenderConstrainedAccessTokens</h2>
+<a id="ad6a5ebe9ffa223cb123fcc055fdf015b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a5ebe9ffa223cb123fcc055fdf015b">&#9670;&nbsp;</a></span>IsTlsClientCertificateBoundAccessTokens</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,7 +808,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsMutualTlsSenderConstrainedAccessTokens</td>
+          <td class="memname">bool IsTlsClientCertificateBoundAccessTokens</td>
         </tr>
       </table>
   </td>
@@ -815,9 +818,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The flag which indicates whether this client uses "Mutual TLS sender constrained access tokens". </p>
-<p>If this property is <code>true</code> (and if the service supports "Mutual TLS sender constrained access tokens"), this client must present its client certificate (1) when it makes token requests to the authorization server and (2) when it makes API calls to the resource server. </p>
-<p>Since version 1.0.9. </p>
+<p>The flag which indicates whether this client uses "client certificate bound access tokens". </p>
+<p>If this property is <code>true</code> (and if the service supports "client certificate bound access tokens"), this client must present its client certificate (1) when it makes token requests to the authorization server and (2) when it makes API calls to the resource server. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>
@@ -1178,6 +1181,34 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The sector identifier URI. This property corresponds to the <code>"sector_identifier_uri"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2. Client Metadata</a> of <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID Connect Dynamic Client Registration 1.0</a>. See <a href="https://openid.net/specs/openid-connect-registration-1_0.html#SectorIdentifierValidation">5. "sector_identifier_uri" Validation</a> of <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID Connect Dynamic Client Registration 1.0</a> for details. </p>
+
+</div>
+</div>
+<a id="a17b770e81c608185b2561bf01ef589dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b770e81c608185b2561bf01ef589dd">&#9670;&nbsp;</a></span>SelfSignedCertificateKeyId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SelfSignedCertificateKeyId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key ID of a JWK containing a self-signed certificate of this client application. </p>
+<p>See "2.2. Self-Signed Certificate Mutual TLS OAuth Client
+Authentication Method" in "OAuth 2.0 Mutual TLS Client
+Authentication and Certificate Bound Access Tokens" for details. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>

@@ -134,6 +134,15 @@ Properties</h2></td></tr>
 <tr class="memitem:a92c6b1cf703f9e064f5efc0907f80379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a92c6b1cf703f9e064f5efc0907f80379">IsActive</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a92c6b1cf703f9e064f5efc0907f80379"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the access token is active (= exists and has not expired). This property is just an alias of the <code>IsUsable</code> property. The reason this property was added is to mitigate confusion that those who are familiar with <a href="https://tools.ietf.org/html/rfc7662">RFC 7662</a> (OAuth 2.0 Token Introspection) may have.  <a href="#a92c6b1cf703f9e064f5efc0907f80379">More...</a><br /></td></tr>
 <tr class="separator:a92c6b1cf703f9e064f5efc0907f80379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_authlete_1_1_dto_1_1_property.html">Property</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a9b6ab7c5d23e9d75a59c0595620fdb51">Properties</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbitrary properties associated with the access token.  <a href="#a9b6ab7c5d23e9d75a59c0595620fdb51">More...</a><br /></td></tr>
+<tr class="separator:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b88383525a736670bb7e9f48264345"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a42b88383525a736670bb7e9f48264345">ClientIdAlias</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a42b88383525a736670bb7e9f48264345"><td class="mdescLeft">&#160;</td><td class="mdescRight">The client ID alias when the authorization request or the token request for the access token was made. Note that this value may be different from the current client ID alias.  <a href="#a42b88383525a736670bb7e9f48264345">More...</a><br /></td></tr>
+<tr class="separator:a42b88383525a736670bb7e9f48264345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bac6f2b5a683a49cd10f8046634456"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a05bac6f2b5a683a49cd10f8046634456">IsClientIdAliasUsed</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a05bac6f2b5a683a49cd10f8046634456"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the client ID alias was sed when the authorization request or the token request for the access token was made.  <a href="#a05bac6f2b5a683a49cd10f8046634456">More...</a><br /></td></tr>
+<tr class="separator:a05bac6f2b5a683a49cd10f8046634456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a723ac64082f1518833d27a08e0ca9ba3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a723ac64082f1518833d27a08e0ca9ba3">CertificateThumbprint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a723ac64082f1518833d27a08e0ca9ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thumbprint of the client certificate which is associated with the access token.  <a href="#a723ac64082f1518833d27a08e0ca9ba3">More...</a><br /></td></tr>
 <tr class="separator:a723ac64082f1518833d27a08e0ca9ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,6 +245,31 @@ Request"</code>. The resource server may use this string to tell the client appl
 
 </div>
 </div>
+<a id="a42b88383525a736670bb7e9f48264345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b88383525a736670bb7e9f48264345">&#9670;&nbsp;</a></span>ClientIdAlias</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ClientIdAlias</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The client ID alias when the authorization request or the token request for the access token was made. Note that this value may be different from the current client ID alias. </p>
+<p>Since version 1.1.0.</p>
+
+</div>
+</div>
 <a id="afc6e28b351635ee06030661d1e3b89f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc6e28b351635ee06030661d1e3b89f6">&#9670;&nbsp;</a></span>ExpiresAt</h2>
 
@@ -282,6 +316,31 @@ Request"</code>. The resource server may use this string to tell the client appl
 
 <p>The flag which indicates whether the access token is active (= exists and has not expired). This property is just an alias of the <code>IsUsable</code> property. The reason this property was added is to mitigate confusion that those who are familiar with <a href="https://tools.ietf.org/html/rfc7662">RFC 7662</a> (OAuth 2.0 Token Introspection) may have. </p>
 <p>Since version 1.0.6. </p>
+
+</div>
+</div>
+<a id="a05bac6f2b5a683a49cd10f8046634456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bac6f2b5a683a49cd10f8046634456">&#9670;&nbsp;</a></span>IsClientIdAliasUsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsClientIdAliasUsed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether the client ID alias was sed when the authorization request or the token request for the access token was made. </p>
+<p>Since version 1.1.0.</p>
 
 </div>
 </div>
@@ -378,6 +437,31 @@ Request"</code>. The resource server may use this string to tell the client appl
 </div><div class="memdoc">
 
 <p>The flag which indicates whether the access token is usable (= exists and has not expired). </p>
+
+</div>
+</div>
+<a id="a9b6ab7c5d23e9d75a59c0595620fdb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6ab7c5d23e9d75a59c0595620fdb51">&#9670;&nbsp;</a></span>Properties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_authlete_1_1_dto_1_1_property.html">Property</a> [] Properties</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arbitrary properties associated with the access token. </p>
+<p>Since version 1.1.0.</p>
 
 </div>
 </div>

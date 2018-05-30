@@ -251,9 +251,9 @@ Properties</h2></td></tr>
 <tr class="memitem:add86c73b72eb4ecfb37068eddc86dca9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#af9d435a056682a35aedd5eb29ac1c553">ServiceProfile</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#add86c73b72eb4ecfb37068eddc86dca9">SupportedServiceProfiles</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:add86c73b72eb4ecfb37068eddc86dca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service profiles supported by this service.  <a href="#add86c73b72eb4ecfb37068eddc86dca9">More...</a><br /></td></tr>
 <tr class="separator:add86c73b72eb4ecfb37068eddc86dca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ae664fc79fbefa3d6c1d03274d5a091ab">IsMutualTlsSenderConstrainedAccessTokens</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service supports "Mutual TLS sender constrained access tokens".  <a href="#ae664fc79fbefa3d6c1d03274d5a091ab">More...</a><br /></td></tr>
-<tr class="separator:ae664fc79fbefa3d6c1d03274d5a091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ad6a5ebe9ffa223cb123fcc055fdf015b">IsTlsClientCertificateBoundAccessTokens</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service supports "client certificate bound access tokens".  <a href="#ad6a5ebe9ffa223cb123fcc055fdf015b">More...</a><br /></td></tr>
+<tr class="separator:ad6a5ebe9ffa223cb123fcc055fdf015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aa8c76e614bafb1b3a6b7e4d882071ae8">IntrospectionEndpoint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the introspection endpoint (<a href="https://tools.ietf.org/html/rfc7662">RFC 7662: OAuth 2.0 Token Introspection</a>).  <a href="#aa8c76e614bafb1b3a6b7e4d882071ae8">More...</a><br /></td></tr>
 <tr class="separator:aa8c76e614bafb1b3a6b7e4d882071ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +263,12 @@ Properties</h2></td></tr>
 <tr class="memitem:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ad6fa3eef1a42aec2a059dd939852eee3">SupportedIntrospectionAuthSigningAlgorithms</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ad6fa3eef1a42aec2a059dd939852eee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWS signing algorithms (<code>"alg"</code> values) supported by the introspection endpoint for the signature on the JWT used to authenticate the client at the introspection endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods.  <a href="#ad6fa3eef1a42aec2a059dd939852eee3">More...</a><br /></td></tr>
 <tr class="separator:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac729d09a68a289c8057103b39e450c2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ac729d09a68a289c8057103b39e450c2f">IsMutualTlsValidatePkiCertChain</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac729d09a68a289c8057103b39e450c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service validates certificate chains during PKI-based client mutual TLS authentication.  <a href="#ac729d09a68a289c8057103b39e450c2f">More...</a><br /></td></tr>
+<tr class="separator:ac729d09a68a289c8057103b39e450c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5874b6df8d48ee06d27486fbe0df1e6"><td class="memItemLeft" align="right" valign="top">string []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#af5874b6df8d48ee06d27486fbe0df1e6">TrustedRootCertificates</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af5874b6df8d48ee06d27486fbe0df1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of root certificates trusted by this service for PKI-based client mutual TLS authentication.  <a href="#af5874b6df8d48ee06d27486fbe0df1e6">More...</a><br /></td></tr>
+<tr class="separator:af5874b6df8d48ee06d27486fbe0df1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a service which represents an authorization server / OpenID provider. </p>
@@ -828,8 +834,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="ae664fc79fbefa3d6c1d03274d5a091ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae664fc79fbefa3d6c1d03274d5a091ab">&#9670;&nbsp;</a></span>IsMutualTlsSenderConstrainedAccessTokens</h2>
+<a id="ac729d09a68a289c8057103b39e450c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac729d09a68a289c8057103b39e450c2f">&#9670;&nbsp;</a></span>IsMutualTlsValidatePkiCertChain</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -838,7 +844,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsMutualTlsSenderConstrainedAccessTokens</td>
+          <td class="memname">bool IsMutualTlsValidatePkiCertChain</td>
         </tr>
       </table>
   </td>
@@ -848,9 +854,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The flag which indicates whether this service supports "Mutual TLS sender constrained access tokens". </p>
-<p>If this property is <code>true</code>, client applications whose <code>IsMutualTlsSenderConstrainedAccessTokens</code> property is <code>true</code> are required to present a client certificate on token requests to the authorization server and on API calls to the resource server. </p>
-<p>Since version 1.0.9. </p>
+<p>The flag which indicates whether this service validates certificate chains during PKI-based client mutual TLS authentication. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>
@@ -924,6 +929,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The issuer identifier of this OpenID provider. This property corresponds to the <code>"issuer"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>. </p>
+
+</div>
+</div>
+<a id="ad6a5ebe9ffa223cb123fcc055fdf015b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a5ebe9ffa223cb123fcc055fdf015b">&#9670;&nbsp;</a></span>IsTlsClientCertificateBoundAccessTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsTlsClientCertificateBoundAccessTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether this service supports "client certificate bound access tokens". </p>
+<p>If this property is <code>true</code>, client applications whose <code>IsClientCertificateBoundAccessTokens</code> property is <code>true</code> are required to present a client certificate on token requests to the authorization server and on API calls to the resource server. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>
@@ -1633,6 +1664,31 @@ Metadata". </p>
 </div><div class="memdoc">
 
 <p>The URI that this OpenID Provider provides to the person registering the client to read about the OP's terms of service. This property corresponds to the <code>"op_tos_uri"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>. </p>
+
+</div>
+</div>
+<a id="af5874b6df8d48ee06d27486fbe0df1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5874b6df8d48ee06d27486fbe0df1e6">&#9670;&nbsp;</a></span>TrustedRootCertificates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] TrustedRootCertificates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of root certificates trusted by this service for PKI-based client mutual TLS authentication. </p>
+<p>Since version 1.1.0. </p>
 
 </div>
 </div>

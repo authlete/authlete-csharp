@@ -95,18 +95,21 @@ Inheritance diagram for IAuthorizationRequestHandlerSpi:</div>
  <div class="center">
   <img src="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_handler_spi.png" usemap="#IAuthorizationRequestHandlerSpi_map" alt=""/>
   <map id="IAuthorizationRequestHandlerSpi_map" name="IAuthorizationRequestHandlerSpi_map">
-<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_user_claim_provider.html" title="Interface to get a claim value by specifying a user&#39;s subject and a claim name. " alt="IUserClaimProvider" shape="rect" coords="148,0,435,24"/>
-<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_decision_handler_spi.html" title="Service Provider Interface for AuthorizationRequestDecisionHandler. " alt="IAuthorizationRequestDecisionHandlerSpi" shape="rect" coords="0,112,287,136"/>
-<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_no_interaction_handler_spi.html" title="Service Provider Interface for NoInteractionHandler. " alt="INoInteractionHandlerSpi" shape="rect" coords="297,112,584,136"/>
+<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_user_claim_provider.html" title="Interface to get a claim value by specifying a user&#39;s subject and a claim name. " alt="IUserClaimProvider" shape="rect" coords="594,0,881,24"/>
+<area href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html" title="An empty implementation of the IAuthorizationRequestHandlerSpi interface. " alt="AuthorizationRequestHandlerSpiAdapter" shape="rect" coords="148,112,435,136"/>
+<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_decision_handler_spi.html" title="Service Provider Interface for AuthorizationRequestDecisionHandler. " alt="IAuthorizationRequestDecisionHandlerSpi" shape="rect" coords="594,112,881,136"/>
+<area href="interface_authlete_1_1_handler_1_1_spi_1_1_i_no_interaction_handler_spi.html" title="Service Provider Interface for NoInteractionHandler. " alt="INoInteractionHandlerSpi" shape="rect" coords="891,112,1178,136"/>
 <area href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html" title="An empty implementation of the IAuthorizationRequestDecisionHandlerSpi interface. ..." alt="AuthorizationRequestDecisionHandlerSpiAdapter" shape="rect" coords="0,168,287,192"/>
 <area href="class_authlete_1_1_handler_1_1_spi_1_1_no_interaction_handler_spi_adapter.html" title="An empty implementation of the INoInteractionHandlerSpi interface. " alt="NoInteractionHandlerSpiAdapter" shape="rect" coords="297,168,584,192"/>
+<area href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html" title="An empty implementation of the IAuthorizationRequestDecisionHandlerSpi interface. ..." alt="AuthorizationRequestDecisionHandlerSpiAdapter" shape="rect" coords="594,168,881,192"/>
+<area href="class_authlete_1_1_handler_1_1_spi_1_1_no_interaction_handler_spi_adapter.html" title="An empty implementation of the INoInteractionHandlerSpi interface. " alt="NoInteractionHandlerSpiAdapter" shape="rect" coords="891,168,1178,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a445866cb04598d698b70c78e3dd5c892"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_handler_spi.html#a445866cb04598d698b70c78e3dd5c892">GetUserAuthenticatedAt</a> ()</td></tr>
-<tr class="memdesc:a445866cb04598d698b70c78e3dd5c892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time when the end-user was authenticated. (1970-Jan-1).  <a href="#a445866cb04598d698b70c78e3dd5c892">More...</a><br /></td></tr>
+<tr class="memdesc:a445866cb04598d698b70c78e3dd5c892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time when the end-user was authenticated.  <a href="#a445866cb04598d698b70c78e3dd5c892">More...</a><br /></td></tr>
 <tr class="separator:a445866cb04598d698b70c78e3dd5c892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bcc36a7b99a6c343b146a19715ca108"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_handler_spi.html#a4bcc36a7b99a6c343b146a19715ca108">GetUserSubject</a> ()</td></tr>
 <tr class="memdesc:a4bcc36a7b99a6c343b146a19715ca108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the subject (= unique identifier) of the end-user. It must consist of only ASCII letters and its length must not exceed 100.  <a href="#a4bcc36a7b99a6c343b146a19715ca108">More...</a><br /></td></tr>
@@ -150,6 +153,8 @@ Public Member Functions</h2></td></tr>
 <p>The value returned from this method has an important meaning only when the <code>"acr"</code> claim is requested as an essential claim. See <a href="https://openid.net/specs/openid-connect-core-1_0.html#acrSemantics">5.5.1.1. Requesting the "acr" Claim</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for details. </p>
 <dl class="section return"><dt>Returns</dt><dd>The ACR that was satisfied when the end-user was authenticated. If your system does not recognize ACR, <code>null</code> should be returned. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#ad1ddb5ef8b8d21eda0f4e37bd852ab9a">AuthorizationRequestHandlerSpiAdapter</a>.</p>
+
 </div>
 </div>
 <a id="ac97276ce567fde54565c144c3758b484"></a>
@@ -191,7 +196,9 @@ Public Member Functions</h2></td></tr>
 <code>id_token</code> </li>
 </ul>
 <p>Note that there is an upper limit on the total size of properties. On Authlete side, the properties will be (1) converted to a multidimensional string array, (2) converted to JSON, (3) encrypted by AES/CBC/PKCS5Padding, (4) encoded by base64url, and then stored into the database. The length of the resultant string must not exceed 65,535 in bytes. This is the upper limit, but we think it is big enough. </p>
-<dl class="section return"><dt>Returns</dt><dd>Arbitrary key-value pairs to be associated with an access token. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Arbitrary key-value pairs to be associated with an access token and/or an authorization code. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#a302ed9eda8cdc736da499fc5a540e8c4">AuthorizationRequestHandlerSpiAdapter</a>.</p>
 
 </div>
 </div>
@@ -216,6 +223,8 @@ Public Member Functions</h2></td></tr>
 <p>If you add the <code>"offline_access"</code> scope although it is not included in the original request, keep in mind that the specification requires explicit consent from the end-user for the scope (<a href="https://openid.net/specs/openid-connect-core-1_0.html#OfflineAccess">11. Offline Access</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). When <code>"offline_access"</code> is included in the original authorization request, the current implementation of Authlete's <code>/api/auth/authorization</code> API checks whether the authorization request has come along with the <code>"prompt"</code> request parameter and its value includes <code>"consent"</code>. However, note that the implementation of Authlete's <code>/api/auth/authorization/issue</code> API does not perform the same validation even if the <code>"offline_access"</code> scope is newly added via this <code>"scopes"</code> parameter. </p>
 <dl class="section return"><dt>Returns</dt><dd>Scopes which replace the scopes of the original authorization request. If <code>null</code> is returned, the scopes will not be replaced. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#a65fd8967ec84319e17b119a8cc6ad176">AuthorizationRequestHandlerSpiAdapter</a>.</p>
+
 </div>
 </div>
 <a id="a4fff0dae09d89fa48d17afd0721bb076"></a>
@@ -237,6 +246,8 @@ Public Member Functions</h2></td></tr>
 <p>The main purpose of this method is to hide the actual value of the subject from client applications. </p>
 <dl class="section return"><dt>Returns</dt><dd>The value of the <code>"sub"</code> claim. </dd></dl>
 
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#ac9658f82dee542f8d2b47937765abba3">AuthorizationRequestHandlerSpiAdapter</a>.</p>
+
 </div>
 </div>
 <a id="a445866cb04598d698b70c78e3dd5c892"></a>
@@ -254,8 +265,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the time when the end-user was authenticated. (1970-Jan-1). </p>
+<p>Get the time when the end-user was authenticated. </p>
 <dl class="section return"><dt>Returns</dt><dd>The time when the current end-user was authenticated. The number of seconds since the Unix epoch (1970-Jan-1). 0 means that the time is unknown. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#a857853efde678418aa37f3cf151272a3">AuthorizationRequestHandlerSpiAdapter</a>.</p>
 
 </div>
 </div>
@@ -276,6 +289,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the subject (= unique identifier) of the end-user. It must consist of only ASCII letters and its length must not exceed 100. </p>
 <dl class="section return"><dt>Returns</dt><dd>The subject of the end-user. </dd></dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html#a5e71fe5b82e80b0f6793d517c78c6bbe">AuthorizationRequestHandlerSpiAdapter</a>.</p>
 
 </div>
 </div>

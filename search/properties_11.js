@@ -11,5 +11,6 @@ var searchData=
   ['tokentype',['TokenType',['../class_authlete_1_1_dto_1_1_token_create_response.html#a7d8633709f0b8aa6ef65ba257618a85c',1,'Authlete::Dto::TokenCreateResponse']]],
   ['tosuri',['TosUri',['../class_authlete_1_1_dto_1_1_client.html#a3dbe64402dd637caf00f27d2581b8bf6',1,'Authlete.Dto.Client.TosUri()'],['../class_authlete_1_1_dto_1_1_service.html#a3dbe64402dd637caf00f27d2581b8bf6',1,'Authlete.Dto.Service.TosUri()']]],
   ['tosuris',['TosUris',['../class_authlete_1_1_dto_1_1_client.html#adf1ece5975d4a652c652d69e0822a73d',1,'Authlete::Dto::Client']]],
-  ['totalcount',['TotalCount',['../class_authlete_1_1_dto_1_1_client_list_response.html#a9dd7dc8c4fec548749f9e6619d237885',1,'Authlete.Dto.ClientListResponse.TotalCount()'],['../class_authlete_1_1_dto_1_1_service_list_response.html#a9dd7dc8c4fec548749f9e6619d237885',1,'Authlete.Dto.ServiceListResponse.TotalCount()']]]
+  ['totalcount',['TotalCount',['../class_authlete_1_1_dto_1_1_client_list_response.html#a9dd7dc8c4fec548749f9e6619d237885',1,'Authlete.Dto.ClientListResponse.TotalCount()'],['../class_authlete_1_1_dto_1_1_service_list_response.html#a9dd7dc8c4fec548749f9e6619d237885',1,'Authlete.Dto.ServiceListResponse.TotalCount()']]],
+  ['trustedrootcertificates',['TrustedRootCertificates',['../class_authlete_1_1_dto_1_1_service.html#af5874b6df8d48ee06d27486fbe0df1e6',1,'Authlete::Dto::Service']]]
 ];

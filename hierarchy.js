@@ -68,6 +68,10 @@ var hierarchy =
     ] ],
     [ "IUserClaimProvider", "interface_authlete_1_1_handler_1_1_spi_1_1_i_user_claim_provider.html", [
       [ "IAuthorizationRequestHandlerSpi", "interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_handler_spi.html", [
+        [ "AuthorizationRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html", [
+          [ "AuthorizationRequestDecisionHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html", null ],
+          [ "NoInteractionHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_no_interaction_handler_spi_adapter.html", null ]
+        ] ],
         [ "IAuthorizationRequestDecisionHandlerSpi", "interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_decision_handler_spi.html", [
           [ "AuthorizationRequestDecisionHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html", null ]
         ] ],
@@ -79,10 +83,7 @@ var hierarchy =
         [ "UserInfoRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html", null ]
       ] ],
       [ "UserClaimProviderAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_user_claim_provider_adapter.html", [
-        [ "AuthorizationRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html", [
-          [ "AuthorizationRequestDecisionHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html", null ],
-          [ "NoInteractionHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_no_interaction_handler_spi_adapter.html", null ]
-        ] ],
+        [ "AuthorizationRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_handler_spi_adapter.html", null ],
         [ "UserInfoRequestHandlerSpiAdapter", "class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html", null ]
       ] ]
     ] ],
