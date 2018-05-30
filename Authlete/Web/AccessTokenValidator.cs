@@ -136,7 +136,7 @@ namespace Authlete.Web
         /// <c>/api/auth/introspection</c> API. If the API call
         /// threw an exception, the exception would be set to this
         /// property. Note that this property remains <c>null</c>
-        /// if the API call succeeded, and in that successfull case,
+        /// if the API call succeeded, and in that successful case,
         /// the <c>IntrospectionResult</c> property is set.
         /// </summary>
         ///

@@ -56,7 +56,7 @@ namespace Authlete.Handler
 
 
         /// <summary>
-        /// A utility method to generated an <c>HttpResponseMessage</c>
+        /// A utility method to generate an <c>HttpResponseMessage</c>
         /// instance with "500 Internal Server Error" and an error
         /// message in JSON. This method is expected to be used
         /// when the value of the <c>"action"</c> parameter in a

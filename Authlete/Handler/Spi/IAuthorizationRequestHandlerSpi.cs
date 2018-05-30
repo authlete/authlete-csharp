@@ -32,7 +32,6 @@ namespace Authlete.Handler.Spi
     {
         /// <summary>
         /// Get the time when the end-user was authenticated.
-        /// (1970-Jan-1).
         /// </summary>
         ///
         /// <returns>
@@ -152,7 +151,7 @@ namespace Authlete.Handler.Spi
         ///
         /// <returns>
         /// Arbitrary key-value pairs to be associated with an
-        /// access token.
+        /// access token and/or an authorization code.
         /// </returns>
         Property[] GetProperties();
 

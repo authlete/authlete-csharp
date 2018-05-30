@@ -62,7 +62,7 @@ namespace Authlete.Handler
         /// <exception cref="AuthleteApiException"/>
         public async Task<HttpResponseMessage> Handle(string parameters)
         {
-            // Call Authlete's /api/auth/introspection/starndard API.
+            // Call Authlete's /api/auth/introspection/standard API.
             StandardIntrospectionResponse response =
                 await CallStandardIntrospectionApi(parameters);
 

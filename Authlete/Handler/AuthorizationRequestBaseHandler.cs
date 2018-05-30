@@ -84,7 +84,7 @@ namespace Authlete.Handler
         /// </param>
         ///
         /// <param name="claims">
-        /// The claims about the end-user in JSON format.
+        /// The claims about the end-user.
         /// </param>
         ///
         /// <param name="properties">

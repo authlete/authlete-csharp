@@ -146,7 +146,7 @@ namespace Authlete.Handler
             // Scopes associated with an access token and/or an
             // authorization code. If a non-null value is returned
             // from Spi.GetScopes(), the scope set replaces the
-            // scopes that was given by the original authorization
+            // scopes that were given by the original authorization
             // request.
             string[] scopes = Spi.GetScopes();
 

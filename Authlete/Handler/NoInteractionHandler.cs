@@ -35,7 +35,7 @@ namespace Authlete.Handler
     /// <remarks>
     /// <para>
     /// A response from Authlete's <c>/api/auth/authorization</c>
-    /// API contains a <c>"action"</c> response parameter. When the
+    /// API contains an <c>"action"</c> response parameter. When the
     /// value of the response parameter is <c>"NO_INTERACTION"</c>,
     /// the authorization request needs to be processed without
     /// user interaction. This class is a handler for the case.

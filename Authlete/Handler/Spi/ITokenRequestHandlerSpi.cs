@@ -144,7 +144,7 @@ namespace Authlete.Handler.Spi
         /// was issued), extra properties returned by this method
         /// will be merged into the existing extra properties. Note
         /// that the existing extra properties will be overwritten
-        /// if extra properties returned by this metho have the
+        /// if extra properties returned by this method have the
         /// same keys.
         /// </para>
         /// <para>
