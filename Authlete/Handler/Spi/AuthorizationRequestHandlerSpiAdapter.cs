@@ -33,7 +33,7 @@ namespace Authlete.Handler.Spi
     /// <c>IAuthorizationRequestHandlerSpi</c> interface.
     /// </summary>
     public class AuthorizationRequestHandlerSpiAdapter
-        : UserClaimProviderAdapter
+        : UserClaimProviderAdapter, IAuthorizationRequestHandlerSpi
     {
         public virtual long GetUserAuthenticatedAt()
         {
