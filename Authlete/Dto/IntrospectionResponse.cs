@@ -307,6 +307,47 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// Arbitrary properties associated with the access token.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.1.0.</para>
+        /// </remarks>
+        [JsonProperty("properties")]
+        public Property[] Properties { get; set; }
+
+
+        /// <summary>
+        /// The client ID alias when the authorization request or
+        /// the token request for the access token was made. Note
+        /// that this value may be different from the current
+        /// client ID alias.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.1.0.</para>
+        /// </remarks>
+        [JsonProperty("clientIdAlias")]
+        public string ClientIdAlias { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether the client ID alias
+        /// was sed when the authorization request or the token
+        /// request for the access token was made.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.1.0.</para>
+        /// </remarks>
+        [JsonProperty("clientIdAliasUsed")]
+        public bool IsClientIdAliasUsed { get; set; }
+
+
+        /// <summary>
         /// The thumbprint of the client certificate which is
         /// associated with the access token.
         /// </summary>
