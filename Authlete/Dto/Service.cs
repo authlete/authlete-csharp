@@ -831,5 +831,34 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("supportedIntrospectionAuthSigningAlgorithms", ItemConverterType = typeof(StringEnumConverter))]
         public JWSAlg[] SupportedIntrospectionAuthSigningAlgorithms { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether this service validates
+        /// certificate chains during PKI-based client mutual TLS
+        /// authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.1.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("mutualTlsValidatePkiCertChain")]
+        public bool IsMutualTlsValidatePkiCertChain { get; set; }
+
+
+        /// <summary>
+        /// The list of root certificates trusted by this service
+        /// for PKI-based client mutual TLS authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.1.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("trustedRootCertificates")]
+        public string[] TrustedRootCertificates { get; set; }
     }
 }
