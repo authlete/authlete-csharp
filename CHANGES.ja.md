@@ -1,6 +1,32 @@
 CHANGES (日本語)
 ================
 
+1.1.0 (2018 年 05 月 30 日)
+---------------------------
+
+- `AuthorizationRequestHandlerSpiAdapter` クラス
+    * `IAuthorizationRequestHandlerSpi` インターフェースを実装。
+
+- `Client` クラス
+    * `SelfSignedCertificateKeyId` プロパティーを追加。
+    * `IsMutualTlsSenderConstrainedAccessTokens` プロパティーを
+      `IsTlsClientCertificateBoundAccessTokens` へと名称変更。
+
+- `IntrospectionResponse` クラス
+    * `Properties` プロパティーを追加。
+    * `ClientIdAlias` プロパティーを追加。
+    * `IsClientIdAliasUsed` プロパティーを追加。
+
+- `Service` クラス
+    * `IsMutualTlsValidatePkiCertChain` プロパティーを追加。
+    * `TrustedRootCertificates` プロパティーを追加。
+    * `IsMutualTlsSenderConstrainedAccessTokens` プロパティーを
+      `IsTlsClientCertificateBoundAccessTokens` へと名称変更。
+
+- `TokenRequest` クラス
+    * `ClientCertificatePath` プロパティーを追加。
+
+
 1.0.9 (2018 年 03 月 15 日)
 ---------------------------
 

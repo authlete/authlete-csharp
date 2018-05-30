@@ -1,6 +1,32 @@
 CHANGES
 =======
 
+1.1.0 (2018-05-30)
+------------------
+
+- `AuthorizationRequestHandlerSpiAdapter` class
+    * Implemented `IAuthorizationRequestHandlerSpi` interface.
+
+- `Client` class
+    * Added `SelfSignedCertificateKeyId` property.
+    * Renamed `IsMutualTlsSenderConstrainedAccessTokens` property to
+      `IsTlsClientCertificateBoundAccessTokens`.
+
+- `IntrospectionResponse` class
+    * Added `Properties` property.
+    * Added `ClientIdAlias` property.
+    * Added `IsClientIdAliasUsed` property.
+
+- `Service` class
+    * Added `IsMutualTlsValidatePkiCertChain` property.
+    * Added `TrustedRootCertificates` property.
+    * Renamed `IsMutualTlsSenderConstrainedAccessTokens` property to
+      `IsTlsClientCertificateBoundAccessTokens`.
+
+- `TokenRequest` class
+    * Added `ClientCertificatePath` property.
+
+
 1.0.9 (2018-03-15)
 ------------------
 
