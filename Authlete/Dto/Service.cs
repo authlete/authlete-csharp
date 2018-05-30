@@ -752,13 +752,13 @@ namespace Authlete.Dto
 
         /// <summary>
         /// The flag which indicates whether this service supports
-        /// "Mutual TLS sender constrained access tokens".
+        /// "client certificate bound access tokens".
         /// </summary>
         ///
         /// <remarks>
         /// <para>
         /// If this property is <c>true</c>, client applications
-        /// whose <c>IsMutualTlsSenderConstrainedAccessTokens</c>
+        /// whose <c>IsClientCertificateBoundAccessTokens</c>
         /// property is <c>true</c> are required to present a
         /// client certificate on token requests to the
         /// authorization server and on API calls to the resource
@@ -766,11 +766,11 @@ namespace Authlete.Dto
         /// </para>
         ///
         /// <para>
-        /// Since version 1.0.9.
+        /// Since version 1.1.0.
         /// </para>
         /// </remarks>
-        [JsonProperty("mutualTlsSenderConstrainedAccessTokens")]
-        public bool IsMutualTlsSenderConstrainedAccessTokens { get; set; }
+        [JsonProperty("tlsClientCertificateBoundAccessTokens")]
+        public bool IsTlsClientCertificateBoundAccessTokens { get; set; }
 
 
         /// <summary>
