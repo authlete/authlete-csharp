@@ -273,7 +273,8 @@ namespace Authlete.Handler
             if (subject == null)
             {
                 // The credentials are invalid. Nothing is issued.
-                return await TokenFail(ticket);
+                return await TokenFail(
+                    ticket, TokenFailReason.INVALID_RESOURCE_OWNER_CREDENTIALS);
             }
 
             // Issue an access token and optionally an ID token.
@@ -330,10 +331,10 @@ namespace Authlete.Handler
         }
 
 
-        async Task<HttpResponseMessage> TokenFail(string ticket)
+        async Task<HttpResponseMessage> TokenFail(string ticket, TokenFailReason reason)
         {
             // Call Authlete's /api/auth/token/fail API.
-            TokenFailResponse response = await CallTokenFailApi(ticket);
+            TokenFailResponse response = await CallTokenFailApi(ticket, reason);
 
             // 'action' in the response denotes the next action which
             // this service implementation should take.
@@ -361,13 +362,13 @@ namespace Authlete.Handler
         }
 
 
-        async Task<TokenFailResponse> CallTokenFailApi(string ticket)
+        async Task<TokenFailResponse> CallTokenFailApi(string ticket, TokenFailReason reason)
         {
             // Prepare a request for Authlete's /api/auth/token/fail API.
             TokenFailRequest request = new TokenFailRequest
             {
                 Ticket = ticket,
-                Reason = TokenFailReason.INVALID_RESOURCE_OWNER_CREDENTIALS
+                Reason = reason
             };
 
             // Call Authlete's /api/auth/token/fail API.
