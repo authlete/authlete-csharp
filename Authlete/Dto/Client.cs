@@ -642,5 +642,26 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("tlsClientCertificateBoundAccessTokens")]
         public bool IsTlsClientCertificateBoundAccessTokens { get; set; }
+
+
+        /// <summary>
+        /// The key ID of a JWK containing a self-signed certificate
+        /// of this client application.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See "2.2. Self-Signed Certificate Mutual TLS OAuth Client
+        /// Authentication Method" in "OAuth 2.0 Mutual TLS Client
+        /// Authentication and Certificate Bound Access Tokens" for
+        /// details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.1.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("selfSignedCertificateKeyId")]
+        public string SelfSignedCertificateKeyId { get; set; }
     }
 }
