@@ -24,8 +24,20 @@ namespace Authlete.Types
     public enum ServiceProfile
     {
         /// <summary>
-        /// <a href="https://openid.net/wg/fapi/">Financial API</a>.
+        /// <a href="https://openid.net/wg/fapi/">Financial-grade API</a>.
         /// </summary>
         FAPI = 1,
+
+
+        /// <summary>
+        /// <a href="https://www.openbanking.org.uk/">Open Banking</a>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        OPEN_BANKING = 2,
     }
 }
