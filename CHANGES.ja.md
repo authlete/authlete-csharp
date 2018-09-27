@@ -1,6 +1,37 @@
 CHANGES (日本語)
 ================
 
+1.2.0 (2018 年 09 月 28 日)
+---------------------------
+
+- `AuthorizationResponse` クラス
+    * `RequestObjectPayload` プロパティーを追加。
+    * `IdTokenClaims` プロパティーを追加。
+    * `UserInfoClaims` プロパティーを追加。
+
+- `Client` クラス
+    * `SoftwareId` プロパティーを追加。
+    * `SoftwareVersion` プロパティーを追加。
+    * `AuthorizationSignAlg` プロパティーを追加。
+    * `AuthorizationEncryptionAlg` プロパティーを追加。
+    * `AuthorizationEncryptionEnc` プロパティーを追加。
+
+- `Service` クラス
+    * `AuthorizationResponseDuration` プロパティーを追加。
+    * `IsClientIdAliasEnabled` プロパティーを追加。
+    * `IsErrorDescriptionOmitted` プロパティーを追加。
+    * `IsErrorUriOmitted` プロパティーを追加。
+    * `IsRefreshTokenKept` プロパティーを追加。
+    * `AuthorizationSignatureKeyId` プロパティーを追加。
+    * `IdTokenSignatureKeyId` プロパティーを追加。
+    * `UserInfoSignatureKeyId` プロパティーを追加。
+    * `SupportedIntrospectionAuthSigningAlgorithms` プロパティーを削除。
+    * `SupportedRevocationAuthSigningAlgorithms` プロパティーを削除。
+
+- `ServiceProfile` 列挙型
+    * `OPEN_BANKING` を追加。
+
+
 1.1.0 (2018 年 05 月 30 日)
 ---------------------------
 

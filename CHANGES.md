@@ -1,6 +1,37 @@
 CHANGES
 =======
 
+1.2.0 (2018-09-28)
+------------------
+
+- `AuthorizationResponse` class
+    * Added `RequestObjectPayload` property.
+    * Added `IdTokenClaims` property.
+    * Added `UserInfoClaims` property.
+
+- `Client` class
+    * Added `SoftwareId` property.
+    * Added `SoftwareVersion` property.
+    * Added `AuthorizationSignAlg` property.
+    * Added `AuthorizationEncryptionAlg` property.
+    * Added `AuthorizationEncryptionEnc` property.
+
+- `Service` class
+    * Added `AuthorizationResponseDuration` property.
+    * Added `IsClientIdAliasEnabled` property.
+    * Added `IsErrorDescriptionOmitted` property.
+    * Added `IsErrorUriOmitted` property.
+    * Added `IsRefreshTokenKept` property.
+    * Added `AuthorizationSignatureKeyId` property.
+    * Added `IdTokenSignatureKeyId` property.
+    * Added `UserInfoSignatureKeyId` property.
+    * Removed `SupportedIntrospectionAuthSigningAlgorithms` property.
+    * Removed `SupportedRevocationAuthSigningAlgorithms` property.
+
+- `ServiceProfile` enum
+    * Added `OPEN_BANKING`.
+
+
 1.1.0 (2018-05-30)
 ------------------
 
