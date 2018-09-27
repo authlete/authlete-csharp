@@ -142,30 +142,6 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// JWS signing algorithms (<c>"alg"</c> values) supported
-        /// by the revocation endpoint for the signature on the
-        /// JWT used to authenticate the client at the revocation
-        /// endpoint for the <c>"private_key_jwt"</c> and
-        /// <c>"client_secret_jwt"</c> authentication methods.
-        /// </summary>
-        ///
-        /// <remarks>
-        /// <para>
-        /// This property corresponds to the
-        /// <c>"revocation_endpoint_auth_signing_alg_values_supported"</c>
-        /// metadata defined in "OAuth 2.0 Authorization Server
-        /// Metadata".
-        /// </para>
-        ///
-        /// <para>
-        /// Since version 1.0.9.
-        /// </para>
-        /// </remarks>
-        [JsonProperty("supportedRevocationAuthSigningAlgorithms", ItemConverterType = typeof(StringEnumConverter))]
-        public JWSAlg[] SupportedRevocationAuthSigningAlgorithms { get; set; }
-
-
-        /// <summary>
         /// The URI of the UserInfo endpoint
         /// (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3.
         /// UserInfo Endpoint</a> of
@@ -445,6 +421,32 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("idTokenDuration")]
         public long IdTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The duration of authorization response JWTs in seconds.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a> defines new values for the
+        /// <c>response_mode</c> request parameter. They are
+        /// <c>query.jwt</c>, <c>fragment.jwt</c>,
+        /// <c>form_post.jwt</c> and <c>jwt</c>. If one of them is
+        /// specified as the response mode, response parameters
+        /// from the authorization endpoint will be packed into a
+        /// JWT. This property is used to compute the value of the
+        /// <c>exp</c> claim of the JWT.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationResponseDuration")]
+        public long AuthorizationResponseDuration { get; set; }
 
 
         /// <summary>
@@ -738,6 +740,87 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The flag which indicates whether a refresh token remains
+        /// valid or gets renewed after its use.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("refreshTokenKept")]
+        public bool IsRefreshTokenKept { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether the
+        /// <c>error_description</c> response parameter is omitted.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// According to RFC 6749, authorization servers may
+        /// include the <c>error_description</c> response parameter
+        /// in error responses. When this property is <c>True</c>,
+        /// Authlete does not embed the <c>error_description</c>
+        /// response parameter in error responses.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("errorDescriptionOmitted")]
+        public bool IsErrorDescriptionOmitted { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether the <c>error_uri</c>
+        /// response parameter is omitted.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// According to RFC 6749, authorization servers may
+        /// include the <c>error_uri</c> response parameter in
+        /// error responses. When this property is <c>True</c>,
+        /// Authlete does not embed the <c>error_uri</c> response
+        /// parameter in error responses.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("errorUriOmitted")]
+        public bool IsErrorUriOmitted { get; set; }
+
+
+        /// <summary>
+        /// Get the flag which indicates whether the "Client ID
+        /// Alias" feature is enabled or not.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// When a new client is created, Authlete generates a
+        /// numeric value and assigns it as a client ID to the
+        /// newly created client. In addition to the client ID,
+        /// each client can have a client ID alias. The client ID
+        /// alias is, however, recognized only when this property
+        /// is <c>True</c>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("clientIdAliasEnabled")]
+        public bool IsClientIdAliasEnabled { get; set; }
+
+
+        /// <summary>
         /// Service profiles supported by this service.
         /// </summary>
         ///
@@ -810,30 +893,6 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// JWS signing algorithms (<c>"alg"</c> values) supported
-        /// by the introspection endpoint for the signature on the
-        /// JWT used to authenticate the client at the introspection
-        /// endpoint for the <c>"private_key_jwt"</c> and
-        /// <c>"client_secret_jwt"</c> authentication methods.
-        /// </summary>
-        ///
-        /// <remarks>
-        /// <para>
-        /// This property corresponds to the
-        /// <c>"introspection_endpoint_auth_signing_alg_values_supported"</c>
-        /// metadata defined in "OAuth 2.0 Authorization Server
-        /// Metadata".
-        /// </para>
-        ///
-        /// <para>
-        /// Since version 1.0.9.
-        /// </para>
-        /// </remarks>
-        [JsonProperty("supportedIntrospectionAuthSigningAlgorithms", ItemConverterType = typeof(StringEnumConverter))]
-        public JWSAlg[] SupportedIntrospectionAuthSigningAlgorithms { get; set; }
-
-
-        /// <summary>
         /// The flag which indicates whether this service validates
         /// certificate chains during PKI-based client mutual TLS
         /// authentication.
@@ -860,5 +919,127 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("trustedRootCertificates")]
         public string[] TrustedRootCertificates { get; set; }
+
+
+        /// <summary>
+        /// Get the key ID to identify a JWK used for signing
+        /// authorization responses using an asymmetric key.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a> has added new values for the
+        /// <c>response_mode</c> request parameter. They are
+        /// <c>query.jwt</c>, <c>fragment.jwt</c>,
+        /// <c>form_post.jwt</c> and <c>jwt</c>. If one of them is
+        /// used, response parameters returned from the
+        /// authorization endpoint will be packed into a JWT. The
+        /// JWT is always signed. For the signature of the JWT,
+        /// Authlete Server has to pick up one JWK from the
+        /// service's JWK Set.
+        /// </para>
+        ///
+        /// <para>
+        /// Authlete Server searches the JWK Set for a JWK which
+        /// satisfies conditions for authorization response
+        /// signature. If the number of JWK candidates which
+        /// satisfy the conditions is 1, there is no problem. On
+        /// the other hand, if there exist multiple candidates, a
+        /// <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key
+        /// ID</a> is needed to be specified so that Authlete
+        /// Server can pick up one JWK from among the JWK
+        /// candidates. This property exists to specify the key ID.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationSignatureKeyId")]
+        public string AuthorizationSignatureKeyId { get; set; }
+
+
+        /// <summary>
+        /// Get the key ID to identify a JWK used for ID token
+        /// signature using an asymmetric key.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// A JWK Set can be registered as a property of a Service.
+        /// A JWK Set can contain 0 or more JWKs (see
+        /// <a href="https://tools.ietf.org/html/rfc7517">RFC 7517</a>
+        /// for details about JWK). Authlete Server has to pick up
+        /// one JWK for signature from the JWK Set when it
+        /// generates an ID token and signature using an asymmetric
+        /// key. Authlete Server searches the registered JWK Set
+        /// for a JWK which satisfies conditions for ID token
+        /// signature. If the number of JWK candidates which
+        /// satisfy the conditions is 1, there is no problem. On
+        /// the other hand, if there exist multiple candidates, a
+        /// <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key
+        /// ID</a> is needed to be specified so that Authlete
+        /// Server can pick up one JWK from among the JWK
+        /// candidates.
+        /// </para>
+        ///
+        /// <para>
+        /// This property exists for the purpose described above.
+        /// For key rotation (OpenID Connect Core 1.0,
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys">10.1.1.
+        /// Rotation of Asymmetric Signing Keys</a>), this
+        /// mechanism is needed.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("idTokenSignatureKeyId")]
+        public string IdTokenSignatureKeyId { get; set; }
+
+
+        /// <summary>
+        /// Get the key ID to identify a JWK used for user info
+        /// signature using an asymmetric key.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// A JWK Set can be registered as a property of a Service.
+        /// A JWK Set can contain 0 or more JWKs (see
+        /// <a href="https://tools.ietf.org/html/rfc7517">RFC 7517</a>
+        /// for details about JWK). Authlete Server has to pick up
+        /// one JWK for signature from the JWK Set when it is
+        /// required to sign user info (which is returned from
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">UserInfo
+        /// Endpoint</a>) using an asymmetric key. Authlete Server
+        /// searches the registered JWK Set for a JWK which
+        /// satisfies conditions for user info signature. If the
+        /// number of JWK candidates which satisfy the conditions
+        /// is 1, there is no problem. On the other hand, if there
+        /// exist multiple candidates, a
+        /// <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key
+        /// ID</a> is needed to be specified so that Authlete
+        /// Server can pick up one JWK from among the JWK
+        /// candidates.
+        /// </para>
+        ///
+        /// <para>
+        /// This property exists for the purpose described above.
+        /// For key rotation (OpenID Connect Core 1.0,
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys">10.1.1.
+        /// Rotation of Asymmetric Signing Keys</a>), this
+        /// mechanism is needed.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("userInfoSignatureKeyId")]
+        public string UserInfoSignatureKeyId { get; set; }
     }
 }
