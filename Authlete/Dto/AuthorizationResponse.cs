@@ -1141,6 +1141,179 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The payload part of the request object in JSON format.
+        /// This property holds <c>null</c> if the authorization
+        /// request does not include a request object.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("requestObjectPayload")]
+        public string RequestObjectPayload { get; set; }
+
+
+        /// <summary>
+        /// The value of the <c>id_token</c> property in the
+        /// <c>claims</c> request parameter or in the <c>claims</c>
+        /// property in a request object.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// A client application may request certain claims be
+        /// embedded in an ID token or in a response from the
+        /// UserInfo endpoint. There are several ways. Including
+        /// the <c>claims</c> request parameter and including the
+        /// <c>claims</c> property in a request object are such
+        /// examples. In both the cases, the value of the
+        /// <c>claims</c> parameter/property is JSON. Its format is
+        /// described in
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
+        /// Requesting Claims using the "claims" Request Parameter</a>
+        /// of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// Connect Core 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// The following is an excerpt from the specification. You
+        /// can find <c>userinfo</c> and <c>id_token</c> are
+        /// top-level properties.
+        /// </para>
+        ///
+        /// <code>
+        /// {
+        ///  "userinfo":
+        ///   {
+        ///    "given_name": {"essential": true},
+        ///    "nickname": null,
+        ///    "email": {"essential": true},
+        ///    "email_verified": {"essential": true},
+        ///    "picture": null,
+        ///    "http://example.info/claims/groups": null
+        ///   },
+        ///  "id_token":
+        ///   {
+        ///    "auth_time": {"essential": true},
+        ///    "acr": {"values": ["urn:mace:incommon:iap:silver"]
+        ///   }
+        /// }
+        /// </code>
+        ///
+        /// <para>
+        /// This property (<c>IdTokenClaims</c>) holds the value of
+        /// the <c>id_token</c> property in JSON format. For
+        /// example, if the JSON above is included in an
+        /// authorization request, this property holds JSON
+        /// equivalent to the following.
+        /// </para>
+        ///
+        /// <code>
+        /// {
+        ///  "auth_time": {"essential": true},
+        ///  "acr": {"values": ["urn:mace:incommon:iap:silver"]
+        /// }
+        /// </code>
+        ///
+        /// <para>
+        /// Note that if a request object is given and it contains
+        /// the <c>claims</c> property and if the <c>claims</c>
+        /// request parameter is also given, this property holds
+        /// the value of the former.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("idTokenClaims")]
+        public string IdTokenClaims { get; set; }
+
+
+        /// <summary>
+        /// The value of the <c>userinfo</c> property in the
+        /// <c>claims</c> request parameter or in the <c>claims</c>
+        /// property in a request object.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// A client application may request certain claims be
+        /// embedded in an ID token or in a response from the
+        /// UserInfo endpoint. There are several ways. Including
+        /// the <c>claims</c> request parameter and including the
+        /// <c>claims</c> property in a request object are such
+        /// examples. In both the cases, the value of the
+        /// <c>claims</c> parameter/property is JSON. Its format is
+        /// described in
+        /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5.
+        /// Requesting Claims using the "claims" Request Parameter</a>
+        /// of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
+        /// Connect Core 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// The following is an excerpt from the specification. You
+        /// can find <c>userinfo</c> and <c>id_token</c> are
+        /// top-level properties.
+        /// </para>
+        ///
+        /// <code>
+        /// {
+        ///  "userinfo":
+        ///   {
+        ///    "given_name": {"essential": true},
+        ///    "nickname": null,
+        ///    "email": {"essential": true},
+        ///    "email_verified": {"essential": true},
+        ///    "picture": null,
+        ///    "http://example.info/claims/groups": null
+        ///   },
+        ///  "id_token":
+        ///   {
+        ///    "auth_time": {"essential": true},
+        ///    "acr": {"values": ["urn:mace:incommon:iap:silver"]
+        ///   }
+        /// }
+        /// </code>
+        ///
+        /// <para>
+        /// This property (<c>UserInfoClaims</c>) holds the value
+        /// of the <c>userinfo</c> property in JSON format. For
+        /// example, if the JSON above is included in an
+        /// authorization request, this property holds JSON
+        /// equivalent to the following.
+        /// </para>
+        ///
+        /// <code>
+        /// {
+        ///  "given_name": {"essential": true},
+        ///  "nickname": null,
+        ///  "email": {"essential": true},
+        ///  "email_verified": {"essential": true},
+        ///  "picture": null,
+        ///  "http://example.info/claims/groups": null
+        /// }
+        /// </code>
+        ///
+        /// <para>
+        /// Note that if a request object is given and it contains
+        /// the <c>claims</c> property and if the <c>claims</c>
+        /// request parameter is also given, this property holds
+        /// the value of the former.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("UserInfoClaims")]
+        public string UserInfoClaims { get; set; }
+
+
+        /// <summary>
         /// The response content which can be used to generate a
         /// response to the client application. The format of the
         /// value varies depending on the value of the <c>Action</c>
