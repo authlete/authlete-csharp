@@ -239,6 +239,21 @@ Properties</h2></td></tr>
 <tr class="memitem:a17b770e81c608185b2561bf01ef589dd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a17b770e81c608185b2561bf01ef589dd">SelfSignedCertificateKeyId</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a17b770e81c608185b2561bf01ef589dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key ID of a JWK containing a self-signed certificate of this client application.  <a href="#a17b770e81c608185b2561bf01ef589dd">More...</a><br /></td></tr>
 <tr class="separator:a17b770e81c608185b2561bf01ef589dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78612b02de7bd55ddb91d05bcbee1ea8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a78612b02de7bd55ddb91d05bcbee1ea8">SoftwareId</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a78612b02de7bd55ddb91d05bcbee1ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique identifier string assigned by the client developer or software publisher used by registration endpoints to identify the client software to be dynamically registered.  <a href="#a78612b02de7bd55ddb91d05bcbee1ea8">More...</a><br /></td></tr>
+<tr class="separator:a78612b02de7bd55ddb91d05bcbee1ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60f56965fe36c3517ca25b3fe8ab66c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#ae60f56965fe36c3517ca25b3fe8ab66c">SoftwareVersion</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae60f56965fe36c3517ca25b3fe8ab66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version identifier string for the client software identified by the software ID.  <a href="#ae60f56965fe36c3517ca25b3fe8ab66c">More...</a><br /></td></tr>
+<tr class="separator:ae60f56965fe36c3517ca25b3fe8ab66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c75a0f9bc30dd1d2aa25ff5da35b3c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a1c75a0f9bc30dd1d2aa25ff5da35b3c4">AuthorizationSignAlg</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1c75a0f9bc30dd1d2aa25ff5da35b3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JWS <code>"alg"</code> algorithm for signing authorization responses. This property corresponds to the <code>"authorization_signed_response_alg"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>.  <a href="#a1c75a0f9bc30dd1d2aa25ff5da35b3c4">More...</a><br /></td></tr>
+<tr class="separator:a1c75a0f9bc30dd1d2aa25ff5da35b3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe702cceb329e20ecd7b8104fb81750"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a1cc0cc6a1e63b0e11dcdbec83d1986e1">JWEAlg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a7fe702cceb329e20ecd7b8104fb81750">AuthorizationEncryptionAlg</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7fe702cceb329e20ecd7b8104fb81750"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JWE <code>"alg"</code> algorithm for encrypting authorization responses. This property corresponds to the <code>"authorization_encrypted_response_alg"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>.  <a href="#a7fe702cceb329e20ecd7b8104fb81750">More...</a><br /></td></tr>
+<tr class="separator:a7fe702cceb329e20ecd7b8104fb81750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396386d478c1f24e3b94c28501f2552b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a8448b2f44fa435dc4ff938f4f3742fef">JWEEnc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a396386d478c1f24e3b94c28501f2552b">AuthorizationEncryptionEnc</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a396386d478c1f24e3b94c28501f2552b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JWE <code>"enc"</code> algorithm for encrypting authorization responses. This property corresponds to the <code>"authorization_encrypted_response_enc"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>.  <a href="#a396386d478c1f24e3b94c28501f2552b">More...</a><br /></td></tr>
+<tr class="separator:a396386d478c1f24e3b94c28501f2552b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a client application. </p>
@@ -265,6 +280,81 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The application type of this client application. <code>WEB</code>, <code>NATIVE</code> or <code>null</code>. This property corresponds to the <code>"application_type"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2. Client Metadata</a> of <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID Connect Dynamic Client Registration 1.0</a>. </p>
+
+</div>
+</div>
+<a id="a7fe702cceb329e20ecd7b8104fb81750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe702cceb329e20ecd7b8104fb81750">&#9670;&nbsp;</a></span>AuthorizationEncryptionAlg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a1cc0cc6a1e63b0e11dcdbec83d1986e1">JWEAlg</a> AuthorizationEncryptionAlg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The JWE <code>"alg"</code> algorithm for encrypting authorization responses. This property corresponds to the <code>"authorization_encrypted_response_alg"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
+<a id="a396386d478c1f24e3b94c28501f2552b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396386d478c1f24e3b94c28501f2552b">&#9670;&nbsp;</a></span>AuthorizationEncryptionEnc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a8448b2f44fa435dc4ff938f4f3742fef">JWEEnc</a> AuthorizationEncryptionEnc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The JWE <code>"enc"</code> algorithm for encrypting authorization responses. This property corresponds to the <code>"authorization_encrypted_response_enc"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
+<a id="a1c75a0f9bc30dd1d2aa25ff5da35b3c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c75a0f9bc30dd1d2aa25ff5da35b3c4">&#9670;&nbsp;</a></span>AuthorizationSignAlg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> AuthorizationSignAlg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The JWS <code>"alg"</code> algorithm for signing authorization responses. This property corresponds to the <code>"authorization_signed_response_alg"</code> in <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5. Client Metadata</a> of <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a>. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>
@@ -1209,6 +1299,58 @@ Properties</h2></td></tr>
 Authentication Method" in "OAuth 2.0 Mutual TLS Client
 Authentication and Certificate Bound Access Tokens" for details. </p>
 <p>Since version 1.1.0. </p>
+
+</div>
+</div>
+<a id="a78612b02de7bd55ddb91d05bcbee1ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78612b02de7bd55ddb91d05bcbee1ea8">&#9670;&nbsp;</a></span>SoftwareId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SoftwareId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unique identifier string assigned by the client developer or software publisher used by registration endpoints to identify the client software to be dynamically registered. </p>
+<p>This property corresponds to the <code>software_id</code> metadata defined in <a href="https://tools.ietf.org/html/rfc7591#section-2">2. Client Metadata</a> of <a href="https://tools.ietf.org/html/rfc7591">RFC 7591</a> (OAuth 2.0 Dynamic Client Registration Protocol). </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
+<a id="ae60f56965fe36c3517ca25b3fe8ab66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60f56965fe36c3517ca25b3fe8ab66c">&#9670;&nbsp;</a></span>SoftwareVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SoftwareVersion</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The version identifier string for the client software identified by the software ID. </p>
+<p>This property corresponds to the <code>software_version</code> metadata defined in <a href="https://tools.ietf.org/html/rfc7591#section-2">2. Client Metadata</a> of <a href="https://tools.ietf.org/html/rfc7591">RFC 7591</a> (OAuth 2.0 Dynamic Client Registration Protocol). </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>

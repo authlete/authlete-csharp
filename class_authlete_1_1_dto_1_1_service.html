@@ -116,9 +116,6 @@ Properties</h2></td></tr>
 <tr class="memitem:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a5fd7bc99cbd0ead1d2a9df66a23e3b87">SupportedRevocationAuthMethods</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client authentication methods at the revocation endpoint supported by this service.  <a href="#a5fd7bc99cbd0ead1d2a9df66a23e3b87">More...</a><br /></td></tr>
 <tr class="separator:a5fd7bc99cbd0ead1d2a9df66a23e3b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc3d23c710762d77c57c85d64a36118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aadc3d23c710762d77c57c85d64a36118">SupportedRevocationAuthSigningAlgorithms</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:aadc3d23c710762d77c57c85d64a36118"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWS signing algorithms (<code>"alg"</code> values) supported by the revocation endpoint for the signature on the JWT used to authenticate the client at the revocation endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods.  <a href="#aadc3d23c710762d77c57c85d64a36118">More...</a><br /></td></tr>
-<tr class="separator:aadc3d23c710762d77c57c85d64a36118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d099e1e9b7006fd71d8e2f9a320588"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a26d099e1e9b7006fd71d8e2f9a320588">UserInfoEndpoint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a26d099e1e9b7006fd71d8e2f9a320588"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the UserInfo endpoint (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3. UserInfo Endpoint</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). This property corresponds to the <code>"userinfo_endpoint"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>.  <a href="#a26d099e1e9b7006fd71d8e2f9a320588">More...</a><br /></td></tr>
 <tr class="separator:a26d099e1e9b7006fd71d8e2f9a320588"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +182,9 @@ Properties</h2></td></tr>
 <tr class="memitem:aee036a8ebfb6d90e423d70787c75480f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aee036a8ebfb6d90e423d70787c75480f">IdTokenDuration</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aee036a8ebfb6d90e423d70787c75480f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration of ID tokens in seconds.  <a href="#aee036a8ebfb6d90e423d70787c75480f">More...</a><br /></td></tr>
 <tr class="separator:aee036a8ebfb6d90e423d70787c75480f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201c76bd8610452d8e0ae8dc32828fc9"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a201c76bd8610452d8e0ae8dc32828fc9">AuthorizationResponseDuration</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a201c76bd8610452d8e0ae8dc32828fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration of authorization response JWTs in seconds.  <a href="#a201c76bd8610452d8e0ae8dc32828fc9">More...</a><br /></td></tr>
+<tr class="separator:a201c76bd8610452d8e0ae8dc32828fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a295ccd4fe6be0fbaad66815af28c43ab"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a295ccd4fe6be0fbaad66815af28c43ab">AuthenticationCallbackEndpoint</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a295ccd4fe6be0fbaad66815af28c43ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The URI of the authentication callback endpoint.  <a href="#a295ccd4fe6be0fbaad66815af28c43ab">More...</a><br /></td></tr>
 <tr class="separator:a295ccd4fe6be0fbaad66815af28c43ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +248,19 @@ Properties</h2></td></tr>
 <tr class="memitem:aa72f9e5a5338a69f13d9cba2f2ad1896"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aa72f9e5a5338a69f13d9cba2f2ad1896">IsPkceRequired</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aa72f9e5a5338a69f13d9cba2f2ad1896"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the use of Proof Key for Code Exchange (PKCE) is always required for authorization requests using <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization Code Flow</a>. See <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a> (Proof Key for Code Exchange by OAuth Public Clients) for details.  <a href="#aa72f9e5a5338a69f13d9cba2f2ad1896">More...</a><br /></td></tr>
 <tr class="separator:aa72f9e5a5338a69f13d9cba2f2ad1896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9b85f7a1209241589069127c80adc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#adb9b85f7a1209241589069127c80adc1">IsRefreshTokenKept</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:adb9b85f7a1209241589069127c80adc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether a refresh token remains valid or gets renewed after its use.  <a href="#adb9b85f7a1209241589069127c80adc1">More...</a><br /></td></tr>
+<tr class="separator:adb9b85f7a1209241589069127c80adc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68eb99cc6071d543984a6a6c8a11798c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a68eb99cc6071d543984a6a6c8a11798c">IsErrorDescriptionOmitted</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a68eb99cc6071d543984a6a6c8a11798c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the <code>error_description</code> response parameter is omitted.  <a href="#a68eb99cc6071d543984a6a6c8a11798c">More...</a><br /></td></tr>
+<tr class="separator:a68eb99cc6071d543984a6a6c8a11798c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf78e4be7465a84be031d357820d660c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#aaf78e4be7465a84be031d357820d660c">IsErrorUriOmitted</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aaf78e4be7465a84be031d357820d660c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the <code>error_uri</code> response parameter is omitted.  <a href="#aaf78e4be7465a84be031d357820d660c">More...</a><br /></td></tr>
+<tr class="separator:aaf78e4be7465a84be031d357820d660c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4710df1daa3a166e3319ffdc2fa3b454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a4710df1daa3a166e3319ffdc2fa3b454">IsClientIdAliasEnabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4710df1daa3a166e3319ffdc2fa3b454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flag which indicates whether the "Client ID
+Alias" feature is enabled or not.  <a href="#a4710df1daa3a166e3319ffdc2fa3b454">More...</a><br /></td></tr>
+<tr class="separator:a4710df1daa3a166e3319ffdc2fa3b454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add86c73b72eb4ecfb37068eddc86dca9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#af9d435a056682a35aedd5eb29ac1c553">ServiceProfile</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#add86c73b72eb4ecfb37068eddc86dca9">SupportedServiceProfiles</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:add86c73b72eb4ecfb37068eddc86dca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service profiles supported by this service.  <a href="#add86c73b72eb4ecfb37068eddc86dca9">More...</a><br /></td></tr>
 <tr class="separator:add86c73b72eb4ecfb37068eddc86dca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,15 +273,21 @@ Properties</h2></td></tr>
 <tr class="memitem:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040">ClientAuthMethod</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a4614dcb27cf2620cbcb00ed364e8e2c2">SupportedIntrospectionAuthMethods</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client authentication methods at the introspection endpoint supported by this service.  <a href="#a4614dcb27cf2620cbcb00ed364e8e2c2">More...</a><br /></td></tr>
 <tr class="separator:a4614dcb27cf2620cbcb00ed364e8e2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ad6fa3eef1a42aec2a059dd939852eee3">SupportedIntrospectionAuthSigningAlgorithms</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ad6fa3eef1a42aec2a059dd939852eee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWS signing algorithms (<code>"alg"</code> values) supported by the introspection endpoint for the signature on the JWT used to authenticate the client at the introspection endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods.  <a href="#ad6fa3eef1a42aec2a059dd939852eee3">More...</a><br /></td></tr>
-<tr class="separator:ad6fa3eef1a42aec2a059dd939852eee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac729d09a68a289c8057103b39e450c2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ac729d09a68a289c8057103b39e450c2f">IsMutualTlsValidatePkiCertChain</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ac729d09a68a289c8057103b39e450c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service validates certificate chains during PKI-based client mutual TLS authentication.  <a href="#ac729d09a68a289c8057103b39e450c2f">More...</a><br /></td></tr>
 <tr class="separator:ac729d09a68a289c8057103b39e450c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5874b6df8d48ee06d27486fbe0df1e6"><td class="memItemLeft" align="right" valign="top">string []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#af5874b6df8d48ee06d27486fbe0df1e6">TrustedRootCertificates</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:af5874b6df8d48ee06d27486fbe0df1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of root certificates trusted by this service for PKI-based client mutual TLS authentication.  <a href="#af5874b6df8d48ee06d27486fbe0df1e6">More...</a><br /></td></tr>
 <tr class="separator:af5874b6df8d48ee06d27486fbe0df1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d769bae702209f2f2e7e7a8fbc9766b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a1d769bae702209f2f2e7e7a8fbc9766b">AuthorizationSignatureKeyId</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1d769bae702209f2f2e7e7a8fbc9766b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key ID to identify a JWK used for signing authorization responses using an asymmetric key.  <a href="#a1d769bae702209f2f2e7e7a8fbc9766b">More...</a><br /></td></tr>
+<tr class="separator:a1d769bae702209f2f2e7e7a8fbc9766b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c4b9da6471221922b62a4aaa5ac48c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#ae8c4b9da6471221922b62a4aaa5ac48c">IdTokenSignatureKeyId</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae8c4b9da6471221922b62a4aaa5ac48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key ID to identify a JWK used for ID token signature using an asymmetric key.  <a href="#ae8c4b9da6471221922b62a4aaa5ac48c">More...</a><br /></td></tr>
+<tr class="separator:ae8c4b9da6471221922b62a4aaa5ac48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3967e7e0145a861a939ad1084ec6012d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a3967e7e0145a861a939ad1084ec6012d">UserInfoSignatureKeyId</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3967e7e0145a861a939ad1084ec6012d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key ID to identify a JWK used for user info signature using an asymmetric key.  <a href="#a3967e7e0145a861a939ad1084ec6012d">More...</a><br /></td></tr>
+<tr class="separator:a3967e7e0145a861a939ad1084ec6012d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a service which represents an authorization server / OpenID provider. </p>
@@ -466,6 +485,59 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a201c76bd8610452d8e0ae8dc32828fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201c76bd8610452d8e0ae8dc32828fc9">&#9670;&nbsp;</a></span>AuthorizationResponseDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AuthorizationResponseDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The duration of authorization response JWTs in seconds. </p>
+<p><a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a> defines new values for the <code>response_mode</code> request parameter. They are <code>query.jwt</code>, <code>fragment.jwt</code>, <code>form_post.jwt</code> and <code>jwt</code>. If one of them is specified as the response mode, response parameters from the authorization endpoint will be packed into a JWT. This property is used to compute the value of the <code>exp</code> claim of the JWT. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
+<a id="a1d769bae702209f2f2e7e7a8fbc9766b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d769bae702209f2f2e7e7a8fbc9766b">&#9670;&nbsp;</a></span>AuthorizationSignatureKeyId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string AuthorizationSignatureKeyId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the key ID to identify a JWK used for signing authorization responses using an asymmetric key. </p>
+<p><a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade API: JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)</a> has added new values for the <code>response_mode</code> request parameter. They are <code>query.jwt</code>, <code>fragment.jwt</code>, <code>form_post.jwt</code> and <code>jwt</code>. If one of them is used, response parameters returned from the authorization endpoint will be packed into a JWT. The JWT is always signed. For the signature of the JWT, Authlete Server has to pick up one JWK from the service's JWK Set. </p>
+<p>Authlete Server searches the JWK Set for a JWK which satisfies conditions for authorization response signature. If the number of JWK candidates which satisfy the conditions is 1, there is no problem. On the other hand, if there exist multiple candidates, a <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key ID</a> is needed to be specified so that Authlete Server can pick up one JWK from among the JWK candidates. This property exists to specify the key ID. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
 <a id="acd53b6edc3217eae62b7736874608945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd53b6edc3217eae62b7736874608945">&#9670;&nbsp;</a></span>ClientsPerDeveloper</h2>
 
@@ -658,6 +730,33 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ae8c4b9da6471221922b62a4aaa5ac48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c4b9da6471221922b62a4aaa5ac48c">&#9670;&nbsp;</a></span>IdTokenSignatureKeyId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string IdTokenSignatureKeyId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the key ID to identify a JWK used for ID token signature using an asymmetric key. </p>
+<p>A JWK Set can be registered as a property of a Service. A JWK Set can contain 0 or more JWKs (see <a href="https://tools.ietf.org/html/rfc7517">RFC 7517</a> for details about JWK). Authlete Server has to pick up one JWK for signature from the JWK Set when it generates an ID token and signature using an asymmetric key. Authlete Server searches the registered JWK Set for a JWK which satisfies conditions for ID token signature. If the number of JWK candidates which satisfy the conditions is 1, there is no problem. On the other hand, if there exist multiple candidates, a <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key ID</a> is needed to be specified so that Authlete Server can pick up one JWK from among the JWK candidates. </p>
+<p>This property exists for the purpose described above. For key rotation (OpenID Connect Core 1.0, <a href="https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys">10.1.1. Rotation of Asymmetric Signing Keys</a>), this mechanism is needed. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
 <a id="aa8c76e614bafb1b3a6b7e4d882071ae8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8c76e614bafb1b3a6b7e4d882071ae8">&#9670;&nbsp;</a></span>IntrospectionEndpoint</h2>
 
@@ -680,6 +779,33 @@ Properties</h2></td></tr>
 
 <p>The URI of the introspection endpoint (<a href="https://tools.ietf.org/html/rfc7662">RFC 7662: OAuth 2.0 Token Introspection</a>). </p>
 <p>Since version 1.0.9. </p>
+
+</div>
+</div>
+<a id="a4710df1daa3a166e3319ffdc2fa3b454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4710df1daa3a166e3319ffdc2fa3b454">&#9670;&nbsp;</a></span>IsClientIdAliasEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsClientIdAliasEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the flag which indicates whether the "Client ID
+Alias" feature is enabled or not. </p>
+<p>When a new client is created, Authlete generates a numeric value and assigns it as a client ID to the newly created client. In addition to the client ID, each client can have a client ID alias. The client ID alias is, however, recognized only when this property is <code>True</code>. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>
@@ -834,6 +960,58 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a68eb99cc6071d543984a6a6c8a11798c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68eb99cc6071d543984a6a6c8a11798c">&#9670;&nbsp;</a></span>IsErrorDescriptionOmitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsErrorDescriptionOmitted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether the <code>error_description</code> response parameter is omitted. </p>
+<p>According to RFC 6749, authorization servers may include the <code>error_description</code> response parameter in error responses. When this property is <code>True</code>, Authlete does not embed the <code>error_description</code> response parameter in error responses. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
+<a id="aaf78e4be7465a84be031d357820d660c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf78e4be7465a84be031d357820d660c">&#9670;&nbsp;</a></span>IsErrorUriOmitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsErrorUriOmitted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether the <code>error_uri</code> response parameter is omitted. </p>
+<p>According to RFC 6749, authorization servers may include the <code>error_uri</code> response parameter in error responses. When this property is <code>True</code>, Authlete does not embed the <code>error_uri</code> response parameter in error responses. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
 <a id="ac729d09a68a289c8057103b39e450c2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac729d09a68a289c8057103b39e450c2f">&#9670;&nbsp;</a></span>IsMutualTlsValidatePkiCertChain</h2>
 
@@ -880,6 +1058,31 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The flag which indicates whether the use of Proof Key for Code Exchange (PKCE) is always required for authorization requests using <a href="https://tools.ietf.org/html/rfc6749#section-4.1">Authorization Code Flow</a>. See <a href="https://tools.ietf.org/html/rfc7636">RFC 7636</a> (Proof Key for Code Exchange by OAuth Public Clients) for details. </p>
+
+</div>
+</div>
+<a id="adb9b85f7a1209241589069127c80adc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9b85f7a1209241589069127c80adc1">&#9670;&nbsp;</a></span>IsRefreshTokenKept</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRefreshTokenKept</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether a refresh token remains valid or gets renewed after its use. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>
@@ -1393,33 +1596,6 @@ Metadata". </p>
 
 </div>
 </div>
-<a id="ad6fa3eef1a42aec2a059dd939852eee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6fa3eef1a42aec2a059dd939852eee3">&#9670;&nbsp;</a></span>SupportedIntrospectionAuthSigningAlgorithms</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> [] SupportedIntrospectionAuthSigningAlgorithms</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>JWS signing algorithms (<code>"alg"</code> values) supported by the introspection endpoint for the signature on the JWT used to authenticate the client at the introspection endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods. </p>
-<p>This property corresponds to the <code>"introspection_endpoint_auth_signing_alg_values_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
-Metadata". </p>
-<p>Since version 1.0.9. </p>
-
-</div>
-</div>
 <a id="afbaaa789bcf7f2fc2c32b7731e0f2d7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbaaa789bcf7f2fc2c32b7731e0f2d7b">&#9670;&nbsp;</a></span>SupportedResponseTypes</h2>
 
@@ -1466,33 +1642,6 @@ Metadata". </p>
 
 <p>Client authentication methods at the revocation endpoint supported by this service. </p>
 <p>This property corresponds to the <code>"revocation_endpoint_auth_methods_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
-Metadata". </p>
-<p>Since version 1.0.9. </p>
-
-</div>
-</div>
-<a id="aadc3d23c710762d77c57c85d64a36118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadc3d23c710762d77c57c85d64a36118">&#9670;&nbsp;</a></span>SupportedRevocationAuthSigningAlgorithms</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541">JWSAlg</a> [] SupportedRevocationAuthSigningAlgorithms</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>JWS signing algorithms (<code>"alg"</code> values) supported by the revocation endpoint for the signature on the JWT used to authenticate the client at the revocation endpoint for the <code>"private_key_jwt"</code> and <code>"client_secret_jwt"</code> authentication methods. </p>
-<p>This property corresponds to the <code>"revocation_endpoint_auth_signing_alg_values_supported"</code> metadata defined in "OAuth 2.0 Authorization Server
 Metadata". </p>
 <p>Since version 1.0.9. </p>
 
@@ -1713,6 +1862,33 @@ Metadata". </p>
 </div><div class="memdoc">
 
 <p>The URI of the UserInfo endpoint (<a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">5.3. UserInfo Endpoint</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>). This property corresponds to the <code>"userinfo_endpoint"</code> metadata defined in <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">3. OpenID Provider Metadata</a> of <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID Connect Discovery 1.0</a>. </p>
+
+</div>
+</div>
+<a id="a3967e7e0145a861a939ad1084ec6012d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3967e7e0145a861a939ad1084ec6012d">&#9670;&nbsp;</a></span>UserInfoSignatureKeyId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UserInfoSignatureKeyId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the key ID to identify a JWK used for user info signature using an asymmetric key. </p>
+<p>A JWK Set can be registered as a property of a Service. A JWK Set can contain 0 or more JWKs (see <a href="https://tools.ietf.org/html/rfc7517">RFC 7517</a> for details about JWK). Authlete Server has to pick up one JWK for signature from the JWK Set when it is required to sign user info (which is returned from <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">UserInfo Endpoint</a>) using an asymmetric key. Authlete Server searches the registered JWK Set for a JWK which satisfies conditions for user info signature. If the number of JWK candidates which satisfy the conditions is 1, there is no problem. On the other hand, if there exist multiple candidates, a <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key ID</a> is needed to be specified so that Authlete Server can pick up one JWK from among the JWK candidates. </p>
+<p>This property exists for the purpose described above. For key rotation (OpenID Connect Core 1.0, <a href="https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys">10.1.1. Rotation of Asymmetric Signing Keys</a>), this mechanism is needed. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>

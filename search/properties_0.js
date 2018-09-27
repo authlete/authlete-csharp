@@ -16,6 +16,11 @@ var searchData=
   ['authenticationcallbackapikey',['AuthenticationCallbackApiKey',['../class_authlete_1_1_dto_1_1_service.html#aaf4cb4b13b6e1d2ddb2ccd36ac3002cb',1,'Authlete::Dto::Service']]],
   ['authenticationcallbackapisecret',['AuthenticationCallbackApiSecret',['../class_authlete_1_1_dto_1_1_service.html#a1d152282da3309a44cdfe2c63666de17',1,'Authlete::Dto::Service']]],
   ['authenticationcallbackendpoint',['AuthenticationCallbackEndpoint',['../class_authlete_1_1_dto_1_1_service.html#a295ccd4fe6be0fbaad66815af28c43ab',1,'Authlete::Dto::Service']]],
+  ['authorizationencryptionalg',['AuthorizationEncryptionAlg',['../class_authlete_1_1_dto_1_1_client.html#a7fe702cceb329e20ecd7b8104fb81750',1,'Authlete::Dto::Client']]],
+  ['authorizationencryptionenc',['AuthorizationEncryptionEnc',['../class_authlete_1_1_dto_1_1_client.html#a396386d478c1f24e3b94c28501f2552b',1,'Authlete::Dto::Client']]],
   ['authorizationendpoint',['AuthorizationEndpoint',['../class_authlete_1_1_dto_1_1_service.html#ad54b0502446cdcdad2d397f57dee7bd2',1,'Authlete::Dto::Service']]],
+  ['authorizationresponseduration',['AuthorizationResponseDuration',['../class_authlete_1_1_dto_1_1_service.html#a201c76bd8610452d8e0ae8dc32828fc9',1,'Authlete::Dto::Service']]],
+  ['authorizationsignalg',['AuthorizationSignAlg',['../class_authlete_1_1_dto_1_1_client.html#a1c75a0f9bc30dd1d2aa25ff5da35b3c4',1,'Authlete::Dto::Client']]],
+  ['authorizationsignaturekeyid',['AuthorizationSignatureKeyId',['../class_authlete_1_1_dto_1_1_service.html#a1d769bae702209f2f2e7e7a8fbc9766b',1,'Authlete::Dto::Service']]],
   ['authtime',['AuthTime',['../class_authlete_1_1_dto_1_1_authorization_issue_request.html#a2da8755a965ba161c30f7dd40ea21c9d',1,'Authlete::Dto::AuthorizationIssueRequest']]]
 ];

@@ -15,6 +15,7 @@ var searchData=
   ['userid',['UserId',['../class_authlete_1_1_web_1_1_basic_credentials.html#abc7e824d07fb4b7efdef6498d7c99e63',1,'Authlete::Web::BasicCredentials']]],
   ['userinfo',['UserInfo',['../class_authlete_1_1_api_1_1_authlete_api.html#ac522a9117f3025814c7720386d2e9425',1,'Authlete.Api.AuthleteApi.UserInfo()'],['../interface_authlete_1_1_api_1_1_i_authlete_api.html#aa10e6b49262810c44a6d9ecf02bb0e77',1,'Authlete.Api.IAuthleteApi.UserInfo()']]],
   ['userinfoaction',['UserInfoAction',['../namespace_authlete_1_1_dto.html#a656f9e30e1a014082d09e68f4c27dbd0',1,'Authlete::Dto']]],
+  ['userinfoclaims',['UserInfoClaims',['../class_authlete_1_1_dto_1_1_authorization_response.html#af54f3cdbaf1b973ab831c7917c7c3a8e',1,'Authlete::Dto::AuthorizationResponse']]],
   ['userinfoencryptionalg',['UserInfoEncryptionAlg',['../class_authlete_1_1_dto_1_1_client.html#aa6dfdd915e11d237bc5017f8b4e42f58',1,'Authlete::Dto::Client']]],
   ['userinfoencryptionenc',['UserInfoEncryptionEnc',['../class_authlete_1_1_dto_1_1_client.html#ad7d593831b930833fee337a578091e3f',1,'Authlete::Dto::Client']]],
   ['userinfoendpoint',['UserInfoEndpoint',['../class_authlete_1_1_dto_1_1_service.html#a26d099e1e9b7006fd71d8e2f9a320588',1,'Authlete::Dto::Service']]],
@@ -27,5 +28,6 @@ var searchData=
   ['userinforequesthandlerspiadapter',['UserInfoRequestHandlerSpiAdapter',['../class_authlete_1_1_handler_1_1_spi_1_1_user_info_request_handler_spi_adapter.html',1,'Authlete::Handler::Spi']]],
   ['userinforesponse',['UserInfoResponse',['../class_authlete_1_1_dto_1_1_user_info_response.html',1,'Authlete::Dto']]],
   ['userinfosignalg',['UserInfoSignAlg',['../class_authlete_1_1_dto_1_1_client.html#ab71e923436c038dbec96c335084cc7f2',1,'Authlete::Dto::Client']]],
+  ['userinfosignaturekeyid',['UserInfoSignatureKeyId',['../class_authlete_1_1_dto_1_1_service.html#a3967e7e0145a861a939ad1084ec6012d',1,'Authlete::Dto::Service']]],
   ['username',['Username',['../class_authlete_1_1_dto_1_1_token_response.html#acc7e2f953f8dbfceb1c5a3834b78e3f7',1,'Authlete::Dto::TokenResponse']]]
 ];

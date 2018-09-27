@@ -1,6 +1,9 @@
 var class_authlete_1_1_dto_1_1_client =
 [
     [ "ApplicationType", "class_authlete_1_1_dto_1_1_client.html#a0aeca13a9fbf895bf4ccc36c6977569e", null ],
+    [ "AuthorizationEncryptionAlg", "class_authlete_1_1_dto_1_1_client.html#a7fe702cceb329e20ecd7b8104fb81750", null ],
+    [ "AuthorizationEncryptionEnc", "class_authlete_1_1_dto_1_1_client.html#a396386d478c1f24e3b94c28501f2552b", null ],
+    [ "AuthorizationSignAlg", "class_authlete_1_1_dto_1_1_client.html#a1c75a0f9bc30dd1d2aa25ff5da35b3c4", null ],
     [ "ClientId", "class_authlete_1_1_dto_1_1_client.html#ab251593be26db265e53ed7eec15102de", null ],
     [ "ClientIdAlias", "class_authlete_1_1_dto_1_1_client.html#a42b88383525a736670bb7e9f48264345", null ],
     [ "ClientName", "class_authlete_1_1_dto_1_1_client.html#ae9fef83a760cde3e0a9b031ea0baa65e", null ],
@@ -40,6 +43,8 @@ var class_authlete_1_1_dto_1_1_client =
     [ "ResponseTypes", "class_authlete_1_1_dto_1_1_client.html#ad7b396467a918c620c80df6d2ad67d09", null ],
     [ "SectorIdentifierUri", "class_authlete_1_1_dto_1_1_client.html#ae7fa5b20db9b4d75632e9b29e25ce2b6", null ],
     [ "SelfSignedCertificateKeyId", "class_authlete_1_1_dto_1_1_client.html#a17b770e81c608185b2561bf01ef589dd", null ],
+    [ "SoftwareId", "class_authlete_1_1_dto_1_1_client.html#a78612b02de7bd55ddb91d05bcbee1ea8", null ],
+    [ "SoftwareVersion", "class_authlete_1_1_dto_1_1_client.html#ae60f56965fe36c3517ca25b3fe8ab66c", null ],
     [ "SubjectType", "class_authlete_1_1_dto_1_1_client.html#af21d018c9d2e1a66f491e5eee170c6c9", null ],
     [ "TlsClientAuthSubjectDn", "class_authlete_1_1_dto_1_1_client.html#a2cf5a7ce85ac120338b51eb3bad67ac9", null ],
     [ "TokenAuthMethod", "class_authlete_1_1_dto_1_1_client.html#a7df39547ff40fb08f5267db3e090a673", null ],

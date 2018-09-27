@@ -146,6 +146,15 @@ Properties</h2></td></tr>
 <tr class="memitem:a2fb757ed921844ce77cdccb875903a9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_authlete_1_1_types.html#acc042eb862c2e7d4925bf61a38977f46">Prompt</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#a2fb757ed921844ce77cdccb875903a9e">Prompts</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a2fb757ed921844ce77cdccb875903a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of prompts contained in the authorization request (= the value of the <code>"prompt"</code> request parameter).  <a href="#a2fb757ed921844ce77cdccb875903a9e">More...</a><br /></td></tr>
 <tr class="separator:a2fb757ed921844ce77cdccb875903a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954619238514101f99ab7e5f4f677d41"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#a954619238514101f99ab7e5f4f677d41">RequestObjectPayload</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a954619238514101f99ab7e5f4f677d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">The payload part of the request object in JSON format. This property holds <code>null</code> if the authorization request does not include a request object.  <a href="#a954619238514101f99ab7e5f4f677d41">More...</a><br /></td></tr>
+<tr class="separator:a954619238514101f99ab7e5f4f677d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ca40aa56f3b295fb945f712125000e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#a27ca40aa56f3b295fb945f712125000e">IdTokenClaims</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a27ca40aa56f3b295fb945f712125000e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the <code>id_token</code> property in the <code>claims</code> request parameter or in the <code>claims</code> property in a request object.  <a href="#a27ca40aa56f3b295fb945f712125000e">More...</a><br /></td></tr>
+<tr class="separator:a27ca40aa56f3b295fb945f712125000e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54f3cdbaf1b973ab831c7917c7c3a8e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#af54f3cdbaf1b973ab831c7917c7c3a8e">UserInfoClaims</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af54f3cdbaf1b973ab831c7917c7c3a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the <code>userinfo</code> property in the <code>claims</code> request parameter or in the <code>claims</code> property in a request object.  <a href="#af54f3cdbaf1b973ab831c7917c7c3a8e">More...</a><br /></td></tr>
+<tr class="separator:af54f3cdbaf1b973ab831c7917c7c3a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67bc0fd60e288194bc360bd6a319e6c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#ae67bc0fd60e288194bc360bd6a319e6c">ResponseContent</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ae67bc0fd60e288194bc360bd6a319e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The response content which can be used to generate a response to the client application. The format of the value varies depending on the value of the <code>Action</code> property.  <a href="#ae67bc0fd60e288194bc360bd6a319e6c">More...</a><br /></td></tr>
 <tr class="separator:ae67bc0fd60e288194bc360bd6a319e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,6 +471,35 @@ Server Error"</code>. Authlete recommends <code>"application/json"</code> as the
 
 </div>
 </div>
+<a id="a27ca40aa56f3b295fb945f712125000e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ca40aa56f3b295fb945f712125000e">&#9670;&nbsp;</a></span>IdTokenClaims</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string IdTokenClaims</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The value of the <code>id_token</code> property in the <code>claims</code> request parameter or in the <code>claims</code> property in a request object. </p>
+<p>A client application may request certain claims be embedded in an ID token or in a response from the UserInfo endpoint. There are several ways. Including the <code>claims</code> request parameter and including the <code>claims</code> property in a request object are such examples. In both the cases, the value of the <code>claims</code> parameter/property is JSON. Its format is described in <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5. Requesting Claims using the "claims" Request Parameter</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. </p>
+<p>The following is an excerpt from the specification. You can find <code>userinfo</code> and <code>id_token</code> are top-level properties. </p>
+<div class="fragment"><div class="line">{</div><div class="line"> <span class="stringliteral">&quot;userinfo&quot;</span>:</div><div class="line">  {</div><div class="line">   <span class="stringliteral">&quot;given_name&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;nickname&quot;</span>: null,</div><div class="line">   <span class="stringliteral">&quot;email&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;email_verified&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;picture&quot;</span>: null,</div><div class="line">   <span class="stringliteral">&quot;http://example.info/claims/groups&quot;</span>: null</div><div class="line">  },</div><div class="line"> <span class="stringliteral">&quot;id_token&quot;</span>:</div><div class="line">  {</div><div class="line">   <span class="stringliteral">&quot;auth_time&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;acr&quot;</span>: {<span class="stringliteral">&quot;values&quot;</span>: [<span class="stringliteral">&quot;urn:mace:incommon:iap:silver&quot;</span>]</div><div class="line">  }</div><div class="line">}</div></div><!-- fragment --><p>This property (<code>IdTokenClaims</code>) holds the value of the <code>id_token</code> property in JSON format. For example, if the JSON above is included in an authorization request, this property holds JSON equivalent to the following. </p>
+<div class="fragment"><div class="line">{</div><div class="line"> <span class="stringliteral">&quot;auth_time&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line"> <span class="stringliteral">&quot;acr&quot;</span>: {<span class="stringliteral">&quot;values&quot;</span>: [<span class="stringliteral">&quot;urn:mace:incommon:iap:silver&quot;</span>]</div><div class="line">}</div></div><!-- fragment --><p>Note that if a request object is given and it contains the <code>claims</code> property and if the <code>claims</code> request parameter is also given, this property holds the value of the former. </p>
+<p>Since version 1.2.0. </p>
+
+</div>
+</div>
 <a id="a354a2efd3a1034496ae5c46823f8c5b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a354a2efd3a1034496ae5c46823f8c5b1">&#9670;&nbsp;</a></span>IsAcrEssential</h2>
 
@@ -584,6 +622,31 @@ Server Error"</code>. Authlete recommends <code>"application/json"</code> as the
 
 <p>The list of prompts contained in the authorization request (= the value of the <code>"prompt"</code> request parameter). </p>
 <p>See <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1. Authentication Request</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for the <code>"prompt"</code> request parameter. </p>
+
+</div>
+</div>
+<a id="a954619238514101f99ab7e5f4f677d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954619238514101f99ab7e5f4f677d41">&#9670;&nbsp;</a></span>RequestObjectPayload</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string RequestObjectPayload</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The payload part of the request object in JSON format. This property holds <code>null</code> if the authorization request does not include a request object. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>
@@ -731,6 +794,35 @@ Server Error"</code>. Authlete recommends <code>"application/json"</code> as the
 
 <p>The list of preferred languages and scripts for the user interface. The value of this property comes from the <code>"ui_locales"</code> request parameter. </p>
 <p>See <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">3.1.2.1. Authentication Request</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a> for the <code>"ui_locales"</code> request parameter. </p>
+
+</div>
+</div>
+<a id="af54f3cdbaf1b973ab831c7917c7c3a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54f3cdbaf1b973ab831c7917c7c3a8e">&#9670;&nbsp;</a></span>UserInfoClaims</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UserInfoClaims</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The value of the <code>userinfo</code> property in the <code>claims</code> request parameter or in the <code>claims</code> property in a request object. </p>
+<p>A client application may request certain claims be embedded in an ID token or in a response from the UserInfo endpoint. There are several ways. Including the <code>claims</code> request parameter and including the <code>claims</code> property in a request object are such examples. In both the cases, the value of the <code>claims</code> parameter/property is JSON. Its format is described in <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter">5.5. Requesting Claims using the "claims" Request Parameter</a> of <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>. </p>
+<p>The following is an excerpt from the specification. You can find <code>userinfo</code> and <code>id_token</code> are top-level properties. </p>
+<div class="fragment"><div class="line">{</div><div class="line"> <span class="stringliteral">&quot;userinfo&quot;</span>:</div><div class="line">  {</div><div class="line">   <span class="stringliteral">&quot;given_name&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;nickname&quot;</span>: null,</div><div class="line">   <span class="stringliteral">&quot;email&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;email_verified&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;picture&quot;</span>: null,</div><div class="line">   <span class="stringliteral">&quot;http://example.info/claims/groups&quot;</span>: null</div><div class="line">  },</div><div class="line"> <span class="stringliteral">&quot;id_token&quot;</span>:</div><div class="line">  {</div><div class="line">   <span class="stringliteral">&quot;auth_time&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line">   <span class="stringliteral">&quot;acr&quot;</span>: {<span class="stringliteral">&quot;values&quot;</span>: [<span class="stringliteral">&quot;urn:mace:incommon:iap:silver&quot;</span>]</div><div class="line">  }</div><div class="line">}</div></div><!-- fragment --><p>This property (<code>UserInfoClaims</code>) holds the value of the <code>userinfo</code> property in JSON format. For example, if the JSON above is included in an authorization request, this property holds JSON equivalent to the following. </p>
+<div class="fragment"><div class="line">{</div><div class="line"> <span class="stringliteral">&quot;given_name&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line"> <span class="stringliteral">&quot;nickname&quot;</span>: null,</div><div class="line"> <span class="stringliteral">&quot;email&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line"> <span class="stringliteral">&quot;email_verified&quot;</span>: {<span class="stringliteral">&quot;essential&quot;</span>: <span class="keyword">true</span>},</div><div class="line"> <span class="stringliteral">&quot;picture&quot;</span>: null,</div><div class="line"> <span class="stringliteral">&quot;http://example.info/claims/groups&quot;</span>: null</div><div class="line">}</div></div><!-- fragment --><p>Note that if a request object is given and it contains the <code>claims</code> property and if the <code>claims</code> request parameter is also given, this property holds the value of the former. </p>
+<p>Since version 1.2.0. </p>
 
 </div>
 </div>

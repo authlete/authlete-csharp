@@ -83,7 +83,41 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s.html','');});
 <div class="title">CHANGES </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>1.1.0 (2018-05-30) </h2>
+<div class="textblock"><h2>1.2.0 (2018-09-28) </h2>
+<ul>
+<li><code>AuthorizationResponse</code> class<ul>
+<li>Added <code>RequestObjectPayload</code> property.</li>
+<li>Added <code>IdTokenClaims</code> property.</li>
+<li>Added <code>UserInfoClaims</code> property.</li>
+</ul>
+</li>
+<li><code>Client</code> class<ul>
+<li>Added <code>SoftwareId</code> property.</li>
+<li>Added <code>SoftwareVersion</code> property.</li>
+<li>Added <code>AuthorizationSignAlg</code> property.</li>
+<li>Added <code>AuthorizationEncryptionAlg</code> property.</li>
+<li>Added <code>AuthorizationEncryptionEnc</code> property.</li>
+</ul>
+</li>
+<li><code>Service</code> class<ul>
+<li>Added <code>AuthorizationResponseDuration</code> property.</li>
+<li>Added <code>IsClientIdAliasEnabled</code> property.</li>
+<li>Added <code>IsErrorDescriptionOmitted</code> property.</li>
+<li>Added <code>IsErrorUriOmitted</code> property.</li>
+<li>Added <code>IsRefreshTokenKept</code> property.</li>
+<li>Added <code>AuthorizationSignatureKeyId</code> property.</li>
+<li>Added <code>IdTokenSignatureKeyId</code> property.</li>
+<li>Added <code>UserInfoSignatureKeyId</code> property.</li>
+<li>Removed <code>SupportedIntrospectionAuthSigningAlgorithms</code> property.</li>
+<li>Removed <code>SupportedRevocationAuthSigningAlgorithms</code> property.</li>
+</ul>
+</li>
+<li><code>ServiceProfile</code> enum<ul>
+<li>Added <code>OPEN_BANKING</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>1.1.0 (2018-05-30) </h2>
 <ul>
 <li><code>AuthorizationRequestHandlerSpiAdapter</code> class<ul>
 <li>Implemented <code>IAuthorizationRequestHandlerSpi</code> interface.</li>
