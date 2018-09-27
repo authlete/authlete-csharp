@@ -663,5 +663,116 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("selfSignedCertificateKeyId")]
         public string SelfSignedCertificateKeyId { get; set; }
+
+
+        /// <summary>
+        /// The unique identifier string assigned by the client
+        /// developer or software publisher used by registration
+        /// endpoints to identify the client software to be
+        /// dynamically registered.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the <c>software_id</c>
+        /// metadata defined in
+        /// <a href="https://tools.ietf.org/html/rfc7591#section-2">2.
+        /// Client Metadata</a> of
+        /// <a href="https://tools.ietf.org/html/rfc7591">RFC 7591</a>
+        /// (OAuth 2.0 Dynamic Client Registration Protocol).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("softwareId")]
+        public string SoftwareId { get; set; }
+
+
+        /// <summary>
+        /// The version identifier string for the client software
+        /// identified by the software ID.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>software_version</c> metadata defined in
+        /// <a href="https://tools.ietf.org/html/rfc7591#section-2">2.
+        /// Client Metadata</a> of
+        /// <a href="https://tools.ietf.org/html/rfc7591">RFC 7591</a>
+        /// (OAuth 2.0 Dynamic Client Registration Protocol).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("softwareVersion")]
+        public string SoftwareVersion { get; set; }
+
+
+        /// <summary>
+        /// The JWS <c>"alg"</c> algorithm for signing authorization
+        /// responses. This property corresponds to the
+        /// <c>"authorization_signed_response_alg"</c> in
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5.
+        /// Client Metadata</a> of
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationSignAlg")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JWSAlg AuthorizationSignAlg { get; set; }
+
+
+        /// <summary>
+        /// The JWE <c>"alg"</c> algorithm for encrypting
+        /// authorization responses. This property corresponds to
+        /// the <c>"authorization_encrypted_response_alg"</c> in
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5.
+        /// Client Metadata</a> of
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationEncryptionAlg")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JWEAlg AuthorizationEncryptionAlg { get; set; }
+
+
+        /// <summary>
+        /// The JWE <c>"enc"</c> algorithm for encrypting
+        /// authorization responses. This property corresponds to
+        /// the <c>"authorization_encrypted_response_enc"</c> in
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">5.
+        /// Client Metadata</a> of
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html#client-metadata">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationEncryptionEnc")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JWEEnc AuthorizationEncryptionEnc { get; set; }
     }
 }
