@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+1.3.0 (2019-05-03)
+------------------
+
 - `AuthorizationIssueResponse` class
     * Added `AccessToken` property.
     * Added `AccessTokenDuration` property.

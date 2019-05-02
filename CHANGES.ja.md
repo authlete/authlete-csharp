@@ -1,6 +1,9 @@
 CHANGES (日本語)
 ================
 
+1.3.0 (2019 年 05 月 03 日)
+---------------------------
+
 - `AuthorizationIssueResponse` クラス
     * `AccessToken` プロパティーを追加。
     * `AccessTokenDuration` プロパティーを追加。
