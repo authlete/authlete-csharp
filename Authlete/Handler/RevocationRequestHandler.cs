@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ namespace Authlete.Handler
         /// request using Basic Authentication.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         public async Task<HttpResponseMessage> Handle(
             string parameters, AuthenticationHeaderValue authorization)
         {
@@ -117,7 +117,7 @@ namespace Authlete.Handler
         /// request using Basic Authentication.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         public async Task<HttpResponseMessage> Handle(
             string parameters, string authorizationHeaderValue)
         {
@@ -160,7 +160,7 @@ namespace Authlete.Handler
         /// revocation request.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         public async Task<HttpResponseMessage> Handle(
             string parameters, BasicCredentials credentials)
         {

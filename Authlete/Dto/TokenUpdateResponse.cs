@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -87,6 +87,19 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("accessToken")]
         public string AccessToken { get; set; }
+
+
+        /// <summary>
+        /// The token type associated with the access token.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("tokenType")]
+        public string TokenType { get; set; }
 
 
         /// <summary>

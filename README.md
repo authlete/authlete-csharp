@@ -276,6 +276,13 @@ categories.
     - `GetClientAuthorizationList(ClientAuthorizationGetListRequest request)`
     - `UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)`
 
+  13. Methods for CIBA (Client Initiated Backchannel Authentication)
+
+    - `BackchannelAuthentication(BackchannelAuthenticationRequest request)`
+    - `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request)`
+    - `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request)`
+    - `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request)`
+
 *Example*
 
 The following code snippet is an example to get the list of your

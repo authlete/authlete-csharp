@@ -1,6 +1,87 @@
 CHANGES
 =======
 
+- `AuthorizationIssueResponse` class
+    * Added `AccessToken` property.
+    * Added `AccessTokenDuration` property.
+    * Added `AccessTokenExpiresAt` property.
+    * Added `AuthorizationCode` property.
+    * Added `IdToken` property.
+    * Added `JwtAccessToken` property.
+
+- `Client` class
+    * Added `BcDeliveryMode` property.
+    * Added `BcNotificationEndpoint` property.
+    * Added `BcRequestSignAlg` property.
+    * Added `IsBcUserCodeRequired` property.
+    * Added `TlsClientAuthSanDns` property.
+    * Added `TlsClientAuthSanEmail` property.
+    * Added `TlsClientAuthSanIp` property.
+    * Added `TlsClientAuthSanUri` property.
+
+- `GrantType` enum
+    * Added `CIBA`.
+
+- `IAuthleteApi` interface
+    * Added `BackchannelAuthentication(BackchannelAuthenticationRequest)` method.
+    * Added `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest)` method.
+    * Added `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest)` method.
+    * Added `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest)` method.
+
+- `IAuthleteConfiguration` interface
+    * Added `ServiceAccessToken` property.
+    * Added `ServiceOwnerAccessToken` property.
+
+- `Service` class
+    * Added `AccessTokenSignAlg` property.
+    * Added `AccessTokenSignatureKeyId` property.
+    * Added `AllowableClockSkew` property.
+    * Added `BackchannelAuthenticationEndpoint` property.
+    * Added `BackchannelAuthReqIdDuration` property.
+    * Added `BackchannelPollingInterval` property.
+    * Added `IsBackchannelUserCodeParameterSupported` property.
+    * Added `SupportedBackchannelTokenDeliveryModes` property.
+
+- `TokenCreateRequest` class
+    * Added `IsAccessTokenPersistent` property.
+
+- `TokenIssueResponse` class
+    * Added `JwtAccessToken` property.
+
+- `TokenResponse` class
+    * Added `JwtAccessToken` property.
+
+- `TokenUpdateRequest` class
+    * Added `AccessTokenHash` property.
+    * Added `IsAccessTokenExpiresAtUpdatedOnScopeUpdate` property.
+    * Added `IsAccessTokenPersistent` property.
+    * Added `IsAccessTokenValueUpdated` property.
+
+- `TokenUpdateResponse` class
+    * Added `TokenType` property.
+
+- `UserInfoRequest` class
+    * Added `ClientCertificate` property.
+
+- New types
+    * `BackchannelAuthenticationAction` enum
+    * `BackchannelAuthenticationRequest` class
+    * `BackchannelAuthenticationResponse` class
+    * `BackchannelAuthenticationCompleteAction` enum
+    * `BackchannelAuthenticationCompleteRequest` class
+    * `BackchannelAuthenticationCompleteResponse` class
+    * `BackchannelAuthenticationCompleteResult` enum
+    * `BackchannelAuthenticationFailAction` enum
+    * `BackchannelAuthenticationFailReason` enum
+    * `BackchannelAuthenticationFailRequest` class
+    * `BackchannelAuthenticationFailResponse` class
+    * `BackchannelAuthenticationIssueAction` class
+    * `BackchannelAuthenticationIssueRequest` class
+    * `BackchannelAuthenticationIssueResponse` class
+    * `DeliveryMode` enum
+    * `UserIdentificationHintType` enum
+
+
 1.2.0 (2018-09-28)
 ------------------
 

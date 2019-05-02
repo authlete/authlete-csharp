@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -191,6 +191,26 @@ namespace Authlete.Dto
     /// header. However, if the service has selected another
     /// different token type, the resource server has to generate
     /// error message for itself.
+    /// </para>
+    ///
+    /// <hr/>
+    ///
+    /// <para>
+    /// Since version 2.1, Authlete provides a feature to issue
+    /// access tokens in JWT format. This feature can be enabled by
+    /// setting a non-null value to the <c>AccessTokenSignAlg</c>
+    /// property of the service (see the description of the
+    /// <c>Service</c> class for details).
+    /// <c>/api/auth/introspection</c> API can accept access tokens
+    /// in JWT format. However, note that the API does not return
+    /// information contained in a given JWT-based access token but
+    /// returns information stored in the database record which
+    /// corresponds to the given JWT-based access token. Because
+    /// attributes of the database record can be modified after the
+    /// access token is issued (for example, by using
+    /// <c>/api/auth/token/update</c> API), information returned by
+    /// <c>/api/auth/introspection</c> API and information the
+    /// given JWT-based access token holds may be different.
     /// </para>
     /// </remarks>
     public class IntrospectionResponse : ApiResponse

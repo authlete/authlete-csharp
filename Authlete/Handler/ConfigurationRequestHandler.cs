@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -103,7 +103,7 @@ namespace Authlete.Handler
         /// application.
         /// </returns>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         public async Task<HttpResponseMessage> Handle()
         {
             return await Handle(true);
@@ -127,7 +127,7 @@ namespace Authlete.Handler
         /// human-readable way.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         public async Task<HttpResponseMessage> Handle(bool pretty)
         {
             // Call Authlete's /api/service/configuration API.

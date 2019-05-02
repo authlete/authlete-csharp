@@ -274,6 +274,13 @@ settings.Timeout = TimeSpan.FromSeconds(5);
     - `GetClientAuthorizationList(ClientAuthorizationGetListRequest request)`
     - `UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)`
 
+  13. CIBA (Client Initiated Backchannel Authentication) に関するメソッド群
+
+    - `BackchannelAuthentication(BackchannelAuthenticationRequest request)`
+    - `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request)`
+    - `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request)`
+    - `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request)`
+
 *例*
 
 次のコードは既存のサービスのリストを取得する例です。

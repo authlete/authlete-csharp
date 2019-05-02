@@ -1,6 +1,87 @@
 CHANGES (日本語)
 ================
 
+- `AuthorizationIssueResponse` クラス
+    * `AccessToken` プロパティーを追加。
+    * `AccessTokenDuration` プロパティーを追加。
+    * `AccessTokenExpiresAt` プロパティーを追加。
+    * `AuthorizationCode` プロパティーを追加。
+    * `IdToken` プロパティーを追加。
+    * `JwtAccessToken` プロパティーを追加。
+
+- `Client` クラス
+    * `BcDeliveryMode` プロパティーを追加。
+    * `BcNotificationEndpoint` プロパティーを追加。
+    * `BcRequestSignAlg` プロパティーを追加。
+    * `IsBcUserCodeRequired` プロパティーを追加。
+    * `TlsClientAuthSanDns` プロパティーを追加。
+    * `TlsClientAuthSanEmail` プロパティーを追加。
+    * `TlsClientAuthSanIp` プロパティーを追加。
+    * `TlsClientAuthSanUri` プロパティーを追加。
+
+- `GrantType` 列挙型
+    * `CIBA` を追加。
+
+- `IAuthleteApi` インターフェース
+    * `BackchannelAuthentication(BackchannelAuthenticationRequest)` メソッドを追加。
+    * `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest)` メソッドを追加。
+    * `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest)` メソッドを追加。
+    * `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest)` メソッドを追加。
+
+- `IAuthleteConfiguration` インターフェース
+    * `ServiceAccessToken` プロパティーを追加。
+    * `ServiceOwnerAccessToken` プロパティーを追加。
+
+- `Service` クラス
+    * `AccessTokenSignAlg` プロパティーを追加。
+    * `AccessTokenSignatureKeyId` プロパティーを追加。
+    * `AllowableClockSkew` プロパティーを追加。
+    * `BackchannelAuthenticationEndpoint` プロパティーを追加。
+    * `BackchannelAuthReqIdDuration` プロパティーを追加。
+    * `BackchannelPollingInterval` プロパティーを追加。
+    * `IsBackchannelUserCodeParameterSupported` プロパティーを追加。
+    * `SupportedBackchannelTokenDeliveryModes` プロパティーを追加。
+
+- `TokenCreateRequest` クラス
+    * `IsAccessTokenPersistent` プロパティーを追加。
+
+- `TokenIssueResponse` クラス
+    * `JwtAccessToken` プロパティーを追加。
+
+- `TokenResponse` クラス
+    * `JwtAccessToken` プロパティーを追加。
+
+- `TokenUpdateRequest` クラス
+    * `AccessTokenHash` プロパティーを追加。
+    * `IsAccessTokenExpiresAtUpdatedOnScopeUpdate` プロパティーを追加。
+    * `IsAccessTokenPersistent` プロパティーを追加。
+    * `IsAccessTokenValueUpdated` プロパティーを追加。
+
+- `TokenUpdateResponse` クラス
+    * `TokenType` プロパティーを追加。
+
+- `UserInfoRequest` クラス
+    * `ClientCertificate` プロパティーを追加。
+
+- 新しい型
+    * `BackchannelAuthenticationAction` 列挙型
+    * `BackchannelAuthenticationRequest` クラス
+    * `BackchannelAuthenticationResponse` クラス
+    * `BackchannelAuthenticationCompleteAction` 列挙型
+    * `BackchannelAuthenticationCompleteRequest` クラス
+    * `BackchannelAuthenticationCompleteResponse` クラス
+    * `BackchannelAuthenticationCompleteResult` 列挙型
+    * `BackchannelAuthenticationFailAction` 列挙型
+    * `BackchannelAuthenticationFailReason` 列挙型
+    * `BackchannelAuthenticationFailRequest` クラス
+    * `BackchannelAuthenticationFailResponse` クラス
+    * `BackchannelAuthenticationIssueAction` 列挙型
+    * `BackchannelAuthenticationIssueRequest` クラス
+    * `BackchannelAuthenticationIssueResponse` クラス
+    * `DeliveryMode` 列挙型
+    * `UserIdentificationHintType` 列挙型
+
+
 1.2.0 (2018 年 09 月 28 日)
 ---------------------------
 

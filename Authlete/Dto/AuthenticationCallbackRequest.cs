@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -79,32 +79,39 @@ namespace Authlete.Dto
     /// Some notes specific to respective SNSes.
     /// </para>
     ///
+    /// <para><b>Facebook</b></para>
     /// <list type="bullet">
     /// <item>
-    /// <term>Facebook</term>
     /// <description>
-    /// <para>
     /// The value of the <c>"id"</c> parameter is unique to each
     /// Facebook application and cannot be used across different
     /// applications. If you need the third party ID, make an API
     /// call to <c>/me</c> API with <c>fields=third_party_id</c>
     /// and <c>access_token=<i>{accessToken}</i></c>. See the API
     /// document of Facebook for details.
-    /// </para>
-    /// <para>
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <description>
     /// The value of the <c>"rawTokenResponse"</c> parameter is in
     /// the form of <c>application/x-www-form-urlencoded</c> (not
     /// <c>application/json</c>). This is a violation against RFC
     /// 6749.
-    /// </para>
-    /// <para>
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <description>
     /// The value of the <c>"refreshToken"</c> parameter is empty.
-    /// </para>
-    /// <para>
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <description>
     /// The value of the <c>"expiresIn"</c> parameter is the value
     /// of <c>"expires"</c> in the response from the token endpoint
     /// of Facebook.
-    /// </para>
     /// </description>
     /// </item>
     /// </list>

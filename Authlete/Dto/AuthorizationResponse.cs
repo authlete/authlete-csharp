@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -186,10 +186,8 @@ namespace Authlete.Dto
     /// should follow the steps below.
     /// </para>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[END-USER AUTHENTICATION]</term>
-    /// <description>
+    /// <para><b>[END-USER AUTHENTICATION]</b></para>
+    ///
     /// <para>
     /// Check whether an end-user has already logged in. If an
     /// end-user has logged in, go to the next step ([MAX AGE]).
@@ -198,14 +196,9 @@ namespace Authlete.Dto
     /// and use the response from the API to generate a response to
     /// the client application.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[MAX AGE]</term>
-    /// <description>
+    /// <para><b>[MAX AGE]</b></para>
+    ///
     /// <para>
     /// Get the value of the max age from the <c>MaxAge</c> property.
     /// The value represents the maximum authentication age which
@@ -215,6 +208,7 @@ namespace Authlete.Dto
     /// next step ([SUBJECT]). Otherwise, follow the sub steps
     /// described below.
     /// </para>
+    ///
     /// <para>
     /// (1) Get the time at which the end-user was authenticated.
     /// Note that this value is not managed by Authlete, meaning
@@ -226,10 +220,12 @@ namespace Authlete.Dto
     /// and use the response from the API to generate a response to
     /// the client application.
     /// </para>
+    ///
     /// <para>
     /// (2) Add the value of the maximum authentication age (which
     /// is represented in seconds to the authentication time.
     /// </para>
+    ///
     /// <para>
     /// (3) Check whether the calculated value is equal to or
     /// greater than the current time. If this condition is
@@ -239,14 +235,9 @@ namespace Authlete.Dto
     /// use the response from the API to generate a response to the
     /// client application.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[SUBJECT]</term>
-    /// <description>
+    /// <para><b>[SUBJECT]</b></para>
+    ///
     /// <para>
     /// Get the value of the requested subject from the <c>Subject</c>
     /// property. The value represents an end-user who the client
@@ -254,13 +245,16 @@ namespace Authlete.Dto
     /// <c>null</c>, go to the next step ([ACRs]). Otherwise, follow
     /// the sub steps described below.
     /// </para>
+    ///
     /// <para>
     /// (1) Compare the value of the requested subject to the subject
     /// (= unique user ID) of the current end-user.
     /// </para>
+    ///
     /// <para>
     /// (2) If they are equal, go to the next step ([ACRs]).
     /// </para>
+    ///
     /// <para>
     /// If they are not equal, call Authlete's
     /// <c>/api/auth/authorization/fail</c> API with
@@ -268,14 +262,9 @@ namespace Authlete.Dto
     /// and use the response from the API to generate a response to
     /// the client application.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[ACRs]</term>
-    /// <description>
+    /// <para><b>[ACRs]</b></para>
+    ///
     /// <para>
     /// Get the value of ACRs (Authentication Context Class
     /// References) from the <c>Acrs</c> property. The value has
@@ -284,6 +273,7 @@ namespace Authlete.Dto
     /// parameter, or (3) the <c>"default_acr_values"</c>
     /// configuration parameter of the client application.
     /// </para>
+    ///
     /// <para>
     /// It is ensured that all the ACRs returned by the <c>Acrs</c>
     /// property are supported by the authorization server
@@ -291,11 +281,13 @@ namespace Authlete.Dto
     /// ACRs are listed in the <c>"acr_values_supported"</c>
     /// configuration parameter of the authorization server.
     /// </para>
+    ///
     /// <para>
     /// If the value of ACRs is <c>null</c>, go to the next step
     /// ([SCOPES]). Otherwise, follow the sub steps described
     /// below.
     /// </para>
+    ///
     /// <para>
     /// (1) Get the ACR performed for the authentication of the
     /// current end-user. Note that this value is managed not by
@@ -304,12 +296,14 @@ namespace Authlete.Dto
     /// ACRs, it should not have listed ACRs in the
     /// <c>"acr_values_supported"</c> configuration parameter.)
     /// </para>
+    ///
     /// <para>
     /// Compare the ACR value obtained in the above step to each
     /// element in the ACR array obtained from the <c>Acrs</c>
     /// property in the listed order. If the ACR value was found in
     /// the array, go to the next step ([SCOPES]).
     /// </para>
+    ///
     /// <para>
     /// If the ACR value was not found in the ACR array (= if the
     /// ACR performed for the authentication of the current end-user
@@ -324,14 +318,9 @@ namespace Authlete.Dto
     /// client application. Otherwise, go to the next step
     /// ([SCOPES]).
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[SCOPES]</term>
-    /// <description>
+    /// <para><b>[SCOPES]</b></para>
+    ///
     /// <para>
     /// Get the scopes from the <c>Scopes</c> property. If the array
     /// contains one or more scopes which have not been granted to
@@ -341,6 +330,7 @@ namespace Authlete.Dto
     /// use the response from the API to generate a response to the
     /// client application. Otherwise, go to the next step ([ISSUE]).
     /// </para>
+    ///
     /// <para>
     /// Note that Authlete provides APIs to manage records of
     /// granted scopes (<c>/api/client/grantedscopes/*</c> APIs),
@@ -352,14 +342,9 @@ namespace Authlete.Dto
     /// prevent garbage data from being accumulated) and they
     /// return <c>"403 Forbidden"</c>.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[ISSUE]</term>
-    /// <description>
+    /// <para><b>[ISSUE]</b></para>
+    ///
     /// <para>
     /// If all the above steps succeeded, the last step is to issue
     /// an authorization code, an ID token and/or an access token
@@ -372,12 +357,14 @@ namespace Authlete.Dto
     /// parameters and call the <c>/api/auth/authorization/issue</c>
     /// API.
     /// </para>
+    ///
     /// <para>
     /// (1) [ticket] (required). This parameter represents a ticket
     /// which is exchanged with tokens at the
     /// <c>/api/auth/authorization/issue</c> API. Use the value
     /// returned from the <c>Ticket</c> property as it is.
     /// </para>
+    ///
     /// <para>
     /// (2) [subject] (required). This parameter represents the
     /// unique identifier of the current end-user. It is often
@@ -388,12 +375,14 @@ namespace Authlete.Dto
     /// consist of only ASCII letters and its length must be equal
     /// to or less than 100.
     /// </para>
+    ///
     /// <para>
     /// When the <c>Subject</c> property of <c>AuthorizationResponse</c>
     /// returns a non-null value, the value of <c>subject</c>
     /// request parameter to <c>/api/auth/authorization/issue</c>
     /// API is necessarily identical.
     /// </para>
+    ///
     /// <para>
     /// The value of this request parameter will be embedded in an
     /// ID token as the value of the <c>"sub"</c> claim. When the
@@ -407,11 +396,13 @@ namespace Authlete.Dto
     /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details about subject types.
     /// </para>
+    ///
     /// <para>
     /// You can use the <c>"sub"</c> request parameter to adjust
     /// the value of the <c>"sub"</c> claim in an ID token. See the
     /// description of the <c>"sub"</c> request parameter for details.
     /// </para>
+    ///
     /// <para>
     /// (3) [authTime] (optional). This parameter represents the
     /// time when the end-user authentication occurred. Its value
@@ -419,6 +410,7 @@ namespace Authlete.Dto
     /// The value of this parameter will be embedded in an ID token
     /// as the value of the <c>"auth_time"</c> claim.
     /// </para>
+    ///
     /// <para>
     /// (4) [acr] (optional). This parameter represents the ACR
     /// (Authentication Context Class Reference) which the
@@ -430,6 +422,7 @@ namespace Authlete.Dto
     /// parameter will be embedded in an ID token as the value of
     /// the <c>"acr"</c> claim.
     /// </para>
+    ///
     /// <para>
     /// (5) [claims] (optional). This parameter represents claims
     /// of the end-user. "Claims" here are pieces of information
@@ -439,17 +432,20 @@ namespace Authlete.Dto
     /// format the claim values into a JSON and set the JSON string
     /// as the value of this parameter.
     /// </para>
+    ///
     /// <para>
     /// The claims which the authorization server implementation is
     /// required to gather can be obtained from the <c>Claims</c>
     /// property.
     /// </para>
+    ///
     /// <para>
     /// For example, if the <c>Claims</c> property returns an array
     /// which contains <c>"name"</c>, <c>"email"</c> and
     /// <c>"birthdate"</c>, the value of this parameter should look
     /// like the following.
     /// </para>
+    ///
     /// <code>
     /// {
     ///   "name": "John Smith",
@@ -457,6 +453,7 @@ namespace Authlete.Dto
     ///   "birthdate": "1974-05-06"
     /// }
     /// </code>
+    ///
     /// <para>
     /// The <c>ClaimsLocales</c> property lists the end-user's
     /// preferred languages and scripts for claim values, ordered by
@@ -470,6 +467,7 @@ namespace Authlete.Dto
     /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </para>
+    ///
     /// <para>
     /// <i>"When the OP determines, either through the
     /// <c>claims_locales</c> parameter, or by other means, that
@@ -480,11 +478,13 @@ namespace Authlete.Dto
     /// in a manner that they can handle and utilize Claims using
     /// language tags."</i>
     /// </para>
+    ///
     /// <para>
     /// If the <c>Claims</c> property returns <c>null</c> or an
     /// empty array, the value of this parameter should be
     /// <c>null</c>.
     /// </para>
+    ///
     /// <para>
     /// See
     /// <a href="https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims">5.1.
@@ -501,10 +501,23 @@ namespace Authlete.Dto
     /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a> for details.
     /// </para>
+    ///
     /// <para>
     /// The claim values in this parameter will be embedded in an
     /// ID token.
     /// </para>
+    ///
+    /// <para>
+    /// <c>IdTokenClaims</c> is available since version 1.2.0. The
+    /// property holds the value of the <c>"id_token"</c> property
+    /// in the <c>"claims"</c> request parameter or in the
+    /// <c>"claims"</c> property in a request object. The value
+    /// held by <c>IdTokenClaims</c> should be considered when you
+    /// prepare claim values. See the description of the property
+    /// for details. Note that, however, old Authlete servers don't
+    /// support this response parameter.
+    /// </para>
+    ///
     /// <para>
     /// (6) [properties] (optional). Extra properties to be
     /// associated with an access token and/or an authorization
@@ -516,6 +529,7 @@ namespace Authlete.Dto
     /// <c>"application/x-www-form-urlencoded"</c> if you want to
     /// use this request parameter.
     /// </para>
+    ///
     /// <para>
     /// (7) [scopes] (optional). Scopes to be associated with an
     /// access token and/or an authorization code. If this
@@ -525,6 +539,7 @@ namespace Authlete.Dto
     /// parameter will replace the scopes contained in the original
     /// authorization request.
     /// </para>
+    ///
     /// <para>
     /// Even scopes that are not included in the original
     /// authorization request can be specified. However, as an
@@ -536,6 +551,7 @@ namespace Authlete.Dto
     /// (although the client application has not requested it) and
     /// the behavior is a major violation against the specification.
     /// </para>
+    ///
     /// <para>
     /// If you add the <c>"offline_access"</c> scope although it is
     /// not included in the original request, keep in mind that the
@@ -555,6 +571,7 @@ namespace Authlete.Dto
     /// <c>"offline_access"</c> scope is added via this <c>scopes</c>
     /// parameter.
     /// </para>
+    ///
     /// <para>
     /// (8) [sub] (optional). The value of the <c>"sub"</c> claim
     /// in an ID token which may be issued. If the value of this
@@ -565,9 +582,6 @@ namespace Authlete.Dto
     /// is to hide the actual value of the subject from client
     /// applications.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
     /// <para>
     /// <c>/api/auth/authorization/issue</c> API returns a response
@@ -596,10 +610,8 @@ namespace Authlete.Dto
     /// consideration when it builds the UI.
     /// </para>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[DISPLAY MODE]</term>
-    /// <description>
+    /// <para><b>[DISPLAY MODE]</b></para>
+    ///
     /// <para>
     /// <c>AuthorizationResponse</c> contains <c>"display"</c>
     /// parameter. The value can be obtained via the <c>Display</c>
@@ -616,20 +628,16 @@ namespace Authlete.Dto
     /// capabilities of the User Agent and present an appropriate
     /// display."</i>
     /// </para>
+    ///
     /// <para>
     /// It is ensured that the value returned from the <c>Display</c>
     /// property is one of the supported display values which are
     /// specified by the <c>"display_values_supported"</c>
     /// configuration parameter of the authorization server.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[UI LOCALE]</term>
-    /// <description>
+    /// <para><b>[UI LOCALE]</b></para>
+    ///
     /// <para>
     /// <c>AuthorizationResponse</c> contains <c>"ui_locales"</c>
     /// parameter. The value can be obtained via the <c>UiLocales</c>
@@ -639,6 +647,7 @@ namespace Authlete.Dto
     /// in one of the languages listed in the <c>"ui_locales"</c>
     /// parameter when possible.
     /// </para>
+    ///
     /// <para>
     /// It is ensured that language tags returned from the
     /// <c>UiLocales</c> property are contained in the list of
@@ -646,27 +655,17 @@ namespace Authlete.Dto
     /// <c>"ui_locales_supported"</c> configuration parameter of
     /// the authorization server.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[CLIENT INFORMATION]</term>
-    /// <description>
+    /// <para><b>[CLIENT INFORMATION]</b></para>
+    ///
     /// <para>
     /// The authorization server implementation should show the
     /// end-user information about the client application. The
     /// information can be obtained via the <c>Client</c> property.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[SCOPES]</term>
-    /// <description>
+    /// <para><b>[SCOPES]</b></para>
+    ///
     /// <para>
     /// A client application requires authorization for specific
     /// permissions. In OAuth 2.0 specification, <i>"scope"</i> is
@@ -675,6 +674,7 @@ namespace Authlete.Dto
     /// client application. The authorization server implementation
     /// should show the end-user the scopes.
     /// </para>
+    ///
     /// <para>
     /// The authorization server implementation may choose not to
     /// show scopes to which the end-user has given consent in the
@@ -687,6 +687,7 @@ namespace Authlete.Dto
     /// end-user even if the end-user has given consent to all the
     /// requested scopes in the past.
     /// </para>
+    ///
     /// <para>
     /// Note that Authlete provides APIs to manage records of
     /// granted scopes (<c>/api/client/granted_scopes/*</c> APIs),
@@ -698,19 +699,15 @@ namespace Authlete.Dto
     /// prevent garbage data from being accumulated) and they
     /// return <c>"403 Forbidden"</c>.
     /// </para>
+    ///
     /// <para>
     /// It is ensured that scopes returned from the <c>Scopes</c>
     /// property are contained in the list of supported scopes
     /// parameter of the authorization server.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[END-USER AUTHENTICATION]</term>
-    /// <description>
+    /// <para><b>[END-USER AUTHENTICATION]</b></para>
+    ///
     /// <para>
     /// Necessarily, the end-user must be authenticated (= must
     /// login your service) before granting authorization to the
@@ -720,6 +717,7 @@ namespace Authlete.Dto
     /// to comply with OpenID Connect. (Or just always show a login
     /// form if it's too much of a bother to follow the steps below).
     /// </para>
+    ///
     /// <para>
     /// (1) Get the value of the <c>Prompts</c> property. It
     /// corresponds to the value of the <c>"prompt"</c> request
@@ -730,6 +728,7 @@ namespace Authlete.Dto
     /// <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID
     /// Connect Core 1.0</a>.
     /// </para>
+    ///
     /// <para>
     /// If the value returned from the <c>Prompts</c> property
     /// contains <c>Prompt.SELECT_ACCOUNT</c>, display a form to
@@ -744,6 +743,7 @@ namespace Authlete.Dto
     /// the login ID. The <c>LoginHint</c> property simply returns
     /// the value of the <c>"login_hint"</c> request parameter.
     /// </para>
+    ///
     /// <para>
     /// If the value returned from the <c>Prompts</c> property
     /// contains <c>Prompt.LOGIN</c>, display a form to urge the
@@ -758,6 +758,7 @@ namespace Authlete.Dto
     /// the login ID. The <c>LoginHint</c> property simply returns
     /// the value of the <c>"login_hint"</c> request parameter.
     /// </para>
+    ///
     /// <para>
     /// If the value returned from the <c>Prompts</c> property does
     /// not contain <c>Prompt.LOGIN</c>, the authorization server
@@ -766,15 +767,18 @@ namespace Authlete.Dto
     /// one of the condisionts is not satisfied, show a login form
     /// to authenticate the end-user.
     /// </para>
+    ///
     /// <para>
     /// (a) An end-user has already logged in your service.
     /// </para>
+    ///
     /// <para>
     /// (b) The login ID of the current end-user matches the value
     /// returned from the <c>Subject</c> property. This check is
     /// required only when the <c>Subject</c> property returns a
     /// non-null value.
     /// </para>
+    ///
     /// <para>
     /// (c) The max age, which is the number of seconds obtained by
     /// the <c>MaxAge</c> property, has not passed since the
@@ -782,6 +786,7 @@ namespace Authlete.Dto
     /// required only when the <c>MaxAge</c> property returns a
     /// non-zero value.
     /// </para>
+    ///
     /// <para>
     /// If the authorization server implementation does not manage
     /// authentication time of end-users (= if the authorization
@@ -789,6 +794,7 @@ namespace Authlete.Dto
     /// and if the <c>MaxAge</c> property returns a non-zero value,
     /// a login form should be displayed.
     /// </para>
+    ///
     /// <para>
     /// (d) The ACR (Authentication Context Class Reference) of the
     /// authentication performed for the current end-user satisfies
@@ -796,20 +802,16 @@ namespace Authlete.Dto
     /// property. This check is required only when the <c>Acrs</c>
     /// property returns a non-empty array.
     /// </para>
+    ///
     /// <para>
     /// In every case, the end-user authentication must satisfy one
     /// of the ACRs listed in the value of the <c>Acrs</c> property
     /// when the <c>Acrs</c> property returns a non-empty array and
     /// the <c>IsAcrEssential</c> property returns <c>true</c>.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
-    /// <list type="bullet">
-    /// <item>
-    /// <term>[GRANT/DENY BUTTONS]</term>
-    /// <description>
+    /// <para><b>[GRANT/DENY BUTTONS]</b></para>
+    ///
     /// <para>
     /// The end-user is supposed to choose either (1) to grant
     /// authorization to the client application or (2) to deny the
@@ -818,9 +820,6 @@ namespace Authlete.Dto
     /// grant authorization and a button to deny the request are
     /// provided.
     /// </para>
-    /// </description>
-    /// </item>
-    /// </list>
     ///
     /// <para>
     /// When the subject returned by the <c>Subject</c> property is
@@ -931,6 +930,7 @@ namespace Authlete.Dto
         /// <c>"default_max_age"</c> configuration parameter.
         /// </para>
         /// </remarks>
+        [JsonProperty("maxAge")]
         public int MaxAge { get; set; }
 
 

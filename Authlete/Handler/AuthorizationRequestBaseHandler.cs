@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -103,7 +103,7 @@ namespace Authlete.Handler
         /// will be used instead.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         protected async Task<HttpResponseMessage> AuthorizationIssue(
             string ticket, string subject, long authTime, string acr,
             IDictionary<string, object> claims, Property[] properties,
@@ -198,7 +198,7 @@ namespace Authlete.Handler
         /// The reason of the failure of the authorization request.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         protected async Task<HttpResponseMessage> AuthorizationFail(
             string ticket, AuthorizationFailReason reason)
         {

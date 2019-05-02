@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,14 +14,6 @@
 // language governing permissions and limitations under the
 // License.
 //
-
-
-// Disable the following warning to the implementation of the
-// IAuthleteApi interface.
-//
-//   "Missing XML comment for publicly visible type or member"
-//
-#pragma warning disable 1591
 
 
 using System;
@@ -80,6 +72,10 @@ namespace Authlete.Api
         const string CLIENT_AUTHORIZATION_DELETE_API_PATH   = "/api/client/authorization/delete/{0}";
         const string CLIENT_AUTHORIZATION_GET_LIST_API_PATH = "/api/client/authorization/get/list";
         const string CLIENT_AUTHORIZATION_UPDATE_API_PATH   = "/api/client/authorization/update/{0}";
+        const string BC_AUTHENTICATION_API_PATH             = "/api/backchannel/authentication";
+        const string BC_AUTHENTICATION_COMPLETE_API_PATH    = "/api/backchannel/authentication/complete";
+        const string BC_AUTHENTICATION_FAIL_API_PATH        = "/api/backchannel/authentication/fail";
+        const string BC_AUTHENTICATION_ISSUE_API_PATH       = "/api/backchannel/authentication/issue";
 
 
         /// <summary>
@@ -638,6 +634,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<AuthorizationResponse>
         Authorization(AuthorizationRequest request)
         {
@@ -646,6 +643,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<AuthorizationFailResponse>
         AuthorizationFail(AuthorizationFailRequest request)
         {
@@ -654,6 +652,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<AuthorizationIssueResponse>
         AuthorizationIssue(AuthorizationIssueRequest request)
         {
@@ -662,6 +661,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<TokenResponse>
         Token(TokenRequest request)
         {
@@ -670,6 +670,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<TokenCreateResponse>
         TokenCreate(TokenCreateRequest request)
         {
@@ -678,6 +679,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<TokenFailResponse>
         TokenFail(TokenFailRequest request)
         {
@@ -686,6 +688,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<TokenIssueResponse>
         TokenIssue(TokenIssueRequest request)
         {
@@ -694,6 +697,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<TokenUpdateResponse>
         TokenUpdate(TokenUpdateRequest request)
         {
@@ -702,6 +706,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<RevocationResponse>
         Revocation(RevocationRequest request)
         {
@@ -710,6 +715,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<UserInfoResponse>
         UserInfo(UserInfoRequest request)
         {
@@ -718,6 +724,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<UserInfoIssueResponse>
         UserInfoIssue(UserInfoIssueRequest request)
         {
@@ -726,6 +733,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<IntrospectionResponse>
         Introspection(IntrospectionRequest request)
         {
@@ -734,6 +742,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<StandardIntrospectionResponse>
         StandardIntrospection(StandardIntrospectionRequest request)
         {
@@ -742,6 +751,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Service>
         CreateService(Service service)
         {
@@ -750,6 +760,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<object>
         DeleteService(long apiKey)
         {
@@ -758,6 +769,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Service>
         GetService(long apiKey)
         {
@@ -766,6 +778,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ServiceListResponse>
         GetServiceList()
         {
@@ -774,6 +787,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ServiceListResponse>
         GetServiceList(int start, int end)
         {
@@ -789,6 +803,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Service>
         UpdateService(Service service)
         {
@@ -798,6 +813,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<string>
         GetServiceJwks()
         {
@@ -806,6 +822,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<string>
         GetServiceJwks(bool pretty, bool includePrivateKeys)
         {
@@ -821,6 +838,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<string>
         GetServiceConfiguration()
         {
@@ -829,6 +847,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<string>
         GetServiceConfiguration(bool pretty)
         {
@@ -843,6 +862,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Client>
         CreateClient(Client client)
         {
@@ -851,6 +871,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<object>
         DeleteClient(long clientId)
         {
@@ -859,6 +880,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Client>
         GetClient(long clientId)
         {
@@ -867,6 +889,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientListResponse>
         GetClientList()
         {
@@ -875,6 +898,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientListResponse>
         GetClientList(string developer)
         {
@@ -889,6 +913,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientListResponse>
         GetClientList(int start, int end)
         {
@@ -904,6 +929,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientListResponse>
         GetClientList(string developer, int start, int end)
         {
@@ -920,6 +946,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<Client>
         UpdateClient(Client client)
         {
@@ -936,6 +963,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<GrantedScopesGetResponse>
         GetGrantedScopes(long clientId, string subject)
         {
@@ -952,6 +980,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ApiResponse>
         DeleteGrantedScopes(long clientId, string subject)
         {
@@ -968,6 +997,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ApiResponse>
         DeleteClientAuthorization(long clientId, string subject)
         {
@@ -984,6 +1014,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<AuthorizedClientListResponse>
         GetClientAuthorizationList(ClientAuthorizationGetListRequest request)
         {
@@ -992,6 +1023,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ApiResponse>
         UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request)
         {
@@ -1001,6 +1033,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientSecretRefreshResponse>
         RefreshClientSecret(long clientId)
         {
@@ -1008,6 +1041,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientSecretRefreshResponse>
         RefreshClientSecret(string clientIdentifier)
         {
@@ -1016,6 +1050,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientSecretUpdateResponse>
         UpdateClientSecret(long clientId, string clientSecret)
         {
@@ -1023,6 +1058,7 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public async Task<ClientSecretUpdateResponse>
         UpdateClientSecret(string clientIdentifier, string clientSecret)
         {
@@ -1065,6 +1101,43 @@ namespace Authlete.Api
         }
 
 
+        /// <inheritdoc/>
         public ISettings Settings { get; }
+
+
+        /// <inheritdoc/>
+        public async Task<BackchannelAuthenticationResponse>
+        BackchannelAuthentication(BackchannelAuthenticationRequest request)
+        {
+            return await CallServicePostApi<BackchannelAuthenticationResponse>(
+                BC_AUTHENTICATION_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<BackchannelAuthenticationIssueResponse>
+        BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request)
+        {
+            return await CallServicePostApi<BackchannelAuthenticationIssueResponse>(
+                BC_AUTHENTICATION_ISSUE_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<BackchannelAuthenticationFailResponse>
+        BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request)
+        {
+            return await CallServicePostApi<BackchannelAuthenticationFailResponse>(
+                BC_AUTHENTICATION_FAIL_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<BackchannelAuthenticationCompleteResponse>
+        BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request)
+        {
+            return await CallServicePostApi<BackchannelAuthenticationCompleteResponse>(
+                BC_AUTHENTICATION_COMPLETE_API_PATH, request);
+        }
     }
 }

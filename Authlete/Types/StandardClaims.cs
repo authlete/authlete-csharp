@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@ namespace Authlete.Types
         /// Shorthand name by which the End-User wishes to be
         /// referred to at the RP, such as <c>janedoe</c> or
         /// <c>j.doe</c>. This value MAY be any valid JSON string
-        /// including special characters such as <c>@</c>, <c>/</c>,
+        /// including special characters such as <c>@@</c>, <c>/</c>,
         /// or whitespace. The RP MUST NOT rely upon this value
         /// being unique, as discussed in Section 5.7.
         /// </summary>

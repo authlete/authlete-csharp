@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,14 +16,6 @@
 //
 
 
-// Disable the following warning to the implementation of the
-// IAuthleteConfiguration interface.
-//
-//   "Missing XML comment for publicly visible type or member"
-//
-#pragma warning disable 1591
-
-
 namespace Authlete.Conf
 {
     /// <summary>
@@ -32,18 +24,31 @@ namespace Authlete.Conf
     /// </summary>
     public class AuthleteSimpleConfiguration : IAuthleteConfiguration
     {
+        /// <inheritdoc/>
         public string BaseUrl { get; set; }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiKey { get; set; }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiSecret { get; set; }
 
 
+        /// <inheritdoc/>
+        public string ServiceOwnerAccessToken { get; set; }
+
+
+        /// <inheritdoc/>
         public string ServiceApiKey { get; set; }
 
 
+        /// <inheritdoc/>
         public string ServiceApiSecret { get; set; }
+
+
+        /// <inheritdoc/>
+        public string ServiceAccessToken { get; set; }
     }
 }

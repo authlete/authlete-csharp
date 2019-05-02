@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,14 +14,6 @@
 // language governing permissions and limitations under the
 // License.
 //
-
-
-// Disable the following warning to the implementation of the
-// IAuthleteConfiguration interface.
-//
-//   "Missing XML comment for publicly visible type or member"
-//
-#pragma warning disable 1591
 
 
 namespace Authlete.Conf
@@ -50,6 +42,10 @@ namespace Authlete.Conf
     ///     <description>The API secret of a service owner.</description>
     ///   </item>
     ///   <item>
+    ///     <term><c>AUTHLETE_SERVICEOWNER_ACCESSTOKEN</c></term>
+    ///     <description>The access token for service owner APIs.</description>
+    ///   </item>
+    ///   <item>
     ///     <term><c>AUTHLETE_SERVICE_APIKEY</c></term>
     ///     <description>The API key of a service.</description>
     ///   </item>
@@ -57,17 +53,24 @@ namespace Authlete.Conf
     ///     <term><c>AUTHLETE_SERVICE_APISECRET</c></term>
     ///     <description>The API secret of a service.</description>
     ///   </item>
+    ///   <item>
+    ///     <term><c>AUTHLETE_SERVICE_ACCESSTOKEN</c></term>
+    ///     <description>The access token for service APIs.</description>
+    ///   </item>
     /// </list>
     /// </remarks>
     public class AuthleteEnvConfiguration : IAuthleteConfiguration
     {
-        const string ENV_BASE_URL                 = "AUTHLETE_BASE_URL";
-        const string ENV_SERVICE_OWNER_API_KEY    = "AUTHLETE_SERVICEOWNER_APIKEY";
-        const string ENV_SERVICE_OWNER_API_SECRET = "AUTHLETE_SERVICEOWNER_APISECRET";
-        const string ENV_SERVICE_API_KEY          = "AUTHLETE_SERVICE_APIKEY";
-        const string ENV_SERVICE_API_SECRET       = "AUTHLETE_SERVICE_APISECRET";
+        const string ENV_BASE_URL                   = "AUTHLETE_BASE_URL";
+        const string ENV_SERVICE_OWNER_API_KEY      = "AUTHLETE_SERVICEOWNER_APIKEY";
+        const string ENV_SERVICE_OWNER_API_SECRET   = "AUTHLETE_SERVICEOWNER_APISECRET";
+        const string ENV_SERVICE_OWNER_ACCESS_TOKEN = "AUTHLETE_SERVICEOWNER_ACCESSTOKEN";
+        const string ENV_SERVICE_API_KEY            = "AUTHLETE_SERVICE_APIKEY";
+        const string ENV_SERVICE_API_SECRET         = "AUTHLETE_SERVICE_APISECRET";
+        const string ENV_SERVICE_ACCESS_TOKEN       = "AUTHLETE_SERVICE_ACCESSTOKEN";
 
 
+        /// <inheritdoc/>
         public string BaseUrl
         {
             get
@@ -77,6 +80,7 @@ namespace Authlete.Conf
         }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiKey
         {
             get
@@ -86,6 +90,7 @@ namespace Authlete.Conf
         }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiSecret
         {
             get
@@ -95,6 +100,17 @@ namespace Authlete.Conf
         }
 
 
+        /// <inheritdoc/>
+        public string ServiceOwnerAccessToken
+        {
+            get
+            {
+                return GetEnv(ENV_SERVICE_OWNER_ACCESS_TOKEN);
+            }
+        }
+
+
+        /// <inheritdoc/>
         public string ServiceApiKey
         {
             get
@@ -104,11 +120,22 @@ namespace Authlete.Conf
         }
 
 
+        /// <inheritdoc/>
         public string ServiceApiSecret
         {
             get
             {
                 return GetEnv(ENV_SERVICE_API_SECRET);
+            }
+        }
+
+
+        /// <inheritdoc/>
+        public string ServiceAccessToken
+        {
+            get
+            {
+                return GetEnv(ENV_SERVICE_ACCESS_TOKEN);
             }
         }
 

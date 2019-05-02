@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -623,6 +623,90 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The string representation of the expected DNS subject
+        /// alternative name of the certificate this client will
+        /// use in mutual TLS authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <c>tls_client_auth_san_dns</c> in "2.3. Dynamic
+        /// Client Registration" in "Mutual TLS Profiles for OAuth
+        /// Clients" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("tlsClientAuthSanDns")]
+        public string TlsClientAuthSanDns { get; set; }
+
+
+        /// <summary>
+        /// The string representation of the expected URI subject
+        /// alternative name of the certificate this client will
+        /// use in mutual TLS authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <c>tls_client_auth_san_uri</c> in "2.3. Dynamic
+        /// Client Registration" in "Mutual TLS Profiles for OAuth
+        /// Clients" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("tlsClientAuthSanUri")]
+        public Uri TlsClientAuthSanUri { get; set; }
+
+
+        /// <summary>
+        /// The string representation of the expected IP address
+        /// subject alternative name of the certificate this client
+        /// will use in mutual TLS authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <c>tls_client_auth_san_ip</c> in "2.3. Dynamic
+        /// Client Registration" in "Mutual TLS Profiles for OAuth
+        /// Clients" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("tlsClientAuthSanIp")]
+        public string TlsClientAuthSanIp { get; set; }
+
+
+        /// <summary>
+        /// The string representation of the expected email address
+        /// subject alternative name of the certificate this client
+        /// will use in mutual TLS authentication.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <c>tls_client_auth_san_email</c> in "2.3. Dynamic
+        /// Client Registration" in "Mutual TLS Profiles for OAuth
+        /// Clients" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("tlsClientAuthSanEmail")]
+        public string TlsClientAuthSanEmail { get; set; }
+
+
+        /// <summary>
         /// The flag which indicates whether this client uses
         /// "client certificate bound access tokens".
         /// </summary>
@@ -774,5 +858,88 @@ namespace Authlete.Dto
         [JsonProperty("authorizationEncryptionEnc")]
         [JsonConverter(typeof(StringEnumConverter))]
         public JWEEnc AuthorizationEncryptionEnc { get; set; }
+
+
+        /// <summary>
+        /// The backchannel token delivery mode. This property
+        /// corresponds to the <c>backchannel_token_delivery_mode</c>
+        /// metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The backchannel token delivery mode is defined in the
+        /// specification of CIBA (Client Initiated Backchannel
+        /// Authentication).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("bcDeliveryMode")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public DeliveryMode BcDeliveryMode { get; set; }
+
+
+        /// <summary>
+        /// The backchannel client notification endpoint. This
+        /// property corresponds to the
+        /// <c>backchannel_client_notification_endpoint</c>
+        /// metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The backchannel client notification endpoint is defined
+        /// in the specification of CIBA (Client Initiated
+        /// Backchannel Authentication).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("bcNotificationEndpoint")]
+        public Uri BcNotificationEndpoint { get; set; }
+
+
+        /// <summary>
+        /// The signature algorithm of the request to the
+        /// backchannel authentication endpoint. This property
+        /// corresponds to the
+        /// <c>backchannel_authentication_request_signing_alg</c>
+        /// metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The specification of CIBA (Client Initiated Backchannel
+        /// Authentication) allows asymmetric algorithms only.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("bcRequestSignAlg")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JWSAlg BcRequestSignAlg { get; set; }
+
+
+        /// <summary>
+        /// The boolean flag which indicates whether a user code is
+        /// required when this client makes a backchannel
+        /// authentication request. This property corresponds to
+        /// the <c>backchannel_user_code_parameter</c> metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("bcUserCodeRequired")]
+        public bool IsBcUserCodeRequired { get; set; }
     }
 }

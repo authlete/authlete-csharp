@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<AuthorizationResponse>
         Authorization(AuthorizationRequest request);
 
@@ -56,7 +56,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<AuthorizationFailResponse>
         AuthorizationFail(AuthorizationFailRequest request);
 
@@ -73,7 +73,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<AuthorizationIssueResponse>
         AuthorizationIssue(AuthorizationIssueRequest request);
 
@@ -90,7 +90,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<TokenResponse>
         Token(TokenRequest request);
 
@@ -107,7 +107,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<TokenCreateResponse>
         TokenCreate(TokenCreateRequest request);
 
@@ -124,7 +124,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<TokenFailResponse>
         TokenFail(TokenFailRequest request);
 
@@ -141,7 +141,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<TokenIssueResponse>
         TokenIssue(TokenIssueRequest request);
 
@@ -158,7 +158,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<TokenUpdateResponse>
         TokenUpdate(TokenUpdateRequest request);
 
@@ -175,7 +175,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<RevocationResponse>
         Revocation(RevocationRequest request);
 
@@ -192,7 +192,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<UserInfoResponse>
         UserInfo(UserInfoRequest request);
 
@@ -209,7 +209,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<UserInfoIssueResponse>
         UserInfoIssue(UserInfoIssueRequest request);
 
@@ -226,7 +226,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<IntrospectionResponse>
         Introspection(IntrospectionRequest request);
 
@@ -243,7 +243,7 @@ namespace Authlete.Api
         /// Request parameters passed to the API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<StandardIntrospectionResponse>
         StandardIntrospection(StandardIntrospectionRequest request);
 
@@ -261,7 +261,7 @@ namespace Authlete.Api
         /// Information about the service you want to create.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<Service>
         CreateService(Service service);
 
@@ -275,7 +275,7 @@ namespace Authlete.Api
         /// The API key of the service.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<object>
         DeleteService(long apiKey);
 
@@ -293,7 +293,7 @@ namespace Authlete.Api
         /// The API key of the service.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<Service>
         GetService(long apiKey);
 
@@ -315,7 +315,7 @@ namespace Authlete.Api
         /// A list of services.
         /// </returns>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ServiceListResponse>
         GetServiceList();
 
@@ -370,7 +370,7 @@ namespace Authlete.Api
         /// query. Must not be negative.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ServiceListResponse>
         GetServiceList(int start, int end);
 
@@ -395,7 +395,7 @@ namespace Authlete.Api
         /// Information about a service to update.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<Service>
         UpdateService(Service service);
 
@@ -416,7 +416,7 @@ namespace Authlete.Api
         /// JSON representation of the JWK Set of the service.
         /// </returns>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<string>
         GetServiceJwks();
 
@@ -439,7 +439,7 @@ namespace Authlete.Api
         /// <c>false</c> to exclude private keys from the JSON.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<string>
         GetServiceJwks(bool pretty, bool includePrivateKeys);
 
@@ -462,7 +462,7 @@ namespace Authlete.Api
         /// The configuration of the service in JSON format.
         /// </returns>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<string>
         GetServiceConfiguration();
 
@@ -496,7 +496,7 @@ namespace Authlete.Api
         /// <c>true</c> to get the JSON in pretty format.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<string>
         GetServiceConfiguration(bool pretty);
 
@@ -513,7 +513,7 @@ namespace Authlete.Api
         /// <param name="client">
         /// Information about the client you want to create.
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         /// </param>
         Task<Client>
         CreateClient(Client client);
@@ -529,7 +529,7 @@ namespace Authlete.Api
         /// delete.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<object>
         DeleteClient(long clientId);
 
@@ -547,7 +547,7 @@ namespace Authlete.Api
         /// The client ID.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<Client>
         GetClient(long clientId);
 
@@ -569,7 +569,7 @@ namespace Authlete.Api
         /// A list of clients.
         /// </returns>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientListResponse>
         GetClientList();
 
@@ -600,7 +600,7 @@ namespace Authlete.Api
         /// The developer of the targeted client applications.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientListResponse>
         GetClientList(string developer);
 
@@ -624,7 +624,7 @@ namespace Authlete.Api
         /// query. Must not be negative.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientListResponse>
         GetClientList(int start, int end);
 
@@ -690,7 +690,7 @@ namespace Authlete.Api
         /// query. Must not be negative.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientListResponse>
         GetClientList(string developer, int start, int end);
 
@@ -715,7 +715,7 @@ namespace Authlete.Api
         /// Information about a client you want to update.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<Client>
         UpdateClient(Client client);
 
@@ -752,7 +752,7 @@ namespace Authlete.Api
         /// Subject (= unique identifier) of an end-user.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<GrantedScopesGetResponse>
         GetGrantedScopes(long clientId, string subject);
 
@@ -792,7 +792,7 @@ namespace Authlete.Api
         /// Subject (= unique identifier) of an end-user.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ApiResponse>
         DeleteGrantedScopes(long clientId, string subject);
 
@@ -815,7 +815,7 @@ namespace Authlete.Api
         /// Subject (= unique identifier) of an end-user.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ApiResponse>
         DeleteClientAuthorization(long clientId, string subject);
 
@@ -835,7 +835,7 @@ namespace Authlete.Api
         /// <c>/api/client/authorization/get/list</c> API.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<AuthorizedClientListResponse>
         GetClientAuthorizationList(ClientAuthorizationGetListRequest request);
 
@@ -859,7 +859,7 @@ namespace Authlete.Api
         /// Request.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ApiResponse>
         UpdateClientAuthorization(long clientId, ClientAuthorizationUpdateRequest request);
 
@@ -880,7 +880,7 @@ namespace Authlete.Api
         /// Client ID.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientSecretRefreshResponse>
         RefreshClientSecret(long clientId);
 
@@ -901,7 +901,7 @@ namespace Authlete.Api
         /// Client ID.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientSecretRefreshResponse>
         RefreshClientSecret(string clientIdentifier);
 
@@ -934,7 +934,7 @@ namespace Authlete.Api
         /// A new value of client secret.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientSecretUpdateResponse>
         UpdateClientSecret(long clientId, string clientSecret);
 
@@ -967,7 +967,7 @@ namespace Authlete.Api
         /// A new value of client secret.
         /// </param>
         ///
-        /// <exception cref="AuthleteApiException"/>
+        /// <exception cref="AuthleteApiException"></exception>
         Task<ClientSecretUpdateResponse>
         UpdateClientSecret(string clientIdentifier, string clientSecret);
 
@@ -977,5 +977,77 @@ namespace Authlete.Api
         /// implementation.
         /// </summary>
         ISettings Settings { get; }
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/backchannel/authentication</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        Task<BackchannelAuthenticationResponse>
+        BackchannelAuthentication(BackchannelAuthenticationRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/backchannel/authentication/issue</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        Task<BackchannelAuthenticationIssueResponse>
+        BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/backchannel/authentication/fail</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        Task<BackchannelAuthenticationFailResponse>
+        BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/backchannel/authentication/complete</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        Task<BackchannelAuthenticationCompleteResponse>
+        BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request);
     }
 }

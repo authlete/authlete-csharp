@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,6 +36,110 @@ namespace Authlete.Dto
     /// OpenID Provider Metadata</a> of
     /// <a href="https://openid.net/specs/openid-connect-discovery-1_0.html">OpenID
     /// Connect Discovery 1.0</a>
+    /// </para>
+    ///
+    /// <br/><hr/>
+    ///
+    /// <para><b>JWT-based access token</b></para>
+    ///
+    /// <para>
+    /// When the <c>AccessTokenSignAlg</c> property holds a
+    /// non-null value, access tokens issued by this service become
+    /// JWTs. The value held by the property is used as the
+    /// signature algorithm of the JWTs. When the property holds
+    /// null, access tokens issued by this service are random
+    /// strings as before.
+    /// </para>
+    ///
+    /// <para>
+    /// A JWT-based access token has the following claims.
+    /// </para>
+    ///
+    /// <list type="bullet">
+    /// <item>
+    /// <term><c>scope</c></term>
+    /// <description>
+    /// (string) : Space-delimited scope names.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>client_id</c></term>
+    /// <description>
+    /// (string) : Client ID.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>exp</c></term>
+    /// <description>
+    /// (integer) : Time at which this access token will expire.
+    /// Seconds since the Unix epoch.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>iat</c></term>
+    /// <description>
+    /// (integer) : Time at which this access token was issued.
+    /// Seconds since the Unix epoch.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>sub</c></term>
+    /// <description>
+    /// (string) : The subject (unique identifier) of the resource
+    /// owner who approved issue of this access token. This claim
+    /// does not exist or its value is null if this access token
+    /// was issued by resource owner password credentials flow.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>iss</c></term>
+    /// <description>
+    /// (string) : The issuer identifier of this service.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>jti</c></term>
+    /// <description>
+    /// (string) : The unique identifier of this JWT. The value of
+    /// this claim itself is the random-string version of this
+    /// access token.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>cnf</c></term>
+    /// <description>
+    /// (object) : If this access token is bound to a client
+    /// certificate, this claim is included. The type of its value
+    /// is object and the sub object contains a
+    /// <c>x5t</c><c>#</c><c>S256</c> claim. The value of the
+    /// <c>x5t</c><c>#</c><c>S256</c> claim is the X.509
+    /// Certificate SHA-256 thumbprint of the client certificate.
+    /// See <i>"3.1. X.509 Certificate Thumbprint Confirmation
+    /// Method for JWT"</i> of
+    /// <i><a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-mtls/?include_text=1">OAuth
+    /// 2.0 Mutual TLS Client Authentication and Certificate Bound
+    /// Access Tokens</a></i> for details.
+    /// </description>
+    /// </item>
+    /// </list>
+    ///
+    /// <para>
+    /// Visible (= not-hidden) extra properties of the access token
+    /// are embedded in the JWT as custom claims. Regarding extra
+    /// properties, see the Authlete API document.
+    /// </para>
+    ///
+    /// <para>
+    /// This feature of JWT-based access token is available since
+    /// Authlete 2.1. Access tokens issued by older Authlete
+    /// versions are always random strings.
     /// </para>
     /// </remarks>
     public class Service
@@ -374,79 +478,6 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("tosUri")]
         public Uri TosUri { get; set; }
-
-
-        /// <summary>
-        /// The description about this service.
-        /// </summary>
-        [JsonProperty("description")]
-        public string Description { get; set; }
-
-
-        /// <summary>
-        /// The token type of access tokens issued by this
-        /// authorization server. It is the value of the
-        /// <c>"token_type"</c> parameter in access token responses
-        /// (<a href="https://tools.ietf.org/html/rfc6749#section-5.1">5.1.
-        /// Successful Response</a> of
-        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>).
-        /// <c>"Bearer"</c> is recommended
-        /// (<a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>).
-        /// </summary>
-        [JsonProperty("accessTokenType")]
-        public string AccessTokenType { get; set; }
-
-
-        /// <summary>
-        /// The duration of access tokens in seconds. It is the
-        /// value of the <c>"expires_in"</c> parameter in access
-        /// token responses
-        /// (<a href="https://tools.ietf.org/html/rfc6749#section-5.1">5.1.
-        /// Successful Response</a> of
-        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>).
-        /// </summary>
-        [JsonProperty("accessTokenDuration")]
-        public long AccessTokenDuration { get; set; }
-
-
-        /// <summary>
-        /// The duration of refresh tokens in seconds.
-        /// </summary>
-        [JsonProperty("refreshTokenDuration")]
-        public long RefreshTokenDuration { get; set; }
-
-
-        /// <summary>
-        /// The duration of ID tokens in seconds.
-        /// </summary>
-        [JsonProperty("idTokenDuration")]
-        public long IdTokenDuration { get; set; }
-
-
-        /// <summary>
-        /// The duration of authorization response JWTs in seconds.
-        /// </summary>
-        ///
-        /// <remarks>
-        /// <para>
-        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade
-        /// API: JWT Secured Authorization Response Mode for OAuth
-        /// 2.0 (JARM)</a> defines new values for the
-        /// <c>response_mode</c> request parameter. They are
-        /// <c>query.jwt</c>, <c>fragment.jwt</c>,
-        /// <c>form_post.jwt</c> and <c>jwt</c>. If one of them is
-        /// specified as the response mode, response parameters
-        /// from the authorization endpoint will be packed into a
-        /// JWT. This property is used to compute the value of the
-        /// <c>exp</c> claim of the JWT.
-        /// </para>
-        ///
-        /// <para>
-        /// Since version 1.2.0.
-        /// </para>
-        /// </remarks>
-        [JsonProperty("authorizationResponseDuration")]
-        public long AuthorizationResponseDuration { get; set; }
 
 
         /// <summary>
@@ -922,7 +953,152 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// Get the key ID to identify a JWK used for signing
+        /// The description about this service.
+        /// </summary>
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+
+        /// <summary>
+        /// The token type of access tokens issued by this
+        /// authorization server. It is the value of the
+        /// <c>"token_type"</c> parameter in access token responses
+        /// (<a href="https://tools.ietf.org/html/rfc6749#section-5.1">5.1.
+        /// Successful Response</a> of
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>).
+        /// <c>"Bearer"</c> is recommended
+        /// (<a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>).
+        /// </summary>
+        [JsonProperty("accessTokenType")]
+        public string AccessTokenType { get; set; }
+
+
+        /// <summary>
+        /// The signature algorithm of access tokens.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// When the value of this property is null, access tokens
+        /// issued by this service are just random strings. On the
+        /// other hand, when this property holds a non-null value,
+        /// access tokens issued by this service are JWTs and the
+        /// value of this property represents the signature
+        /// algorithm of the JWTs. Regarding the format, see the
+        /// description of this <c>Service</c> class.
+        /// </para>
+        ///
+        /// <para>
+        /// This feature is available since Authlete 2.1. Access
+        /// tokens generated by older Authlete versions are always
+        /// random strings.
+        /// </para>
+        ///
+        /// <para>
+        /// Note that symmetric algorithms (<c>HS256</c>, <c>HS384</c>
+        /// and <c>HS512</c>) are not supported.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenSignAlg")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public JWSAlg AccessTokenSignAlg { get; set; }
+
+
+        /// <summary>
+        /// The duration of access tokens in seconds. It is the
+        /// value of the <c>"expires_in"</c> parameter in access
+        /// token responses
+        /// (<a href="https://tools.ietf.org/html/rfc6749#section-5.1">5.1.
+        /// Successful Response</a> of
+        /// <a href="https://tools.ietf.org/html/rfc6749">RFC 6749</a>).
+        /// </summary>
+        [JsonProperty("accessTokenDuration")]
+        public long AccessTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The duration of refresh tokens in seconds.
+        /// </summary>
+        [JsonProperty("refreshTokenDuration")]
+        public long RefreshTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The duration of ID tokens in seconds.
+        /// </summary>
+        [JsonProperty("idTokenDuration")]
+        public long IdTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The duration of authorization response JWTs in seconds.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// <a href="https://openid.net/specs/openid-financial-api-jarm.html">Financial-grade
+        /// API: JWT Secured Authorization Response Mode for OAuth
+        /// 2.0 (JARM)</a> defines new values for the
+        /// <c>response_mode</c> request parameter. They are
+        /// <c>query.jwt</c>, <c>fragment.jwt</c>,
+        /// <c>form_post.jwt</c> and <c>jwt</c>. If one of them is
+        /// specified as the response mode, response parameters
+        /// from the authorization endpoint will be packed into a
+        /// JWT. This property is used to compute the value of the
+        /// <c>exp</c> claim of the JWT.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.2.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationResponseDuration")]
+        public long AuthorizationResponseDuration { get; set; }
+
+
+        /// <summary>
+        /// The key ID to identify a JWK used for signing access
+        /// tokens.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// A JWK Set can be registered as a property of a Service.
+        /// A JWK Set can contain 0 or more JWKs (see
+        /// <a href="https://tools.ietf.org/html/rfc7517">RFC 7517</a>
+        /// for details about JWK). Authlete Server has to pick up
+        /// one JWK for signing from the JWK Set when it generates
+        /// a JWT-based access token (see the description of the
+        /// <c>AccessTokenSignAlg</c> for details about JWT-based
+        /// access token). Authlete Server searches the registered
+        /// JWK Set for a JWK which satisfies conditions for access
+        /// token signature. If the number of JWK candidates which
+        /// satisfy the conditions is 1, there is no problem. On
+        /// the other hand, if there exist multiple candidates, a
+        /// <a href="https://tools.ietf.org/html/rfc7517#section-4.5">Key
+        /// ID</a> is needed to be specified so that Authlete
+        /// Server can pick up one JWK from among the JWK
+        /// candidates.
+        /// </para>
+        ///
+        /// <para>
+        /// This property exists for the purpose described above.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenSignatureKeyId")]
+        public string AccessTokenSignatureKeyId { get; set; }
+
+
+        /// <summary>
+        /// The key ID to identify a JWK used for signing
         /// authorization responses using an asymmetric key.
         /// </summary>
         ///
@@ -962,7 +1138,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// Get the key ID to identify a JWK used for ID token
+        /// The key ID to identify a JWK used for ID token
         /// signature using an asymmetric key.
         /// </summary>
         ///
@@ -1002,7 +1178,7 @@ namespace Authlete.Dto
 
 
         /// <summary>
-        /// Get the key ID to identify a JWK used for user info
+        /// The key ID to identify a JWK used for user info
         /// signature using an asymmetric key.
         /// </summary>
         ///
@@ -1041,5 +1217,120 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("userInfoSignatureKeyId")]
         public string UserInfoSignatureKeyId { get; set; }
+
+
+        /// <summary>
+        /// The supported backchannel token delivery modes. This
+        /// property corresponds to the
+        /// <c>backchannel_token_delivery_modes_supported</c>
+        /// metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Backchannel token delivery modes are defined in the
+        /// specification of CIBA (Client Initiated Backchannel
+        /// Authentication).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedBackchannelTokenDeliveryModes", ItemConverterType = typeof(StringEnumConverter))]
+        public DeliveryMode[] SupportedBackchannelTokenDeliveryModes { get; set; }
+
+
+        /// <summary>
+        /// The URI of the backchannel authentication endpoint.
+        /// This property corresponds to the
+        /// <c>backchannel_authentication_endpoint</c> metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Backchannel authentication endpoint is defined in the
+        /// specification of CIBA (Client Initiated Backchannel
+        /// Authentication).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("backchannelAuthenticationEndpoint")]
+        public Uri BackchannelAuthenticationEndpoint { get; set; }
+
+
+        /// <summary>
+        /// The boolean flag which indicates whether the
+        /// <c>user_code</c> request parameter is supported at the
+        /// backchannel authentication endpoint. This property
+        /// corresponds to the
+        /// <c>backchannel_user_code_parameter_supported</c>
+        /// metadata.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("backchannelUserCodeParameterSupported")]
+        public bool IsBackchannelUserCodeParameterSupported { get; set; }
+
+
+        /// <summary>
+        /// The duration of backchannel authentication request IDs
+        /// issued from the backchannel authentication endpoint in
+        /// seconds. This is used as the value of the
+        /// <c>expires_in</c> property in responses from the
+        /// backchannel authentication endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("backchannelAuthReqIdDuration")]
+        public int BackchannelAuthReqIdDuration { get; set; }
+
+
+        /// <summary>
+        /// The minimum interval between polling requests to the
+        /// token endpoint from client applications in seconds.
+        /// This is used as the value of the <c>interval</c>
+        /// property in responses from the backchannel
+        /// authentication endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("backchannelPollingInterval")]
+        public int BackchannelPollingInterval { get; set; }
+
+
+        /// <summary>
+        /// The allowable clock skew between the server and clients
+        /// in seconds. Must be in between 0 and 65,535.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The clock skew is taken into consideration when
+        /// time-related claims in a JWT (e.g. <c>exp</c>,
+        /// <c>iat</c>, <c>nbf</c>) are verified.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("allowableClockSkew")]
+        public int AllowableClockSkew { get; set; }
     }
 }

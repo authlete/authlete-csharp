@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,14 +14,6 @@
 // language governing permissions and limitations under the
 // License.
 //
-
-
-// Disable the following warning to the implementation of the
-// IAuthleteConfiguration interface.
-//
-//   "Missing XML comment for publicly visible type or member"
-//
-#pragma warning disable 1591
 
 
 using System.Collections.Generic;
@@ -70,6 +62,13 @@ namespace Authlete.Conf
     /// </item>
     ///
     /// <item>
+    /// <term><c>service_owner.access_token</c></term>
+    /// <description>
+    /// The access token for service owner APIs.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
     /// <term><c>service.api_key</c></term>
     /// <description>
     /// The API key of a service.
@@ -80,6 +79,13 @@ namespace Authlete.Conf
     /// <term><c>service.api_secret</c></term>
     /// <description>
     /// The API secret of a service.
+    /// </description>
+    /// </item>
+    ///
+    /// <item>
+    /// <term><c>service.access_token</c></term>
+    /// <description>
+    /// The access token for service APIs.
     /// </description>
     /// </item>
     /// </list>
@@ -98,12 +104,14 @@ namespace Authlete.Conf
         /// </summary>
         public const string ENV_CONFIG_FILE = "AUTHLETE_CONFIGURATION_FILE";
 
-        const string KEY_BASE_URL                 = "base_url";
-        const string KEY_SERVICE_OWNER_API_KEY    = "service_owner.api_key";
-        const string KEY_SERVICE_OWNER_API_SECRET = "service_owner.api_secret";
-        const string KEY_SERVICE_API_KEY          = "service.api_key";
-        const string KEY_SERVICE_API_SECRET       = "service.api_secret";
-        const string BASE_URL_DEFAULT             = "https://api.authlete.com";
+        const string KEY_BASE_URL                   = "base_url";
+        const string KEY_SERVICE_OWNER_API_KEY      = "service_owner.api_key";
+        const string KEY_SERVICE_OWNER_API_SECRET   = "service_owner.api_secret";
+        const string KEY_SERVICE_OWNER_ACCESS_TOKEN = "service_owner.access_token";
+        const string KEY_SERVICE_API_KEY            = "service.api_key";
+        const string KEY_SERVICE_API_SECRET         = "service.api_secret";
+        const string KEY_SERVICE_ACCESS_TOKEN       = "service.access_token";
+        const string BASE_URL_DEFAULT               = "https://api.authlete.com";
 
 
         /// <summary>
@@ -183,26 +191,41 @@ namespace Authlete.Conf
                 PropertiesLoader.Load(reader);
 
             // Set up parameters to access Authlete APIs.
-            BaseUrl               = props[KEY_BASE_URL];
-            ServiceOwnerApiKey    = props[KEY_SERVICE_OWNER_API_KEY];
-            ServiceOwnerApiSecret = props[KEY_SERVICE_OWNER_API_SECRET];
-            ServiceApiKey         = props[KEY_SERVICE_API_KEY];
-            ServiceApiSecret      = props[KEY_SERVICE_API_SECRET];
+            BaseUrl                 = props[KEY_BASE_URL];
+            ServiceOwnerApiKey      = props[KEY_SERVICE_OWNER_API_KEY];
+            ServiceOwnerApiSecret   = props[KEY_SERVICE_OWNER_API_SECRET];
+            ServiceOwnerAccessToken = props[KEY_SERVICE_OWNER_ACCESS_TOKEN];
+            ServiceApiKey           = props[KEY_SERVICE_API_KEY];
+            ServiceApiSecret        = props[KEY_SERVICE_API_SECRET];
+            ServiceAccessToken      = props[KEY_SERVICE_ACCESS_TOKEN];
         }
 
 
+        /// <inheritdoc/>
         public string BaseUrl { get; private set; }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiKey { get; private set; }
 
 
+        /// <inheritdoc/>
         public string ServiceOwnerApiSecret { get; private set; }
 
 
+        /// <inheritdoc/>
+        public string ServiceOwnerAccessToken { get; private set; }
+
+
+        /// <inheritdoc/>
         public string ServiceApiKey { get; private set; }
 
 
+        /// <inheritdoc/>
         public string ServiceApiSecret { get; private set; }
+
+
+        /// <inheritdoc/>
+        public string ServiceAccessToken { get; private set; }
     }
 }

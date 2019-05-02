@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -136,7 +136,6 @@ namespace Authlete.Handler.Spi
         /// <item>
         /// <term>grant_type=authorization_code</term>
         /// <description>
-        /// <para>
         /// If the authorization code presented by the client
         /// application already has extra properties (this happens
         /// if <c>IAuthorizationDecisionHandlerSpi.GetProperties</c>
@@ -146,28 +145,23 @@ namespace Authlete.Handler.Spi
         /// that the existing extra properties will be overwritten
         /// if extra properties returned by this method have the
         /// same keys.
-        /// </para>
-        /// <para>
         /// For example, if an authorization code has two extra
         /// properties, <c>a=1</c> and <c>b=2</c>, and if this
         /// method returns two extra properties, <c>a=A</c> and
         /// <c>c=3</c>, the resultant access token will have three
         /// extra properties, <c>a=A</c>, <c>b=2</c> and <c>c=3</c>.
-        /// </para>
         /// </description>
         /// </item>
         ///
         /// <item>
         /// <term>grant_type=refresh_token</term>
         /// <description>
-        /// <para>
         /// If the access token associated with the refresh token
         /// already has extra properties, extra properties returned
         /// by this method will be merged into the existing extra
         /// properties. Note that the existing extra properties
         /// will be overwritten if extra properties returned by
         /// this method have the same keys.
-        /// </para>
         /// </description>
         /// </item>
         /// </list>

@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -169,5 +169,111 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("responseContent")]
         public string ResponseContent { get; set; }
+
+
+        /// <summary>
+        /// The newly issued access token. An access token is issued
+        /// when the <c>response_type</c> request parameter of the
+        /// authorization request includes <c>token</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If the service is configured to issue JWT-based access
+        /// tokens, a JWT-based access token is issued additionally.
+        /// In the case, the <c>JwtAccessToken</c> property holds
+        /// the JWT-based access token.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessToken")]
+        public string AccessToken { get; set; }
+
+
+        /// <summary>
+        /// The time in milliseconds since the Unix epoch at which
+        /// the access token will expire.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenExpiresAt")]
+        public long AccessTokenExpiresAt { get; set; }
+
+
+        /// <summary>
+        /// The duration of the access token in seconds.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenDuration")]
+        public long AccessTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The newly issued ID token. An ID token is issued when
+        /// the <c>response_type</c> request parameter of the
+        /// authorization request includes <c>id_token</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("idToken")]
+        public string IdToken { get; set; }
+
+
+        /// <summary>
+        /// The newly issued authorization code. An authorization
+        /// code is issued when the <c>response_type</c> request
+        /// parameter of the authorization request includes
+        /// <c>code</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationCode")]
+        public string AuthorizationCode { get; set; }
+
+
+        /// <summary>
+        /// The newly issued access token in JWT format.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If the authorization server is configured to issue
+        /// JWT-based access tokens (= if <c>AccessTokenSignAlg</c>
+        /// property of <c>Service</c> holds a non-null value), a
+        /// JWT-based access token is issued along with the original
+        /// random-string one.
+        /// </para>
+        ///
+        /// <para>
+        /// Regarding the detailed format of the JWT-based access
+        /// token, see the description of the <c>Service</c> class.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("jwtAccessToken")]
+        public string JwtAccessToken { get; set; }
     }
 }

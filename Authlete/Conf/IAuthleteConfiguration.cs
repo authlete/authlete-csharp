@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,6 +42,18 @@ namespace Authlete.Conf
 
 
         /// <summary>
+        /// The access token for service owner APIs.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        string ServiceOwnerAccessToken { get; }
+
+
+        /// <summary>
         /// The API key of a service.
         /// </summary>
         string ServiceApiKey { get; }
@@ -51,5 +63,17 @@ namespace Authlete.Conf
         /// Gets the service API secret.
         /// </summary>
         string ServiceApiSecret { get; }
+
+
+        /// <summary>
+        /// The access token for service APIs.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        string ServiceAccessToken { get; }
     }
 }

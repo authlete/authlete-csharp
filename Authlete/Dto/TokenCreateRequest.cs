@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -214,5 +214,32 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("refreshToken")]
         public string RefreshToken { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether the access token
+        /// expires or not.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// By default, all access tokens expire after a period of
+        /// time determined by their service. If this request
+        /// parameter is <c>true</c> then the access token will not
+        /// automatically expire and must be revoked or deleted
+        /// manually at the service.
+        /// </para>
+        ///
+        /// <para>
+        /// If this request parameter is <c>true</c>, the
+        /// <c>accessTokenDuration</c> request parameter is ignored.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenPersistent")]
+        public bool IsAccessTokenPersistent { get; set; }
     }
 }

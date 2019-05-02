@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -69,5 +69,25 @@ namespace Authlete.Types
         /// using a refresh token.
         /// </summary>
         REFRESH_TOKEN,
+
+
+        /// <summary>
+        /// <a href="https://openid.net/specs/openid-client-initiated-backchannel-authentication-core-1_0.html">CIBA</a>,
+        /// a grant type to request an ID token, an access token,
+        /// and optionally a refresh token, using a CIBA flow.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In the "poll" mode or the "ping" mode, clients make one
+        /// or more token requests to the token endpoint with
+        /// <c>grant_type=urn:openid:params:grant-type:ciba</c>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.3.0.
+        /// </para>
+        /// </remarks>
+        CIBA,
     }
 }

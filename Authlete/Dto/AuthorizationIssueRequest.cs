@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2019 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -132,9 +132,10 @@ namespace Authlete.Dto
         /// <para>
         /// For example, if <c>"given_name"</c> claim,
         /// <c>"family_name"</c> claim and <c>"email"</c> claim are
-        /// required, the authorization server implementation should
-        /// generate a JSON object like the following and set its
-        /// string representation to this <c>Claims</c> property.
+        /// requested, the authorization server implementation
+        /// should generate a JSON object like the following and
+        /// set its string representation to this <c>Claims</c>
+        /// property.
         /// </para>
         ///
         /// <code>
