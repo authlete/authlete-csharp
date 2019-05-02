@@ -201,13 +201,12 @@ Public Member Functions</h2></td></tr>
 <p>When the value of the <code>"grant_type"</code> parameter of a token request is <code>"authorization_code"</code> or <code>"refresh_token"</code>, properties are merged. Rules are described below. </p>
 <ul>
 <li>
-<p class="startli">grant_type=authorization_code  </p>
-<p class="endli">If the authorization code presented by the client application already has extra properties (this happens if <code>IAuthorizationDecisionHandlerSpi.GetProperties</code> returned extra properties when the authorization code was issued), extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this method have the same keys. </p>
+<p class="startli">grant_type=authorization_code  If the authorization code presented by the client application already has extra properties (this happens if <code>IAuthorizationDecisionHandlerSpi.GetProperties</code> returned extra properties when the authorization code was issued), extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this method have the same keys. For example, if an authorization code has two extra properties, <code>a=1</code> and <code>b=2</code>, and if this method returns two extra properties, <code>a=A</code> and <code>c=3</code>, the resultant access token will have three extra properties, <code>a=A</code>, <code>b=2</code> and <code>c=3</code>.  </p>
+<p class="endli"></p>
 </li>
+<li>
+grant_type=refresh_token  If the access token associated with the refresh token already has extra properties, extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this method have the same keys.   </li>
 </ul>
-<p>For example, if an authorization code has two extra properties, <code>a=1</code> and <code>b=2</code>, and if this method returns two extra properties, <code>a=A</code> and <code>c=3</code>, the resultant access token will have three extra properties, <code>a=A</code>, <code>b=2</code> and <code>c=3</code>. </p>
-<p>grant_type=refresh_token  </p>
-<p>If the access token associated with the refresh token already has extra properties, extra properties returned by this method will be merged into the existing extra properties. Note that the existing extra properties will be overwritten if extra properties returned by this method have the same keys. </p>
 <dl class="section return"><dt>Returns</dt><dd>Arbitrary key-value pairs to be associated with an access token. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_token_request_handler_spi_adapter.html#a302ed9eda8cdc736da499fc5a540e8c4">TokenRequestHandlerSpiAdapter</a>.</p>

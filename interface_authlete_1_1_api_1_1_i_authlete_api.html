@@ -222,6 +222,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6c4013f892ff5da03ca599bab8b6b3f"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_authlete_1_1_dto_1_1_client_secret_update_response.html">ClientSecretUpdateResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_api_1_1_i_authlete_api.html#af6c4013f892ff5da03ca599bab8b6b3f">UpdateClientSecret</a> (string clientIdentifier, string clientSecret)</td></tr>
 <tr class="memdesc:af6c4013f892ff5da03ca599bab8b6b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the client secret of a client (= call Authlete's <code>/api/client/secret/update/{clientId}</code> API). If you want to have the Authlete server generate a new value of the client secret, use <code>RefreshClientSecret</code> method.  <a href="#af6c4013f892ff5da03ca599bab8b6b3f">More...</a><br /></td></tr>
 <tr class="separator:af6c4013f892ff5da03ca599bab8b6b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8dd481ce65e39f5e9e93359a5a672a5"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_response.html">BackchannelAuthenticationResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_api_1_1_i_authlete_api.html#ae8dd481ce65e39f5e9e93359a5a672a5">BackchannelAuthentication</a> (<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_request.html">BackchannelAuthenticationRequest</a> request)</td></tr>
+<tr class="memdesc:ae8dd481ce65e39f5e9e93359a5a672a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call Authlete's <code>/api/backchannel/authentication</code> API.  <a href="#ae8dd481ce65e39f5e9e93359a5a672a5">More...</a><br /></td></tr>
+<tr class="separator:ae8dd481ce65e39f5e9e93359a5a672a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed3893febbfbae52440c92c5186b3d8"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_response.html">BackchannelAuthenticationIssueResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_api_1_1_i_authlete_api.html#a0ed3893febbfbae52440c92c5186b3d8">BackchannelAuthenticationIssue</a> (<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_request.html">BackchannelAuthenticationIssueRequest</a> request)</td></tr>
+<tr class="memdesc:a0ed3893febbfbae52440c92c5186b3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call Authlete's <code>/api/backchannel/authentication/issue</code> API.  <a href="#a0ed3893febbfbae52440c92c5186b3d8">More...</a><br /></td></tr>
+<tr class="separator:a0ed3893febbfbae52440c92c5186b3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa766da5073f33bf06e938db4bc40116f"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_fail_response.html">BackchannelAuthenticationFailResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_api_1_1_i_authlete_api.html#aa766da5073f33bf06e938db4bc40116f">BackchannelAuthenticationFail</a> (<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_fail_request.html">BackchannelAuthenticationFailRequest</a> request)</td></tr>
+<tr class="memdesc:aa766da5073f33bf06e938db4bc40116f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call Authlete's <code>/api/backchannel/authentication/fail</code> API.  <a href="#aa766da5073f33bf06e938db4bc40116f">More...</a><br /></td></tr>
+<tr class="separator:aa766da5073f33bf06e938db4bc40116f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac8925f172608427930521065f90f2e"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html">BackchannelAuthenticationCompleteResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_authlete_1_1_api_1_1_i_authlete_api.html#afac8925f172608427930521065f90f2e">BackchannelAuthenticationComplete</a> (<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html">BackchannelAuthenticationCompleteRequest</a> request)</td></tr>
+<tr class="memdesc:afac8925f172608427930521065f90f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call Authlete's <code>/api/backchannel/authentication/complete</code> API.  <a href="#afac8925f172608427930521065f90f2e">More...</a><br /></td></tr>
+<tr class="separator:afac8925f172608427930521065f90f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -334,6 +346,146 @@ Properties</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#a68fc3de31bc4e62a5a2686ca41d3ddb1">AuthleteApi</a>.</p>
+
+</div>
+</div>
+<a id="ae8dd481ce65e39f5e9e93359a5a672a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8dd481ce65e39f5e9e93359a5a672a5">&#9670;&nbsp;</a></span>BackchannelAuthentication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_response.html">BackchannelAuthenticationResponse</a>&gt; BackchannelAuthentication </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_request.html">BackchannelAuthenticationRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call Authlete's <code>/api/backchannel/authentication</code> API. </p>
+<dl class="section return"><dt>Returns</dt><dd>A response from the API. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request parameters passed to the API. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthleteApiException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#a50bca6600dea6afa04a7192ab3d581f6">AuthleteApi</a>.</p>
+
+</div>
+</div>
+<a id="afac8925f172608427930521065f90f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac8925f172608427930521065f90f2e">&#9670;&nbsp;</a></span>BackchannelAuthenticationComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html">BackchannelAuthenticationCompleteResponse</a>&gt; BackchannelAuthenticationComplete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html">BackchannelAuthenticationCompleteRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call Authlete's <code>/api/backchannel/authentication/complete</code> API. </p>
+<dl class="section return"><dt>Returns</dt><dd>A response from the API. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request parameters passed to the API. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthleteApiException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#a17cdd9cadddf38dd488a98eb638a2173">AuthleteApi</a>.</p>
+
+</div>
+</div>
+<a id="aa766da5073f33bf06e938db4bc40116f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa766da5073f33bf06e938db4bc40116f">&#9670;&nbsp;</a></span>BackchannelAuthenticationFail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_fail_response.html">BackchannelAuthenticationFailResponse</a>&gt; BackchannelAuthenticationFail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_fail_request.html">BackchannelAuthenticationFailRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call Authlete's <code>/api/backchannel/authentication/fail</code> API. </p>
+<dl class="section return"><dt>Returns</dt><dd>A response from the API. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request parameters passed to the API. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthleteApiException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#a326da278bde5489245bf3ab7580d8408">AuthleteApi</a>.</p>
+
+</div>
+</div>
+<a id="a0ed3893febbfbae52440c92c5186b3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed3893febbfbae52440c92c5186b3d8">&#9670;&nbsp;</a></span>BackchannelAuthenticationIssue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_response.html">BackchannelAuthenticationIssueResponse</a>&gt; BackchannelAuthenticationIssue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_request.html">BackchannelAuthenticationIssueRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Call Authlete's <code>/api/backchannel/authentication/issue</code> API. </p>
+<dl class="section return"><dt>Returns</dt><dd>A response from the API. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request parameters passed to the API. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">AuthleteApiException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#aac2f7eb1d14f3bc6726cb15ad9d6c1ff">AuthleteApi</a>.</p>
 
 </div>
 </div>

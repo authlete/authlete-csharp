@@ -95,10 +95,39 @@ Properties</h2></td></tr>
 <tr class="memitem:acd3e5c7eaa3e7ddacd91a04117004b61"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_user_info_request.html#acd3e5c7eaa3e7ddacd91a04117004b61">Token</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:acd3e5c7eaa3e7ddacd91a04117004b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">The access token that the <a href="https://openid.net/specs/openid-connect-core-1_0.html#UserInfo">userinfo endpoint</a> implementation received from the client application.  <a href="#acd3e5c7eaa3e7ddacd91a04117004b61">More...</a><br /></td></tr>
 <tr class="separator:acd3e5c7eaa3e7ddacd91a04117004b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15755995ab2ca9587d4c24b5735aa51e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_user_info_request.html#a15755995ab2ca9587d4c24b5735aa51e">ClientCertificate</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a15755995ab2ca9587d4c24b5735aa51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The client certificate used in the TLS connection established between the client application and the userinfo endpoint in PEM format.  <a href="#a15755995ab2ca9587d4c24b5735aa51e">More...</a><br /></td></tr>
+<tr class="separator:a15755995ab2ca9587d4c24b5735aa51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Request to Authlete's <code>/api/auth/userinfo</code> API. </p>
 </div><h2 class="groupheader">Property Documentation</h2>
+<a id="a15755995ab2ca9587d4c24b5735aa51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15755995ab2ca9587d4c24b5735aa51e">&#9670;&nbsp;</a></span>ClientCertificate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ClientCertificate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The client certificate used in the TLS connection established between the client application and the userinfo endpoint in PEM format. </p>
+<p>The value of this request parameter is referred to when the access token given to the userinfo endpoint was bound to a client certificate when it was issued. See <a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-mtls/?include_text=1">OAuth 2.0 Mutual TLS Client Authentication and Certificate-Bound Access Tokens</a> for details about the specification of certificate-bound access tokens. </p>
+<p>Since version 1.3.0. </p>
+
+</div>
+</div>
 <a id="acd3e5c7eaa3e7ddacd91a04117004b61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd3e5c7eaa3e7ddacd91a04117004b61">&#9670;&nbsp;</a></span>Token</h2>
 

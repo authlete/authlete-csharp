@@ -4,6 +4,7 @@ var searchData=
   ['native',['NATIVE',['../namespace_authlete_1_1_types.html#aeecf5888f18e859ec6023d64ec50934daf78504d96ba7177dc0c6784905ac8743',1,'Authlete::Types']]],
   ['newclientsecret',['NewClientSecret',['../class_authlete_1_1_dto_1_1_client_secret_refresh_response.html#a296f3989c7a9a79d9e427942b8532b41',1,'Authlete.Dto.ClientSecretRefreshResponse.NewClientSecret()'],['../class_authlete_1_1_dto_1_1_client_secret_update_response.html#a296f3989c7a9a79d9e427942b8532b41',1,'Authlete.Dto.ClientSecretUpdateResponse.NewClientSecret()']]],
   ['nickname',['NICKNAME',['../class_authlete_1_1_types_1_1_standard_claims.html#afd5551e69d98fa11cacfbafc6a88d5a1',1,'Authlete::Types::StandardClaims']]],
+  ['no_5faction',['NO_ACTION',['../namespace_authlete_1_1_dto.html#af490d06b3da8f6a62cb4edbfdd19691aa24ce802dad4f363a652f77ce888c9b91',1,'Authlete::Dto']]],
   ['no_5finteraction',['NO_INTERACTION',['../namespace_authlete_1_1_dto.html#a25d4830acda62615a4de107e1694e031a7fd88b0804fa362cdf66379da4aa6de6',1,'Authlete::Dto']]],
   ['nocontent',['NoContent',['../class_authlete_1_1_web_1_1_response_utility.html#aa44c17881fed4353313e0c54fa1580d3',1,'Authlete::Web::ResponseUtility']]],
   ['nointeractionhandler',['NoInteractionHandler',['../class_authlete_1_1_handler_1_1_no_interaction_handler.html',1,'NoInteractionHandler'],['../class_authlete_1_1_handler_1_1_no_interaction_handler.html#a6aaa7d9b256a69c3e95b5feaa6deb708',1,'Authlete.Handler.NoInteractionHandler.NoInteractionHandler()']]],
@@ -13,5 +14,6 @@ var searchData=
   ['not_5fauthenticated',['NOT_AUTHENTICATED',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779abff4abc7af63b54d004abcd84684a82c',1,'Authlete::Dto']]],
   ['not_5ffound',['NOT_FOUND',['../namespace_authlete_1_1_dto.html#a77955c231117c6ee18debfbbadbd1742a8c02547a8a3b02382bac3557bcb2280d',1,'Authlete::Dto']]],
   ['not_5flogged_5fin',['NOT_LOGGED_IN',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779a0b5c454d04697a80927a7ab49a06fd51',1,'Authlete::Dto']]],
-  ['notfound',['NotFound',['../class_authlete_1_1_web_1_1_response_utility.html#abb9bbf8258a552e6b64a867061d98158',1,'Authlete::Web::ResponseUtility']]]
+  ['notfound',['NotFound',['../class_authlete_1_1_web_1_1_response_utility.html#abb9bbf8258a552e6b64a867061d98158',1,'Authlete::Web::ResponseUtility']]],
+  ['notification',['NOTIFICATION',['../namespace_authlete_1_1_dto.html#af490d06b3da8f6a62cb4edbfdd19691aa9814d942b7e24870084a3dce24867ab3',1,'Authlete::Dto']]]
 ];

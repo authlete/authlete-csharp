@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ciba',['CIBA',['../namespace_authlete_1_1_types.html#a687ee60f4246db53b58abe121883d829ae622d77eec29ac41e9f7bd97fd656a6f',1,'Authlete::Types']]],
   ['client_5fcredentials',['CLIENT_CREDENTIALS',['../namespace_authlete_1_1_types.html#a687ee60f4246db53b58abe121883d829a0807610c08d70ee1bea49721731655f0',1,'Authlete::Types']]],
   ['client_5fsecret_5fbasic',['CLIENT_SECRET_BASIC',['../namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040a980df965c0e8d2b1edc25d506b7ac8d1',1,'Authlete::Types']]],
   ['client_5fsecret_5fjwt',['CLIENT_SECRET_JWT',['../namespace_authlete_1_1_types.html#abac9b353967a1892de7637976abbf040a4c407eb345a072fd51101c34a02b647e',1,'Authlete::Types']]],

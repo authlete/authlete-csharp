@@ -83,7 +83,103 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s.html','');});
 <div class="title">CHANGES </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>1.2.0 (2018-09-28) </h2>
+<div class="textblock"><h2>1.3.0 (2019-05-03) </h2>
+<ul>
+<li><code>AuthorizationIssueResponse</code> class<ul>
+<li>Added <code>AccessToken</code> property.</li>
+<li>Added <code>AccessTokenDuration</code> property.</li>
+<li>Added <code>AccessTokenExpiresAt</code> property.</li>
+<li>Added <code>AuthorizationCode</code> property.</li>
+<li>Added <code>IdToken</code> property.</li>
+<li>Added <code>JwtAccessToken</code> property.</li>
+</ul>
+</li>
+<li><code>Client</code> class<ul>
+<li>Added <code>BcDeliveryMode</code> property.</li>
+<li>Added <code>BcNotificationEndpoint</code> property.</li>
+<li>Added <code>BcRequestSignAlg</code> property.</li>
+<li>Added <code>IsBcUserCodeRequired</code> property.</li>
+<li>Added <code>TlsClientAuthSanDns</code> property.</li>
+<li>Added <code>TlsClientAuthSanEmail</code> property.</li>
+<li>Added <code>TlsClientAuthSanIp</code> property.</li>
+<li>Added <code>TlsClientAuthSanUri</code> property.</li>
+</ul>
+</li>
+<li><code>GrantType</code> enum<ul>
+<li>Added <code>CIBA</code>.</li>
+</ul>
+</li>
+<li><code>IAuthleteApi</code> interface<ul>
+<li>Added <code>BackchannelAuthentication(BackchannelAuthenticationRequest)</code> method.</li>
+<li>Added <code>BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest)</code> method.</li>
+<li>Added <code>BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest)</code> method.</li>
+<li>Added <code>BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest)</code> method.</li>
+</ul>
+</li>
+<li><code>IAuthleteConfiguration</code> interface<ul>
+<li>Added <code>ServiceAccessToken</code> property.</li>
+<li>Added <code>ServiceOwnerAccessToken</code> property.</li>
+</ul>
+</li>
+<li><code>Service</code> class<ul>
+<li>Added <code>AccessTokenSignAlg</code> property.</li>
+<li>Added <code>AccessTokenSignatureKeyId</code> property.</li>
+<li>Added <code>AllowableClockSkew</code> property.</li>
+<li>Added <code>BackchannelAuthenticationEndpoint</code> property.</li>
+<li>Added <code>BackchannelAuthReqIdDuration</code> property.</li>
+<li>Added <code>BackchannelPollingInterval</code> property.</li>
+<li>Added <code>IsBackchannelUserCodeParameterSupported</code> property.</li>
+<li>Added <code>SupportedBackchannelTokenDeliveryModes</code> property.</li>
+</ul>
+</li>
+<li><code>TokenCreateRequest</code> class<ul>
+<li>Added <code>IsAccessTokenPersistent</code> property.</li>
+</ul>
+</li>
+<li><code>TokenIssueResponse</code> class<ul>
+<li>Added <code>JwtAccessToken</code> property.</li>
+</ul>
+</li>
+<li><code>TokenResponse</code> class<ul>
+<li>Added <code>JwtAccessToken</code> property.</li>
+</ul>
+</li>
+<li><code>TokenUpdateRequest</code> class<ul>
+<li>Added <code>AccessTokenHash</code> property.</li>
+<li>Added <code>IsAccessTokenExpiresAtUpdatedOnScopeUpdate</code> property.</li>
+<li>Added <code>IsAccessTokenPersistent</code> property.</li>
+<li>Added <code>IsAccessTokenValueUpdated</code> property.</li>
+</ul>
+</li>
+<li><code>TokenUpdateResponse</code> class<ul>
+<li>Added <code>TokenType</code> property.</li>
+</ul>
+</li>
+<li><code>UserInfoRequest</code> class<ul>
+<li>Added <code>ClientCertificate</code> property.</li>
+</ul>
+</li>
+<li>New types<ul>
+<li><code>BackchannelAuthenticationAction</code> enum</li>
+<li><code>BackchannelAuthenticationRequest</code> class</li>
+<li><code>BackchannelAuthenticationResponse</code> class</li>
+<li><code>BackchannelAuthenticationCompleteAction</code> enum</li>
+<li><code>BackchannelAuthenticationCompleteRequest</code> class</li>
+<li><code>BackchannelAuthenticationCompleteResponse</code> class</li>
+<li><code>BackchannelAuthenticationCompleteResult</code> enum</li>
+<li><code>BackchannelAuthenticationFailAction</code> enum</li>
+<li><code>BackchannelAuthenticationFailReason</code> enum</li>
+<li><code>BackchannelAuthenticationFailRequest</code> class</li>
+<li><code>BackchannelAuthenticationFailResponse</code> class</li>
+<li><code>BackchannelAuthenticationIssueAction</code> class</li>
+<li><code>BackchannelAuthenticationIssueRequest</code> class</li>
+<li><code>BackchannelAuthenticationIssueResponse</code> class</li>
+<li><code>DeliveryMode</code> enum</li>
+<li><code>UserIdentificationHintType</code> enum</li>
+</ul>
+</li>
+</ul>
+<h2>1.2.0 (2018-09-28) </h2>
 <ul>
 <li><code>AuthorizationResponse</code> class<ul>
 <li>Added <code>RequestObjectPayload</code> property.</li>

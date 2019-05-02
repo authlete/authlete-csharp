@@ -12,8 +12,10 @@ var searchData=
   ['a256gcm',['A256GCM',['../namespace_authlete_1_1_types.html#a8448b2f44fa435dc4ff938f4f3742fefa47bfe8960e664b28982098daf4deb4c4',1,'Authlete::Types']]],
   ['a256gcmkw',['A256GCMKW',['../namespace_authlete_1_1_types.html#a1cc0cc6a1e63b0e11dcdbec83d1986e1ab9f10ffb6c8fe495e058bd355e1066a9',1,'Authlete::Types']]],
   ['a256kw',['A256KW',['../namespace_authlete_1_1_types.html#a1cc0cc6a1e63b0e11dcdbec83d1986e1abd74bc402fd8d43a6ee317a266c7a306',1,'Authlete::Types']]],
+  ['access_5fdenied',['ACCESS_DENIED',['../namespace_authlete_1_1_dto.html#a70f9e9e46b733ca40fc614c1b14022cda2eaec33b2d6224f90e7222e4b7a49183',1,'Authlete.Dto.ACCESS_DENIED()'],['../namespace_authlete_1_1_dto.html#ac18431ba5c564fd2b5fb2eca4357b0c0a2eaec33b2d6224f90e7222e4b7a49183',1,'Authlete.Dto.ACCESS_DENIED()']]],
   ['account_5fselection_5frequired',['ACCOUNT_SELECTION_REQUIRED',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779abe40e99e8823c79d44b5a63ddb2aa022',1,'Authlete::Dto']]],
   ['acr_5fnot_5fsatisfied',['ACR_NOT_SATISFIED',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779afc0e4b1a0d13c8f632a42e909a2175ae',1,'Authlete::Dto']]],
   ['aggregated',['AGGREGATED',['../namespace_authlete_1_1_types.html#ac0e98475459a85c8c7a28330a493039ea53abf58b95fcf48929216452a4a08f5a',1,'Authlete::Types']]],
-  ['authorization_5fcode',['AUTHORIZATION_CODE',['../namespace_authlete_1_1_types.html#a687ee60f4246db53b58abe121883d829aa39abf9b31a114a1025af215c1f8de39',1,'Authlete::Types']]]
+  ['authorization_5fcode',['AUTHORIZATION_CODE',['../namespace_authlete_1_1_types.html#a687ee60f4246db53b58abe121883d829aa39abf9b31a114a1025af215c1f8de39',1,'Authlete::Types']]],
+  ['authorized',['AUTHORIZED',['../namespace_authlete_1_1_dto.html#a70f9e9e46b733ca40fc614c1b14022cdac62575d93ceab8ef551cb3fe0a3aea63',1,'Authlete::Dto']]]
 ];

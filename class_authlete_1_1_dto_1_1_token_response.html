@@ -158,6 +158,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_authlete_1_1_dto_1_1_property.html">Property</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_response.html#a9b6ab7c5d23e9d75a59c0595620fdb51">Properties</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra properties associated with the access token.  <a href="#a9b6ab7c5d23e9d75a59c0595620fdb51">More...</a><br /></td></tr>
 <tr class="separator:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e383454b5e02b11420d564e19c7ec9e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_response.html#a6e383454b5e02b11420d564e19c7ec9e">JwtAccessToken</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6e383454b5e02b11420d564e19c7ec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The newly issued access token in JWT format.  <a href="#a6e383454b5e02b11420d564e19c7ec9e">More...</a><br /></td></tr>
+<tr class="separator:a6e383454b5e02b11420d564e19c7ec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_authlete_1_1_dto_1_1_api_response"><td colspan="2" onclick="javascript:toggleInherit('properties_class_authlete_1_1_dto_1_1_api_response')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_authlete_1_1_dto_1_1_api_response.html">ApiResponse</a></td></tr>
 <tr class="memitem:a90ab9c1807ec222e7723930c865b8266 inherit properties_class_authlete_1_1_dto_1_1_api_response"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_api_response.html#a90ab9c1807ec222e7723930c865b8266">ResultCode</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a90ab9c1807ec222e7723930c865b8266 inherit properties_class_authlete_1_1_dto_1_1_api_response"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code of the result of an Authlete API call. For example, <code>"A004001"</code>.  <a href="class_authlete_1_1_dto_1_1_api_response.html#a90ab9c1807ec222e7723930c865b8266">More...</a><br /></td></tr>
@@ -190,7 +193,7 @@ Authorization header is missing."</em>  <a href="class_authlete_1_1_dto_1_1_api_
 <hr/>
 <p>When the value of the <code>Action</code> property is <code>TokenAction.OK</code>, it means that the request from the client application is valid, and an access token and optionally an ID token are ready to be issued. The HTTP status of the response returned to the client application must be <code>"200 OK"</code> and the content type must be <code>"application/json"</code>. </p>
 <p>In this case, the <code>ResponseContent</code> property returns a JSON string which contains an access token (and optionally an ID token), so it can be used as the entity body of the response. The following illustrates the response which the token endpoint implementation should generate and return to the client application. </p>
-<div class="fragment"><div class="line">HTTP/1.1 200 <a class="code" href="namespace_authlete_1_1_dto.html#a3f71cf061e6190c765df8409536d3d47ae0aa021e21dddbd6d8cecec71e9cf564">OK</a></div><div class="line">Content-Type: application/json</div><div class="line">Cache-Control: no-store</div><div class="line">Pragma: no-cache</div><div class="line"></div><div class="line">(The value returned from ResponseContent)</div></div><!-- fragment --> </div><h2 class="groupheader">Property Documentation</h2>
+<div class="fragment"><div class="line">HTTP/1.1 200 <a class="code" href="namespace_authlete_1_1_dto.html#ad6c540ec54d4d650972fefdbad84d366ae0aa021e21dddbd6d8cecec71e9cf564">OK</a></div><div class="line">Content-Type: application/json</div><div class="line">Cache-Control: no-store</div><div class="line">Pragma: no-cache</div><div class="line"></div><div class="line">(The value returned from ResponseContent)</div></div><!-- fragment --> </div><h2 class="groupheader">Property Documentation</h2>
 <a id="ac308f1729c7669f121de9733fafa76e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac308f1729c7669f121de9733fafa76e9">&#9670;&nbsp;</a></span>AccessToken</h2>
 
@@ -404,6 +407,33 @@ Authorization header is missing."</em>  <a href="class_authlete_1_1_dto_1_1_api_
 </div><div class="memdoc">
 
 <p>The flag which indicates whether the client ID alias was used when the token request was made. </p>
+
+</div>
+</div>
+<a id="a6e383454b5e02b11420d564e19c7ec9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e383454b5e02b11420d564e19c7ec9e">&#9670;&nbsp;</a></span>JwtAccessToken</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string JwtAccessToken</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The newly issued access token in JWT format. </p>
+<p>If the authorization server is configured to issue JWT-based access tokens (= if the <code>AccessTokenSignAlg</code> property of the <code>Service</code> holds a non-null value), a JWT-based access token is issued along with the original random-string one. </p>
+<p>Regarding the detailed format of the JWT-based access token, see the description of the <code>Service</code> class. </p>
+<p>Since version 1.3.0. </p>
 
 </div>
 </div>

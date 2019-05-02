@@ -104,6 +104,18 @@ Properties</h2></td></tr>
 <tr class="memitem:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_authlete_1_1_dto_1_1_property.html">Property</a> []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_update_request.html#a9b6ab7c5d23e9d75a59c0595620fdb51">Properties</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">A new set of properties assigned to the access token. If <code>null</code> is given, the property set associated with the access token is not changed.  <a href="#a9b6ab7c5d23e9d75a59c0595620fdb51">More...</a><br /></td></tr>
 <tr class="separator:a9b6ab7c5d23e9d75a59c0595620fdb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942d8cae1e9d1c122c034fa79c967a41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_update_request.html#a942d8cae1e9d1c122c034fa79c967a41">IsAccessTokenExpiresAtUpdatedOnScopeUpdate</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a942d8cae1e9d1c122c034fa79c967a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether <code>/api/auth/token/update</code> API attempts to update the expiration date of the access token when the scopes linked to the access token are changed by this request.  <a href="#a942d8cae1e9d1c122c034fa79c967a41">More...</a><br /></td></tr>
+<tr class="separator:a942d8cae1e9d1c122c034fa79c967a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf61e8607422604ef2a621d27e081150"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_update_request.html#acf61e8607422604ef2a621d27e081150">IsAccessTokenPersistent</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:acf61e8607422604ef2a621d27e081150"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether the access token expires or not.  <a href="#acf61e8607422604ef2a621d27e081150">More...</a><br /></td></tr>
+<tr class="separator:acf61e8607422604ef2a621d27e081150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d0671c789554325538a1bb60a85f82"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_update_request.html#ab2d0671c789554325538a1bb60a85f82">AccessTokenHash</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab2d0671c789554325538a1bb60a85f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash of the access token value.  <a href="#ab2d0671c789554325538a1bb60a85f82">More...</a><br /></td></tr>
+<tr class="separator:ab2d0671c789554325538a1bb60a85f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aca489e414e149c25abc270738ff89e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_token_update_request.html#a2aca489e414e149c25abc270738ff89e">IsAccessTokenValueUpdated</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2aca489e414e149c25abc270738ff89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether to update the value of the access token in the data store.  <a href="#a2aca489e414e149c25abc270738ff89e">More...</a><br /></td></tr>
+<tr class="separator:a2aca489e414e149c25abc270738ff89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Request to Authlete's <code>/api/auth/token/update</code> API. </p>
@@ -153,6 +165,137 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A new date at which the acces token will expire. The value needs to be expressed in milliseconds since the Unix epoch (1970-Jan-1). If <code>0</code> or a negative value is given, the expiration date of the access token is not changed. </p>
+
+</div>
+</div>
+<a id="ab2d0671c789554325538a1bb60a85f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d0671c789554325538a1bb60a85f82">&#9670;&nbsp;</a></span>AccessTokenHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string AccessTokenHash</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The hash of the access token value. </p>
+<p>Used when the hash of the token is known (perhaps from lookup) but the value of the token itself is not. The value of the <code>accessToken</code> parameter takes precedence. </p>
+<p>Since version 1.3.0. </p>
+
+</div>
+</div>
+<a id="a942d8cae1e9d1c122c034fa79c967a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942d8cae1e9d1c122c034fa79c967a41">&#9670;&nbsp;</a></span>IsAccessTokenExpiresAtUpdatedOnScopeUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsAccessTokenExpiresAtUpdatedOnScopeUpdate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether <code>/api/auth/token/update</code> API attempts to update the expiration date of the access token when the scopes linked to the access token are changed by this request. </p>
+<p>This request parameter is optional and its default value is <code>false</code>. If this request parameter is set to <code>true</code> and all of the following conditions are satisfied, the API performs an update on the expiration date of the access token even if the <code>accessTokenExpiresAt</code> request parameter is not explicitly specified in the request. </p>
+<ol>
+<li>
+<p class="startli">The <code>accessTokenExpiresAt</code> request parameter is not included in the request or its value is <code>0</code> (or negative).  </p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli">The scopes linked to the access token are changed by the <code>scopes</code> request parameter in the request.  </p>
+<p class="endli"></p>
+</li>
+<li>
+Any of the new scopes to be linked to the access token has one or more attributes specifying access token duration.   </li>
+</ol>
+<p>When multiple access token duration values are found in the attributes of the specified scopes, the smallest value among them is used. </p>
+<p>For more details, see the following examples. </p>
+<hr/>
+<p><b>Example 1.</b></p>
+<p>Let's say we send the following request to <code>/api/auth/token/update</code> API. </p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;accessToken&quot;</span> : <span class="stringliteral">&quot;JDGiiM9PuWT63FIwGjG9eYlGi-aZMq6CQ2IB475JUxs&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;scopes&quot;</span> : [<span class="stringliteral">&quot;read_profile&quot;</span>]</div><div class="line">}</div></div><!-- fragment --><p>and <code>"read_profile"</code> has the following attributes. </p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;key&quot;</span> : <span class="stringliteral">&quot;access_token.duration&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;value&quot;</span> : <span class="stringliteral">&quot;10000&quot;</span></div><div class="line">}</div></div><!-- fragment --><p>In this case, the API evaluates <code>"10000"</code> as a new value of the duration of the access token (in seconds) and updates the expiration date of the access token using the duration. </p>
+<hr/>
+<p><b>Example 2.</b></p>
+<p>Let's say we send the following request to <code>/api/auth/token/update</code> API. </p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;accessToken&quot;</span> : <span class="stringliteral">&quot;JDGiiM9PuWT63FIwGjG9eYlGi-aZMq6CQ2IB475JUxs&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;scopes&quot;</span> : [<span class="stringliteral">&quot;read_profile&quot;</span>, <span class="stringliteral">&quot;write_profile&quot;</span>]</div><div class="line">}</div></div><!-- fragment --><p>and <code>"read_profile"</code> has the following attributes. </p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;key&quot;</span> : <span class="stringliteral">&quot;access_token.duration&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;value&quot;</span> : <span class="stringliteral">&quot;10000&quot;</span></div><div class="line">}</div></div><!-- fragment --><p>and <code>"write_profile"</code> has the following attributes. </p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="stringliteral">&quot;key&quot;</span> : <span class="stringliteral">&quot;access_token.duration&quot;</span>,</div><div class="line">  <span class="stringliteral">&quot;value&quot;</span> : <span class="stringliteral">&quot;5000&quot;</span></div><div class="line">}</div></div><!-- fragment --><p>In this case, the API evaluates <code>"10000"</code> and <code>"5000"</code> as candidate values for new duration of the access token (in seconds) and chooses the smallest value of them (i.e. "5000" is adopted) and updates the expiration date of the access token using the duration. </p>
+<hr/>
+<p>Since version 1.3.0. </p>
+
+</div>
+</div>
+<a id="acf61e8607422604ef2a621d27e081150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf61e8607422604ef2a621d27e081150">&#9670;&nbsp;</a></span>IsAccessTokenPersistent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsAccessTokenPersistent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether the access token expires or not. </p>
+<p>By default, all access tokens expire after a period of time determined by their service. If this request parameter is <code>true</code> then the access token will not automatically expire and must be revoked or deleted manually at the service. </p>
+<p>If this request parameter is <code>true</code>, the <code>accessTokenExpiresAt</code> request parameter is ignored. If this request parameter is <code>false</code>, the <code>accessTokenExpiresAt</code> request parameter is processed normally. </p>
+<p>Since version 1.3.0. </p>
+
+</div>
+</div>
+<a id="a2aca489e414e149c25abc270738ff89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aca489e414e149c25abc270738ff89e">&#9670;&nbsp;</a></span>IsAccessTokenValueUpdated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsAccessTokenValueUpdated</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether to update the value of the access token in the data store. </p>
+<p>If this parameter is set to <code>true</code>, then a new access token value is generated by the server and returned in the response. If <code>false</code> (the default value), the current value of the access token is not changed. </p>
+<p>Since version 1.3.0. </p>
 
 </div>
 </div>

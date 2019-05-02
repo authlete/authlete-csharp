@@ -9,6 +9,7 @@ var class_authlete_1_1_dto_1_1_token_response =
     [ "GrantType", "class_authlete_1_1_dto_1_1_token_response.html#a8456bea268596e0e0a27118cbbe117b3", null ],
     [ "IdToken", "class_authlete_1_1_dto_1_1_token_response.html#af3ef6eba0ef983fb259673b4d23dc273", null ],
     [ "IsClientIdAliasUsed", "class_authlete_1_1_dto_1_1_token_response.html#a05bac6f2b5a683a49cd10f8046634456", null ],
+    [ "JwtAccessToken", "class_authlete_1_1_dto_1_1_token_response.html#a6e383454b5e02b11420d564e19c7ec9e", null ],
     [ "Password", "class_authlete_1_1_dto_1_1_token_response.html#a9c7aae3a8518d5efd22e991b5944e0d4", null ],
     [ "Properties", "class_authlete_1_1_dto_1_1_token_response.html#a9b6ab7c5d23e9d75a59c0595620fdb51", null ],
     [ "RefreshToken", "class_authlete_1_1_dto_1_1_token_response.html#ab3dcdb196c0eb91d655d34f784637913", null ],

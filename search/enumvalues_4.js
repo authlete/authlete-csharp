@@ -7,5 +7,6 @@ var searchData=
   ['es256',['ES256',['../namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541afd60368f8e6bdf74fddcbd09f89c4aa5',1,'Authlete::Types']]],
   ['es384',['ES384',['../namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541a0b24963bd9959fbc123de61adbdc07e4',1,'Authlete::Types']]],
   ['es512',['ES512',['../namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541a9bed1c03a3ddb9495e6bf7d6699dd595',1,'Authlete::Types']]],
-  ['exceeds_5fmax_5fage',['EXCEEDS_MAX_AGE',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779a1ff631edecaee35adc06935df4125121',1,'Authlete::Dto']]]
+  ['exceeds_5fmax_5fage',['EXCEEDS_MAX_AGE',['../namespace_authlete_1_1_dto.html#a7147204b8ca7972f6e0429b4f545a779a1ff631edecaee35adc06935df4125121',1,'Authlete::Dto']]],
+  ['expired_5flogin_5fhint_5ftoken',['EXPIRED_LOGIN_HINT_TOKEN',['../namespace_authlete_1_1_dto.html#ac18431ba5c564fd2b5fb2eca4357b0c0a0ed2482cd671c7ec14dc557f42c1e56e',1,'Authlete::Dto']]]
 ];

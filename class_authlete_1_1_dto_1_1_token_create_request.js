@@ -4,6 +4,7 @@ var class_authlete_1_1_dto_1_1_token_create_request =
     [ "AccessTokenDuration", "class_authlete_1_1_dto_1_1_token_create_request.html#a717f4939f8e6095ab00e1528ddf59ab1", null ],
     [ "ClientId", "class_authlete_1_1_dto_1_1_token_create_request.html#ab251593be26db265e53ed7eec15102de", null ],
     [ "GrantType", "class_authlete_1_1_dto_1_1_token_create_request.html#a8456bea268596e0e0a27118cbbe117b3", null ],
+    [ "IsAccessTokenPersistent", "class_authlete_1_1_dto_1_1_token_create_request.html#acf61e8607422604ef2a621d27e081150", null ],
     [ "IsClientIdAliasUsed", "class_authlete_1_1_dto_1_1_token_create_request.html#a05bac6f2b5a683a49cd10f8046634456", null ],
     [ "Properties", "class_authlete_1_1_dto_1_1_token_create_request.html#a9b6ab7c5d23e9d75a59c0595620fdb51", null ],
     [ "RefreshToken", "class_authlete_1_1_dto_1_1_token_create_request.html#ab3dcdb196c0eb91d655d34f784637913", null ],

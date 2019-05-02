@@ -6,6 +6,10 @@ var hierarchy =
       [ "AuthorizationFailResponse", "class_authlete_1_1_dto_1_1_authorization_fail_response.html", null ],
       [ "AuthorizationIssueResponse", "class_authlete_1_1_dto_1_1_authorization_issue_response.html", null ],
       [ "AuthorizationResponse", "class_authlete_1_1_dto_1_1_authorization_response.html", null ],
+      [ "BackchannelAuthenticationCompleteResponse", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html", null ],
+      [ "BackchannelAuthenticationFailResponse", "class_authlete_1_1_dto_1_1_backchannel_authentication_fail_response.html", null ],
+      [ "BackchannelAuthenticationIssueResponse", "class_authlete_1_1_dto_1_1_backchannel_authentication_issue_response.html", null ],
+      [ "BackchannelAuthenticationResponse", "class_authlete_1_1_dto_1_1_backchannel_authentication_response.html", null ],
       [ "ClientSecretRefreshResponse", "class_authlete_1_1_dto_1_1_client_secret_refresh_response.html", null ],
       [ "ClientSecretUpdateResponse", "class_authlete_1_1_dto_1_1_client_secret_update_response.html", null ],
       [ "GrantedScopesGetResponse", "class_authlete_1_1_dto_1_1_granted_scopes_get_response.html", null ],
@@ -24,6 +28,10 @@ var hierarchy =
     [ "AuthorizationFailRequest", "class_authlete_1_1_dto_1_1_authorization_fail_request.html", null ],
     [ "AuthorizationIssueRequest", "class_authlete_1_1_dto_1_1_authorization_issue_request.html", null ],
     [ "AuthorizationRequest", "class_authlete_1_1_dto_1_1_authorization_request.html", null ],
+    [ "BackchannelAuthenticationCompleteRequest", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html", null ],
+    [ "BackchannelAuthenticationFailRequest", "class_authlete_1_1_dto_1_1_backchannel_authentication_fail_request.html", null ],
+    [ "BackchannelAuthenticationIssueRequest", "class_authlete_1_1_dto_1_1_backchannel_authentication_issue_request.html", null ],
+    [ "BackchannelAuthenticationRequest", "class_authlete_1_1_dto_1_1_backchannel_authentication_request.html", null ],
     [ "BaseRequestHandler", "class_authlete_1_1_handler_1_1_base_request_handler.html", [
       [ "AuthorizationRequestBaseHandler", "class_authlete_1_1_handler_1_1_authorization_request_base_handler.html", [
         [ "AuthorizationRequestDecisionHandler", "class_authlete_1_1_handler_1_1_authorization_request_decision_handler.html", null ],

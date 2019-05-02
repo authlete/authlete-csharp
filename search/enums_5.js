@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['jwealg',['JWEAlg',['../namespace_authlete_1_1_types.html#a1cc0cc6a1e63b0e11dcdbec83d1986e1',1,'Authlete::Types']]],
-  ['jweenc',['JWEEnc',['../namespace_authlete_1_1_types.html#a8448b2f44fa435dc4ff938f4f3742fef',1,'Authlete::Types']]],
-  ['jwsalg',['JWSAlg',['../namespace_authlete_1_1_types.html#a6e49865f3cf68b81a8a216a173151541',1,'Authlete::Types']]]
+  ['introspectionaction',['IntrospectionAction',['../namespace_authlete_1_1_dto.html#a3f71cf061e6190c765df8409536d3d47',1,'Authlete::Dto']]]
 ];

@@ -133,15 +133,23 @@ Properties</h2></td></tr>
 <p>When the end-user tried end-user authentication by inputting his/her credentials to the input fields of the form, the <code>"id"</code> and <code>"password"</code> parameters in an authentication request are the values that the end-user input. </p>
 <p>On the other hand, when the end-user tried end-user authentication by signing in an SNS such as Facebook, the <code>"id"</code> parameter represents the subject (= unique identifier) of the end-user in the SNS and the <code>"password"</code> parameter has no meaning. In this case, the <code>"sns"</code> and <code>"accessToken"</code> parameters are not <code>null</code>. The <code>"accessToken"</code> in an authentication request is the value of the access token issued by the SNS which an implementation of an authentication callback endpoint may use as necessary. </p>
 <p>Some notes specific to respective SNSes. </p>
+<p><b>Facebook</b></p>
 <ul>
 <li>
-<p class="startli">Facebook  </p>
-<p class="endli">The value of the <code>"id"</code> parameter is unique to each Facebook application and cannot be used across different applications. If you need the third party ID, make an API call to <code>/me</code> API with <code>fields=third_party_id</code> and <code>access_token=<em>{accessToken}</em></code>. See the API document of Facebook for details. </p>
+<p class="startli">The value of the <code>"id"</code> parameter is unique to each Facebook application and cannot be used across different applications. If you need the third party ID, make an API call to <code>/me</code> API with <code>fields=third_party_id</code> and <code>access_token=<em>{accessToken}</em></code>. See the API document of Facebook for details.  </p>
+<p class="endli"></p>
 </li>
+<li>
+<p class="startli">The value of the <code>"rawTokenResponse"</code> parameter is in the form of <code>application/x-www-form-urlencoded</code> (not <code>application/json</code>). This is a violation against RFC 6749.  </p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli">The value of the <code>"refreshToken"</code> parameter is empty.  </p>
+<p class="endli"></p>
+</li>
+<li>
+The value of the <code>"expiresIn"</code> parameter is the value of <code>"expires"</code> in the response from the token endpoint of Facebook.   </li>
 </ul>
-<p>The value of the <code>"rawTokenResponse"</code> parameter is in the form of <code>application/x-www-form-urlencoded</code> (not <code>application/json</code>). This is a violation against RFC 6749. </p>
-<p>The value of the <code>"refreshToken"</code> parameter is empty. </p>
-<p>The value of the <code>"expiresIn"</code> parameter is the value of <code>"expires"</code> in the response from the token endpoint of Facebook. </p>
 <hr/>
 <p>Authlete provides an implementation of token endpoint at <code>/api/auth/token/direct/<em>{service-api-key}</em></code>. We call it <em>"direct token endpoint"</em>. The direct endpoint is provided for development purposes only and it is not suitable for production use. Basically, Authlete users should implement their own token endpoints using <code>/api/auth/token</code> API, <code>/api/auth/token/issue</code> API and <code>/api/auth/token/fail</code> API. </p>
 <p>If a client application accesses the direct token endpoint using <a href="https://tools.ietf.org/html/rfc6749#section-4.3">Resource Owner Password Credentials</a> flow, Authlete makes an authentication request to your system unless the direct endpoint is disabled by the configuration. </p>

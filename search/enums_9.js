@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['tokenaction',['TokenAction',['../namespace_authlete_1_1_dto.html#a96513a0e9907a398c674b94c18d6c38c',1,'Authlete::Dto']]],
-  ['tokencreateaction',['TokenCreateAction',['../namespace_authlete_1_1_dto.html#a4496e9ef9f9cffc51a019fcfa190962e',1,'Authlete::Dto']]],
-  ['tokenfailaction',['TokenFailAction',['../namespace_authlete_1_1_dto.html#a1f89589642087be26c663e530c4af228',1,'Authlete::Dto']]],
-  ['tokenfailreason',['TokenFailReason',['../namespace_authlete_1_1_dto.html#a6ffa79502480434031cdec9c0f524a26',1,'Authlete::Dto']]],
-  ['tokenissueaction',['TokenIssueAction',['../namespace_authlete_1_1_dto.html#abe5af72b9df928ffb722d8a85b51436a',1,'Authlete::Dto']]],
-  ['tokenupdateaction',['TokenUpdateAction',['../namespace_authlete_1_1_dto.html#a77955c231117c6ee18debfbbadbd1742',1,'Authlete::Dto']]]
+  ['serviceprofile',['ServiceProfile',['../namespace_authlete_1_1_types.html#af9d435a056682a35aedd5eb29ac1c553',1,'Authlete::Types']]],
+  ['sns',['Sns',['../namespace_authlete_1_1_types.html#a3ea6bd4b5f604ac8b81b1c57def1f1c2',1,'Authlete::Types']]],
+  ['standardintrospectionaction',['StandardIntrospectionAction',['../namespace_authlete_1_1_dto.html#a79bbcb7a860aa515a9c02ed79d0930f8',1,'Authlete::Dto']]],
+  ['subjecttype',['SubjectType',['../namespace_authlete_1_1_types.html#ab30ae0cdb97a5339718c533a78d22e9b',1,'Authlete::Types']]]
 ];

@@ -1,4 +1,13 @@
 var searchData=
 [
-  ['value',['Value',['../class_authlete_1_1_dto_1_1_pair.html#af7b88db799d8f791f785e437bc6099d2',1,'Authlete.Dto.Pair.Value()'],['../class_authlete_1_1_dto_1_1_property.html#af7b88db799d8f791f785e437bc6099d2',1,'Authlete.Dto.Property.Value()'],['../class_authlete_1_1_dto_1_1_tagged_value.html#af7b88db799d8f791f785e437bc6099d2',1,'Authlete.Dto.TaggedValue.Value()']]]
+  ['uilocales',['UiLocales',['../class_authlete_1_1_dto_1_1_authorization_response.html#a1d1299301e893485fc9ab78cb96ae18c',1,'Authlete::Dto::AuthorizationResponse']]],
+  ['usercode',['UserCode',['../class_authlete_1_1_dto_1_1_backchannel_authentication_response.html#afe6864d20652337cf2d40b61ea6a4fa1',1,'Authlete::Dto::BackchannelAuthenticationResponse']]],
+  ['userid',['UserId',['../class_authlete_1_1_web_1_1_basic_credentials.html#abc7e824d07fb4b7efdef6498d7c99e63',1,'Authlete::Web::BasicCredentials']]],
+  ['userinfoclaims',['UserInfoClaims',['../class_authlete_1_1_dto_1_1_authorization_response.html#af54f3cdbaf1b973ab831c7917c7c3a8e',1,'Authlete::Dto::AuthorizationResponse']]],
+  ['userinfoencryptionalg',['UserInfoEncryptionAlg',['../class_authlete_1_1_dto_1_1_client.html#aa6dfdd915e11d237bc5017f8b4e42f58',1,'Authlete::Dto::Client']]],
+  ['userinfoencryptionenc',['UserInfoEncryptionEnc',['../class_authlete_1_1_dto_1_1_client.html#ad7d593831b930833fee337a578091e3f',1,'Authlete::Dto::Client']]],
+  ['userinfoendpoint',['UserInfoEndpoint',['../class_authlete_1_1_dto_1_1_service.html#a26d099e1e9b7006fd71d8e2f9a320588',1,'Authlete::Dto::Service']]],
+  ['userinfosignalg',['UserInfoSignAlg',['../class_authlete_1_1_dto_1_1_client.html#ab71e923436c038dbec96c335084cc7f2',1,'Authlete::Dto::Client']]],
+  ['userinfosignaturekeyid',['UserInfoSignatureKeyId',['../class_authlete_1_1_dto_1_1_service.html#a3967e7e0145a861a939ad1084ec6012d',1,'Authlete::Dto::Service']]],
+  ['username',['Username',['../class_authlete_1_1_dto_1_1_token_response.html#acc7e2f953f8dbfceb1c5a3834b78e3f7',1,'Authlete::Dto::TokenResponse']]]
 ];

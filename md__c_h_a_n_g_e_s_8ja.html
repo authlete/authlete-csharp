@@ -83,7 +83,103 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s_8ja.html','');});
 <div class="title">CHANGES (日本語) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>1.2.0 (2018 年 09 月 28 日) </h2>
+<div class="textblock"><h2>1.3.0 (2019 年 05 月 03 日) </h2>
+<ul>
+<li><code>AuthorizationIssueResponse</code> クラス<ul>
+<li><code>AccessToken</code> プロパティーを追加。</li>
+<li><code>AccessTokenDuration</code> プロパティーを追加。</li>
+<li><code>AccessTokenExpiresAt</code> プロパティーを追加。</li>
+<li><code>AuthorizationCode</code> プロパティーを追加。</li>
+<li><code>IdToken</code> プロパティーを追加。</li>
+<li><code>JwtAccessToken</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>Client</code> クラス<ul>
+<li><code>BcDeliveryMode</code> プロパティーを追加。</li>
+<li><code>BcNotificationEndpoint</code> プロパティーを追加。</li>
+<li><code>BcRequestSignAlg</code> プロパティーを追加。</li>
+<li><code>IsBcUserCodeRequired</code> プロパティーを追加。</li>
+<li><code>TlsClientAuthSanDns</code> プロパティーを追加。</li>
+<li><code>TlsClientAuthSanEmail</code> プロパティーを追加。</li>
+<li><code>TlsClientAuthSanIp</code> プロパティーを追加。</li>
+<li><code>TlsClientAuthSanUri</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>GrantType</code> 列挙型<ul>
+<li><code>CIBA</code> を追加。</li>
+</ul>
+</li>
+<li><code>IAuthleteApi</code> インターフェース<ul>
+<li><code>BackchannelAuthentication(BackchannelAuthenticationRequest)</code> メソッドを追加。</li>
+<li><code>BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest)</code> メソッドを追加。</li>
+<li><code>BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest)</code> メソッドを追加。</li>
+<li><code>BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest)</code> メソッドを追加。</li>
+</ul>
+</li>
+<li><code>IAuthleteConfiguration</code> インターフェース<ul>
+<li><code>ServiceAccessToken</code> プロパティーを追加。</li>
+<li><code>ServiceOwnerAccessToken</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>Service</code> クラス<ul>
+<li><code>AccessTokenSignAlg</code> プロパティーを追加。</li>
+<li><code>AccessTokenSignatureKeyId</code> プロパティーを追加。</li>
+<li><code>AllowableClockSkew</code> プロパティーを追加。</li>
+<li><code>BackchannelAuthenticationEndpoint</code> プロパティーを追加。</li>
+<li><code>BackchannelAuthReqIdDuration</code> プロパティーを追加。</li>
+<li><code>BackchannelPollingInterval</code> プロパティーを追加。</li>
+<li><code>IsBackchannelUserCodeParameterSupported</code> プロパティーを追加。</li>
+<li><code>SupportedBackchannelTokenDeliveryModes</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>TokenCreateRequest</code> クラス<ul>
+<li><code>IsAccessTokenPersistent</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>TokenIssueResponse</code> クラス<ul>
+<li><code>JwtAccessToken</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>TokenResponse</code> クラス<ul>
+<li><code>JwtAccessToken</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>TokenUpdateRequest</code> クラス<ul>
+<li><code>AccessTokenHash</code> プロパティーを追加。</li>
+<li><code>IsAccessTokenExpiresAtUpdatedOnScopeUpdate</code> プロパティーを追加。</li>
+<li><code>IsAccessTokenPersistent</code> プロパティーを追加。</li>
+<li><code>IsAccessTokenValueUpdated</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>TokenUpdateResponse</code> クラス<ul>
+<li><code>TokenType</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>UserInfoRequest</code> クラス<ul>
+<li><code>ClientCertificate</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li>新しい型<ul>
+<li><code>BackchannelAuthenticationAction</code> 列挙型</li>
+<li><code>BackchannelAuthenticationRequest</code> クラス</li>
+<li><code>BackchannelAuthenticationResponse</code> クラス</li>
+<li><code>BackchannelAuthenticationCompleteAction</code> 列挙型</li>
+<li><code>BackchannelAuthenticationCompleteRequest</code> クラス</li>
+<li><code>BackchannelAuthenticationCompleteResponse</code> クラス</li>
+<li><code>BackchannelAuthenticationCompleteResult</code> 列挙型</li>
+<li><code>BackchannelAuthenticationFailAction</code> 列挙型</li>
+<li><code>BackchannelAuthenticationFailReason</code> 列挙型</li>
+<li><code>BackchannelAuthenticationFailRequest</code> クラス</li>
+<li><code>BackchannelAuthenticationFailResponse</code> クラス</li>
+<li><code>BackchannelAuthenticationIssueAction</code> 列挙型</li>
+<li><code>BackchannelAuthenticationIssueRequest</code> クラス</li>
+<li><code>BackchannelAuthenticationIssueResponse</code> クラス</li>
+<li><code>DeliveryMode</code> 列挙型</li>
+<li><code>UserIdentificationHintType</code> 列挙型</li>
+</ul>
+</li>
+</ul>
+<h2>1.2.0 (2018 年 09 月 28 日) </h2>
 <ul>
 <li><code>AuthorizationResponse</code> クラス<ul>
 <li><code>RequestObjectPayload</code> プロパティーを追加。</li>

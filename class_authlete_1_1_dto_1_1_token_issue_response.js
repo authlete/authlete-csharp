@@ -7,6 +7,7 @@ var class_authlete_1_1_dto_1_1_token_issue_response =
     [ "ClientId", "class_authlete_1_1_dto_1_1_token_issue_response.html#ab251593be26db265e53ed7eec15102de", null ],
     [ "ClientIdAlias", "class_authlete_1_1_dto_1_1_token_issue_response.html#a42b88383525a736670bb7e9f48264345", null ],
     [ "IsClientIdAliasUsed", "class_authlete_1_1_dto_1_1_token_issue_response.html#a05bac6f2b5a683a49cd10f8046634456", null ],
+    [ "JwtAccessToken", "class_authlete_1_1_dto_1_1_token_issue_response.html#a6e383454b5e02b11420d564e19c7ec9e", null ],
     [ "Properties", "class_authlete_1_1_dto_1_1_token_issue_response.html#a9b6ab7c5d23e9d75a59c0595620fdb51", null ],
     [ "RefreshToken", "class_authlete_1_1_dto_1_1_token_issue_response.html#ab3dcdb196c0eb91d655d34f784637913", null ],
     [ "RefreshTokenDuration", "class_authlete_1_1_dto_1_1_token_issue_response.html#ae1df2b412c9d6b9194697f9d82bd7199", null ],
