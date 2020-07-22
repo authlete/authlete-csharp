@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2019 Authlete, Inc.
+// Copyright (C) 2019-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -343,5 +343,23 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("jwtAccessToken")]
         public string JwtAccessToken { get; set; }
+
+
+        /// <summary>
+        /// The resources specified by the <c>resource</c> request parameters or
+        /// by the <code>resource</code> property in the request object in the
+        /// preceding backchannel authentication request. If both are given, the
+        /// values in the request object take precedence. See
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("resources")]
+        public string[] Resources { get; set; }
     }
 }

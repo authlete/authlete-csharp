@@ -11,6 +11,9 @@ CHANGES
     * Added `Purpose` property.
     * Added `Resources` property.
 
+- `BackchannelAuthenticationCompleteResponse` class
+    * Added `Resources` property.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

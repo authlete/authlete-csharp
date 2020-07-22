@@ -11,6 +11,9 @@ CHANGES (日本語)
     * `Purpose` プロパティーを追加。
     * `Resources` プロパティーを追加。
 
+- `BackchannelAuthenticationCompleteResponse` クラス
+    * `Resources` プロパティーを追加。
+
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 
