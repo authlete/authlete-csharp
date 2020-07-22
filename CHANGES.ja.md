@@ -60,6 +60,11 @@ CHANGES (日本語)
     * `CertificateThumbprint` プロパティーを追加。
     * `DpopKeyThumbprint` プロパティーを追加。
 
+- `UserInfoRequest` クラス
+    * `Dpop` プロパティーを追加。
+    * `Htm` プロパティーを追加。
+    * `Htu` プロパティーを追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型

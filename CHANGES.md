@@ -60,6 +60,11 @@ CHANGES
     * Added `CertificateThumbprint` property.
     * Added `DpopKeyThumbprint` property.
 
+- `UserInfoRequest` class
+    * Added `Dpop` property.
+    * Added `Htm` property.
+    * Added `Htu` property.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum

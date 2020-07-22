@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -59,5 +59,73 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("clientCertificate")]
         public string ClientCertificate { get; set; }
+
+
+        /// <summary>
+        /// The <c>DPoP</c> header presented by the client during the request
+        /// to the userinfo endpoint. The header contains a signed JWT which
+        /// includes the public key that is paired with the private key used to
+        /// sign the JWT.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("dpop")]
+        public string Dpop { get; set; }
+
+
+        /// <summary>
+        /// The HTTP method of the userinfo request. This property is used to
+        /// validate the <c>DPoP</c> header.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In normal cases, the value is either <c>GET</c> or <c>POST</c>.
+        /// </para>
+        ///
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("htm")]
+        public string Htm { get; set; }
+
+
+        /// <summary>
+        /// The URL of the userinfo endpoint. This property is used to validate
+        /// the <c>DPoP</c> header.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If this parameter is omitted, the <c>userInfoEndpoint</c> property
+        /// of the <c>Service</c> is used as the default value.
+        /// </para>
+        ///
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("htu")]
+        public string Htu { get; set; }
     }
 }
