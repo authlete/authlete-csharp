@@ -44,6 +44,31 @@ CHANGES (日本語)
     * `Resources` プロパティーを追加。
     * `AccessTokenResources` プロパティーを追加。
 
+- `Service` クラス
+    * `DeviceAuthorizationEndpoint` プロパティーを追加。
+    * `DeviceFlowCodeDuration` プロパティーを追加。
+    * `DeviceFlowPollingInterval` プロパティーを追加。
+    * `DeviceVerificationUri` プロパティーを追加。
+    * `DeviceVerificationUriComplete` プロパティーを追加。
+    * `EndSessionEndpoint` プロパティーを追加。
+    * `IsBackchannelBindingMessageRequiredInFapi` プロパティーを追加。
+    * `IsDynamicRegistrationSupported` プロパティーを追加。
+    * `IsMissingClientIdAllowed` プロパティーを追加。
+    * `IsParRequired` プロパティーを追加。
+    * `IsRefreshTokenDurationKept` プロパティーを追加。
+    * `MtlsEndpointAliases` プロパティーを追加。
+    * `PushedAuthReqDuration` プロパティーを追加。
+    * `PushedAuthReqEndpoint` プロパティーを追加。
+    * `RegistrationManagementEndpoint` プロパティーを追加。
+    * `SupportedAuthorizationDataTypes` プロパティーを追加。
+    * `SupportedEvidence` プロパティーを追加。
+    * `SupportedIdentityDocuments` プロパティーを追加。
+    * `SupportedTrustFrameworks` プロパティーを追加。
+    * `SupportedVerificationMethods` プロパティーを追加。
+    * `SupportedVerifiedClaims` プロパティーを追加。
+    * `UserCodeCharset` プロパティーを追加。
+    * `UserCodeLength` プロパティーを追加。
+
 - `TokenCreateRequest` クラス
     * `CertificateThumbprint` プロパティーを追加。
     * `DpopKeyThumbprint` プロパティーを追加。

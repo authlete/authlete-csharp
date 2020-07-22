@@ -44,6 +44,31 @@ CHANGES
     * Added `Resources` property.
     * Added `AccessTokenResources` property.
 
+- `Service` class
+    * Added `DeviceAuthorizationEndpoint` property.
+    * Added `DeviceFlowCodeDuration` property.
+    * Added `DeviceFlowPollingInterval` property.
+    * Added `DeviceVerificationUri` property.
+    * Added `DeviceVerificationUriComplete` property.
+    * Added `EndSessionEndpoint` property.
+    * Added `IsBackchannelBindingMessageRequiredInFapi` property.
+    * Added `IsDynamicRegistrationSupported` property.
+    * Added `IsMissingClientIdAllowed` property.
+    * Added `IsParRequired` property.
+    * Added `IsRefreshTokenDurationKept` property.
+    * Added `MtlsEndpointAliases` property.
+    * Added `PushedAuthReqDuration` property.
+    * Added `PushedAuthReqEndpoint` property.
+    * Added `RegistrationManagementEndpoint` property.
+    * Added `SupportedAuthorizationDataTypes` property.
+    * Added `SupportedEvidence` property.
+    * Added `SupportedIdentityDocuments` property.
+    * Added `SupportedTrustFrameworks` property.
+    * Added `SupportedVerificationMethods` property.
+    * Added `SupportedVerifiedClaims` property.
+    * Added `UserCodeCharset` property.
+    * Added `UserCodeLength` property.
+
 - `TokenCreateRequest` class
     * Added `CertificateThumbprint` property.
     * Added `DpopKeyThumbprint` property.

@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -295,6 +295,24 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("registrationEndpoint")]
         public Uri RegistrationEndpoint { get; set; }
+
+
+        /// <summary>
+        /// The URI of the registration management endpoint. If dynamic client
+        /// registration is supported and this property is set, the URI will be
+        /// used as the basis of the client's management endpoint by appending
+        /// <c>/clientID/</c> to it as a path element. If this property is unset,
+        /// the value of the <c>RegistrationEndpoint</c> property will be used
+        /// as the URI base instead.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("registrationManagementEndpoint")]
+        public Uri RegistrationManagementEndpoint { get; set; }
 
 
         /// <summary>
@@ -785,6 +803,20 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The flag which indicates whether the remaining duration of the used
+        /// refresh token is taken over to the newly issued one.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("refreshTokenDurationKept")]
+        public bool IsRefreshTokenDurationKept { get; set; }
+
+
+        /// <summary>
         /// The flag which indicates whether the
         /// <c>error_description</c> response parameter is omitted.
         /// </summary>
@@ -953,6 +985,37 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The flag which indicates whether dynamic client registration is
+        /// supported.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("dynamicRegistratinoSupported")]
+        public bool IsDynamicRegistrationSupported { get; set; }
+
+
+        /// <summary>
+        /// The end session endpoint for the service. This endpoint is used by
+        /// clients to signal to the IdP that the user's session should be
+        /// terminated. See
+        /// <a href="https://openid.net/specs/openid-connect-session-1_0.html">OpenID
+        /// Connect Session Management 1.0</a> for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("endSessionEndpoint")]
+        public Uri EndSessionEndpoint { get; set; }
+
+
+        /// <summary>
         /// The description about this service.
         /// </summary>
         [JsonProperty("description")]
@@ -1058,6 +1121,36 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("authorizationResponseDuration")]
         public long AuthorizationResponseDuration { get; set; }
+
+
+        /// <summary>
+        /// The duration of pushed authorization requests.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// "OAuth 2.0 Pushed Authorization Requests" (PAR) defines an endpoint
+        /// (called "pushed authorization request endpoint") which client
+        /// applications can register authorization requests into and get
+        /// corresponding URIs (called "request URI") from. The issued request
+        /// URIs represent the registered authorization requests. The client
+        /// applications can use the URIs as the value of the <c>request_uri</c>
+        /// request parameter in an authorization request.
+        /// </para>
+        ///
+        /// <para>
+        /// The value held by this property represents the duration in seconds
+        /// of registered authorization requests and is used as the value of the
+        /// <c>expires_in</c> parameter in responses from the pushed
+        /// authorization request endpoint.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("pushedAuthReqDuration")]
+        public long PushedAuthReqDuration { get; set; }
 
 
         /// <summary>
@@ -1315,6 +1408,22 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The boolean flag which indicates whether the <c>binding_message</c>
+        /// request parameter is always required whenever a backchannel
+        /// authentication request is judged as a request for Financial-grade
+        /// API.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("backchannelBindingMessageRequiredInFapi")]
+        public bool IsBackchannelBindingMessageRequiredInFapi { get; set; }
+
+
+        /// <summary>
         /// The allowable clock skew between the server and clients
         /// in seconds. Must be in between 0 and 65,535.
         /// </summary>
@@ -1332,5 +1441,369 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("allowableClockSkew")]
         public int AllowableClockSkew { get; set; }
+
+
+        /// <summary>
+        /// The URI of the device authorization endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the <c>device_authorization_endpoint</c>
+        /// server metadata defined in
+        /// <a href="https://tools.ietf.org/html/rfc8628">RFC 8628</a> (OAuth
+        /// 2.0 Device Authorization Grant).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("deviceAuthorizationEndpoint")]
+        public Uri DeviceAuthorizationEndpoint { get; set; }
+
+
+        /// <summary>
+        /// The verification URI for Device Flow
+        /// (<a href="https://tools.ietf.org/html/rfc8628">RFC 8628</a>). This
+        /// URI is used as the value of the <c>verification_uri</c> parameter in
+        /// responses from the device authorization endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("deviceVerificationUri")]
+        public Uri DeviceVerificationUri { get; set; }
+
+
+        /// <summary>
+        /// The verification URI for Device Flow
+        /// (<a href="https://tools.ietf.org/html/rfc8628">RFC 8628</a>) with a
+        /// placeholder for a user code. This URI is used to build the value of
+        /// the <c>verification_uri_complete</c> parameter in responses from the
+        /// device authorization endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// It is expected that the URI contains a fixed string <c>USER_CODE</c>
+        /// somewhere as a placeholder for a user code. For example, like the
+        /// following.
+        /// </para>
+        ///
+        /// <code>
+        /// https://example.com/device?user_code=USER_CODE
+        /// </code>
+        ///
+        /// <para>
+        /// The fixed string is replaced with an actual user code when Authlete
+        /// builds a verification URI with a user code for the
+        /// <c>verification_uri_complete</c> parameter.
+        /// </para>
+        ///
+        /// <para>
+        /// If this URI is not set, the <c>verification_uri_complete</c>
+        /// parameter won't appear in device authorization responses.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("deviceVerificationUriComplete")]
+        public Uri DeviceVerificationUriComplete { get; set; }
+
+
+        /// <summary>
+        /// The duration of device verification codes and end-user verification
+        /// codes issued from the device authorization endpoint in seconds.
+        /// This is used as the value of the <c>expires_in</c> property in
+        /// responses from the device authorization endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("deviceFlowCodeDuration")]
+        public int DeviceFlowCodeDuration { get; set; }
+
+
+        /// <summary>
+        /// The minimum interval between polling requests to the token endpoint
+        /// from client applications in seconds in Device Flow
+        /// (<a href="https://tools.ietf.org/html/rfc8628">RFC 8628</a>). This
+        /// is used as the value of the <c>interval</c> property in responses
+        /// from the device authorization endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The value must be in between 0 and 65535.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("deviceFlowPollingInterval")]
+        public int DeviceFlowPollingInterval { get; set; }
+
+
+        /// <summary>
+        /// The character set for end-user verification codes (<c>user_code</c>)
+        /// for Device Flow (<a href="https://tools.ietf.org/html/rfc8628">RFC
+        /// 8628</a>).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("userCodeCharset")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public UserCodeCharset UserCodeCharset { get; set; }
+
+
+        /// <summary>
+        /// The length of end-user verification codes (<c>user_code</c>) for
+        /// Device Flow (<a href="https://tools.ietf.org/html/rfc8628">RFC
+        /// 8628</a>).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The value must not be negative and must not be greater than 255.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("userCodeLength")]
+        public int UserCodeLength { get; set; }
+
+
+        /// <summary>
+        /// The URI of the pushed authorization request endpoint.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>pushed_authorization_request_endpoint</c> server metadata defined
+        /// in "OAuth 2.0 Pushed Authorization Requests" (PAR).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("pushedAuthReqEndpoint")]
+        public Uri PushedAuthReqEndpoint { get; set; }
+
+
+        /// <summary>
+        /// The MTLS endpoint aliases.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the <c>mtls_endpoint_aliases</c> server
+        /// metadata defined in
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8705.html">RFC 8705</a>
+        /// (OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound
+        /// Access Tokens).
+        /// </para>
+        ///
+        /// <para>
+        /// The aliases will be embedded in the response from the discovery
+        /// endpoint like the following.
+        /// </para>
+        ///
+        /// <code>
+        /// {
+        ///     ......,
+        ///     "mtls_endpoint_aliases": {
+        ///         "token_endpoint":         "https://mtls.example.com/token",
+        ///         "revocation_endpoint":    "https://mtls.example.com/revo",
+        ///         "introspection_endpoint": "https://mtls.example.com/introspect"
+        ///     }
+        /// }
+        /// </code>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("mtlsEndpointAliases")]
+        public NamedUri[] MtlsEndpointAliases { get; set; }
+
+
+        /// <summary>
+        /// The supported data types that can be used as values of the <c>type</c>
+        /// field in <c>authorization_details</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>authorization_data_types_supported</c> server metadata defined in
+        /// "OAuth 2.0 Rich Authorization Requests" (RAR).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedAuthorizationDataTypes")]
+        public string[] SupportedAuthorizationDataTypes { get; set; }
+
+
+        /// <summary>
+        /// Trust frameworks supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This corresponds to the <c>trust_frameworks_supported</c> server
+        /// metadata defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedTrustFrameworks")]
+        public string[] SupportedTrustFrameworks { get; set; }
+
+
+        /// <summary>
+        /// Evidence supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This corresponds to the <c>evidence_supported</c> server metadata
+        /// defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedEvidence")]
+        public string[] SupportedEvidence { get; set; }
+
+
+        /// <summary>
+        /// Identity documents supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This corresponds to the <c>id_documents_supported</c> server
+        /// metadata defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedIdentityDocuments")]
+        public string[] SupportedIdentityDocuments { get; set; }
+
+
+        /// <summary>
+        /// Verification methods supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This corresponds to the
+        /// <c>id_documents_verification_methods_supported</c> server metadata
+        /// defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedVerificationMethods")]
+        public string[] SupportedVerificationMethods { get; set; }
+
+
+        /// <summary>
+        /// Verified claims supported by this service.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This corresponds to the <c>claims_in_verified_claims_supported</c>
+        /// server metadata defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("supportedVerifiedClaims")]
+        public string[] SupportedVerifiedClaims { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether token requests from public clients
+        /// without the <c>client_id</c> request parameter are allowed when the
+        /// client can be guessed from <c>authorization_code</c> or
+        /// <c>refresh_token</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property should not be set to true unless you have special
+        /// reasons.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("missingClientIdAllowed")]
+        public bool IsMissingClientIdAllowed { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether this service requires that clients
+        /// use PAR (Pushed Authorization Request).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property corresponds to the
+        /// <c>require_pushed_authorization_requests</c> server metadata defined
+        /// in "OAuth 2.0 Pushed Authorization Requests".
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("parRequired")]
+        public bool IsParRequired { get; set; }
     }
 }
