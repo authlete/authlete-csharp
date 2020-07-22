@@ -21,6 +21,10 @@ CHANGES
     * Added `RequestContext` property.
     * Added `Resources` property.
 
+- `ClientExtension` class
+    * Added `AccessTokenDuration` property.
+    * Added `RefreshTokenDuration` property.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

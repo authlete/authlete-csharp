@@ -21,6 +21,10 @@ CHANGES (日本語)
     * `RequestContext` プロパティーを追加。
     * `Resources` プロパティーを追加。
 
+- `ClientExtension` クラス
+    * `AccessTokenDuration` プロパティーを追加。
+    * `RefreshTokenDuration` プロパティーを追加。
+
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 

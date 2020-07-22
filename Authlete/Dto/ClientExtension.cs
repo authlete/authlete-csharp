@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -85,5 +85,61 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("requestableScopes")]
         public string[] RequestableScopes { get; set; }
+
+
+        /// <summary>
+        /// The value of the duration of access tokens per client in seconds.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In normal cases, the value of the <c>AccessTokenDuration</c>
+        /// property of <c>Service</c> is used as the duration of access tokens
+        /// issued by the service. However, if this <c>AccessTokenDuration</c>
+        /// property holds a non-zero positive number and its value is less than
+        /// the duration configured by the service, the value is used as the
+        /// duration of access tokens issued to the client application.
+        /// </para>
+        ///
+        /// <para>
+        /// Note that the duration of access tokens can be controlled by the
+        /// scope attribute <c>access_token.duration</c>, too. Authlete chooses
+        /// the minimum value among the candidates.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenDuration")]
+        public long AccessTokenDuration { get; set; }
+
+
+        /// <summary>
+        /// The value of the duration of refresh tokens per client in seconds.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In normal cases, the value of the <c>RefreshTokenDuration</c>
+        /// property of <c>Service</c> is used as the duration of refresh tokens
+        /// issued by the service. However, if this <c>RefreshTokenDuration</c>
+        /// property holds a non-zero positive number and its value is less than
+        /// the duration configured by the service, the value is used as the
+        /// duration of refresh tokens issued to the client application.
+        /// </para>
+        ///
+        /// <para>
+        /// Note that the duration of refresh tokens can be controlled by the
+        /// scope attribute <c>refresh_token.duration</c>, too. Authlete chooses
+        /// the minimum value among the candidates.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("refreshTokenDuration")]
+        public long RefreshTokenDuration { get; set; }
     }
 }
