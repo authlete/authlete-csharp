@@ -47,6 +47,11 @@ CHANGES
 - `TokenIssueResponse` class
     * Added `AccessTokenResources` property.
 
+- `TokenRequest` class
+    * Added `Dpop` property.
+    * Added `Htm` property.
+    * Added `Htu` property.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum

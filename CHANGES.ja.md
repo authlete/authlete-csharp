@@ -47,6 +47,11 @@ CHANGES (日本語)
 - `TokenIssueResponse` クラス
     * `AccessTokenResources` プロパティーを追加。
 
+- `TokenRequest` クラス
+    * `Dpop` プロパティーを追加。
+    * `Htm` プロパティーを追加。
+    * `Htu` プロパティーを追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型

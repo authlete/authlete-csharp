@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -243,5 +243,74 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("clientCertificatePath")]
         public string[] ClientCertificatePath { get; set; }
+
+
+        /// <summary>
+        /// The <c>DPoP</c> header presented by the client during the request
+        /// to the token endpoint. The header contains a signed JWT which
+        /// includes the public key that is paired with the private key used to
+        /// sign the JWT.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("Dpop")]
+        public string Dpop { get; set; }
+
+
+        /// <summary>
+        /// The HTTP method of the token request. This property is used to
+        /// validate the <c>DPoP</c> header.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In normal cases, the value is <c>POST</c>. When this parameter is
+        /// omitted, <c>POST</c> is used as the default value.
+        /// </para>
+        ///
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("Htm")]
+        public string Htm { get; set; }
+
+
+        /// <summary>
+        /// The URL of the token endpoint. This property is used to validate
+        /// the <c>DPoP</c> header.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If this parameter is omitted, the <c>tokenEndpoint</c> property of
+        /// the <c>Service</c> is used as the default value.
+        /// </para>
+        ///
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("Htu")]
+        public string Htu { get; set; }
     }
 }
