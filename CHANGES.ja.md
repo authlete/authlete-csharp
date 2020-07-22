@@ -52,6 +52,10 @@ CHANGES (日本語)
     * `Htm` プロパティーを追加。
     * `Htu` プロパティーを追加。
 
+- `TokenResponse` クラス
+    * `Resources` プロパティーを追加。
+    * `AccessTokenResources` プロパティーを追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型

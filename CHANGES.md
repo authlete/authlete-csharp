@@ -52,6 +52,10 @@ CHANGES
     * Added `Htm` property.
     * Added `Htu` property.
 
+- `TokenResponse` class
+    * Added `Resources` property.
+    * Added `AccessTokenResources` property.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum
