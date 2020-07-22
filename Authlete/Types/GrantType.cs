@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -89,5 +89,29 @@ namespace Authlete.Types
         /// </para>
         /// </remarks>
         CIBA,
+
+
+        /// <summary>
+        /// <a href="https://tools.ietf.org/html/rfc8628">Device flow</a>, a
+        /// grant type to request an access token using the device flow.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// In the device flow, the value of the <code>grant_type</code> request
+        /// parameter of token requests is
+        /// <c>urn:ietf:params:oauth:grant-type:device_code</c>.
+        /// </para>
+        ///
+        /// <para>
+        /// Authlete's implementation issues an ID token in the device flow when
+        /// <c>scope</c> includes <code>openid</code>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        DEVICE_CODE,
     }
 }
