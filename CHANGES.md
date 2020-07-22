@@ -37,6 +37,10 @@ CHANGES
     * Added `Resources` property.
     * Added `AccessTokenResources` property.
 
+- `TokenCreateRequest` class
+    * Added `CertificateThumbprint` property.
+    * Added `DpopKeyThumbprint` property.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum

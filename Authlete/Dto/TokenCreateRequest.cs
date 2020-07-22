@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -241,5 +241,51 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("accessTokenPersistent")]
         public bool IsAccessTokenPersistent { get; set; }
+
+
+        /// <summary>
+        /// The thumbprint of the client certificate bound to the token. If this
+        /// property is set, a certificate whose thumbprint matches the value
+        /// must be presented with the access token when it is used by a client.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <a href="https://www.rfc-editor.org/rfc/rfc8705.html">RFC 8705</a>
+        /// (OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound
+        /// Access Tokens) for details.
+        /// </para>
+        ///
+        /// <para>
+        /// The value should be a base64url-encoded SHA-256 certificate thumbprint.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("certificateThumbprint")]
+        public string CertificateThumbprint { get; set; }
+
+
+        /// <summary>
+        /// The thumbprint of the public key used for DPoP presentation of the
+        /// token. If this property is set, a DPoP proof JWT signed with the
+        /// corresponding private key must be presented with the access token
+        /// when it is used by a client.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See "OAuth 2.0 Demonstration of Proof-of-Possession at the
+        /// Application Layer (DPoP)" for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("dpopKeyThumbprint")]
+        public string DpopKeyThumbprint { get; set; }
     }
 }
