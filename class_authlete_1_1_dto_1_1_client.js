@@ -1,6 +1,7 @@
 var class_authlete_1_1_dto_1_1_client =
 [
     [ "ApplicationType", "class_authlete_1_1_dto_1_1_client.html#a0aeca13a9fbf895bf4ccc36c6977569e", null ],
+    [ "AuthorizationDataTypes", "class_authlete_1_1_dto_1_1_client.html#a41dd5de6b4841c7e3726e441a2f87f45", null ],
     [ "AuthorizationEncryptionAlg", "class_authlete_1_1_dto_1_1_client.html#a7fe702cceb329e20ecd7b8104fb81750", null ],
     [ "AuthorizationEncryptionEnc", "class_authlete_1_1_dto_1_1_client.html#a396386d478c1f24e3b94c28501f2552b", null ],
     [ "AuthorizationSignAlg", "class_authlete_1_1_dto_1_1_client.html#a1c75a0f9bc30dd1d2aa25ff5da35b3c4", null ],
@@ -19,6 +20,7 @@ var class_authlete_1_1_dto_1_1_client =
     [ "CreatedAt", "class_authlete_1_1_dto_1_1_client.html#a212b715dcf032c5653532b2fd71155aa", null ],
     [ "DefaultAcrs", "class_authlete_1_1_dto_1_1_client.html#a6dc2cf97502e519408fb066c4db8ce29", null ],
     [ "DefaultMaxAge", "class_authlete_1_1_dto_1_1_client.html#a1e90ea2b7c86aa2eee21e7976510c535", null ],
+    [ "DerivedSectorIdentifier", "class_authlete_1_1_dto_1_1_client.html#a92c441b6cf0f31b5875f199e2a799da2", null ],
     [ "Description", "class_authlete_1_1_dto_1_1_client.html#a34409fed9d39281ada2d7ec172a52f9b", null ],
     [ "Descriptions", "class_authlete_1_1_dto_1_1_client.html#a364003bd4f24980ea9c3792598ad3ba0", null ],
     [ "Developer", "class_authlete_1_1_dto_1_1_client.html#aa02e8341d02e19ae3e58fd739015146e", null ],
@@ -30,6 +32,8 @@ var class_authlete_1_1_dto_1_1_client =
     [ "IsAuthTimeRequired", "class_authlete_1_1_dto_1_1_client.html#a9750dad1b33c042d78fa876f9f663a80", null ],
     [ "IsBcUserCodeRequired", "class_authlete_1_1_dto_1_1_client.html#ad00dc1de9c45aa6cb3dbc4417594c935", null ],
     [ "IsClientIdAliasEnabled", "class_authlete_1_1_dto_1_1_client.html#a4710df1daa3a166e3319ffdc2fa3b454", null ],
+    [ "IsDynamicallyRegistered", "class_authlete_1_1_dto_1_1_client.html#a033d9012c9412d96369e14b454ab5338", null ],
+    [ "IsParRequired", "class_authlete_1_1_dto_1_1_client.html#a97a907db86402f13a9c5366ca0714b3a", null ],
     [ "IsTlsClientCertificateBoundAccessTokens", "class_authlete_1_1_dto_1_1_client.html#ad6a5ebe9ffa223cb123fcc055fdf015b", null ],
     [ "Jwks", "class_authlete_1_1_dto_1_1_client.html#a265fb5702391fa9d7f9ef8e4aec9c689", null ],
     [ "JwksUri", "class_authlete_1_1_dto_1_1_client.html#a82e5ef73b4ad47c49d3fae2eda2fe925", null ],
@@ -40,6 +44,7 @@ var class_authlete_1_1_dto_1_1_client =
     [ "PolicyUri", "class_authlete_1_1_dto_1_1_client.html#a0c1b398ef20f53b9ff217401e8422dd1", null ],
     [ "PolicyUris", "class_authlete_1_1_dto_1_1_client.html#a9939f9f7a778842b079119587c44c605", null ],
     [ "RedirectUris", "class_authlete_1_1_dto_1_1_client.html#aca6c047c4cea39b06903743fd653a6c6", null ],
+    [ "RegistrationAccessTokenHash", "class_authlete_1_1_dto_1_1_client.html#adfa039d6916a1113bcdb919f553374a4", null ],
     [ "RequestEncryptionAlg", "class_authlete_1_1_dto_1_1_client.html#a7f921be21a85f371ed3661f08558b36f", null ],
     [ "RequestEncryptionEnc", "class_authlete_1_1_dto_1_1_client.html#a5e2f649038fe408f00b196141844e068", null ],
     [ "RequestSignAlg", "class_authlete_1_1_dto_1_1_client.html#a685bb07ff3a12e6417167c789ee75a34", null ],

@@ -3,6 +3,7 @@ var class_authlete_1_1_dto_1_1_token_issue_response =
     [ "AccessToken", "class_authlete_1_1_dto_1_1_token_issue_response.html#ac308f1729c7669f121de9733fafa76e9", null ],
     [ "AccessTokenDuration", "class_authlete_1_1_dto_1_1_token_issue_response.html#a717f4939f8e6095ab00e1528ddf59ab1", null ],
     [ "AccessTokenExpiresAt", "class_authlete_1_1_dto_1_1_token_issue_response.html#a4eac53aa8d2d4326dc49628375c23158", null ],
+    [ "AccessTokenResources", "class_authlete_1_1_dto_1_1_token_issue_response.html#aea1c575ea3b61b2efb1e284aa919af0a", null ],
     [ "Action", "class_authlete_1_1_dto_1_1_token_issue_response.html#acd227f27b8afe6f3c0aa4b9b9d7fe365", null ],
     [ "ClientId", "class_authlete_1_1_dto_1_1_token_issue_response.html#ab251593be26db265e53ed7eec15102de", null ],
     [ "ClientIdAlias", "class_authlete_1_1_dto_1_1_token_issue_response.html#a42b88383525a736670bb7e9f48264345", null ],

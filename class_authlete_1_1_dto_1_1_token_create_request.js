@@ -2,7 +2,9 @@ var class_authlete_1_1_dto_1_1_token_create_request =
 [
     [ "AccessToken", "class_authlete_1_1_dto_1_1_token_create_request.html#ac308f1729c7669f121de9733fafa76e9", null ],
     [ "AccessTokenDuration", "class_authlete_1_1_dto_1_1_token_create_request.html#a717f4939f8e6095ab00e1528ddf59ab1", null ],
+    [ "CertificateThumbprint", "class_authlete_1_1_dto_1_1_token_create_request.html#a723ac64082f1518833d27a08e0ca9ba3", null ],
     [ "ClientId", "class_authlete_1_1_dto_1_1_token_create_request.html#ab251593be26db265e53ed7eec15102de", null ],
+    [ "DpopKeyThumbprint", "class_authlete_1_1_dto_1_1_token_create_request.html#a79f3a207d811cf83e25883ce4d1cc01a", null ],
     [ "GrantType", "class_authlete_1_1_dto_1_1_token_create_request.html#a8456bea268596e0e0a27118cbbe117b3", null ],
     [ "IsAccessTokenPersistent", "class_authlete_1_1_dto_1_1_token_create_request.html#acf61e8607422604ef2a621d27e081150", null ],
     [ "IsClientIdAliasUsed", "class_authlete_1_1_dto_1_1_token_create_request.html#a05bac6f2b5a683a49cd10f8046634456", null ],

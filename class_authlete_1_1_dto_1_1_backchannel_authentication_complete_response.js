@@ -16,5 +16,6 @@ var class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response =
     [ "JwtAccessToken", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#a6e383454b5e02b11420d564e19c7ec9e", null ],
     [ "RefreshToken", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#ab3dcdb196c0eb91d655d34f784637913", null ],
     [ "RefreshTokenDuration", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#ae1df2b412c9d6b9194697f9d82bd7199", null ],
+    [ "Resources", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#a86ef5d1257794ce60c6e1a4086fd4920", null ],
     [ "ResponseContent", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#ae67bc0fd60e288194bc360bd6a319e6c", null ]
 ];
