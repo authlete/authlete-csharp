@@ -90,7 +90,8 @@ namespace Authlete.Dto
         /// <summary>
         /// The <c>DPoP</c> header presented by the client during the request to
         /// the resource server. The header contains a signed JWT which includes
-        /// the public key used to sign it.
+        /// the public key that is paired with the private key used to sign the
+        /// JWT.
         /// </summary>
         ///
         /// <remarks>
