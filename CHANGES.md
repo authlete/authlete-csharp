@@ -44,6 +44,9 @@ CHANGES
 - `TokenFailReason` enum
     * Added `INVALID_TARGET`.
 
+- `TokenIssueResponse` class
+    * Added `AccessTokenResources` property.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum

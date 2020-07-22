@@ -44,6 +44,9 @@ CHANGES (日本語)
 - `TokenFailReason` 列挙型
     * `INVALID_TARGET` を追加。
 
+- `TokenIssueResponse` クラス
+    * `AccessTokenResources` プロパティーを追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型
