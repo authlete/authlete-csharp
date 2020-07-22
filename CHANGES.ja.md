@@ -56,6 +56,10 @@ CHANGES (日本語)
     * `Resources` プロパティーを追加。
     * `AccessTokenResources` プロパティーを追加。
 
+- `TokenUpdateRequest` クラス
+    * `CertificateThumbprint` プロパティーを追加。
+    * `DpopKeyThumbprint` プロパティーを追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型
