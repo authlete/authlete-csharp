@@ -7,6 +7,10 @@ CHANGES
 - `AuthorizationIssueRequest` class
     * Added `IdtHeaderParams` property.
 
+- `AuthorizationResponse` class
+    * Added `Purpose` property.
+    * Added `Resources` property.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

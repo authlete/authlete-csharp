@@ -7,6 +7,10 @@ CHANGES (日本語)
 - `AuthorizationIssueRequest` クラス
     * `IdtHeaderParams` プロパティーを追加。
 
+- `AuthorizationResponse` クラス
+    * `Purpose` プロパティーを追加。
+    * `Resources` プロパティーを追加。
+
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 

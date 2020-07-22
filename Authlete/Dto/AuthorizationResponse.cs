@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -1309,8 +1309,44 @@ namespace Authlete.Dto
         /// Since version 1.2.0.
         /// </para>
         /// </remarks>
-        [JsonProperty("UserInfoClaims")]
+        [JsonProperty("userInfoClaims")]
         public string UserInfoClaims { get; set; }
+
+
+        /// <summary>
+        /// The resources specified by the <c>resource</c> request parameters or
+        /// by the <code>resource</code> property in the request object. If both
+        /// are given, the values in the request object take precedence. See
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("resources")]
+        public string[] Resources { get; set; }
+
+
+        /// <summary>
+        /// The value of the <c>purpose</c> request parameter.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The <code>purpose</code> request parameter is defined in
+        /// <a href="https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html">OpenID
+        /// Connect for Identity Assurance 1.0</a>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("purpose")]
+        public string Purpose { get; set; }
 
 
         /// <summary>
