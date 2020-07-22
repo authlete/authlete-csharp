@@ -17,6 +17,10 @@ CHANGES
 - `BackchannelAuthenticationFailReason` enum
     * Added `INVALID_TARGET`.
 
+- `BackchannelAuthenticationResponse` class
+    * Added `RequestContext` property.
+    * Added `Resources` property.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

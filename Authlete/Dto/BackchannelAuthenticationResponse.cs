@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2019 Authlete, Inc.
+// Copyright (C) 2019-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -725,6 +725,47 @@ namespace Authlete.Dto
         /// </summary>
         [JsonProperty("requestedExpiry")]
         public int RequestedExpiry { get; set; }
+
+
+        /// <summary>
+        /// The request context of the backchannel authentication request. It
+        /// is the value of the <c>request_context</c> claim in the signed
+        /// authentication request object and its format is JSON.
+        /// <c>request_context</c> is a new claim added by the FAPI-CIBA profile.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// This property is null if the backchannel authentication request does
+        /// not include a <c>request</c> request parameter or the JWT specified
+        /// by the request parameter does not include a <c>request_context</c>
+        /// claim.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("requestContext")]
+        public string RequestContext { get; set; }
+
+
+        /// <summary>
+        /// The resources specified by the <c>resource</c> request parameters or
+        /// by the <code>resource</code> property in the request object in the
+        /// preceding backchannel authentication request. If both are given, the
+        /// values in the request object take precedence. See
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("resources")]
+        public string[] Resources { get; set; }
 
 
         /// <summary>
