@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ namespace Authlete.Handler
         /// </param>
         protected HttpResponseMessage UnknownAction(string apiPath)
         {
-            string content = $"{{\"error\":\"Authlete's '{apiPath}' API returned an unknown action.\"}}";
+            string content = $"{{\"error\":\"server_error\",\"error_description\":\"Authlete's '{apiPath}' API returned an unknown action.\"}}";
 
             return ResponseUtility.InternalServerError(content);
         }
