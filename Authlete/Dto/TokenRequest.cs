@@ -262,7 +262,7 @@ namespace Authlete.Dto
         /// Since version 1.4.0.
         /// </para>
         /// </remarks>
-        [JsonProperty("Dpop")]
+        [JsonProperty("dpop")]
         public string Dpop { get; set; }
 
 
@@ -286,7 +286,7 @@ namespace Authlete.Dto
         /// Since version 1.4.0.
         /// </para>
         /// </remarks>
-        [JsonProperty("Htm")]
+        [JsonProperty("htm")]
         public string Htm { get; set; }
 
 
@@ -310,7 +310,7 @@ namespace Authlete.Dto
         /// Since version 1.4.0.
         /// </para>
         /// </remarks>
-        [JsonProperty("Htu")]
+        [JsonProperty("htu")]
         public string Htu { get; set; }
     }
 }
