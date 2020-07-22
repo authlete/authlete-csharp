@@ -4,6 +4,9 @@ CHANGES
 - `AuthorizationFailReason` enum
     * Added `INVALID_TARGET`.
 
+- `AuthorizationIssueRequest` class
+    * Added `IdtHeaderParams` property.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

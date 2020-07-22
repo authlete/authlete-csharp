@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -298,5 +298,19 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("scopes")]
         public string[] Scopes { get; set; }
+
+
+        /// <summary>
+        /// JSON that represents additional JWS header parameters for ID tokens
+        /// that may be issued based on the authorization request.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("idtHeaderParams")]
+        public string IdtHeaderParams { get; set; }
     }
 }
