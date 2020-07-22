@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+1.4.0 (2020-07-23)
+------------------
+
 - `AuthorizationFailReason` enum
     * Added `INVALID_TARGET`.
 

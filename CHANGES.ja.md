@@ -1,6 +1,9 @@
 CHANGES (日本語)
 ================
 
+1.4.0 (2020 年 07 月 23 日)
+---------------------------
+
 - `AuthorizationFailReason` 列挙型
     * `INVALID_TARGET` を追加。
 
