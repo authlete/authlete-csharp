@@ -4,6 +4,9 @@ CHANGES (日本語)
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 
+- 新しい型
+    * `UserCodeCharset` 列挙型
+
 
 1.3.0 (2019 年 05 月 03 日)
 ---------------------------

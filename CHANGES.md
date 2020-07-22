@@ -4,6 +4,9 @@ CHANGES
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 
+- New types
+    * `UserCodeCharset` enum
+
 
 1.3.0 (2019-05-03)
 ------------------
