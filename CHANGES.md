@@ -21,6 +21,13 @@ CHANGES
     * Added `RequestContext` property.
     * Added `Resources` property.
 
+- `Client` class
+    * Added `AuthorizationDataTypes` property.
+    * Added `DerivedSectorIdentifier` property.
+    * Added `IsDynamicallyRegistered` property.
+    * Added `IsParRequired` property.
+    * Added `RegistrationAccessTokenHash` property.
+
 - `ClientExtension` class
     * Added `AccessTokenDuration` property.
     * Added `RefreshTokenDuration` property.

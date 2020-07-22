@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -309,6 +309,29 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// The sector identifier host component as derived from either the
+        /// <c>sector_identifier_uri</c> or the registered <c>redirect_uri</c>.
+        /// If no <c>sector_identifier_uri</c> is registered and multiple
+        /// redirect URIs are registered, this value is undefined and this
+        /// property holds null.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <a href="https://openid.net/specs/openid-connect-core-1_0.html#PairwiseAlg">8.1.
+        /// Pairwise Identifier Algorithm</a> of OpenID Connect Core 1.0 for
+        /// details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("derivedSectorIdentifier")]
+        public String DerivedSectorIdentifier { get; set; }
+
+
+        /// <summary>
         /// The sector identifier URI. This property corresponds to
         /// the <c>"sector_identifier_uri"</c> metadata defined in
         /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata">2.
@@ -320,7 +343,7 @@ namespace Authlete.Dto
         /// <a href="https://openid.net/specs/openid-connect-registration-1_0.html">OpenID
         /// Connect Dynamic Client Registration 1.0</a> for details.
         /// </summary>
-        [JsonProperty("sectorIdentifier")]
+        [JsonProperty("sectorIdentifierUri")]
         public Uri SectorIdentifierUri { get; set; }
 
 
@@ -941,5 +964,64 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("bcUserCodeRequired")]
         public bool IsBcUserCodeRequired { get; set; }
+
+
+        /// <summary>
+        /// The boolean flag which indicates whether this client has been
+        /// registered dynamically.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("dynamicallyRegistered")]
+        public bool IsDynamicallyRegistered { get; set; }
+
+
+        /// <summary>
+        /// The hash of the registration access token for this client.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("registrationAccessTokenHash")]
+        public string RegistrationAccessTokenHash { get; set; }
+
+
+        /// <summary>
+        /// The data types that this client may use as values of the <c>type</c>
+        /// field in <c>authorization_details</c>. This property corresponds to
+        /// the <c>authorization_data_types</c> client metadata defined in
+        /// "OAuth 2.0 Rich Authorization Requests" (RAR).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("authorizationDataTypes")]
+        public string[] AuthorizationDataTypes { get; set; }
+
+
+        /// <summary>
+        /// The boolean flag which indicates whether this client is required to
+        /// use PAR (Pushed Authorization Request). This property corresponds to
+        /// the <c>require_pushed_authorization_requests</c> client metadata
+        /// defined in "OAuth 2.0 Pushed Authorization Requests" (PAR).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("parRequired")]
+        public bool IsParRequired { get; set; }
     }
 }

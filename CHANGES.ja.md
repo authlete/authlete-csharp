@@ -21,6 +21,13 @@ CHANGES (日本語)
     * `RequestContext` プロパティーを追加。
     * `Resources` プロパティーを追加。
 
+- `Client` クラス
+    * `AuthorizationDataTypes` プロパティーを追加。
+    * `DerivedSectorIdentifier` プロパティーを追加。
+    * `IsDynamicallyRegistered` プロパティーを追加。
+    * `IsParRequired` プロパティーを追加。
+    * `RegistrationAccessTokenHash` プロパティーを追加。
+
 - `ClientExtension` クラス
     * `AccessTokenDuration` プロパティーを追加。
     * `RefreshTokenDuration` プロパティーを追加。
