@@ -33,6 +33,10 @@ CHANGES (日本語)
     * `Htm` プロパティーを追加。
     * `Htu` プロパティーを追加。
 
+- `IntrospectionResponse` クラス
+    * `Resources` プロパティーを追加。
+    * `AccessTokenResources` プロパティーを追加。
+
 - 新しい型
     * `UserCodeCharset` 列挙型
 

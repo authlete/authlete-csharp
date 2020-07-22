@@ -33,6 +33,10 @@ CHANGES
     * Added `Htm` property.
     * Added `Htu` property.
 
+- `IntrospectionResponse` class
+    * Added `Resources` property.
+    * Added `AccessTokenResources` property.
+
 - New types
     * `UserCodeCharset` enum
 

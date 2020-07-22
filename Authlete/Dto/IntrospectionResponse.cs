@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -385,5 +385,56 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("certificateThumbprint")]
         public string CertificateThumbprint { get; set; }
+
+
+        /// <summary>
+        /// The target resources. This represents the resources specified by the
+        /// <c>resource</c> request parameters or by the <c>resource</c>
+        /// property in the request object. See
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("resources")]
+        public string[] Resources { get; set; }
+
+
+        /// <summary>
+        /// The target resources of the access token.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// The target resources held by this property may be the same as or
+        /// different from the ones held by the <c>Resources</c> property.
+        /// </para>
+        ///
+        /// <para>
+        /// In some flows, the initial request and the subsequent token request
+        /// are sent to different endpoints. Example flows are the authorization
+        /// code flow, the refresh token flow, the CIBA Ping mode, the CIBA Poll
+        /// mode and the device flow. In these flows, not only the initial
+        /// request but also the subsequent token request can include the
+        /// <c>resource</c> request parameters. The purpose of the <c>resource</c>
+        /// request parameters in the token request is to narrow the range of
+        /// the target resources from the original set of target resources
+        /// requested by the preceding initial request. If narrowing down is
+        /// performed, the target resources held by the <c>Resources</c>
+        /// property and the ones held by this <c>AccessTokenResources</c>
+        /// property are different. This property holds the narrowed set of
+        /// target resources.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("accessTokenResources")]
+        public string[] AccessTokenResources { get; set; }
     }
 }
