@@ -14,6 +14,9 @@ CHANGES (日本語)
 - `BackchannelAuthenticationCompleteResponse` クラス
     * `Resources` プロパティーを追加。
 
+- `BackchannelAuthenticationFailReason` 列挙型
+    * `INVALID_TARGET` を追加。
+
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 

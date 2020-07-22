@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2019 Authlete, Inc.
+// Copyright (C) 2019-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -160,6 +160,25 @@ namespace Authlete.Dto
         /// </para>
         /// </remarks>
         INVALID_BINDING_MESSAGE,
+
+
+        /// <summary>
+        /// The requested resource is invalid, missing, unknown, or malformed.
+        /// See <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Using this reason will result in
+        /// <c>"error":"invalid_target"</c>.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        INVALID_TARGET,
 
 
         /// <summary>

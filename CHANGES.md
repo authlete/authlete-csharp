@@ -14,6 +14,9 @@ CHANGES
 - `BackchannelAuthenticationCompleteResponse` class
     * Added `Resources` property.
 
+- `BackchannelAuthenticationFailReason` enum
+    * Added `INVALID_TARGET`.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 
