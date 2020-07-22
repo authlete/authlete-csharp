@@ -38,6 +38,7 @@ CHANGES (日本語)
     * `AccessTokenResources` プロパティーを追加。
 
 - 新しい型
+    * `NamedUri` クラス
     * `UserCodeCharset` 列挙型
 
 

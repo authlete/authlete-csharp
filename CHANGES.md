@@ -38,6 +38,7 @@ CHANGES
     * Added `AccessTokenResources` property.
 
 - New types
+    * `NamedUri` class
     * `UserCodeCharset` enum
 
 
