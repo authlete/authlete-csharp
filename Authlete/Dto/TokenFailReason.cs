@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,5 +40,23 @@ namespace Authlete.Dto
         /// reason will result in <c>error=invalid_request</c>.
         /// </summary>
         INVALID_RESOURCE_OWNER_CREDENTIALS,
+
+
+        /// <summary>
+        /// The requested resource is invalid, missing, unknown, or malformed.
+        /// Using this reason will result in <c>error=invalid_target</c>.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// See <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        INVALID_TARGET,
     }
 }

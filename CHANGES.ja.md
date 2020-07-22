@@ -41,6 +41,9 @@ CHANGES (日本語)
     * `CertificateThumbprint` プロパティーを追加。
     * `DpopKeyThumbprint` プロパティーを追加。
 
+- `TokenFailReason` 列挙型
+    * `INVALID_TARGET` を追加。
+
 - 新しい型
     * `NamedUri` クラス
     * `UserCodeCharset` 列挙型

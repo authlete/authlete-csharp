@@ -41,6 +41,9 @@ CHANGES
     * Added `CertificateThumbprint` property.
     * Added `DpopKeyThumbprint` property.
 
+- `TokenFailReason` enum
+    * Added `INVALID_TARGET`.
+
 - New types
     * `NamedUri` class
     * `UserCodeCharset` enum
