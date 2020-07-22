@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+- `AuthorizationFailReason` enum
+    * Added `INVALID_TARGET`.
+
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 

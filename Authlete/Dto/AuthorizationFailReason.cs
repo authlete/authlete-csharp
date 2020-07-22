@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -186,5 +186,20 @@ namespace Authlete.Dto
         /// <c>error=interaction_required</c>.
         /// </summary>
         INTERACTION_REQUIRED,
+
+
+        /// <summary>
+        /// The requested resource is invalid, missing, unknown, or malformed.
+        /// Using this reason will result in <c>error=invalid_target</c>. See
+        /// <a href="https://www.rfc-editor.org/rfc/rfc8707.html">RFC 8707</a>
+        /// (Resource Indicators for OAuth 2.0) for details.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.4.0.
+        /// </para>
+        /// </remarks>
+        INVALID_TARGET,
     }
 }

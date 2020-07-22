@@ -1,6 +1,9 @@
 CHANGES (日本語)
 ================
 
+- `AuthorizationFailReason` 列挙型
+    * `INVALID_TARGET` を追加。
+
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 
