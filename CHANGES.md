@@ -28,6 +28,11 @@ CHANGES
 - `GrantType` enum
     * Added `DEVICE_CODE`.
 
+- `IntrospectionRequest` class
+    * Added `Dpop` property.
+    * Added `Htm` property.
+    * Added `Htu` property.
+
 - New types
     * `UserCodeCharset` enum
 

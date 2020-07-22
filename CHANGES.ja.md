@@ -28,6 +28,11 @@ CHANGES (日本語)
 - `GrantType` 列挙型
     * `DEVICE_CODE` を追加。
 
+- `IntrospectionRequest` クラス
+    * `Dpop` プロパティーを追加。
+    * `Htm` プロパティーを追加。
+    * `Htu` プロパティーを追加。
+
 - 新しい型
     * `UserCodeCharset` 列挙型
 
