@@ -308,6 +308,20 @@ namespace Authlete.Dto
 
 
         /// <summary>
+        /// JSON that represents additional JWS header parameters for the ID
+        /// token.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("idtHeaderParams")]
+        public string IdtHeaderParams { get; set; }
+
+
+        /// <summary>
         /// The description of the error. This corresponds to the
         /// <c>error_description</c> property in the response to
         /// the client.
