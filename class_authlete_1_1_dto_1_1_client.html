@@ -295,6 +295,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a97a907db86402f13a9c5366ca0714b3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a97a907db86402f13a9c5366ca0714b3a">IsParRequired</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a97a907db86402f13a9c5366ca0714b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The boolean flag which indicates whether this client is required to use PAR (Pushed Authorization Request). This property corresponds to the <code>require_pushed_authorization_requests</code> client metadata defined in "OAuth 2.0 Pushed Authorization Requests" (PAR).  <a href="class_authlete_1_1_dto_1_1_client.html#a97a907db86402f13a9c5366ca0714b3a">More...</a><br /></td></tr>
 <tr class="separator:a97a907db86402f13a9c5366ca0714b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_client.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">IsRequestObjectRequired</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The boolean flag which indicates whether authorization requests from this client are always required to utilize a request object by using either <code>request</code> or <code>request_uri</code> request parameter.  <a href="class_authlete_1_1_dto_1_1_client.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">More...</a><br /></td></tr>
+<tr class="separator:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a client application. </p>
@@ -1130,6 +1133,32 @@ Properties</h2></td></tr>
 
 <p>The boolean flag which indicates whether this client is required to use PAR (Pushed Authorization Request). This property corresponds to the <code>require_pushed_authorization_requests</code> client metadata defined in "OAuth 2.0 Pushed Authorization Requests" (PAR). </p>
 <p>Since version 1.4.0. </p>
+
+</div>
+</div>
+<a id="a193e7b6ee52e20b67aa7f911eb9bb2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193e7b6ee52e20b67aa7f911eb9bb2dd">&#9670;&nbsp;</a></span>IsRequestObjectRequired</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRequestObjectRequired</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The boolean flag which indicates whether authorization requests from this client are always required to utilize a request object by using either <code>request</code> or <code>request_uri</code> request parameter. </p>
+<p>If this property is true and the service's <code>IsTraditionalRequestObjectProcessingApplied</code> property is false, authorization requests from this client are processed as if <code>require_signed_request_object</code> client metadata of this client is true. The metadata is defined in JAR (JWT Secured Authorization Request). </p>
+<p>Since version 1.5.0. </p>
 
 </div>
 </div>

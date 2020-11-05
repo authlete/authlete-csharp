@@ -142,7 +142,7 @@ Authorization header is missing."</em>  <a href="class_authlete_1_1_dto_1_1_api_
 <div class="line">(The value returned from <a class="code" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_response.html#ae67bc0fd60e288194bc360bd6a319e6c">ResponseContent</a>)</div>
 </div><!-- fragment --><p><br  />
 </p><hr  />
-<p>When the value of the <code>Action</code> property is <code>BackchannelAuthenticationIssueAction.INTERNAL_SERVER_Error</code>, it means that an error occurred in Authlete. </p>
+<p>When the value of the <code>Action</code> property is <code>BackchannelAuthenticationIssueAction.INTERNAL_SERVER_ERROR</code>, it means that an error occurred in Authlete. </p>
 <p>From a viewpoint of the client application, this is an error on the server side. Therefore, the authorization server implementation should generate a response to the client application with <code>500 Internal Server Error</code> and <code>application/json</code>. </p>
 <p>The <code>ResponseContent</code> property holds a JSON string which describes the error, so it can be used as the entity body of the response. The following illustrates the response which the authorization server implementation should generate and return to the client application. </p>
 <div class="fragment"><div class="line">HTTP/1.1 500 Internal Server Error</div>

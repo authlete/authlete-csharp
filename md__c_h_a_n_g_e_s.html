@@ -85,7 +85,49 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s.html',''); initResiz
 <div class="title">CHANGES </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>1.4.0 (2020-07-23) </h1>
+<div class="textblock"><h1>1.5.0 (2020-11-06) </h1>
+<ul>
+<li><code>BackchannelAuthenticationCompleteRequest</code> class<ul>
+<li>Added <code>IdtHeaderParams</code> property.</li>
+</ul>
+</li>
+<li><code>Client</code> class<ul>
+<li>Added <code>IsRequestObjectRequired</code> property.</li>
+</ul>
+</li>
+<li><code>IAuthleteApi</code> interface<ul>
+<li>Added <code>TokenDelete(string)</code> method.</li>
+<li>Added <code>DeviceAuthorization(DeviceAuthorizationRequest)</code> method.</li>
+<li>Added <code>DeviceComplete(DeviceCompleteRequest)</code> method.</li>
+<li>Added <code>DeviceVerification(DeviceVerificationRequest)</code> method.</li>
+<li>Added <code>PushAuthorizationRequest(PushedAuthReqRequest)</code> method.</li>
+</ul>
+</li>
+<li><code>Service</code> class<ul>
+<li>Added <code>IsRequestObjectRequired</code> property.</li>
+<li>Added <code>IsTraditionalRequestObjectProcessingApplied</code> property.</li>
+<li>Added <code>IsClaimShortcutRestrictive</code> property.</li>
+<li>Added <code>IsScopeRequired</code> property.</li>
+</ul>
+</li>
+<li>New types<ul>
+<li><code>DeviceAuthorizationAction</code> enum</li>
+<li><code>DeviceAuthorizationRequest</code> class</li>
+<li><code>DeviceAuthorizationResponse</code> class</li>
+<li><code>DeviceCompleteAction</code> enum</li>
+<li><code>DeviceCompleteRequest</code> class</li>
+<li><code>DeviceCompleteResponse</code> class</li>
+<li><code>DeviceCompleteResult</code> enum</li>
+<li><code>DeviceVerificationAction</code> enum</li>
+<li><code>DeviceVerificationRequest</code> class</li>
+<li><code>DeviceVerificationResponse</code> class</li>
+<li><code>PushedAuthReqAction</code> enum</li>
+<li><code>PushedAuthReqRequest</code> class</li>
+<li><code>PushedAuthReqResponse</code> class</li>
+</ul>
+</li>
+</ul>
+<h1>1.4.0 (2020-07-23) </h1>
 <ul>
 <li><code>AuthorizationFailReason</code> enum<ul>
 <li>Added <code>INVALID_TARGET</code>.</li>

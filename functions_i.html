@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>IdtHeaderParams
 : <a class="el" href="class_authlete_1_1_dto_1_1_authorization_issue_request.html#aa20d948799e2d8353ea686f399eaa4e9">AuthorizationIssueRequest</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#aa20d948799e2d8353ea686f399eaa4e9">BackchannelAuthenticationCompleteRequest</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_device_complete_request.html#aa20d948799e2d8353ea686f399eaa4e9">DeviceCompleteRequest</a>
 </li>
 <li>IdToken
 : <a class="el" href="class_authlete_1_1_dto_1_1_authorization_issue_response.html#af3ef6eba0ef983fb259673b4d23dc273">AuthorizationIssueResponse</a>
@@ -120,6 +122,7 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>Interval
 : <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_issue_response.html#a12c53eb4a81e12d2846e1b3f841fc69b">BackchannelAuthenticationIssueResponse</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_device_authorization_response.html#a12c53eb4a81e12d2846e1b3f841fc69b">DeviceAuthorizationResponse</a>
 </li>
 <li>Introspection()
 : <a class="el" href="class_authlete_1_1_api_1_1_authlete_api.html#a10c5ec216633ff5810be89d1f6593a75">AuthleteApi</a>
@@ -165,6 +168,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>IsBcUserCodeRequired
 : <a class="el" href="class_authlete_1_1_dto_1_1_client.html#ad00dc1de9c45aa6cb3dbc4417594c935">Client</a>
 </li>
+<li>IsClaimShortcutRestrictive
+: <a class="el" href="class_authlete_1_1_dto_1_1_service.html#a7e9a7465da3b66c051c662df91de9182">Service</a>
+</li>
 <li>IsClientAuthorized()
 : <a class="el" href="class_authlete_1_1_handler_1_1_spi_1_1_authorization_request_decision_handler_spi_adapter.html#ac34a5d178a5bbf967252e4796faf3c4b">AuthorizationRequestDecisionHandlerSpiAdapter</a>
 , <a class="el" href="interface_authlete_1_1_handler_1_1_spi_1_1_i_authorization_request_decision_handler_spi.html#a8007923285555d590e196e4f42e73b0c">IAuthorizationRequestDecisionHandlerSpi</a>
@@ -177,6 +183,8 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 : <a class="el" href="class_authlete_1_1_dto_1_1_authorization_response.html#a05bac6f2b5a683a49cd10f8046634456">AuthorizationResponse</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_response.html#a05bac6f2b5a683a49cd10f8046634456">BackchannelAuthenticationCompleteResponse</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_response.html#a05bac6f2b5a683a49cd10f8046634456">BackchannelAuthenticationResponse</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_device_authorization_response.html#a05bac6f2b5a683a49cd10f8046634456">DeviceAuthorizationResponse</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_device_verification_response.html#a05bac6f2b5a683a49cd10f8046634456">DeviceVerificationResponse</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a05bac6f2b5a683a49cd10f8046634456">IntrospectionResponse</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_token_create_request.html#a05bac6f2b5a683a49cd10f8046634456">TokenCreateRequest</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_token_issue_response.html#a05bac6f2b5a683a49cd10f8046634456">TokenIssueResponse</a>
@@ -246,6 +254,13 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>IsRequestableScopesEnabled
 : <a class="el" href="class_authlete_1_1_dto_1_1_client_extension.html#a3c9928f1eb1b962e1b5f0d7c583ed82d">ClientExtension</a>
 </li>
+<li>IsRequestObjectRequired
+: <a class="el" href="class_authlete_1_1_dto_1_1_client.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">Client</a>
+, <a class="el" href="class_authlete_1_1_dto_1_1_service.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">Service</a>
+</li>
+<li>IsScopeRequired
+: <a class="el" href="class_authlete_1_1_dto_1_1_service.html#a864d781fae9514234d29d928c817e92c">Service</a>
+</li>
 <li>IsSingleAccessTokenPerSubject
 : <a class="el" href="class_authlete_1_1_dto_1_1_service.html#aee17734606ced132dc4c8798a949536c">Service</a>
 </li>
@@ -258,6 +273,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>IsTlsClientCertificateBoundAccessTokens
 : <a class="el" href="class_authlete_1_1_dto_1_1_client.html#ad6a5ebe9ffa223cb123fcc055fdf015b">Client</a>
 , <a class="el" href="class_authlete_1_1_dto_1_1_service.html#ad6a5ebe9ffa223cb123fcc055fdf015b">Service</a>
+</li>
+<li>IsTraditionalRequestObjectProcessingApplied
+: <a class="el" href="class_authlete_1_1_dto_1_1_service.html#a386c33d4aebf8fe65e7777391944dc93">Service</a>
 </li>
 <li>IsUsable
 : <a class="el" href="class_authlete_1_1_dto_1_1_introspection_response.html#a4c229593df19c46b3d7bc0583b62aac2">IntrospectionResponse</a>

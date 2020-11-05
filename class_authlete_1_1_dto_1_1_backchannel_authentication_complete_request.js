@@ -5,6 +5,7 @@ var class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request =
     [ "Claims", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a276767f843a0185797836c8d2e7bce25", null ],
     [ "ErrorDescription", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a04fba40718e84ce40bb7c8ba72c3be46", null ],
     [ "ErrorUri", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a16421592c61a4c918e165b026ae5d832", null ],
+    [ "IdtHeaderParams", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#aa20d948799e2d8353ea686f399eaa4e9", null ],
     [ "Properties", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a9b6ab7c5d23e9d75a59c0595620fdb51", null ],
     [ "Result", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#afad914ae5bc59e1ef8247eb6236cb5e7", null ],
     [ "Scopes", "class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a6cddb907d289189a0110bd13c4dcd6fb", null ],

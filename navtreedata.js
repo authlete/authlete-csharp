@@ -42,7 +42,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", "functions_prop" ]
       ] ]
@@ -53,9 +53,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_authlete_1_1_dto_1_1_client.html#a0c1b398ef20f53b9ff217401e8422dd1",
-"class_authlete_1_1_dto_1_1_service.html#acd53b6edc3217eae62b7736874608945",
-"class_authlete_1_1_types_1_1_standard_claims.html#acf6008f40d67cd148a0404ffe41fb88b"
+"class_authlete_1_1_dto_1_1_backchannel_authentication_response.html#afe6864d20652337cf2d40b61ea6a4fa1",
+"class_authlete_1_1_dto_1_1_service.html#a197ac8d42ccdd232b72c7d27d06817b7",
+"class_authlete_1_1_handler_1_1_base_request_handler.html#a1c6a5d20d9fa25b739ab0bcec1a8176c",
+"interface_authlete_1_1_api_1_1_i_settings.html#a0e52f16c40d06b9ea84817deba1f7e2d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

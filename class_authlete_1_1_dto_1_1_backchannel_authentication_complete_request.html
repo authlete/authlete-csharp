@@ -121,6 +121,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a6cddb907d289189a0110bd13c4dcd6fb"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a6cddb907d289189a0110bd13c4dcd6fb">Scopes</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a6cddb907d289189a0110bd13c4dcd6fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scopes that should be associated with the access token. If <code>null</code> (the default value) is set, the scopes specified in the original backchannel authentication request are used. In other cases, the scopes set to this property will replace the original scopes contained in the original request.  <a href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a6cddb907d289189a0110bd13c4dcd6fb">More...</a><br /></td></tr>
 <tr class="separator:a6cddb907d289189a0110bd13c4dcd6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20d948799e2d8353ea686f399eaa4e9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#aa20d948799e2d8353ea686f399eaa4e9">IdtHeaderParams</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa20d948799e2d8353ea686f399eaa4e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON that represents additional JWS header parameters for the ID token.  <a href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#aa20d948799e2d8353ea686f399eaa4e9">More...</a><br /></td></tr>
+<tr class="separator:aa20d948799e2d8353ea686f399eaa4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fba40718e84ce40bb7c8ba72c3be46"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a04fba40718e84ce40bb7c8ba72c3be46">ErrorDescription</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a04fba40718e84ce40bb7c8ba72c3be46"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of the error. This corresponds to the <code>error_description</code> property in the response to the client.  <a href="class_authlete_1_1_dto_1_1_backchannel_authentication_complete_request.html#a04fba40718e84ce40bb7c8ba72c3be46">More...</a><br /></td></tr>
 <tr class="separator:a04fba40718e84ce40bb7c8ba72c3be46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,6 +269,31 @@ Properties</h2></td></tr>
 
 <p>The URI of a document which describes the error in detail. This corresponds to the <code>error_uri</code> property in the response to the client. </p>
 <p>If this optional request parameter is given, its value is used as the value of the <code>error_uri</code> property, but it is used only when the result is not <code>BackchannelAuthenticationCompleteResult.AUTHORIZED</code>. </p>
+
+</div>
+</div>
+<a id="aa20d948799e2d8353ea686f399eaa4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20d948799e2d8353ea686f399eaa4e9">&#9670;&nbsp;</a></span>IdtHeaderParams</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string IdtHeaderParams</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JSON that represents additional JWS header parameters for the ID token. </p>
+<p>Since version 1.5.0. </p>
 
 </div>
 </div>

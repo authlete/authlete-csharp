@@ -85,7 +85,49 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_s_8ja.html',''); initR
 <div class="title">CHANGES (日本語) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>1.4.0 (2020 年 07 月 23 日) </h1>
+<div class="textblock"><h1>1.5.0 (2020 年 11 月 06 日) </h1>
+<ul>
+<li><code>BackchannelAuthenticationCompleteRequest</code> クラス<ul>
+<li><code>IdtHeaderParams</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>Client</code> クラス<ul>
+<li><code>IsRequestObjectRequired</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li><code>IAuthleteApi</code> インターフェース<ul>
+<li><code>TokenDelete(string)</code> メソッドを追加。</li>
+<li><code>DeviceAuthorization(DeviceAuthorizationRequest)</code> メソッドを追加。</li>
+<li><code>DeviceComplete(DeviceCompleteRequest)</code> メソッドを追加。</li>
+<li><code>DeviceVerification(DeviceVerificationRequest)</code> メソッドを追加。</li>
+<li><code>PushAuthorizationRequest(PushedAuthReqRequest)</code> メソッドを追加。</li>
+</ul>
+</li>
+<li><code>Service</code> クラス<ul>
+<li><code>IsRequestObjectRequired</code> プロパティーを追加。</li>
+<li><code>IsTraditionalRequestObjectProcessingApplied</code> プロパティーを追加。</li>
+<li><code>IsClaimShortcutRestrictive</code> プロパティーを追加。</li>
+<li><code>IsScopeRequired</code> プロパティーを追加。</li>
+</ul>
+</li>
+<li>新しい型<ul>
+<li><code>DeviceAuthorizationAction</code> 列挙型</li>
+<li><code>DeviceAuthorizationRequest</code> クラス</li>
+<li><code>DeviceAuthorizationResponse</code> クラス</li>
+<li><code>DeviceCompleteAction</code> 列挙型</li>
+<li><code>DeviceCompleteRequest</code> クラス</li>
+<li><code>DeviceCompleteResponse</code> クラス</li>
+<li><code>DeviceCompleteResult</code> 列挙型</li>
+<li><code>DeviceVerificationAction</code> 列挙型</li>
+<li><code>DeviceVerificationRequest</code> クラス</li>
+<li><code>DeviceVerificationResponse</code> クラス</li>
+<li><code>PushedAuthReqAction</code> 列挙型</li>
+<li><code>PushedAuthReqRequest</code> クラス</li>
+<li><code>PushedAuthReqResponse</code> クラス</li>
+</ul>
+</li>
+</ul>
+<h1>1.4.0 (2020 年 07 月 23 日) </h1>
 <ul>
 <li><code>AuthorizationFailReason</code> 列挙型<ul>
 <li><code>INVALID_TARGET</code> を追加。</li>

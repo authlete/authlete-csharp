@@ -34,6 +34,7 @@ var class_authlete_1_1_dto_1_1_client =
     [ "IsClientIdAliasEnabled", "class_authlete_1_1_dto_1_1_client.html#a4710df1daa3a166e3319ffdc2fa3b454", null ],
     [ "IsDynamicallyRegistered", "class_authlete_1_1_dto_1_1_client.html#a033d9012c9412d96369e14b454ab5338", null ],
     [ "IsParRequired", "class_authlete_1_1_dto_1_1_client.html#a97a907db86402f13a9c5366ca0714b3a", null ],
+    [ "IsRequestObjectRequired", "class_authlete_1_1_dto_1_1_client.html#a193e7b6ee52e20b67aa7f911eb9bb2dd", null ],
     [ "IsTlsClientCertificateBoundAccessTokens", "class_authlete_1_1_dto_1_1_client.html#ad6a5ebe9ffa223cb123fcc055fdf015b", null ],
     [ "Jwks", "class_authlete_1_1_dto_1_1_client.html#a265fb5702391fa9d7f9ef8e4aec9c689", null ],
     [ "JwksUri", "class_authlete_1_1_dto_1_1_client.html#a82e5ef73b4ad47c49d3fae2eda2fe925", null ],

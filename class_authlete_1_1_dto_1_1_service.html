@@ -383,6 +383,18 @@ Alias" feature is enabled or not.  <a href="class_authlete_1_1_dto_1_1_service.h
 <tr class="memitem:a97a907db86402f13a9c5366ca0714b3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a97a907db86402f13a9c5366ca0714b3a">IsParRequired</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a97a907db86402f13a9c5366ca0714b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service requires that clients use PAR (Pushed Authorization Request).  <a href="class_authlete_1_1_dto_1_1_service.html#a97a907db86402f13a9c5366ca0714b3a">More...</a><br /></td></tr>
 <tr class="separator:a97a907db86402f13a9c5366ca0714b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">IsRequestObjectRequired</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether this service requires that authorization requests always utilize a request object by using either <code>request</code> or <code>request_uri</code> request parameter.  <a href="class_authlete_1_1_dto_1_1_service.html#a193e7b6ee52e20b67aa7f911eb9bb2dd">More...</a><br /></td></tr>
+<tr class="separator:a193e7b6ee52e20b67aa7f911eb9bb2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386c33d4aebf8fe65e7777391944dc93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a386c33d4aebf8fe65e7777391944dc93">IsTraditionalRequestObjectProcessingApplied</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a386c33d4aebf8fe65e7777391944dc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether a request object is processed based on rules defined in OpenID Connect Core 1.0 or JAR (JWT Secured Authorization Request).  <a href="class_authlete_1_1_dto_1_1_service.html#a386c33d4aebf8fe65e7777391944dc93">More...</a><br /></td></tr>
+<tr class="separator:a386c33d4aebf8fe65e7777391944dc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9a7465da3b66c051c662df91de9182"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a7e9a7465da3b66c051c662df91de9182">IsClaimShortcutRestrictive</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7e9a7465da3b66c051c662df91de9182"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether claims specified by shortcut scopes (e.g. <code>profile</code>) are included in the issued ID token only when no access token is issued.  <a href="class_authlete_1_1_dto_1_1_service.html#a7e9a7465da3b66c051c662df91de9182">More...</a><br /></td></tr>
+<tr class="separator:a7e9a7465da3b66c051c662df91de9182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864d781fae9514234d29d928c817e92c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_authlete_1_1_dto_1_1_service.html#a864d781fae9514234d29d928c817e92c">IsScopeRequired</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a864d781fae9514234d29d928c817e92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag which indicates whether requests that request no scope are rejected or not.  <a href="class_authlete_1_1_dto_1_1_service.html#a864d781fae9514234d29d928c817e92c">More...</a><br /></td></tr>
+<tr class="separator:a864d781fae9514234d29d928c817e92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information about a service which represents an authorization server / OpenID provider. </p>
@@ -1280,6 +1292,33 @@ Method for JWT"</em> of <em><a href="https://datatracker.ietf.org/doc/draft-ietf
 
 </div>
 </div>
+<a id="a7e9a7465da3b66c051c662df91de9182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9a7465da3b66c051c662df91de9182">&#9670;&nbsp;</a></span>IsClaimShortcutRestrictive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsClaimShortcutRestrictive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether claims specified by shortcut scopes (e.g. <code>profile</code>) are included in the issued ID token only when no access token is issued. </p>
+<p>To strictly conform to the description below excerpted from OpenID Connect Core 1.0 Section 5.4, this flag has to be true. </p>
+<p>"The Claims requested by the <code>profile</code>, <code>email</code>, <code>address</code>, and <code>phone</code> scope values are returned from the UserInfo Endpoint, as described in Section 5.3.2, when a <code>response_type</code> value is used that results in an Access Token being issued. However, when no Access Token is issued (which is the case for the <code>response_type</code> value <code>id_token</code>), the resulting Claims are returned in the ID Token." </p>
+<p>Since version 1.5.0. </p>
+
+</div>
+</div>
 <a id="a4710df1daa3a166e3319ffdc2fa3b454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4710df1daa3a166e3319ffdc2fa3b454">&#9670;&nbsp;</a></span>IsClientIdAliasEnabled</h2>
 
@@ -1686,6 +1725,62 @@ Alias" feature is enabled or not. </p>
 
 </div>
 </div>
+<a id="a193e7b6ee52e20b67aa7f911eb9bb2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193e7b6ee52e20b67aa7f911eb9bb2dd">&#9670;&nbsp;</a></span>IsRequestObjectRequired</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRequestObjectRequired</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether this service requires that authorization requests always utilize a request object by using either <code>request</code> or <code>request_uri</code> request parameter. </p>
+<p>If this flag is true and <code>IsTraditionalRequestObjectProcessingApplied</code> property is false, the value of <code>require_signed_request_object</code> server metadata of this service is reported as true in the discovery document. The metadata is defined in JAR (JWT Secured Authorization Request). That <code>require_signed_request_object</code> is true means that authorization requests which don't conform to the JAR specification are rejected. </p>
+<p>Since version 1.5.0. </p>
+
+</div>
+</div>
+<a id="a864d781fae9514234d29d928c817e92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864d781fae9514234d29d928c817e92c">&#9670;&nbsp;</a></span>IsScopeRequired</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsScopeRequired</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether requests that request no scope are rejected or not. </p>
+<p>When a request has no explicit <code>scope</code> parameter and the service's pre-defined default scope set is empty, the authorization server regards the request requests no scope. When this flag is true, requests that request no scope are rejected. </p>
+<p>The requirement below excerpted from RFC 6749 Section 3.3 does not explicitly mention the case where the default scope set is empty. </p>
+<p>"If the client omits the <code>scope</code> parameter when requesting authorization, the authorization server MUST either process the request using a pre-defined default value or fail the request indicating an invalid scope." </p>
+<p>However, if you interpret the state "the default scope set exists
+but is empty" as "the default scope set does not exist" and want to strictly conform to the requirement above, this flag has to be true. </p>
+<p>Since version 1.5.0. </p>
+
+</div>
+</div>
 <a id="aee17734606ced132dc4c8798a949536c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee17734606ced132dc4c8798a949536c">&#9670;&nbsp;</a></span>IsSingleAccessTokenPerSubject</h2>
 
@@ -1758,6 +1853,45 @@ Alias" feature is enabled or not. </p>
 <p>The flag which indicates whether this service supports "client certificate bound access tokens". </p>
 <p>If this property is <code>true</code>, client applications whose <code>IsClientCertificateBoundAccessTokens</code> property is <code>true</code> are required to present a client certificate on token requests to the authorization server and on API calls to the resource server. </p>
 <p>Since version 1.1.0. </p>
+
+</div>
+</div>
+<a id="a386c33d4aebf8fe65e7777391944dc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386c33d4aebf8fe65e7777391944dc93">&#9670;&nbsp;</a></span>IsTraditionalRequestObjectProcessingApplied</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsTraditionalRequestObjectProcessingApplied</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag which indicates whether a request object is processed based on rules defined in OpenID Connect Core 1.0 or JAR (JWT Secured Authorization Request). </p>
+<p>Differences between rules in OpenID Connect Core 1.0 and ones in JAR are as follows. </p>
+<ol type="1">
+<li>JAR requires that a request object be always signed. </li>
+</ol>
+<ol type="1">
+<li>JAR does not allow request parameters outside a request object to be referred to. </li>
+</ol>
+<ol type="1">
+<li>OIDC Core 1.0 requires that <code>response_type</code> request parameter exist outside a request object even if the request object includes the request parameter. </li>
+</ol>
+<ol type="1">
+<li>OIDC Core 1.0 requires that <code>scope</code> request parameter exist outside a request object if the authorization request is an OIDC request even if the request object includes the request parameter. </li>
+</ol>
+<p>If this flag is false and <code>IsRequestObjectRequired</code> property is true, the value of <code>require_signed_request_object</code> server metadata of this service is reported as true in the discovery document. The metadata is defined in JAR (JWT Secured Authorization Request). That <code>require_signed_request_object</code> is true means that authorization requests which don't conform to the JAR specification are rejected. </p>
+<p>Since version 1.5.0. </p>
 
 </div>
 </div>
