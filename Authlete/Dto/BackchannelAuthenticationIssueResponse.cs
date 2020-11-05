@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2019 Authlete, Inc.
+// Copyright (C) 2019-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -69,7 +69,7 @@ namespace Authlete.Dto
     ///
     /// <para>
     /// When the value of the <c>Action</c> property is
-    /// <c>BackchannelAuthenticationIssueAction.INTERNAL_SERVER_Error</c>,
+    /// <c>BackchannelAuthenticationIssueAction.INTERNAL_SERVER_ERROR</c>,
     /// it means that an error occurred in Authlete.
     /// </para>
     ///

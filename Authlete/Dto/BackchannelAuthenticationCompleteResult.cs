@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2019 Authlete, Inc.
+// Copyright (C) 2019-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 namespace Authlete.Dto
 {
     /// <summary>
-    /// The value of <c>action</c> in responses from Authlete's
+    /// Valid values of <c>result</c> in requests to Authlete's
     /// <c>/api/backchannel/authentication/complete</c> API.
     /// </summary>
     ///
@@ -34,7 +34,7 @@ namespace Authlete.Dto
         /// The end-user was authenticated and has granted
         /// authorization to the client application.
         /// </summary>
-        AUTHORIZED = 1,
+        AUTHORIZED,
 
 
         /// <summary>

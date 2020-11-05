@@ -111,7 +111,7 @@ namespace Authlete.Dto
     ///
     /// <para>
     /// When the value of the <c>Action</c> property is
-    /// <c>BackchannelAuthenticationAction.INTERNAL_SERVER_Error</c>,
+    /// <c>BackchannelAuthenticationAction.INTERNAL_SERVER_ERROR</c>,
     /// it means that the API call from the authorization server
     /// implementation was wrong or that an error occurred in
     /// Authlete.
