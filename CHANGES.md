@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+1.5.0 (2020-11-06)
+------------------
+
 - `BackchannelAuthenticationCompleteRequest` class
     * Added `IdtHeaderParams` property.
 

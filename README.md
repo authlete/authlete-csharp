@@ -263,6 +263,7 @@ categories.
   10. Methods for Token Operations
 
     - `TokenCreate(TokenCreateRequest request)`
+    - `TokenDelete(string token)`
     - `TokenUpdate(TokenUpdateRequest request)`
 
   11. Methods for Records of Granted Scopes
@@ -282,6 +283,16 @@ categories.
     - `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request)`
     - `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request)`
     - `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request)`
+
+  14. Methods for Device Flow
+
+    - `DeviceAuthorization(DeviceAuthorizationRequest request)`
+    - `DeviceComplete(DeviceCompleteRequest request)`
+    - `DeviceVerification(DeviceVerificationRequest request)`
+
+  15. Methods for Pushed Authorization Requests
+
+    - `PushAuthorizationRequest(PushedAuthReqRequest request)`
 
 *Example*
 

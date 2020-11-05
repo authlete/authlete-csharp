@@ -1,6 +1,9 @@
 CHANGES (日本語)
 ================
 
+1.5.0 (2020 年 11 月 06 日)
+---------------------------
+
 - `BackchannelAuthenticationCompleteRequest` クラス
     * `IdtHeaderParams` プロパティーを追加。
 

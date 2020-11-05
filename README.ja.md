@@ -261,6 +261,7 @@ settings.Timeout = TimeSpan.FromSeconds(5);
   10. トークン操作のためのメソッド群
 
     - `TokenCreate(TokenCreateRequest request)`
+    - `TokenDelete(string token)`
     - `TokenUpdate(TokenUpdateRequest request)`
 
   11. 付与されたスコープの記録に関するメソッド群
@@ -280,6 +281,16 @@ settings.Timeout = TimeSpan.FromSeconds(5);
     - `BackchannelAuthenticationIssue(BackchannelAuthenticationIssueRequest request)`
     - `BackchannelAuthenticationFail(BackchannelAuthenticationFailRequest request)`
     - `BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request)`
+
+  14. Device Flow に関するメソッド群
+
+    - `DeviceAuthorization(DeviceAuthorizationRequest request)`
+    - `DeviceComplete(DeviceCompleteRequest request)`
+    - `DeviceVerification(DeviceVerificationRequest request)`
+
+  15. Pushed Authorization Requests に関するメソッド群
+
+    - `PushAuthorizationRequest(PushedAuthReqRequest request)`
 
 *例*
 
