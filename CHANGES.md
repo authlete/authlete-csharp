@@ -4,6 +4,9 @@ CHANGES
 - `BackchannelAuthenticationCompleteRequest` class
     * Added `IdtHeaderParams` property.
 
+- `Client` class
+    * Added `IsRequestObjectRequired` property.
+
 - New types
     * `DeviceAuthorizationAction` enum
     * `DeviceAuthorizationRequest` class

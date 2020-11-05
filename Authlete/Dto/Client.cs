@@ -1023,5 +1023,29 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("parRequired")]
         public bool IsParRequired { get; set; }
+
+
+        /// <summary>
+        /// The boolean flag which indicates whether authorization requests
+        /// from this client are always required to utilize a request object by
+        /// using either <c>request</c> or <c>request_uri</c> request parameter.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If this property is true and the service's
+        /// <c>IsTraditionalRequestObjectProcessingApplied</c> property is
+        /// false, authorization requests from this client are processed as if
+        /// <c>require_signed_request_object</c> client metadata of this client
+        /// is true. The metadata is defined in JAR (JWT Secured Authorization
+        /// Request).
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("requestObjectRequired")]
+        public bool IsRequestObjectRequired { get; set; }
     }
 }

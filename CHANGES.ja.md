@@ -4,6 +4,9 @@ CHANGES (日本語)
 - `BackchannelAuthenticationCompleteRequest` クラス
     * `IdtHeaderParams` プロパティーを追加。
 
+- `Client` クラス
+    * `IsRequestObjectRequired` プロパティーを追加。
+
 - 新しい型
     * `DeviceAuthorizationAction` 列挙型
     * `DeviceAuthorizationRequest` クラス
