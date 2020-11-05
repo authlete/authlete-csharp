@@ -7,6 +7,13 @@ CHANGES
 - `Client` class
     * Added `IsRequestObjectRequired` property.
 
+- `IAuthleteApi` interface
+    * Added `TokenDelete(string)` method.
+    * Added `DeviceAuthorization(DeviceAuthorizationRequest)` method.
+    * Added `DeviceComplete(DeviceCompleteRequest)` method.
+    * Added `DeviceVerification(DeviceVerificationRequest)` method.
+    * Added `PushAuthorizationRequest(PushedAuthReqRequest)` method.
+
 - `Service` class
     * Added `IsRequestObjectRequired` property.
     * Added `IsTraditionalRequestObjectProcessingApplied` property.

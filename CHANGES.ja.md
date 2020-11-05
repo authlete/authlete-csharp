@@ -7,6 +7,13 @@ CHANGES (日本語)
 - `Client` クラス
     * `IsRequestObjectRequired` プロパティーを追加。
 
+- `IAuthleteApi` インターフェース
+    * `TokenDelete(string)` メソッドを追加。
+    * `DeviceAuthorization(DeviceAuthorizationRequest)` メソッドを追加。
+    * `DeviceComplete(DeviceCompleteRequest)` メソッドを追加。
+    * `DeviceVerification(DeviceVerificationRequest)` メソッドを追加。
+    * `PushAuthorizationRequest(PushedAuthReqRequest)` メソッドを追加。
+
 - `Service` クラス
     * `IsRequestObjectRequired` プロパティーを追加。
     * `IsTraditionalRequestObjectProcessingApplied` プロパティーを追加。

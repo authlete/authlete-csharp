@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,6 +42,7 @@ namespace Authlete.Api
         const string AUTH_AUTHORIZATION_ISSUE_API_PATH      = "/api/auth/authorization/issue";
         const string AUTH_TOKEN_API_PATH                    = "/api/auth/token";
         const string AUTH_TOKEN_CREATE_API_PATH             = "/api/auth/token/create";
+        const string AUTH_TOKEN_DELETE_API_PATH             = "/api/auth/token/delete/{0}";
         const string AUTH_TOKEN_FAIL_API_PATH               = "/api/auth/token/fail";
         const string AUTH_TOKEN_ISSUE_API_PATH              = "/api/auth/token/issue";
         const string AUTH_TOKEN_UPDATE_API_PATH             = "/api/auth/token/update";
@@ -76,6 +77,10 @@ namespace Authlete.Api
         const string BC_AUTHENTICATION_COMPLETE_API_PATH    = "/api/backchannel/authentication/complete";
         const string BC_AUTHENTICATION_FAIL_API_PATH        = "/api/backchannel/authentication/fail";
         const string BC_AUTHENTICATION_ISSUE_API_PATH       = "/api/backchannel/authentication/issue";
+        const string DEVICE_AUTHORIZATION_API_PATH          = "/api/device/authorization";
+        const string DEVICE_COMPLETE_API_PATH               = "/api/device/complete";
+        const string DEVICE_VERIFICATION_API_PATH           = "/api/device/verification";
+        const string PUSHED_AUTH_REQ_API_PATH               = "/api/pushed_auth_req";
 
 
         /// <summary>
@@ -680,6 +685,15 @@ namespace Authlete.Api
 
 
         /// <inheritdoc/>
+        public async Task<object>
+        TokenDelete(string token)
+        {
+            return await CallServiceDeleteApi(
+                String.Format(AUTH_TOKEN_DELETE_API_PATH, token));
+        }
+
+
+        /// <inheritdoc/>
         public async Task<TokenFailResponse>
         TokenFail(TokenFailRequest request)
         {
@@ -1138,6 +1152,42 @@ namespace Authlete.Api
         {
             return await CallServicePostApi<BackchannelAuthenticationCompleteResponse>(
                 BC_AUTHENTICATION_COMPLETE_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<DeviceAuthorizationResponse>
+        DeviceAuthorization(DeviceAuthorizationRequest request)
+        {
+            return await CallServicePostApi<DeviceAuthorizationResponse>(
+                DEVICE_AUTHORIZATION_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<DeviceCompleteResponse>
+        DeviceComplete(DeviceCompleteRequest request)
+        {
+            return await CallServicePostApi<DeviceCompleteResponse>(
+                DEVICE_COMPLETE_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<DeviceVerificationResponse>
+        DeviceVerification(DeviceVerificationRequest request)
+        {
+            return await CallServicePostApi<DeviceVerificationResponse>(
+                DEVICE_VERIFICATION_API_PATH, request);
+        }
+
+
+        /// <inheritdoc/>
+        public async Task<PushedAuthReqResponse>
+        PushAuthorizationRequest(PushedAuthReqRequest request)
+        {
+            return await CallServicePostApi<PushedAuthReqResponse>(
+                PUSHED_AUTH_REQ_API_PATH, request);
         }
     }
 }

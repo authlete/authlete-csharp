@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2020 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -110,6 +110,26 @@ namespace Authlete.Api
         /// <exception cref="AuthleteApiException"></exception>
         Task<TokenCreateResponse>
         TokenCreate(TokenCreateRequest request);
+
+
+        /// <summary>
+        /// Delete an access token
+        /// (= call Authlete's <c>/api/auth/token/delete/{token}</c> API).
+        /// </summary>
+        ///
+        /// <param name="token">
+        /// An access token or its hash value.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        Task<object>
+        TokenDelete(string token);
 
 
         /// <summary>
@@ -1049,5 +1069,101 @@ namespace Authlete.Api
         /// <exception cref="AuthleteApiException"></exception>
         Task<BackchannelAuthenticationCompleteResponse>
         BackchannelAuthenticationComplete(BackchannelAuthenticationCompleteRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/device/authorization</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        Task<DeviceAuthorizationResponse>
+        DeviceAuthorization(DeviceAuthorizationRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/device/complete</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        Task<DeviceCompleteResponse>
+        DeviceComplete(DeviceCompleteRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/device/verification</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        Task<DeviceVerificationResponse>
+        DeviceVerification(DeviceVerificationRequest request);
+
+
+        /// <summary>
+        /// Call Authlete's
+        /// <c>/api/pushed_auth_req</c> API.
+        /// </summary>
+        ///
+        /// <returns>
+        /// A response from the API.
+        /// </returns>
+        ///
+        /// <param name="request">
+        /// Request parameters passed to the API.
+        /// </param>
+        ///
+        /// <exception cref="AuthleteApiException"></exception>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        Task<PushedAuthReqResponse>
+        PushAuthorizationRequest(PushedAuthReqRequest request);
     }
 }
