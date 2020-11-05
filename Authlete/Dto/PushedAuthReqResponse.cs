@@ -257,7 +257,7 @@ namespace Authlete.Dto
     /// Since version 1.5.0.
     /// </para>
     /// </remarks>
-    public class RevocationResponse : ApiResponse
+    public class PushedAuthReqResponse : ApiResponse
     {
         /// <summary>
         /// The next action that the revocation endpoint should
