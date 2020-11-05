@@ -24,6 +24,9 @@ CHANGES (日本語)
     * `DeviceVerificationAction` 列挙型
     * `DeviceVerificationRequest` クラス
     * `DeviceVerificationResponse` クラス
+    * `PushedAuthReqAction` 列挙型
+    * `PushedAuthReqRequest` クラス
+    * `PushedAuthReqResponse` クラス
 
 
 1.4.0 (2020 年 07 月 23 日)

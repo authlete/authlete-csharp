@@ -24,6 +24,9 @@ CHANGES
     * `DeviceVerificationAction` enum
     * `DeviceVerificationRequest` class
     * `DeviceVerificationResponse` class
+    * `PushedAuthReqAction` enum
+    * `PushedAuthReqRequest` class
+    * `PushedAuthReqResponse` class
 
 
 1.4.0 (2020-07-23)
