@@ -7,6 +7,12 @@ CHANGES
 - `Client` class
     * Added `IsRequestObjectRequired` property.
 
+- `Service` class
+    * Added `IsRequestObjectRequired` property.
+    * Added `IsTraditionalRequestObjectProcessingApplied` property.
+    * Added `IsClaimShortcutRestrictive` property.
+    * Added `IsScopeRequired` property.
+
 - New types
     * `DeviceAuthorizationAction` enum
     * `DeviceAuthorizationRequest` class

@@ -7,6 +7,12 @@ CHANGES (日本語)
 - `Client` クラス
     * `IsRequestObjectRequired` プロパティーを追加。
 
+- `Service` クラス
+    * `IsRequestObjectRequired` プロパティーを追加。
+    * `IsTraditionalRequestObjectProcessingApplied` プロパティーを追加。
+    * `IsClaimShortcutRestrictive` プロパティーを追加。
+    * `IsScopeRequired` プロパティーを追加。
+
 - 新しい型
     * `DeviceAuthorizationAction` 列挙型
     * `DeviceAuthorizationRequest` クラス

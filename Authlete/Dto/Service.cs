@@ -1805,5 +1805,151 @@ namespace Authlete.Dto
         /// </remarks>
         [JsonProperty("parRequired")]
         public bool IsParRequired { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether this service requires that
+        /// authorization requests always utilize a request object by using
+        /// either <c>request</c> or <c>request_uri</c> request parameter.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// If this flag is true and
+        /// <c>IsTraditionalRequestObjectProcessingApplied</c> property is
+        /// false, the value of <c>require_signed_request_object</c> server
+        /// metadata of this service is reported as true in the discovery
+        /// document. The metadata is defined in JAR (JWT Secured Authorization
+        /// Request). That <c>require_signed_request_object</c> is true means
+        /// that authorization requests which don't conform to the JAR
+        /// specification are rejected.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("requestObjectRequired")]
+        public bool IsRequestObjectRequired { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether a request object is processed based
+        /// on rules defined in OpenID Connect Core 1.0 or JAR (JWT Secured
+        /// Authorization Request).
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Differences between rules in OpenID Connect Core 1.0 and ones in JAR
+        /// are as follows.
+        /// </para>
+        ///
+        /// <para>
+        /// 1. JAR requires that a request object be always signed.
+        /// </para>
+        ///
+        /// <para>
+        /// 2. JAR does not allow request parameters outside a request object to
+        /// be referred to.
+        /// </para>
+        ///
+        /// <para>
+        /// 3. OIDC Core 1.0 requires that <c>response_type</c> request
+        /// parameter exist outside a request object even if the request object
+        /// includes the request parameter.
+        /// </para>
+        ///
+        /// <para>
+        /// 4. OIDC Core 1.0 requires that <c>scope</c> request parameter exist
+        /// outside a request object if the authorization request is an OIDC
+        /// request even if the request object includes the request parameter.
+        /// </para>
+        ///
+        /// <para>
+        /// If this flag is false and <c>IsRequestObjectRequired</c> property is
+        /// true, the value of <c>require_signed_request_object</c> server
+        /// metadata of this service is reported as true in the discovery
+        /// document. The metadata is defined in JAR (JWT Secured Authorization
+        /// Request). That <c>require_signed_request_object</c> is true means
+        /// that authorization requests which don't conform to the JAR
+        /// specification are rejected.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("traditionalRequestObjectProcessingApplied")]
+        public bool IsTraditionalRequestObjectProcessingApplied { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether claims specified by shortcut scopes
+        /// (e.g. <c>profile</c>) are included in the issued ID token only when
+        /// no access token is issued.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// To strictly conform to the description below excerpted from OpenID
+        /// Connect Core 1.0 Section 5.4, this flag has to be true.
+        /// </para>
+        ///
+        /// <para>
+        /// "The Claims requested by the <c>profile</c>, <c>email</c>,
+        /// <c>address</c>, and <c>phone</c> scope values are returned from the
+        /// UserInfo Endpoint, as described in Section 5.3.2, when a
+        /// <c>response_type</c> value is used that results in an Access Token
+        /// being issued. However, when no Access Token is issued (which is the
+        /// case for the <c>response_type</c> value <c>id_token</c>), the
+        /// resulting Claims are returned in the ID Token."
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("claimShortcutRestrictive")]
+        public bool IsClaimShortcutRestrictive { get; set; }
+
+
+        /// <summary>
+        /// The flag which indicates whether requests that request no scope are
+        /// rejected or not.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// When a request has no explicit <c>scope</c> parameter and the
+        /// service's pre-defined default scope set is empty, the authorization
+        /// server regards the request requests no scope. When this flag is
+        /// true, requests that request no scope are rejected.
+        /// </para>
+        ///
+        /// <para>
+        /// The requirement below excerpted from RFC 6749 Section 3.3 does not
+        /// explicitly mention the case where the default scope set is empty.
+        /// </para>
+        ///
+        /// <para>
+        /// "If the client omits the <c>scope</c> parameter when requesting
+        /// authorization, the authorization server MUST either process the
+        /// request using a pre-defined default value or fail the request
+        /// indicating an invalid scope."
+        /// </para>
+        ///
+        /// <para>
+        /// However, if you interpret the state "the default scope set exists
+        /// but is empty" as "the default scope set does not exist" and want to
+        /// strictly conform to the requirement above, this flag has to be true.
+        /// </para>
+        ///
+        /// <para>
+        /// Since version 1.5.0.
+        /// </para>
+        /// </remarks>
+        [JsonProperty("scopeRequired")]
+        public bool IsScopeRequired { get; set; }
     }
 }
