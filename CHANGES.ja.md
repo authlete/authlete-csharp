@@ -4,6 +4,18 @@ CHANGES (日本語)
 - `BackchannelAuthenticationCompleteRequest` クラス
     * `IdtHeaderParams` プロパティーを追加。
 
+- 新しい型
+    * `DeviceAuthorizationAction` 列挙型
+    * `DeviceAuthorizationRequest` クラス
+    * `DeviceAuthorizationResponse` クラス
+    * `DeviceCompleteAction` 列挙型
+    * `DeviceCompleteRequest` クラス
+    * `DeviceCompleteResponse` クラス
+    * `DeviceCompleteResult` 列挙型
+    * `DeviceVerificationAction` 列挙型
+    * `DeviceVerificationRequest` クラス
+    * `DeviceVerificationResponse` クラス
+
 
 1.4.0 (2020 年 07 月 23 日)
 ---------------------------

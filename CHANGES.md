@@ -4,6 +4,18 @@ CHANGES
 - `BackchannelAuthenticationCompleteRequest` class
     * Added `IdtHeaderParams` property.
 
+- New types
+    * `DeviceAuthorizationAction` enum
+    * `DeviceAuthorizationRequest` class
+    * `DeviceAuthorizationResponse` class
+    * `DeviceCompleteAction` enum
+    * `DeviceCompleteRequest` class
+    * `DeviceCompleteResponse` class
+    * `DeviceCompleteResult` enum
+    * `DeviceVerificationAction` enum
+    * `DeviceVerificationRequest` class
+    * `DeviceVerificationResponse` class
+
 
 1.4.0 (2020-07-23)
 ------------------
