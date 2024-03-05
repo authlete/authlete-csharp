@@ -25,14 +25,3 @@ RUN dotnet test "Authlete.Tests/Authlete.Tests.csproj" -c Release --no-restore -
 # Copy test results to a known location
 RUN mkdir /test-results
 RUN cp Authlete.Tests/TestResults/*.trx /test-results
-
-# Publish the application
-FROM build AS publish
-RUN dotnet publish "Authlete/Authlete.csproj" -c Release -o /app/publish
-
-# Final stage/image uses the .NET runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
-WORKDIR /app
-COPY --from=publish /app/publish ./
-
-CMD ["dotnet", "Authlete.dll"]
