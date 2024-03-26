@@ -21,7 +21,6 @@
     <DocumentationFile>bin\Debug\netstandard1.4\Authlete.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
     <Folder Include="Conf\" />
     <Folder Include="Dto\" />
     <Folder Include="Types\" />
