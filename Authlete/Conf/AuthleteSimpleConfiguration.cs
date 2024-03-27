@@ -50,5 +50,17 @@ namespace Authlete.Conf
 
         /// <inheritdoc/>
         public string ServiceAccessToken { get; set; }
+
+        
+        /// <inheritdoc/>
+        public string ApiVersion { get; set; }
+        
+        
+        /// <inheritdoc/>
+        public string DpopKey { get; set; }
+        
+        
+        /// <inheritdoc/>
+        public string ClientCertificate { get; set; }
     }
 }

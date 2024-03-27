@@ -111,7 +111,11 @@ namespace Authlete.Conf
         const string KEY_SERVICE_API_KEY            = "service.api_key";
         const string KEY_SERVICE_API_SECRET         = "service.api_secret";
         const string KEY_SERVICE_ACCESS_TOKEN       = "service.access_token";
+        const string KEY_DPOP_KEY                   = "service.dpop_key";
+        const string KEY_CLIENT_CERTIFICATE         = "service.client_certificate";
+        const string KEY_API_VERSION                = "api_version";
         const string BASE_URL_DEFAULT               = "https://api.authlete.com";
+        
 
 
         /// <summary>
@@ -198,6 +202,10 @@ namespace Authlete.Conf
             ServiceApiKey           = props[KEY_SERVICE_API_KEY];
             ServiceApiSecret        = props[KEY_SERVICE_API_SECRET];
             ServiceAccessToken      = props[KEY_SERVICE_ACCESS_TOKEN];
+            DpopKey                 = props[KEY_DPOP_KEY];
+            ApiVersion              = props[KEY_API_VERSION];
+            ClientCertificate       = props[KEY_CLIENT_CERTIFICATE];
+            
         }
 
 
@@ -227,5 +235,17 @@ namespace Authlete.Conf
 
         /// <inheritdoc/>
         public string ServiceAccessToken { get; private set; }
+
+        
+        /// <inheritdoc/>
+        public string ApiVersion { get; private set; }
+        
+        
+        /// <inheritdoc/>
+        public string DpopKey { get; private set; }
+        
+        
+        /// <inheritdoc/>
+        public string ClientCertificate { get; private set; }
     }
 }

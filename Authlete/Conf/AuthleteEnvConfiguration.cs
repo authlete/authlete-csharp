@@ -68,85 +68,55 @@ namespace Authlete.Conf
         const string ENV_SERVICE_API_KEY            = "AUTHLETE_SERVICE_APIKEY";
         const string ENV_SERVICE_API_SECRET         = "AUTHLETE_SERVICE_APISECRET";
         const string ENV_SERVICE_ACCESS_TOKEN       = "AUTHLETE_SERVICE_ACCESSTOKEN";
+        const string ENV_KEY_DPOP_KEY               = "AUTHLETE_DPOP_KEY";
+        const string ENV_KEY_CLIENT_CERTIFICATE     = "AUTHLETE_CLIENT_CERTIFICATE";
+        const string ENV_KEY_API_VERSION            = "AUTHLETE_API_VERSION";
 
 
         /// <inheritdoc/>
-        public string BaseUrl
-        {
-            get
-            {
-                return GetEnv(ENV_BASE_URL);
-            }
-        }
+        public string BaseUrl => GetEnv(ENV_BASE_URL);
 
 
         /// <inheritdoc/>
-        public string ServiceOwnerApiKey
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_OWNER_API_KEY);
-            }
-        }
+        public string ServiceOwnerApiKey => GetEnv(ENV_SERVICE_OWNER_API_KEY);
 
 
         /// <inheritdoc/>
-        public string ServiceOwnerApiSecret
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_OWNER_API_SECRET);
-            }
-        }
+        public string ServiceOwnerApiSecret => GetEnv(ENV_SERVICE_OWNER_API_SECRET);
 
 
         /// <inheritdoc/>
-        public string ServiceOwnerAccessToken
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_OWNER_ACCESS_TOKEN);
-            }
-        }
+        public string ServiceOwnerAccessToken => GetEnv(ENV_SERVICE_OWNER_ACCESS_TOKEN);
 
 
         /// <inheritdoc/>
-        public string ServiceApiKey
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_API_KEY);
-            }
-        }
+        public string ServiceApiKey => GetEnv(ENV_SERVICE_API_KEY);
 
 
         /// <inheritdoc/>
-        public string ServiceApiSecret
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_API_SECRET);
-            }
-        }
+        public string ServiceApiSecret => GetEnv(ENV_SERVICE_API_SECRET);
 
 
         /// <inheritdoc/>
-        public string ServiceAccessToken
-        {
-            get
-            {
-                return GetEnv(ENV_SERVICE_ACCESS_TOKEN);
-            }
-        }
+        public string ServiceAccessToken => GetEnv(ENV_SERVICE_ACCESS_TOKEN);
+        
+
+        /// <inheritdoc/>
+        public string ApiVersion => GetEnv(ENV_KEY_API_VERSION);
 
 
+        /// <inheritdoc/>
+        public string DpopKey => GetEnv(ENV_KEY_DPOP_KEY);
+
+
+        /// <inheritdoc/>
+        public string ClientCertificate => GetEnv(ENV_KEY_CLIENT_CERTIFICATE);
+        
+        
         /// <summary>
         /// Get the value of the environment variable identified
         /// by the name.
         /// </summary>
-        string GetEnv(string name)
-        {
-            return System.Environment.GetEnvironmentVariable(name);
-        }
+        string GetEnv(string name) => System.Environment.GetEnvironmentVariable(name);
     }
 }

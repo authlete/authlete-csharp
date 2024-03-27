@@ -92,9 +92,12 @@ namespace Authlete.Api
         /// </param>
         public AuthleteApi(IAuthleteConfiguration configuration)
         {
-            if (configuration == null)
+            // Parse the Authlete API version specified by the configuration
+            var version = AuthleteApiVersionExtensions.Parse(configuration.ApiVersion);
+
+            if (version != null && version != AuthleteApiVersion.V2)
             {
-                throw new ArgumentNullException(nameof(configuration));
+                throw new ArgumentException("Configuration must be set to V2 for this implementation.");
             }
 
             ServiceOwnerCredentials = CreateServiceOwnerCredentials(configuration);
@@ -102,6 +105,11 @@ namespace Authlete.Api
             BaseUri                 = CreateBaseUri(configuration);
             ApiClient               = CreateHttpClient();
             Settings                = new SettingsImpl(this);
+            
+            if (configuration == null)
+            {
+                throw new ArgumentNullException(nameof(configuration));
+            }
         }
 
 
