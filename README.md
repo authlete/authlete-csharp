@@ -344,6 +344,54 @@ How To Test
     $ cd Authlete.Tests
     $ dotnet test
 
+Docker Support
+-----------
+#### Building the Docker Image with Detailed Output
+
+This project supports building and running inside a Docker container. The instructions below guide you through the process of building the Docker image, running the container, and retrieving test results with detailed build output.
+
+#### Building the Docker Image
+
+To build the Docker image with detailed build output, use the following command:
+
+```bash
+docker build -t authlete-test --progress=plain --no-cache --target build .
+```
+
+This command performs the following actions:
+- `-t authlete-test` tags the built Docker image as `authlete-test`.
+- `--progress=plain` displays the build output in plain text, providing detailed information during the build process.
+- `--no-cache` ensures that Docker does not use any cached layers from previous builds, forcing all steps to be re-executed.
+- `--target build` specifies that the Docker build process should stop after completing the `build` stage. This is particularly useful if you want to run tests without deploying the final application as part of the build process.
+
+#### Retrieving Test Results
+
+The Dockerfile is configured to generate test results in TRX format during the build process. To extract these test results from the Docker image to your host system, follow these steps:
+
+1. **Create a Temporary Container from the Image**:
+   Create a container named `temp-container` from your `authlete-test` image without starting it:
+
+   ```bash
+   docker create --name temp-container authlete-test
+   ```
+
+2. **Copy Test Results to Host**:
+   Copy the test results from the `temp-container` to a directory on your host machine:
+
+   ```bash
+   docker cp temp-container:/test-results ./test-results
+   ```
+
+   This copies the test results stored at `/test-results` inside the container to a `./test-results` directory on your host.
+
+3. **Cleanup**:
+   Remove the temporary container:
+
+   ```bash
+   docker rm temp-container
+   ```
+
+Now, you'll find the `.trx` test result files in the `./test-results` directory on your host machine, ready for review.
 
 How To Release
 --------------

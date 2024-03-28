@@ -1,0 +1,33 @@
+# Ignore all files and directories
+**
+
+# But do not ignore Dockerfile and .dockerignore
+!Dockerfile
+!.dockerignore
+
+# Do not ignore project and solution files
+!*.csproj
+!*.sln
+
+# Include source code directories
+!Authlete/**
+!Authlete.Tests/**
+
+# Exclude bin and obj folders to prevent including build output in the Docker context
+**/[Bb]in/
+**/[Oo]bj/
+
+# Exclude other unnecessary files and directories
+**/*.user
+**/*.vs/
+**/*.vscode/
+**/*.[Dd]S_Store
+**/.azure/
+**/.github/
+**/.git/
+**/README.md
+**/LICENSE
+
+# Ignore specific app settings or environment files that should not be included
+# appsettings.Production.json
+# .env

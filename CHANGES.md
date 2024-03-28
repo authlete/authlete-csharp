@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+1.6.0 (2024-03-05)
+------------------
+
+- Update dotnet framework to 8.0.
+- Add Docker support for building and testing.
+
+
 1.5.0 (2020-11-06)
 ------------------
 
