@@ -1,5 +1,5 @@
 # Use the .NET 8.0 SDK image to build the application
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /src
 
 # Copy the solution file
@@ -19,9 +19,5 @@ COPY . .
 # Build the project
 RUN dotnet build "Authlete/Authlete.csproj" -c Release -o /app/build
 
-# Run tests and generate TRX test results
-RUN dotnet test "Authlete.Tests/Authlete.Tests.csproj" -c Release --no-restore --logger "trx;LogFileName=test_results.trx"
-
-# Copy test results to a known location
-RUN mkdir /test-results
-RUN cp Authlete.Tests/TestResults/*.trx /test-results
+# Run tests and generate detailed test results in the console
+RUN dotnet test "Authlete.Tests/Authlete.Tests.csproj" -c Release --no-restore --logger "console;verbosity=detailed"
