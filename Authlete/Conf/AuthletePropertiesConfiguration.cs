@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2024 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -205,7 +205,6 @@ namespace Authlete.Conf
             DpopKey                 = props[KEY_DPOP_KEY];
             ApiVersion              = props[KEY_API_VERSION];
             ClientCertificate       = props[KEY_CLIENT_CERTIFICATE];
-            
         }
 
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Authlete, Inc.
+ * Copyright (C) 2024 Authlete, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,9 @@
 
 using System;
 
+
 namespace Authlete.Conf;
+
 
 /// <summary>
 /// Authlete API version.

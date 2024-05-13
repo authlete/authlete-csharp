@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2020 Authlete, Inc.
+// Copyright (C) 2024 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@ using Authlete.Util;
 using Authlete.Web;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
+
 
 namespace Authlete.Api
 {
@@ -103,29 +104,29 @@ namespace Authlete.Api
                 throw new ArgumentNullException(nameof(configuration));
             }
             
-            BaseUri                 = CreateBaseUri(configuration);
+            BaseUri = CreateBaseUri(configuration);
             ExtractDpop(configuration);
-            Settings                = new SettingsImpl(this);
+            Settings = new SettingsImpl(this);
             
-            // Parse the Authlete API version specified by the configuration
+            // Parse the Authlete API version specified by the configuration.
             AuthleteApiVersion? version = AuthleteApiVersionExtensions.Parse(configuration.ApiVersion);
 
-            // Handle the case where version is null
+            // Handle the case where version is null.
             if (version == null)
             {
                 throw new ArgumentException("Authlete Api Version must be set to V3 or V2 for this implementation.");;
             }
             
-            // Check if the version is not V3
+            // Check if the version is not V3.
             if (version != AuthleteApiVersion.V3)
             {
                 throw new ArgumentException("Configuration must be set to V3 for this implementation.");
             }
 
-            // Assign mAuth using a method assumed to create credentials from the configuration
+            // Assign mAuth using a method assumed to create credentials from the configuration.
             _mAuth = CreateCredentials(configuration);
 
-            // Parse the service API key as long if it's not null; otherwise, set mServiceId to null
+            // Parse the service API key as long if it's not null; otherwise, set mServiceId to null.
             if (!string.IsNullOrEmpty(configuration.ServiceApiKey))
             {
                 _mServiceId = long.Parse(configuration.ServiceApiKey);
@@ -140,10 +141,10 @@ namespace Authlete.Api
         
         private string CreateCredentials(IAuthleteConfiguration configuration)
         {
-            // Check if the ServiceAccessToken is provided
+            // Check if the ServiceAccessToken is provided.
             if (configuration.ServiceAccessToken != null)
             {
-                // Check if DPoP is enabled and return the appropriate authorization header
+                // Check if DPoP is enabled and return the appropriate authorization header.
                 if (IsDpopEnabled())
                 {
                     return "DPoP " + configuration.ServiceAccessToken;
@@ -1257,10 +1258,10 @@ namespace Authlete.Api
             {
                 try
                 {
-                    // Parse the JWK from the configuration's DPoP key
+                    // Parse the JWK from the configuration's DPoP key.
                     _mDpopJwk = new JsonWebKey(dpopKey);
 
-                    // Check if the 'alg' field is present in the JWK
+                    // Check if the 'alg' field is present in the JWK.
                     if (string.IsNullOrEmpty(_mDpopJwk.Alg))
                     {
                         throw new ArgumentException("DPoP JWK must contain an 'alg' field.");
@@ -1269,7 +1270,7 @@ namespace Authlete.Api
                     // In .NET, creating a signer from a JWK depends on the use case.
                     // For instance, signing a JWT token would be handled by token creation methods where you specify the signing credentials.
                 }
-                catch (Exception ex) // Catch a more generic exception to handle parsing errors
+                catch (Exception ex) // Catch a more generic exception to handle parsing errors.
                 {
                     throw new ArgumentException("DPoP JWK is not valid.", ex);
                 }
