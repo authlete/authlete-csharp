@@ -27,6 +27,7 @@ using Authlete.Conf;
 using Authlete.Dto;
 using Authlete.Util;
 using Authlete.Web;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
 
@@ -35,52 +36,57 @@ namespace Authlete.Api
     /// <summary>
     /// An implementation of the <c>IAuthleteApi</c> interface.
     /// </summary>
-    public class AuthleteApi : IAuthleteApi
+    public class AuthleteApiV3 : IAuthleteApi
     {
-        const string AUTH_AUTHORIZATION_API_PATH            = "/api/auth/authorization";
-        const string AUTH_AUTHORIZATION_FAIL_API_PATH       = "/api/auth/authorization/fail";
-        const string AUTH_AUTHORIZATION_ISSUE_API_PATH      = "/api/auth/authorization/issue";
-        const string AUTH_TOKEN_API_PATH                    = "/api/auth/token";
-        const string AUTH_TOKEN_CREATE_API_PATH             = "/api/auth/token/create";
-        const string AUTH_TOKEN_DELETE_API_PATH             = "/api/auth/token/delete/{0}";
-        const string AUTH_TOKEN_FAIL_API_PATH               = "/api/auth/token/fail";
-        const string AUTH_TOKEN_ISSUE_API_PATH              = "/api/auth/token/issue";
-        const string AUTH_TOKEN_UPDATE_API_PATH             = "/api/auth/token/update";
-        const string AUTH_REVOCATION_API_PATH               = "/api/auth/revocation";
-        const string AUTH_USERINFO_API_PATH                 = "/api/auth/userinfo";
-        const string AUTH_USERINFO_ISSUE_API_PATH           = "/api/auth/userinfo/issue";
-        const string AUTH_INTROSPECTION_API_PATH            = "/api/auth/introspection";
-        const string AUTH_INTROSPECTION_STANDARD_API_PATH   = "/api/auth/introspection/standard";
-        const string SERVICE_CONFIGURATION_API_PATH         = "/api/service/configuration";
+        const string AUTH_AUTHORIZATION_API_PATH            = "/api/{0}/auth/authorization";
+        const string AUTH_AUTHORIZATION_FAIL_API_PATH       = "/api/{0}/auth/authorization/fail";
+        const string AUTH_AUTHORIZATION_ISSUE_API_PATH      = "/api/{0}/auth/authorization/issue";
+        const string AUTH_TOKEN_API_PATH                    = "/api/{0}/auth/token";
+        const string AUTH_TOKEN_CREATE_API_PATH             = "/api/{0}/auth/token/create";
+        const string AUTH_TOKEN_DELETE_API_PATH             = "/api/{0}/auth/token/delete/{1}";
+        const string AUTH_TOKEN_FAIL_API_PATH               = "/api/{0}/auth/token/fail";
+        const string AUTH_TOKEN_ISSUE_API_PATH              = "/api/{0}/auth/token/issue";
+        const string AUTH_TOKEN_UPDATE_API_PATH             = "/api/{0}/auth/token/update";
+        const string AUTH_REVOCATION_API_PATH               = "/api/{0}/auth/revocation";
+        const string AUTH_USERINFO_API_PATH                 = "/api/{0}/auth/userinfo";
+        const string AUTH_USERINFO_ISSUE_API_PATH           = "/api/{0}/auth/userinfo/issue";
+        const string AUTH_INTROSPECTION_API_PATH            = "/api/{0}/auth/introspection";
+        const string AUTH_INTROSPECTION_STANDARD_API_PATH   = "/api/{0}/auth/introspection/standard";
+        const string SERVICE_CONFIGURATION_API_PATH         = "/api/{0}/service/configuration";
         const string SERVICE_CREATE_API_PATH                = "/api/service/create";
-        const string SERVICE_DELETE_API_PATH                = "/api/service/delete/{0}";
-        const string SERVICE_GET_API_PATH                   = "/api/service/get/{0}";
+        const string SERVICE_DELETE_API_PATH                = "/api/{0}/service/delete";
+        const string SERVICE_GET_API_PATH                   = "/api/{0}/service/get";
         const string SERVICE_GET_LIST_API_PATH              = "/api/service/get/list";
-        const string SERVICE_JWKS_GET_API_PATH              = "/api/service/jwks/get";
-        const string SERVICE_UPDATE_API_PATH                = "/api/service/update/{0}";
+        const string SERVICE_JWKS_GET_API_PATH              = "/api/{0}/service/jwks/get";
+        const string SERVICE_UPDATE_API_PATH                = "/api/{0}/service/update";
         const string CLIENT_CREATE_API_PATH                 = "/api/client/create";
-        const string CLIENT_DELETE_API_PATH                 = "/api/client/delete/{0}";
-        const string CLIENT_GET_API_PATH                    = "/api/client/get/{0}";
+        const string CLIENT_DELETE_API_PATH                 = "/api/{0}/client/delete";
+        const string CLIENT_GET_API_PATH                    = "/api/{0}/client/get";
         const string CLIENT_GET_LIST_API_PATH               = "/api/client/get/list";
-        const string CLIENT_SECRET_REFRESH_API_PATH         = "/api/client/secret/refresh/{0}";
-        const string CLIENT_SECRET_UPDATE_API_PATH          = "/api/client/secret/update/{0}";
-        const string CLIENT_UPDATE_API_PATH                 = "/api/client/update/{0}";
-        const string REQUESTABLE_SCOPES_DELETE_API_PATH     = "/api/client/extension/requestable_scopes/delete/{0}";
-        const string REQUESTABLE_SCOPES_GET_API_PATH        = "/api/client/extension/requestable_scopes/get/{0}";
-        const string REQUESTABLE_SCOPES_UPDATE_API_PATH     = "/api/client/extension/requestable_scopes/update/{0}";
-        const string GRANTED_SCOPES_GET_API_PATH            = "/api/client/granted_scopes/get/{0}";
-        const string GRANTED_SCOPES_DELETE_API_PATH         = "/api/client/granted_scopes/delete/{0}";
-        const string CLIENT_AUTHORIZATION_DELETE_API_PATH   = "/api/client/authorization/delete/{0}";
-        const string CLIENT_AUTHORIZATION_GET_LIST_API_PATH = "/api/client/authorization/get/list";
-        const string CLIENT_AUTHORIZATION_UPDATE_API_PATH   = "/api/client/authorization/update/{0}";
-        const string BC_AUTHENTICATION_API_PATH             = "/api/backchannel/authentication";
-        const string BC_AUTHENTICATION_COMPLETE_API_PATH    = "/api/backchannel/authentication/complete";
-        const string BC_AUTHENTICATION_FAIL_API_PATH        = "/api/backchannel/authentication/fail";
-        const string BC_AUTHENTICATION_ISSUE_API_PATH       = "/api/backchannel/authentication/issue";
-        const string DEVICE_AUTHORIZATION_API_PATH          = "/api/device/authorization";
-        const string DEVICE_COMPLETE_API_PATH               = "/api/device/complete";
-        const string DEVICE_VERIFICATION_API_PATH           = "/api/device/verification";
-        const string PUSHED_AUTH_REQ_API_PATH               = "/api/pushed_auth_req";
+        const string CLIENT_SECRET_REFRESH_API_PATH         = "/api/{0}/client/secret/refresh/{1}";
+        const string CLIENT_SECRET_UPDATE_API_PATH          = "/api/{0}/client/secret/update/{1}";
+        const string CLIENT_UPDATE_API_PATH                 = "/api/{0}/client/updat/{1}";
+        const string REQUESTABLE_SCOPES_DELETE_API_PATH     = "/api/{0}/client/extension/requestable_scopes/delete/{1}";
+        const string REQUESTABLE_SCOPES_GET_API_PATH        = "/api/{0}/client/extension/requestable_scopes/get/{1}";
+        const string REQUESTABLE_SCOPES_UPDATE_API_PATH     = "/api/{0}/client/extension/requestable_scopes/update/{1}";
+        const string GRANTED_SCOPES_GET_API_PATH            = "/api/{0}/client/granted_scopes/get/{1}";
+        const string GRANTED_SCOPES_DELETE_API_PATH         = "/api/{0}/client/granted_scopes/delete/{1}";
+        const string CLIENT_AUTHORIZATION_DELETE_API_PATH   = "/api/{0}/client/authorization/delete/{1}";
+        const string CLIENT_AUTHORIZATION_GET_LIST_API_PATH = "/api/{0}/client/authorization/get/list";
+        const string CLIENT_AUTHORIZATION_UPDATE_API_PATH   = "/api/{0}/client/authorization/update/{1}";
+        const string BC_AUTHENTICATION_API_PATH             = "/api/{0}/backchannel/authentication";
+        const string BC_AUTHENTICATION_COMPLETE_API_PATH    = "/api/{0}/backchannel/authentication/complete";
+        const string BC_AUTHENTICATION_FAIL_API_PATH        = "/api/{0}/backchannel/authentication/fail";
+        const string BC_AUTHENTICATION_ISSUE_API_PATH       = "/api/{0}/backchannel/authentication/issue";
+        const string DEVICE_AUTHORIZATION_API_PATH          = "/api/{0}/device/authorization";
+        const string DEVICE_COMPLETE_API_PATH               = "/api/{0}/device/complete";
+        const string DEVICE_VERIFICATION_API_PATH           = "/api/{0}/device/verification";
+        const string PUSHED_AUTH_REQ_API_PATH               = "/api/{0}/pushed_auth_req";
+        
+        
+        private readonly string _mAuth;
+        private readonly long? _mServiceId;
+        private JsonWebKey _mDpopJwk;
 
 
         /// <summary>
@@ -90,25 +96,67 @@ namespace Authlete.Api
         /// <param name="configuration">
         /// Configuration to access an Authlete API server.
         /// </param>
-        public AuthleteApi(IAuthleteConfiguration configuration)
+        public AuthleteApiV3(IAuthleteConfiguration configuration)
         {
-            // Parse the Authlete API version specified by the configuration
-            var version = AuthleteApiVersionExtensions.Parse(configuration.ApiVersion);
-
-            if (version != null && version != AuthleteApiVersion.V2)
-            {
-                throw new ArgumentException("Configuration must be set to V2 for this implementation.");
-            }
-
-            ServiceOwnerCredentials = CreateServiceOwnerCredentials(configuration);
-            ServiceCredentials      = CreateServiceCredentials(configuration);
-            BaseUri                 = CreateBaseUri(configuration);
-            ApiClient               = CreateHttpClient();
-            Settings                = new SettingsImpl(this);
-            
+             
             if (configuration == null)
             {
                 throw new ArgumentNullException(nameof(configuration));
+            }
+            
+            BaseUri = CreateBaseUri(configuration);
+            ExtractDpop(configuration);
+            Settings = new SettingsImpl(this);
+            
+            // Parse the Authlete API version specified by the configuration.
+            AuthleteApiVersion? version = AuthleteApiVersionExtensions.Parse(configuration.ApiVersion);
+
+            // Handle the case where version is null.
+            if (version == null)
+            {
+                throw new ArgumentException("Authlete Api Version must be set to V3 or V2 for this implementation.");;
+            }
+            
+            // Check if the version is not V3.
+            if (version != AuthleteApiVersion.V3)
+            {
+                throw new ArgumentException("Configuration must be set to V3 for this implementation.");
+            }
+
+            // Assign mAuth using a method assumed to create credentials from the configuration.
+            _mAuth = CreateCredentials(configuration);
+
+            // Parse the service API key as long if it's not null; otherwise, set mServiceId to null.
+            if (!string.IsNullOrEmpty(configuration.ServiceApiKey))
+            {
+                _mServiceId = long.Parse(configuration.ServiceApiKey);
+            }
+            else
+            {
+                _mServiceId = null;
+            }
+           
+        }
+        
+        
+        private string CreateCredentials(IAuthleteConfiguration configuration)
+        {
+            // Check if the ServiceAccessToken is provided.
+            if (configuration.ServiceAccessToken != null)
+            {
+                // Check if DPoP is enabled and return the appropriate authorization header.
+                if (IsDpopEnabled())
+                {
+                    return "DPoP " + configuration.ServiceAccessToken;
+                }
+                else
+                {
+                    return "Bearer " + configuration.ServiceAccessToken;
+                }
+            }
+            else
+            {
+                throw new ArgumentException("V3 API requires an access token, not a key and secret");
             }
         }
 
@@ -233,13 +281,13 @@ namespace Authlete.Api
 
 
         async Task<TResponse> CallApi<TResponse>(
-            HttpMethod method, BasicCredentials credentials,
+            HttpMethod method, string auth,
             string path, IDictionary<string, string> queryParams,
             object requestBody)
         {
             // Build an HTTP request to call the API.
             HttpRequestMessage request = BuildRequest(
-                method, credentials, path, queryParams, requestBody);
+                method, auth, path, queryParams, requestBody);
 
             // Send the request to the API.
             HttpResponseMessage response = await SendRequest(request);
@@ -277,7 +325,7 @@ namespace Authlete.Api
 
 
         HttpRequestMessage BuildRequest(
-            HttpMethod method, BasicCredentials credentials,
+            HttpMethod method, string auth,
             string path, IDictionary<string, string> queryParams,
             object requestBody)
         {
@@ -293,9 +341,7 @@ namespace Authlete.Api
             var headers = request.Headers;
 
             // Set 'Authorization' header to access the Authlete API.
-            headers.Authorization =
-                new AuthenticationHeaderValue(
-                           "Basic", credentials.FormattedParameter);
+            headers.Add("Authorization",auth);
 
             // If a request body is given.
             if (requestBody != null)
@@ -480,7 +526,7 @@ namespace Authlete.Api
             IDictionary<string, string> queryParams)
         {
             return await CallApi<TResponse>(
-                HttpMethod.Get, credentials, path, queryParams, null);
+                HttpMethod.Get, _mAuth, path, queryParams, null);
         }
 
 
@@ -538,7 +584,7 @@ namespace Authlete.Api
             object requestBody)
         {
             return await CallApi<TResponse>(
-                HttpMethod.Post, credentials, path,
+                HttpMethod.Post, _mAuth, path,
                 queryParams, requestBody);
         }
 
@@ -599,7 +645,7 @@ namespace Authlete.Api
             IDictionary<string, string> queryParams)
         {
             return await CallApi<object>(
-                HttpMethod.Delete, credentials, path, queryParams, null);
+                HttpMethod.Delete, _mAuth, path, queryParams, null);
         }
 
 
@@ -652,7 +698,7 @@ namespace Authlete.Api
         Authorization(AuthorizationRequest request)
         {
             return await CallServicePostApi<AuthorizationResponse>(
-                AUTH_AUTHORIZATION_API_PATH, request);
+                String.Format(AUTH_AUTHORIZATION_API_PATH,_mServiceId), request);
         }
 
 
@@ -1099,11 +1145,11 @@ namespace Authlete.Api
 
         class SettingsImpl : ISettings
         {
-            readonly AuthleteApi api;
+            readonly AuthleteApiV3 api;
             TimeSpan timeout;
 
 
-            public SettingsImpl(AuthleteApi api)
+            public SettingsImpl(AuthleteApiV3 api)
             {
                 this.api = api;
             }
@@ -1196,6 +1242,39 @@ namespace Authlete.Api
         {
             return await CallServicePostApi<PushedAuthReqResponse>(
                 PUSHED_AUTH_REQ_API_PATH, request);
+        }
+        
+        
+        private bool IsDpopEnabled()
+        {
+            return _mDpopJwk != null;
+        }
+        
+        
+        private void ExtractDpop(IAuthleteConfiguration configuration)
+        {
+            var dpopKey = configuration.DpopKey;
+            if (!string.IsNullOrEmpty(dpopKey))
+            {
+                try
+                {
+                    // Parse the JWK from the configuration's DPoP key.
+                    _mDpopJwk = new JsonWebKey(dpopKey);
+
+                    // Check if the 'alg' field is present in the JWK.
+                    if (string.IsNullOrEmpty(_mDpopJwk.Alg))
+                    {
+                        throw new ArgumentException("DPoP JWK must contain an 'alg' field.");
+                    }
+
+                    // In .NET, creating a signer from a JWK depends on the use case.
+                    // For instance, signing a JWT token would be handled by token creation methods where you specify the signing credentials.
+                }
+                catch (Exception ex) // Catch a more generic exception to handle parsing errors.
+                {
+                    throw new ArgumentException("DPoP JWK is not valid.", ex);
+                }
+            }
         }
     }
 }

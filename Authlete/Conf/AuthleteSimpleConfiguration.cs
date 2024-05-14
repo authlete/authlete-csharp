@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2024 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -50,5 +50,17 @@ namespace Authlete.Conf
 
         /// <inheritdoc/>
         public string ServiceAccessToken { get; set; }
+
+        
+        /// <inheritdoc/>
+        public string ApiVersion { get; set; }
+        
+        
+        /// <inheritdoc/>
+        public string DpopKey { get; set; }
+        
+        
+        /// <inheritdoc/>
+        public string ClientCertificate { get; set; }
     }
 }

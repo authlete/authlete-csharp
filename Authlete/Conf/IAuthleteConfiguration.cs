@@ -1,5 +1,5 @@
 ﻿//
-// Copyright (C) 2018-2019 Authlete, Inc.
+// Copyright (C) 2018-2024 Authlete, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,5 +75,41 @@ namespace Authlete.Conf
         /// </para>
         /// </remarks>
         string ServiceAccessToken { get; }
+        
+        
+        /// <summary>
+        /// Get the Authlete API version.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.7.0.
+        /// </para>
+        /// </remarks>
+        string ApiVersion { get; }
+        
+        
+        /// <summary>
+        /// Get the public/private key pair used for DPoP signatures in JWK format.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.7.0.
+        /// </para>
+        /// </remarks>
+        string DpopKey { get; }
+        
+        
+        /// <summary>
+        /// Get the certificate used for MTLS bound access tokens in PEM format.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// <para>
+        /// Since version 1.7.0.
+        /// </para>
+        /// </remarks>
+        string ClientCertificate { get; }
     }
 }

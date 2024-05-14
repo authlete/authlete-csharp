@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ReleaseVersion>1.0.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <PackageId>Authlete.Authlete</PackageId>
-    <PackageVersion>1.5.0</PackageVersion>
+    <PackageVersion>1.7.0</PackageVersion>
     <Authors>Authlete</Authors>
     <PackageLicenseUrl>https://github.com/authlete/authlete-csharp/LICENSE</PackageLicenseUrl>
     <Owners>authlete</Owners>
@@ -21,8 +21,6 @@
     <DocumentationFile>bin\Debug\netstandard1.4\Authlete.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
-    <Folder Include="Conf\" />
     <Folder Include="Dto\" />
     <Folder Include="Types\" />
     <Folder Include="Util\" />
@@ -31,7 +29,8 @@
     <Folder Include="Handler\Spi\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
   </ItemGroup>
 </Project>
