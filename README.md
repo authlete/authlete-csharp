@@ -355,14 +355,13 @@ This project supports building and running inside a Docker container. The instru
 To build the Docker image with detailed build output, use the following command:
 
 ```bash
-docker build -t authlete-test --progress=plain --no-cache --target build .
+docker build -t authlete-test --progress=plain --no-cache .
 ```
 
 This command performs the following actions:
 - `-t authlete-test` tags the built Docker image as `authlete-test`.
 - `--progress=plain` displays the build output in plain text, providing detailed information during the build process.
 - `--no-cache` ensures that Docker does not use any cached layers from previous builds, forcing all steps to be re-executed.
-- `--target build` specifies that the Docker build process should stop after completing the `build` stage. This is particularly useful if you want to run tests without deploying the final application as part of the build process.
 
 #### Retrieving Test Results
 
